@@ -1,11 +1,11 @@
 import React from 'react';
-import { RouterProvider } from 'react-router-dom';
-import router from './config/router';
+import Home from './components/Home/Home';
+
 
 
 const App: React.FC = () => (
     <div className="App flex-grow">
-      <RouterProvider router={router} />
+      <Home/>
     </div>
 );
 
