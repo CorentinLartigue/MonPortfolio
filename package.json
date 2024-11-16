@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://username.github.io/nom-du-repo",
+  "homepage": "https://corentinlartigue.github.io/MonPortfolio/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

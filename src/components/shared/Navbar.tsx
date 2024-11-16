@@ -12,9 +12,6 @@ const Navbar: React.FC = () => {
           </div>
           <div className="space-x-4">
             <Link to="/" className="hover:text-gray-200">Accueil</Link>
-            <Link to="/evenements" className="hover:text-gray-200">Evenements</Link>
-            <Link to="/artistes" className="hover:text-gray-200">Artistes</Link>
-            <Link to="/boutique" className="hover:text-gray-200">Boutique</Link>
           </div>
         </div>
       </nav>
