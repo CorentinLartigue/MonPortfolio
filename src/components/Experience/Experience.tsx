@@ -1,4 +1,10 @@
 import React from 'react';
+import groupeFBO from '/groupeFBO.png';
+import devopti from '/devopti.png';
+import proman from '/proman.png';
+import ducourt from '/ducourt.png';
+
+
 
 interface XP {
   titre: string;
@@ -16,7 +22,7 @@ const Experience: React.FC = () => {
     {
       titre: 'Stage 2ème année BTS SIO option SLAM',
       entreprise: 'Groupe FBO',
-      logo: '/MonPortfolio/assets/groupeFBO.png',  
+      logo: groupeFBO,  
       periode: '29/01/2024 - 22/03/2024',
       description:
         'Développement et maintenance d’une solution logicielle complète.',
@@ -34,7 +40,7 @@ const Experience: React.FC = () => {
     {
       titre: 'Stage 1ère année BTS SIO option SLAM',
       entreprise: 'DevOpti',
-      logo: '/MonPortfolio/assets/devopti.png',  
+      logo: devopti,  
       periode: '22/05/2023 - 23/06/2023',
       description:
         'Formation JS, mini projets en JS et site statique.',
@@ -49,7 +55,7 @@ const Experience: React.FC = () => {
     {
       titre: 'Job étudiant intérim Manutention',
       entreprise: 'Divers',
-      logo: '/MonPortfolio/assets/proman.png',  
+      logo: proman,  
       periode: '2022 - 2024',
       description: 'Travail en équipe, divers et varié.',
       missions: [
@@ -62,7 +68,7 @@ const Experience: React.FC = () => {
     {
       titre: 'Stage d\'observation 3ème - Vignoble Ducourt',
       entreprise: 'Vignoble Ducourt',
-      logo: '/MonPortfolio/assets/ducourt.png',  
+      logo: ducourt,  
       periode: '2019',
       description: 'Stage d’observation dans un domaine viticole.',
       missions: [

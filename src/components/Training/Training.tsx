@@ -1,4 +1,8 @@
 import React from 'react';
+import ynov from '/ynov.png';
+import gustave_eiffel from '/gustave-eiffel.jpg';
+import jean_renou from '/jean-renou.jpg';
+
 
 interface Formation {
   titre: string;
@@ -30,7 +34,7 @@ const FormationPage: React.FC = () => {
 
           ],
           lien: 'https://www.ynov.com/campus/bordeaux/',
-          logo: '/MonPortfolio/assets/ynov.png',
+          logo: ynov,
           ecole: 'YNOV Campus Bordeaux'
         },
         {
@@ -47,7 +51,7 @@ const FormationPage: React.FC = () => {
             'Formation relativement courte et trop ancienne avec certains point à revoir'
           ],
           lien: 'https://www.eiffel-bordeaux.org/formations/bts-sio-cybersecurite/',
-          logo: '/MonPortfolio/assets/gustave-eiffel.jpg',
+          logo: gustave_eiffel,
           ecole: 'Lycée Gustave Eiffel Bordeaux'
         },
         {
@@ -64,7 +68,7 @@ const FormationPage: React.FC = () => {
             'Manque d\'approfondissement pratique sur les projets informatiques et de diversification au niveau des domaines en informatique (cybesécurité, data, ...)'
           ],
           lien: 'https://lyceejeanrenou-lareole.net/la-seconde-generale-et-technologique-une-classe-dorientation/',
-          logo: '/MonPortfolio/assets/jean-renou.jpg',
+          logo: jean_renou,
           ecole: 'Lycée Jean Renou La Réole'
         }
       ];

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import photoProfil from '/MonPortfolio/assets/photo_profil.jpg';
+import photoProfil from '/photo_profil.jpg';
 
 const Home: React.FC = () => {
   return (
