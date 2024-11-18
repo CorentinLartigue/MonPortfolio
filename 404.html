@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404</title>
     <script>
-      // Redirige vers la route actuelle tout en respectant la base
-      var pathname = window.location.pathname;
-      var base = '/MonPortfolio'; // La base définie dans vite.config.ts
-      var newUrl = base + pathname.replace(base, '');
-      window.location.href = newUrl;
+      // Base du chemin de l'application
+      var base = '/MonPortfolio';
+      
+      // Vérifie si l'URL actuelle est déjà sous la forme attendue
+      if (!window.location.pathname.startsWith(base)) {
+        // Si ce n'est pas le cas, redirige vers l'URL corrigée
+        var correctedUrl = base + window.location.pathname;
+        window.location.href = correctedUrl;
+      } else {
+        // Sinon, recharge l'application (elle gérera elle-même la route)
+        window.location.href = base + '/';
+      }
     </script>
   </head>
   <body></body>
