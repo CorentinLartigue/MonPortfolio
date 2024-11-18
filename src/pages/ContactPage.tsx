@@ -1,8 +1,8 @@
-import githubIcon from 'src/assets/github.png';
-import linkedinIcon from 'src/assets/linkedin.png';
-import phoneIcon from 'src/assets/tel.png'; // Assurez-vous d'avoir l'icône de téléphone
-import emailIcon from 'src/assets/email.png'; // Assurez-vous d'avoir l'icône d'email
-import cvIcon from 'src/assets/cv.png';
+import githubIcon from '/MonPortfolio/assets/github.png';
+import linkedinIcon from '/MonPortfolio/assets/linkedin.png';
+import phoneIcon from '/MonPortfolio/assets/tel.png'; 
+import emailIcon from '/MonPortfolio/assets/email.png'; 
+import cvIcon from '/MonPortfolio/assets/cv.png';
 
 const ContactPage: React.FC = () => {
   return (
