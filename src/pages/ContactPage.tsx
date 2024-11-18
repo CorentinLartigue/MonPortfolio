@@ -3,6 +3,7 @@ import linkedinIcon from '/linkedin.png';
 import phoneIcon from '/tel.png'; 
 import emailIcon from '/email.png'; 
 import cvIcon from '/cv.png';
+import cv from '/CV.pdf';
 
 const ContactPage: React.FC = () => {
   return (
@@ -64,7 +65,7 @@ const ContactPage: React.FC = () => {
 
         <div className="mt-8 text-center">
             <p className="text-lg text-gray-600">Envie de découvrir mon parcours ? Téléchargez mon CV en un clic !</p>
-            <a href="src/assets/CV.pdf" download="CV.pdf" className="flex justify-center items-center space-x-4 mt-4 text-lg font-semibold text-blue-500 hover:text-blue-700">
+            <a href={cv} className="flex justify-center items-center space-x-4 mt-4 text-lg font-semibold text-blue-500 hover:text-blue-700">
               <img 
                 src={cvIcon}
                 alt="Download CV"
