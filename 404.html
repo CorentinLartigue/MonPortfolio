@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404</title>
     <script>
-      // Redirige toute URL vers index.html
-      window.location.href = '/MonPortfolio/';
+      // Redirige vers la route actuelle tout en respectant la base
+      var pathname = window.location.pathname;
+      var base = '/MonPortfolio'; // La base définie dans vite.config.ts
+      var newUrl = base + pathname.replace(base, '');
+      window.location.href = newUrl;
     </script>
   </head>
   <body></body>
