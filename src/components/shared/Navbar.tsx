@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
           <Link to="/" className="transition transform hover:scale-105 hover:text-gray-300 duration-300">Accueil</Link>
           <Link to="/projects" className="transition transform hover:scale-105 hover:text-gray-300 duration-300">Projets</Link>
           <Link to="/experiences" className="transition transform hover:scale-105 hover:text-gray-300 duration-300">Expériences Professionnelles</Link>
-          <Link to="/formations" className="transition transform hover:scale-105 hover:text-gray-300 duration-300">Formation</Link>
+          <Link to="/formations" className="transition transform hover:scale-105 hover:text-gray-300 duration-300">Formations</Link>
           <Link to="/competences" className="transition transform hover:scale-105 hover:text-gray-300 duration-300">Compétences</Link>
           <Link to="/contact" className="transition transform hover:scale-105 hover:text-gray-300 duration-300">Contact</Link>
         </div>
