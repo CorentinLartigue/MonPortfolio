@@ -5,18 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404</title>
     <script>
-      // Base du chemin de l'application
-      var base = '/MonPortfolio';
-      
-      // Vérifie si l'URL actuelle est déjà sous la forme attendue
-      if (!window.location.pathname.startsWith(base)) {
-        // Si ce n'est pas le cas, redirige vers l'URL corrigée
-        var correctedUrl = base + window.location.pathname;
-        window.location.href = correctedUrl;
-      } else {
-        // Sinon, recharge l'application (elle gérera elle-même la route)
-        window.location.href = base + '/';
-      }
+      // Redirige toute URL vers index.html
+      window.location.href = '/MonPortfolio/';
     </script>
   </head>
   <body></body>
