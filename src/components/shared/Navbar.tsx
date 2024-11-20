@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import logo from '/logo.png';
 
 const Navbar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  // Initialisez isOpen à true pour que le menu soit ouvert par défaut
+  const [isOpen, setIsOpen] = useState(true);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
