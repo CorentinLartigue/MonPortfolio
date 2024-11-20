@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import groupeFBO from '/groupeFBO.png';
 import devopti from '/devopti.png';
 import proman from '/proman.png';
@@ -35,7 +36,7 @@ const Experience: React.FC = () => {
       ],
       avis:
         'Une expérience très enrichissante, où j’ai pu développer mes compétences techniques et apprendre à travailler dans un environnement agile. La collaboration avec l’équipe a été très agréable, et j’ai pu prendre part à des projets importants.',
-      lienProjet: 'https://www.example.com/project',  
+      lienProjet: '/projects/berroyer',  
     },
     {
       titre: 'Stage 1ère année BTS SIO option SLAM',
@@ -50,7 +51,7 @@ const Experience: React.FC = () => {
       ],
       avis:
         'Ce stage a été une première expérience très formatrice, où j’ai appris les bases du développement web en front-end et la mise en œuvre de sites statiques. La collaboration avec mon équipe a été constructive et m’a permis d’acquérir de solides compétences.',
-      lienProjet: 'https://www.example.com/project',  
+      lienProjet: '/projects/sneaky',  
     },
     {
       titre: 'Job étudiant intérim Manutention',
@@ -128,14 +129,9 @@ const Experience: React.FC = () => {
 
           {experience.lienProjet && (
             <div className="mt-6 text-center">
-              <a
-                href={experience.lienProjet}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-800 text-lg font-semibold"
-              >
+              <Link to={experience.lienProjet} className="text-blue-600 hover:text-blue-800 text-lg font-semibold">
                 Voir le projet
-              </a>
+              </Link>
             </div>
           )}
         </div>

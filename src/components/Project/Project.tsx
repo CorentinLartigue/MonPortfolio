@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import M2L_dynamique from '/M2L_dynamique.png';
 import M2L_statique from '/M2L_statique.png';
 import portfolio from '/portfolio.png';
 import berroyer from '/berroyer.png';
-import amphytrion from '/amphytrion.png';
+import amphitryon from '/amphitryon.png';
+import biorelai from '/biorelai.png';
 import echecs from '/echecs.png';
 import ysport from '/ysport.png';
+import Sneaky from '/sneaky.png';
 import github from '/github.png';
 import figma from '/figma.png';
 import trello from '/trello.png';
@@ -42,7 +45,7 @@ const Project: React.FC = () => {
         description:
           'Un portfolio incluant une présentation personnelle et des sections projets, expériences, compétences, formations et contact. Il est déployé sur GitHub Pages.',
         image: portfolio,
-        lien: '/projects/Portfolio',
+        lien: '/projects/portfolio',
         technologies: [
             { name: 'React', logo: react },
             { name: 'TypeScript', logo: typeScript },
@@ -57,7 +60,7 @@ const Project: React.FC = () => {
         description:
         'Un jeu d\'échecs jouable en local, respectant la plupart des règles du véritable jeu. 2 pages d\'informations supplémentaires sont incluses, offrant un aperçu des règles du jeu ainsi que des statistiques.',
         image: echecs,
-        lien: '/projects/Echecs',
+        lien: '/projects/echecs',
         technologies: [
             { name: 'React', logo: react },
             { name: 'TypeScript', logo: typeScript },
@@ -71,7 +74,7 @@ const Project: React.FC = () => {
         description:
         'Un site ayant pour but de rendre plus accessible la liste des complexes sportif (API gouvernementale) en Nouvelle Aquitaine à l\'aide d\'une carte interactive (Leaflet) et de filtres.',
         image: ysport,
-        lien: '/projects/Ysport',
+        lien: '/projects/ysport',
         technologies: [
             { name: 'React', logo: react },
             { name: 'JavaScript', logo: javaScript },
@@ -88,7 +91,7 @@ const Project: React.FC = () => {
         description:
           'Un extranet permettant la création d\'offres à destination des commerciaux de l\'entité Berroyer. Agrémenté par un stepper (Smart Wizard) et un dispositif de génération PDF pour un devis.',
         image: berroyer,
-        lien: '/projects/Berroyer',
+        lien: '/projects/berroyer',
         technologies: [
           { name: 'JavaScript', logo: javaScript },
           { name: 'PHP', logo: php },
@@ -100,11 +103,11 @@ const Project: React.FC = () => {
         ],
     },
     {
-        titre: 'Amphytrion application mobile',
+        titre: 'Amphitryon application mobile',
         description:
-          'Une application android pour la gestion des restaurants de l\'organisation Amphytrion (chaîne de restauration fictive). Le projet se sépare en trois parties représentant chacune un rôle au sein du restaurant (serveurs, chef cuisinier, chef de salle).',
-        image: amphytrion,
-        lien: '/projects/Amphytrion',
+          'Une application android pour la gestion des restaurants de l\'organisation Amphitryon (chaîne de restauration fictive). Le projet se sépare en trois parties représentant chacune un rôle au sein du restaurant (serveurs, chef cuisinier, chef de salle).',
+        image: amphitryon,
+        lien: '/projects/amphitryon',
         technologies: [
           { name: 'Android', logo: android },
           { name: 'PHP', logo: php },
@@ -116,8 +119,8 @@ const Project: React.FC = () => {
         titre: 'BioRelai site dynamique',
         description:
           'Un site dynamique pour une entreprise sociale et collaborative fictive qui a pour objectif la vente en circuit court de produits issus de l\'agriculture biologique. Le projet se sépare en quatre parties représentant chacune un rôle au sein du site (visiteur, producteur, client et responsable ).',
-        image: '',
-        lien: '/projects/BioRelai',
+        image: biorelai,
+        lien: '/projects/biorelai',
         technologies: [
           { name: 'PHP', logo: php },
           { name: 'HTML', logo: html },
@@ -130,7 +133,7 @@ const Project: React.FC = () => {
         description:
           'Un site web statique à partir de maquettes Figma mises en place pour l\'entité fictive Maison des Ligues de Lorraine.',
         image: M2L_statique,
-        lien: '/projects/M2L_statique',
+        lien: '/projects/m2l',
         technologies: [
           { name: 'HTML', logo: html },
           { name: 'CSS', logo: css },
@@ -143,7 +146,7 @@ const Project: React.FC = () => {
         description:
           'Une migration du site vitrine M2L vers un site dynamique à partir de maquettes Figma créées ultérieurement pour l\'entité fictive Maison des Ligues de Lorraine.',
         image: M2L_dynamique,
-        lien: '/projects/M2L_dynamique',
+        lien: '/projects/m2l',
         technologies: [
           { name: 'PHP', logo: php },
           { name: 'HTML', logo: html },
@@ -152,6 +155,20 @@ const Project: React.FC = () => {
           { name: 'Trello', logo: trello },
         ],
     },
+    {
+      titre: 'Sneaky site statique',
+      description:
+        'Un site web statique à partir d\'une maquette Figma autour de la mode et du design',
+      image: Sneaky,
+      lien: '/projects/sneaky',
+      technologies: [
+        { name: 'HTML', logo: html },
+        { name: 'CSS', logo: css },
+        { name: 'JavaScript', logo: javaScript },
+        { name: 'Figma', logo: figma },
+        { name: 'Trello', logo: trello },
+      ],
+  },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -181,60 +198,57 @@ const Project: React.FC = () => {
         <div className="flex items-center justify-center max-w-5xl w-full bg-white p-16 shadow-xl rounded-lg space-y-8 mb-12 relative">
             {/* Projet */}
             <div className="relative w-full md:w-[85%] lg:w-[85%] bg-white/10 backdrop-blur-md rounded-lg shadow-lg border border-gray-700 bg-gradient-to-r from-gray-900 via-gray-800 to-black">
-                {/* Contenu du projet */}
-                <div className="overflow-hidden">
-                    <img
-                        src={projets[currentIndex].image}
-                        alt={projets[currentIndex].titre}
-                        className="w-full h-80 object-cover"
-                    />
-                    <div className="p-8 text-white">
-                        <h2 className="text-4xl font-bold mb-6 flex items-center justify-center">{projets[currentIndex].titre}</h2>
-                        <p className="text-gray-300 text-lg flex align-center justify-center">{projets[currentIndex].description}</p>
-                        <div className="flex items-center justify-center gap-6 mt-8">
-                            {projets[currentIndex].technologies.map((tech, idx) => (
-                                <img
-                                    key={idx}
-                                    src={tech.logo}
-                                    alt={tech.name}
-                                    title={tech.name}
-                                    className="w-20 h-20 rounded-lg border border-gray-700 p-2 bg-gradient-to-br from-blue-500 to-purple-600 shadow-md"
-                                />
-                            ))}
-                        </div>
-                        <a
-                            href={projets[currentIndex].lien}
-                            className="block mt-10 bg-gradient-to-r from-blue-600 to-purple-600 text-center text-white py-3 px-6 rounded-lg shadow-lg hover:from-purple-600 hover:to-blue-600 transition-transform transform hover:scale-105"
-                        >
-                            Voir le projet
-                        </a>
-                    </div>
-                </div>
-            </div>
+              {/* Contenu du projet */}
+              <div className="overflow-hidden">
+                  <img
+                      src={projets[currentIndex].image}
+                      alt={projets[currentIndex].titre}
+                      className="w-full h-auto object-cover rounded-lg"
+                  />
+                  <div className="p-8 text-white">
+                      <h2 className="text-4xl font-bold mb-6 flex items-center justify-center">{projets[currentIndex].titre}</h2>
+                      <p className="text-gray-300 text-lg flex align-center justify-center">{projets[currentIndex].description}</p>
+                      <div className="flex items-center justify-center gap-6 mt-8 flex-wrap">
+                          {projets[currentIndex].technologies.map((tech, idx) => (
+                              <div key={idx} className="w-20 h-20 p-2 bg-gradient-to-br from-blue-500 to-purple-600 shadow-md rounded-lg flex items-center justify-center mb-4">
+                                  <img
+                                      src={tech.logo}
+                                      alt={tech.name}
+                                      title={tech.name}
+                                      className="w-full h-full object-contain"
+                                  />
+                              </div>
+                          ))}
+                      </div>
+                      <Link to={projets[currentIndex].lien} className="block mt-10 bg-gradient-to-r from-blue-600 to-purple-600 text-center text-white py-3 px-6 rounded-lg shadow-lg hover:from-purple-600 hover:to-blue-600 transition-transform transform hover:scale-105">
+                          Voir le projet
+                      </Link>
+                  </div>
+              </div>
+          </div>
 
-            {/* Boutons de navigation */}
-            <div className="absolute top-1/2 left-0 right-0 transform -translate-y-1/2 flex justify-between w-full px-6">
-                {/* Bouton gauche */}
-                <button
-                    onClick={handlePrevious}
-                    className="w-20 h-20 bg-gradient-to-r from-gray-800 via-blue-600 to-purple-600 rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:from-purple-600 hover:to-blue-500 transition-transform border border-blue-500"
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="white" className="w-8 h-8">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-                    </svg>
-                </button>
+          <div className="absolute top-1/2 left-0 right-0 transform -translate-y-1/2 flex justify-between w-full px-6">
+              {/* Bouton gauche */}
+              <button
+                  onClick={handlePrevious}
+                  className="w-16 h-16 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-gradient-to-r from-gray-800 via-blue-600 to-purple-600 rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:from-purple-600 hover:to-blue-500 transition-transform border border-blue-500"
+              >
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="white" className="w-6 h-6 sm:w-6 sm:h-6 md:w-8 md:h-8">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                  </svg>
+              </button>
 
-                {/* Bouton droit */}
-                <button
-                    onClick={handleNext}
-                    className="w-20 h-20 bg-gradient-to-r from-gray-800 via-blue-600 to-purple-600 rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:from-purple-600 hover:to-blue-500 transition-transform border border-blue-500"
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="white" className="w-8 h-8">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                    </svg>
-                </button>
-            </div>
-        </div>
+              {/* Bouton droit */}
+              <button
+                  onClick={handleNext}
+                  className="w-16 h-16 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-gradient-to-r from-gray-800 via-blue-600 to-purple-600 rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:from-purple-600 hover:to-blue-500 transition-transform border border-blue-500"
+              >
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="white" className="w-6 h-6 sm:w-6 sm:h-6 md:w-8 md:h-8">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+              </button>
+          </div>
+      </div>
     </div>
 </div>
   );

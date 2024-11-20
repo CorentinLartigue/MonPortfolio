@@ -8,6 +8,14 @@ import TrainingPage from '../pages/TrainingPage';
 import SkillPage from '../pages/SkillPage';
 import TermsPage from '../pages/TermsPage';
 import PrivacyPage from '../pages/PrivacyPage';
+import BerroyerPage from '../pages/BerroyerPage';
+import SneakyPage from '../pages/SneakyPage';
+import PortfolioPage from '../pages/PortfolioPage';
+import EchecsPage from '../pages/EchecsPage';
+import YsportPage from '../pages/YsportPage';
+import AmphitryonPage from '../pages/AmphitryonPage';
+import BiorelaiPage from '../pages/BiorelaiPage';
+import M2LPage from '../pages/M2LPage';
 
 const router = createBrowserRouter(
   [
@@ -23,6 +31,14 @@ const router = createBrowserRouter(
         { path: '/contact', element: <ContactPage /> },
         { path: '/terms', element: <TermsPage /> },
         { path: '/privacy', element: <PrivacyPage /> },
+        { path: '/projects/berroyer', element: <BerroyerPage /> },
+        { path: '/projects/sneaky', element: <SneakyPage /> },
+        { path: '/projects/portfolio', element: <PortfolioPage /> },
+        { path: '/projects/echecs', element: <EchecsPage /> },
+        { path: '/projects/ysport', element: <YsportPage /> },
+        { path: '/projects/amphitryon', element: <AmphitryonPage /> },
+        { path: '/projects/biorelai', element: <BiorelaiPage /> },
+        { path: '/projects/m2l', element: <M2LPage /> },
       ],
     },
   ],
