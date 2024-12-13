@@ -24,7 +24,7 @@ const Home: React.FC = () => {
           Tout ceci m'a permis de comprendre que je souhaitais me spécialiser dans le 
           <span className="font-semibold"> développement web</span>, notamment côté 
           <span className="font-bold"> Front-end </span>, avec des technologies comme React et Angular tout en gardant une porte ouverte pour le 
-          <span className="font-semibold"> Back-end avec Nest JS ou Java SpringBoot ou Symfony</span>. 
+          <span className="font-semibold"> Back-end </span>avec Nest JS ou Java SpringBoot ou Symfony. 
           Mon profil s’oriente naturellement vers des aspects comme le design et le maquettage de projets, 
           où je prends plaisir à transformer des idées en solutions visuelles et fonctionnelles.
         </p>
