@@ -16,24 +16,20 @@ const Home: React.FC = () => {
             Bienvenue sur mon portfolio !
         </h1>
         <p className="mt-4 text-gray-600 text-base sm:text-lg leading-relaxed">
-          Je suis <span className="text-blue-500 font-semibold">ravi de vous voir ici</span>. 
-          Depuis mes débuts dans le domaine du développement, mon 
-          <span className="text-green-500 font-semibold"> implication </span> et ma 
-          <span className="text-purple-500 font-semibold"> motivation </span> 
-          m'ont permis de prendre part à des projets donnant lieu à des expériences 
-          <span className="italic"> exceptionnelles</span>.
+          Je suis ravi de vous voir ici. Depuis mes débuts dans le domaine du développement, mon implication et ma 
+          <span className="font-semibold"> motivation </span> 
+          m'ont permis de prendre part à des projets donnant lieu à des expériences exceptionnelles.
         </p>
         <p className="mt-6 text-gray-600 text-base sm:text-lg leading-relaxed">
           Tout ceci m'a permis de comprendre que je souhaitais me spécialiser dans le 
-          <span className="text-blue-500 font-semibold"> développement web</span>, notamment côté 
-          <span className="text-green-500 font-semibold"> Front-end</span>, tout en gardant une porte ouverte pour le 
-          <span className="text-purple-500 font-semibold"> Back-end en PHP</span>. 
-          Mon profil s’oriente naturellement vers des aspects comme le <span className="underline decoration-green-500 decoration-2">design</span> et le <span className="underline decoration-purple-500 decoration-2">maquettage de projets</span>, 
+          <span className="font-semibold"> développement web</span>, notamment côté 
+          <span className="font-bold"> Front-end </span>, avec des technologies comme React et Angular tout en gardant une porte ouverte pour le 
+          <span className="font-semibold"> Back-end avec Nest JS ou Java SpringBoot ou Symfony</span>. 
+          Mon profil s’oriente naturellement vers des aspects comme le design et le maquettage de projets, 
           où je prends plaisir à transformer des idées en solutions visuelles et fonctionnelles.
         </p>
         <p className="mt-4 text-gray-600 text-base sm:text-lg leading-relaxed">
-          Prenez le temps de découvrir mon portfolio. Vous y trouverez une <span className="underline decoration-blue-500 decoration-2">
-          collection de mes travaux</span>. 
+          Prenez le temps de découvrir mon portfolio. Vous y trouverez une collection de mes travaux. 
           N'hésitez pas à me <Link to="/contact" className="text-blue-500 hover:underline">contacter</Link> pour plus d'informations.
         </p>
       </div>

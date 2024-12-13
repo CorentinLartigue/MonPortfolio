@@ -186,71 +186,88 @@ const Project: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center py-16 px-8">
-        <div className="flex flex-col items-center justify-center w-full max-w-5xl">
-
-        <h1 className="text-6xl font-extrabold text-center text-gradient bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600 mb-12">
-            Mes projets
-        </h1>        
-        <p className="text-xl font-medium text-center text-gray-700 mb-6">
-            Voici mes projets les plus importants que j'ai réalisés depuis mes débuts. N'hésitez pas à faire défiler les projets ou à cliquer pour voir le détail de chaque projet.        
-        </p>        
-        <div className="flex items-center justify-center max-w-5xl w-full bg-white p-16 shadow-xl rounded-lg space-y-8 mb-12 relative">
-            {/* Projet */}
-            <div className="relative w-full md:w-[85%] lg:w-[85%] bg-white/10 backdrop-blur-md rounded-lg shadow-lg border border-gray-700 bg-gradient-to-r from-gray-900 via-gray-800 to-black">
-              {/* Contenu du projet */}
-              <div className="overflow-hidden">
-                  <img
-                      src={projets[currentIndex].image}
-                      alt={projets[currentIndex].titre}
-                      className="w-full h-auto object-cover rounded-lg"
-                  />
-                  <div className="p-8 text-white">
-                      <h2 className="text-4xl font-bold mb-6 flex items-center justify-center">{projets[currentIndex].titre}</h2>
-                      <p className="text-gray-300 text-lg flex align-center justify-center">{projets[currentIndex].description}</p>
-                      <div className="flex items-center justify-center gap-6 mt-8 flex-wrap">
-                          {projets[currentIndex].technologies.map((tech, idx) => (
-                              <div key={idx} className="w-20 h-20 p-2 bg-gradient-to-br from-blue-500 to-purple-600 shadow-md rounded-lg flex items-center justify-center mb-4">
-                                  <img
-                                      src={tech.logo}
-                                      alt={tech.name}
-                                      title={tech.name}
-                                      className="w-full h-full object-contain"
-                                  />
-                              </div>
-                          ))}
-                      </div>
-                      <Link to={projets[currentIndex].lien} className="block mt-10 bg-gradient-to-r from-blue-600 to-purple-600 text-center text-white py-3 px-6 rounded-lg shadow-lg hover:from-purple-600 hover:to-blue-600 transition-transform transform hover:scale-105">
-                          Voir le projet
-                      </Link>
+    <div className="min-h-screen flex items-center justify-center py-8 px-4 bg-gray-100">
+      <div className="flex flex-col items-center justify-center w-full max-w-md sm:max-w-2xl md:max-w-4xl">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-gradient bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600 mb-8">
+          Mes projets
+        </h1>
+        <p className="text-base sm:text-lg font-medium text-center text-gray-700 mb-6 px-4">
+          Voici mes projets les plus importants que j'ai réalisés depuis mes débuts. N'hésitez pas à faire défiler les projets ou à cliquer pour voir le détail de chaque projet.
+        </p>
+        <div className="relative bg-white p-6 sm:p-10 shadow-lg rounded-lg w-full">
+          <div className="relative w-full">
+            <img
+              src={projets[currentIndex].image}
+              alt={projets[currentIndex].titre}
+              className="w-full h-auto object-cover rounded-lg"
+            />
+            <div className="p-4 sm:p-6 text-center">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">
+                {projets[currentIndex].titre}
+              </h2>
+              <p className="text-sm sm:text-base text-gray-600">
+                {projets[currentIndex].description}
+              </p>
+              <div className="grid grid-cols-3 sm:grid-cols-4 gap-2 sm:gap-4 mt-6">
+                {projets[currentIndex].technologies.map((tech, idx) => (
+                  <div
+                    key={idx}
+                    className="w-12 h-12 sm:w-16 sm:h-16 p-1 sm:p-2 bg-gradient-to-br from-blue-500 to-purple-600 shadow-md rounded-lg flex items-center justify-center"
+                  >
+                    <img
+                      src={tech.logo}
+                      alt={tech.name}
+                      title={tech.name}
+                      className="w-full h-full object-contain"
+                    />
                   </div>
+                ))}
               </div>
-          </div>
-
-          <div className="absolute top-1/2 left-0 right-0 transform -translate-y-1/2 flex justify-between w-full px-6">
-              {/* Bouton gauche */}
-              <button
-                  onClick={handlePrevious}
-                  className="w-16 h-16 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-gradient-to-r from-gray-800 via-blue-600 to-purple-600 rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:from-purple-600 hover:to-blue-500 transition-transform border border-blue-500"
+              <Link
+                to={projets[currentIndex].lien}
+                className="block mt-6 sm:mt-8 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 sm:py-3 sm:px-6 rounded-lg shadow-lg hover:from-purple-600 hover:to-blue-600 transition-transform transform hover:scale-105"
               >
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="white" className="w-6 h-6 sm:w-6 sm:h-6 md:w-8 md:h-8">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-                  </svg>
-              </button>
-
-              {/* Bouton droit */}
-              <button
-                  onClick={handleNext}
-                  className="w-16 h-16 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-gradient-to-r from-gray-800 via-blue-600 to-purple-600 rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:from-purple-600 hover:to-blue-500 transition-transform border border-blue-500"
-              >
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="white" className="w-6 h-6 sm:w-6 sm:h-6 md:w-8 md:h-8">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                  </svg>
-              </button>
+                Voir le projet
+              </Link>
+            </div>
           </div>
+          <div className="absolute top-1/2 left-0 transform -translate-y-1/2 flex items-center space-x-4">
+            <button
+              onClick={handlePrevious}
+              className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-gray-800 via-blue-600 to-purple-600 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform border border-blue-500"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="white"
+                className="w-6 h-6 sm:w-8 sm:h-8"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+          </div>
+          <div className="absolute top-1/2 right-0 transform -translate-y-1/2 flex items-center space-x-4">
+            <button
+              onClick={handleNext}
+              className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-gray-800 via-blue-600 to-purple-600 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform border border-blue-500"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="white"
+                className="w-6 h-6 sm:w-8 sm:h-8"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-</div>
   );
 };
 
