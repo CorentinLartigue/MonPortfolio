@@ -199,8 +199,8 @@ const Project: React.FC = () => {
             <img
               src={projets[currentIndex].image}
               alt={projets[currentIndex].titre}
-              className="w-full h-auto object-cover rounded-lg"
-            />
+              className="w-full h-64 sm:h-80 object-cover rounded-lg"
+              />
             <div className="p-4 sm:p-6 text-center">
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">
                 {projets[currentIndex].titre}
