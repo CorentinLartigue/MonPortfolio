@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import M2L_dynamique from '/M2L_dynamique.png';
-import M2L_statique from '/M2L_statique.png';
-import portfolio from '/portfolio.png';
-import berroyer from '/berroyer.png';
-import amphitryon from '/amphitryon.png';
-import biorelai from '/biorelai.png';
-import echecs from '/echecs.png';
-import ysport from '/ysport.png';
-import Sneaky from '/sneaky.png';
+import M2L_dynamique from '/M2L_dynamique.webp';
+import M2L_statique from '/M2L_statique.webp';
+import portfolio from '/portfolio.webp';
+import berroyer from '/berroyer.webp';
+import amphitryon from '/amphitryon.webp';
+import biorelai from '/biorelai.webp';
+import echecs from '/echecs.webp';
+import ysport from '/ysport.webp';
+import Sneaky from '/sneaky.webp';
 import github from '/github.png';
 import figma from '/figma.png';
 import trello from '/trello.png';
@@ -172,6 +172,25 @@ const Project: React.FC = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isImagesLoaded, setIsImagesLoaded] = useState(false);
+
+  const imagesToPreload = projets.map((projet) => projet.image);
+
+  useEffect(() => {
+    let loadedImages = 0;
+    const totalImages = imagesToPreload.length;
+
+    imagesToPreload.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+      img.onload = () => {
+        loadedImages += 1;
+        if (loadedImages === totalImages) {
+          setIsImagesLoaded(true);
+        }
+      };
+    });
+  }, [imagesToPreload]);
 
   const handlePrevious = () => {
     setCurrentIndex((prevIndex) =>
@@ -196,11 +215,15 @@ const Project: React.FC = () => {
         </p>
         <div className="relative bg-white p-6 sm:p-10 shadow-lg rounded-lg w-full">
           <div className="relative w-full">
-            <img
-              src={projets[currentIndex].image}
-              alt={projets[currentIndex].titre}
-              className="w-full h-64 sm:h-80 object-cover rounded-lg"
+            {!isImagesLoaded ? (
+              <div className="w-full h-64 sm:h-80 bg-gray-300 rounded-lg animate-pulse"></div>
+            ) : (
+              <img
+                src={projets[currentIndex].image}
+                alt={projets[currentIndex].titre}
+                className="w-full h-64 sm:h-80 object-cover rounded-lg"
               />
+            )}
             <div className="p-4 sm:p-6 text-center">
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">
                 {projets[currentIndex].titre}
