@@ -4,6 +4,7 @@ import groupeFBO from '/groupeFBO.png';
 import devopti from '/devopti.png';
 import proman from '/proman.png';
 import ducourt from '/ducourt.png';
+import home_made_io from '/home-made-io.jpg';
 
 
 
@@ -20,6 +21,22 @@ interface XP {
 
 const Experience: React.FC = () => {
   const experiences: XP[] = [
+    {
+      titre: 'Alternance 3 ème année Bachelor Informatique Ynov',
+      entreprise: 'Home Made IO',
+      logo: home_made_io,  
+      periode: 'Depuis le 23/12/2024',
+      description:
+        'Développement et maintenance de solutions e-commerce',
+      missions: [
+        'Technologies et outils : Laravel, Linux, Bash, GitHub, Bases de Données (BDD), ERP, CMS',
+        'Conception et développement de nouvelles fonctionnalités pour l\'application SyncTo, optimisant la synchronisation des données.',
+        'Maintenance et amélioration des modules de synchronisation pour Prestashop, garantissant leur efficacité et fiabilité.',
+        'Création de solutions applicatives pour Shopify, adaptées aux besoins des utilisateurs.',
+        'Support technique et applicatif pour les clients, assurant une expérience utilisateur fluide et optimale.'
+      ],
+      avis:'A voir avec le temps',
+    },
     {
       titre: 'Stage 2ème année BTS SIO option SLAM',
       entreprise: 'Groupe FBO',
