@@ -25,12 +25,12 @@ const FormationPage: React.FC = () => {
           periode: '2024 - 2027',
           description: 'Formation spécialisée en développement web, couvrant les technologies front-end et back-end. Cette formation permet une maîtrise des langages de programmation modernes ainsi que des frameworks utilisés dans l\'industrie.',
           pointsPositifs: [
-            'Formation reconnue par les entreprises',
-            'Accompagnement professionnel et pédagogique',
-            'De nombreux projets pratiques'
+            'Formation reconnue par le ministère du travail et les entreprises',
+            'La formation offre une bonne base en développement front-end et back-end, avec des projets pratiques et un accompagnement professionnel apprécié.',
+            'De nombreux projets pratiques qui permettent de développer plutôt vite les connaissances apprises'
           ],
           pointsNegatifs: [
-            'A voir dans le futur'
+            'Cependant, les projets interfiliaires (Ydays) manquent de clarté et d\'encadrement, et certains cours pourraient être plus approfondis avec davantage de séances.'
 
           ],
           lien: 'https://www.ynov.com/campus/bordeaux/',

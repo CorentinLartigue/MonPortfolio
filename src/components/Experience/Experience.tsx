@@ -30,12 +30,12 @@ const Experience: React.FC = () => {
         'Développement et maintenance de solutions e-commerce',
       missions: [
         'Technologies et outils : Laravel, Linux, Bash, GitHub, Bases de Données (BDD), ERP, CMS',
-        'Conception et développement de nouvelles fonctionnalités pour l\'application SyncTo, optimisant la synchronisation des données.',
-        'Maintenance et amélioration des modules de synchronisation pour Prestashop, garantissant leur efficacité et fiabilité.',
-        'Création de solutions applicatives pour Shopify, adaptées aux besoins des utilisateurs.',
-        'Support technique et applicatif pour les clients, assurant une expérience utilisateur fluide et optimale.'
+        'Maintenance et amélioration des modules de synchronisation pour Prestashop - Shopify / Fastmag - Joolan.',
+        'Création de solutions applicatives pour Shopify ou Prestashop, adaptées aux besoins des utilisateurs avec une synchronisation avec les ERP Fastmag ou Joolan.',
+        'Support technique et applicatif pour les clients, assurant une expérience utilisateur fluide et optimale.',
+        'Création environnements de développement pour les nouveaux employés sous Docker.'
       ],
-      avis:'A voir avec le temps',
+      avis:'J\'ai rejoint une équipe incroyablement accueillante, avec une ambiance chaleureuse et presque familiale. Les projets sont stimulants, portés par des technologies modernes et passionnantes, offrant de belles opportunités d\'apprentissage. Un environnement motivant où il fait bon évoluer !',
     },
     {
       titre: 'Stage 2ème année BTS SIO option SLAM',
@@ -43,7 +43,7 @@ const Experience: React.FC = () => {
       logo: groupeFBO,  
       periode: '29/01/2024 - 22/03/2024',
       description:
-        'Développement et maintenance d’une solution logicielle complète.',
+        'Développement et maintenance d\'une solution logicielle complète.',
       missions: [
         'Technos: Framework maison(EzFrame) sur la base de Symfony, PHP, JQUERY, TWIG, Ajax et Bootstrap5.',
         'Implémentation fonctionnalité de création d\'offre avec un stepper (Smart Wizard) et génération PDF.',
@@ -52,7 +52,7 @@ const Experience: React.FC = () => {
         'Rédaction de documentation utilisateur.'
       ],
       avis:
-        'Une expérience très enrichissante, où j’ai pu développer mes compétences techniques et apprendre à travailler dans un environnement agile. La collaboration avec l’équipe a été très agréable, et j’ai pu prendre part à des projets importants.',
+        'Une expérience très enrichissante, où j\'ai pu développer mes compétences techniques et apprendre à travailler dans un environnement agile. La collaboration avec l\'équipe a été très agréable, et j\'ai pu prendre part à des projets importants.',
       lienProjet: '/projects/berroyer',  
     },
     {
@@ -64,10 +64,10 @@ const Experience: React.FC = () => {
         'Formation JS, mini projets en JS et site statique.',
       missions: [
         'Technos: HTML, CSS, JavaScript et Figma.',
-        'Implémenter un site statique à l’aide d’une maquette pré définie.',
+        'Implémenter un site statique à l\'aide d\'une maquette pré définie.',
       ],
       avis:
-        'Ce stage a été une première expérience très formatrice, où j’ai appris les bases du développement web en front-end et la mise en œuvre de sites statiques. La collaboration avec mon équipe a été constructive et m’a permis d’acquérir de solides compétences.',
+        'Ce stage a été une première expérience très formatrice, où j\'ai appris les bases du développement web en front-end et la mise en œuvre de sites statiques. La collaboration avec mon équipe a été constructive et m\'a permis d\'acquérir de solides compétences.',
       lienProjet: '/projects/sneaky',  
     },
     {
