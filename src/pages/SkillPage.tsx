@@ -183,7 +183,6 @@ const SkillPage: React.FC = () => {
               </li>
             </ul>
           </section>
-
         </div>
       </div>
   );
