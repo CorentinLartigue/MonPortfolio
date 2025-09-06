@@ -23,9 +23,9 @@ const Home: React.FC = () => {
         <p className="mt-6 text-gray-600 text-base sm:text-lg leading-relaxed">
           Tout ceci m'a permis de comprendre que je souhaitais me spécialiser dans le 
           <span className="font-semibold"> développement web</span>, notamment côté 
-          <span className="font-bold"> Front-end </span>, avec des technologies comme React et Angular tout en gardant une porte ouverte pour le 
-          <span className="font-semibold"> Back-end </span>avec Nest JS ou Java SpringBoot ou Symfony. 
-          Mon profil s’oriente naturellement vers des aspects comme le design et le maquettage de projets, 
+          <span className="font-bold"> Front-end </span>, avec des technologies comme React et Angular et coté
+          <span className="font-semibold"> Back-end </span>avec un attrait pour PHP (Laravel) et Nest JS. 
+          Mon profil s’oriente naturellement vers des projets avec un design et un maquettage créatif,
           où je prends plaisir à transformer des idées en solutions visuelles et fonctionnelles.
         </p>
         <p className="mt-4 text-gray-600 text-base sm:text-lg leading-relaxed">
