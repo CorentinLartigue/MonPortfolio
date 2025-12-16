@@ -97,17 +97,6 @@ const YsportPage: React.FC = () => {
             <li>Accès à des informations détaillées sur chaque complexe (adresse, contact, horaires d’ouverture).</li>
           </ul>
         </section>
-
-        <section className="text-center">
-          <a
-            href="https://github.com/CorentinLartigue/Ysport"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-6 py-3 bg-gray-800 text-white font-semibold rounded-lg shadow-md hover:bg-gray-700 transition"
-          >
-            Voir le projet sur GitHub
-          </a>
-        </section>
       </div>
     </div>
   );

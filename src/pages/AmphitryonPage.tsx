@@ -126,17 +126,6 @@ const AmphitryonPage: React.FC = () => {
               <li>XML et JSON (échanges de données)</li>
             </ul>
           </section>
-
-          <section className="text-center">
-          <a
-            href="https://github.com/CorentinLartigue/Amphitryon_application_android"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-6 py-3 bg-gray-800 text-white font-semibold rounded-lg shadow-md hover:bg-gray-700 transition"
-          >
-            Voir le projet sur GitHub
-          </a>
-        </section>
         </div>
       </div>
     </div>

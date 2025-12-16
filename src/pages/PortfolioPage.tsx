@@ -59,17 +59,6 @@ const PortfolioPage: React.FC = () => {
             Ce projet m'a permis de renforcer mes compétences en front-end, d'explorer des outils comme Tailwind CSS, et de mieux comprendre les attentes des utilisateurs. J'ai également appris à maintenir un code clair et modulaire pour faciliter la maintenance et l'évolution du site.
           </p>
         </section>
-
-        <section className="text-center">
-          <a
-            href="https://github.com/CorentinLartigue/MonPortfolio"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-6 py-3 bg-gray-800 text-white font-semibold rounded-lg shadow-md hover:bg-gray-700 transition"
-          >
-            Voir le projet sur GitHub
-          </a>
-        </section>
       </div>
     </div>
   );

@@ -73,17 +73,6 @@ const BiorelaiPage: React.FC = () => {
               Le développement suit une architecture MVC robuste, garantissant une séparation claire des données, de la logique métier, et de l'interface utilisateur. Les échanges de données entre les modules se font via des API REST, pour une flexibilité et une efficacité accrues.
             </p>
           </section>
-
-          <section className="text-center">
-          <a
-            href="https://github.com/CorentinLartigue/BioRelai_site_dynamique"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-6 py-3 bg-gray-800 text-white font-semibold rounded-lg shadow-md hover:bg-gray-700 transition"
-          >
-            Voir le projet sur GitHub
-          </a>
-        </section>
         </div>
       </div>
     </div>

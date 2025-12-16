@@ -26,71 +26,47 @@ const M2LPage: React.FC = () => {
           <section>
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">Comparaison des Versions</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-  {/* Site Statique */}
-  <div className="bg-blue-50 p-6 rounded-lg shadow-md flex flex-col justify-between">
-    <div>
-      <h3 className="text-xl font-semibold text-blue-800 mb-4">🌐 Site Statique</h3>
-      <img
-        src={M2L_statique_ligue}
-        alt="Site statique"
-        className="rounded-lg shadow-md"
-      />
-      <p className="text-gray-700 leading-relaxed mb-4">
-        Le site statique de la Maison des Ligues de Lorraine présentait des informations sur les ligues, services, et locaux à travers une interface simple en HTML et CSS.
-      </p>
-      <ul className="list-disc list-inside text-gray-600">
-        <li>4 pages principales : Accueil, Services, Locaux, Ligues.</li>
-        <li>Conception esthétique basée sur une maquette Figma.</li>
-        <li>Navigation simple avec du contenu fixe.</li>
-        <li>Aucune interaction ou gestion dynamique.</li>
-      </ul>
-    </div>
-    <section className="text-center mt-6">
-      <a
-        href="https://github.com/CorentinLartigue/M2L_site_statique"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-block px-6 py-3 bg-gray-800 text-white font-semibold rounded-lg shadow-md hover:bg-gray-700 transition"
-      >
-        Voir le projet sur GitHub
-      </a>
-    </section>
-  </div>
+            <div className="bg-blue-50 p-6 rounded-lg shadow-md flex flex-col justify-between">
+              <div>
+                <h3 className="text-xl font-semibold text-blue-800 mb-4">🌐 Site Statique</h3>
+                <img
+                  src={M2L_statique_ligue}
+                  alt="Site statique"
+                  className="rounded-lg shadow-md"
+                />
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  Le site statique de la Maison des Ligues de Lorraine présentait des informations sur les ligues, services, et locaux à travers une interface simple en HTML et CSS.
+                </p>
+                <ul className="list-disc list-inside text-gray-600">
+                  <li>4 pages principales : Accueil, Services, Locaux, Ligues.</li>
+                  <li>Conception esthétique basée sur une maquette Figma.</li>
+                  <li>Navigation simple avec du contenu fixe.</li>
+                  <li>Aucune interaction ou gestion dynamique.</li>
+                </ul>
+              </div>
+            </div>
 
-  {/* Site Dynamique */}
-  <div className="bg-blue-50 p-6 rounded-lg shadow-md flex flex-col justify-between">
-    <div>
-      <h3 className="text-xl font-semibold text-blue-800 mb-4">🌟 Site Dynamique</h3>
-      <img
-        src={M2L_dynamique_ligue}
-        alt="Site dynamique"
-        className="rounded-lg shadow-md"
-      />
-      <p className="text-gray-700 leading-relaxed mb-4">
-        Le site dynamique a été développé pour répondre aux besoins de gestion avancée des ligues et clubs, intégrant des fonctionnalités interactives en PHP.
-      </p>
-      <ul className="list-disc list-inside text-gray-600">
-        <li>Fonctionnalités CRUD : ajout, modification et suppression des ligues et clubs.</li>
-        <li>Gestion des formations et intervenants par rôle spécifique (Secrétaire, RH, etc.).</li>
-        <li>Respect de la réglementation RGPD pour les données personnelles.</li>
-        <li>Technologies : PHP, MySQL, MVC.</li>
-      </ul>
-    </div>
-    <section className="text-center mt-6">
-      <a
-        href="https://github.com/CorentinLartigue/M2L_site_dynamique"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-block px-6 py-3 bg-gray-800 text-white font-semibold rounded-lg shadow-md hover:bg-gray-700 transition"
-      >
-        Voir le projet sur GitHub
-      </a>
-    </section>
-  </div>
-</div>
-
+            <div className="bg-blue-50 p-6 rounded-lg shadow-md flex flex-col justify-between">
+              <div>
+                <h3 className="text-xl font-semibold text-blue-800 mb-4">🌟 Site Dynamique</h3>
+                <img
+                  src={M2L_dynamique_ligue}
+                  alt="Site dynamique"
+                  className="rounded-lg shadow-md"
+                />
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  Le site dynamique a été développé pour répondre aux besoins de gestion avancée des ligues et clubs, intégrant des fonctionnalités interactives en PHP.
+                </p>
+                <ul className="list-disc list-inside text-gray-600">
+                  <li>Fonctionnalités CRUD : ajout, modification et suppression des ligues et clubs.</li>
+                  <li>Gestion des formations et intervenants par rôle spécifique (Secrétaire, RH, etc.).</li>
+                  <li>Respect de la réglementation RGPD pour les données personnelles.</li>
+                  <li>Technologies : PHP, MySQL, MVC.</li>
+                </ul>
+              </div>
+            </div>
+            </div>
           </section>
-
           <section>
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">Technologies Utilisées</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -112,7 +88,6 @@ const M2LPage: React.FC = () => {
               </div>
             </div>
           </section>
-
           <section>
             <h2 className="text-2xl font-semibold text-gray-800 mb-4">Méthodologie et Résultats</h2>
             <img

@@ -70,17 +70,6 @@ const EchecsPage: React.FC = () => {
             Ce projet m'a permis de perfectionner mes compétences en React et TypeScript, ainsi que de mieux comprendre la logique derrière les jeux de stratégie comme les échecs. La gestion des règles et des interactions entre les pièces a constitué un défi enrichissant, tout comme la création d'une interface à la fois simple et fonctionnelle.
           </p>
         </section>
-
-        <section className="text-center">
-          <a
-            href="https://github.com/CorentinLartigue/Echecs_react"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-6 py-3 bg-gray-800 text-white font-semibold rounded-lg shadow-md hover:bg-gray-700 transition"
-          >
-            Voir le projet sur GitHub
-          </a>
-        </section>
       </div>
     </div>
   );
