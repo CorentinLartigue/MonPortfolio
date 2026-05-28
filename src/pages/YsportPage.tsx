@@ -4,10 +4,14 @@ import ysport_filtres from '/ysport_filtres.png';
 import ysport_petit_cluster from '/ysport_petit_cluster.png';
 import ysport_grand_cluster from '/ysport_grand_cluster.png';
 import ysport_complexe from '/ysport_complexe.png';
+import ReturnButton from '../components/shared/ReturnButton';
 
 const YsportPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto mb-4">
+        <ReturnButton />
+      </div>
       <div className="max-w-6xl mx-auto bg-white p-8 shadow-xl rounded-lg space-y-12">
         <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-800 text-center">
           YSport - Cartographie des Complexes Sportifs en Nouvelle-Aquitaine

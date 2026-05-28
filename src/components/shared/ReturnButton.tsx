@@ -1,13 +1,33 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { FaArrowLeft } from 'react-icons/fa';
 
-const ReturnButton: React.FC = () => {
+interface ReturnButtonProps {
+  fallback?: string;
+  label?: string;
+}
+
+const ReturnButton: React.FC<ReturnButtonProps> = ({ fallback = '/projects', label = 'Retour aux projets' }) => {
+  const navigate = useNavigate();
+
+  const handleBack = () => {
+    // Si l'utilisateur a un historique de navigation interne, on retourne en arrière
+    if (window.history.state && window.history.state.idx > 0) {
+      navigate(-1);
+    } else {
+      // Sinon, on le redirige vers le fallback de secours
+      navigate(fallback);
+    }
+  };
+
   return (
-    <div className="absolute top-4 left-4 z-10">
-      <Link to="/" className="flex items-center bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:scale-105 transition duration-300">
-        <span className="mr-2">←</span> Retour
-      </Link>
-    </div>
+    <button
+      onClick={handleBack}
+      className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-800 transition-colors mb-6 group cursor-pointer border-none bg-transparent p-0 focus:outline-none"
+    >
+      <FaArrowLeft className="w-3.5 h-3.5 transition-transform group-hover:-translate-x-1" />
+      {label}
+    </button>
   );
 };
 

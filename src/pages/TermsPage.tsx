@@ -1,5 +1,3 @@
-import React from 'react';
-import ReturnButton from '../components/shared/ReturnButton';
 import { Link } from 'react-router-dom';
 
 
@@ -49,7 +47,7 @@ const TermsPage: React.FC = () => {
         </section>
       </div>
 
-      <ReturnButton />
+      
     </div>
   );
 };

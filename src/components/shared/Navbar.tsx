@@ -56,7 +56,7 @@ const Navbar: React.FC = () => {
               to="/experiences"
               className="transition transform hover:scale-105 hover:text-gray-300 duration-300"
             >
-              Expériences Professionnelles
+              Expériences
             </Link>
             <Link
               to="/formations"

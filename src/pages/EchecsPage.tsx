@@ -1,11 +1,15 @@
 import React from 'react';
 import echecs_regles from '/echecs_regles.png';
 import echecs_jeux from '/echecs_jeux.png';
+import ReturnButton from '../components/shared/ReturnButton';
 
 
 const EchecsPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto mb-4">
+        <ReturnButton />
+      </div>
       <div className="max-w-4xl mx-auto bg-white p-8 shadow-xl rounded-lg space-y-8">
         <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-800 text-center">Jeu d'Échecs - Mode Local</h1>
         <p className="text-gray-600 text-center">

@@ -5,11 +5,15 @@ import step3 from '/step3.png';
 import step4 from '/step4.png';
 import step5 from '/step5.png';
 import step6 from '/step6.png';
+import ReturnButton from '../components/shared/ReturnButton';
 
 const BerroyerPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
-    <div className="max-w-6xl mx-auto bg-white p-8 shadow-xl rounded-lg space-y-12">
+      <div className="max-w-6xl mx-auto mb-4">
+        <ReturnButton />
+      </div>
+      <div className="max-w-6xl mx-auto bg-white p-8 shadow-xl rounded-lg space-y-12">
       <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-800 text-center">
         Extranet Berroyer
       </h1>

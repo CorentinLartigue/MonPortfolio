@@ -1,10 +1,14 @@
 import React from 'react';
 import maquette_sneaky from '/maquette_sneaky.png';
+import ReturnButton from '../components/shared/ReturnButton';
 
 
 const SneakyPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto mb-4">
+        <ReturnButton />
+      </div>
       <div className="max-w-6xl mx-auto bg-white p-8 shadow-xl rounded-lg space-y-12">
         <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-800 text-center">
           Sneaky

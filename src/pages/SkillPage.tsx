@@ -1,190 +1,66 @@
 import React from 'react';
+import { skillCategories } from '../data/skills';
 
 const SkillPage: React.FC = () => {
   return (
-      <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto bg-white p-8 shadow-xl rounded-lg space-y-8">
-          <h1 className="text-4xl font-extrabold text-gray-800 text-center mb-6 ">
-            🚀 Compétences
+    <div className="min-h-screen bg-gray-50/50 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto space-y-12">
+        
+        {/* Titre principal */}
+        <div className="text-center">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-800 tracking-tight">
+            Compétences
           </h1>
-
-          <section>
-            <h2 className="text-2xl font-semibold text-gray-800 border-l-4 border-blue-500 pl-3 mb-3">
-              Back-end
-            </h2>
-            <ul className="mt-2 text-gray-700 space-y-2">
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">💻</span> PHP (Symfony et Laravel)
-              </li>
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">🐍</span> Python
-              </li>
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">☕</span> Java (Spring Boot)
-              </li>
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">🚀</span> Express
-              </li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold text-gray-800 border-l-4 border-blue-500 pl-3 mt-6 mb-3">
-              Front-end
-            </h2>
-            <ul className="mt-2 text-gray-700 space-y-2">
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">🎨</span> HTML
-              </li>
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">🎨</span> CSS (Tailwind / Bootstrap5)
-              </li>
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">⚡</span> JavaScript ou TypeScript
-              </li>
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">⚛️</span> React (+Vite / Next.js)
-              </li>
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">🅰️</span> Angular
-              </li>
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">📜</span> jQuery
-              </li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold text-gray-800 border-l-4 border-blue-500 pl-3 mt-6 mb-3">
-              Data et services
-            </h2>
-            <ul className="mt-2 text-gray-700 space-y-2">
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">📊</span> SQL
-              </li>
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">📉</span> MEA
-              </li>
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">📈</span> MLR
-              </li>
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">📝</span> UML
-              </li>
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">💾</span> MySQL ou MariaDB
-              </li>
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">🔐</span> RGPD
-              </li>
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">🌐</span> Nginx
-              </li>
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">🔧</span> Apache
-              </li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold text-gray-800 border-l-4 border-blue-500 pl-3 mt-6 mb-3">
-              CMS et ERP
-            </h2>
-            <ul className="mt-2 text-gray-700 space-y-2">
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">🛒</span> Prestashop
-              </li>
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">🛍️</span> Shopify
-              </li>
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">📦</span> Fastmag
-              </li>
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">📊</span> Joolan
-              </li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold text-gray-800 border-l-4 border-blue-500 pl-3 mt-6 mb-3">
-              Logiciels
-            </h2>
-            <ul className="mt-2 text-gray-700 space-y-2">
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">💻</span> C#
-              </li>
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">📂</span> JavaFX
-              </li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold text-gray-800 border-l-4 border-blue-500 pl-3 mt-6 mb-3">
-              Utilitaires
-            </h2>
-            <ul className="mt-2 text-gray-700 space-y-2">
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">⚙️</span> Intellij-ultimate
-              </li>
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">⚙️</span> PhpStorm
-              </li>
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">⚙️</span> WebStorm
-              </li>
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">🛠️</span> Postman
-              </li>
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">🐳</span> Docker
-              </li>
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">🐧</span> Linux (CMD)
-              </li>
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">📅</span> Trello
-              </li>
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">🎨</span> Figma
-              </li>
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">💬</span> Slack
-              </li>
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">📖</span> Notion
-              </li>
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">💻</span> Github
-              </li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-semibold text-gray-800 border-l-4 border-blue-500 pl-3 mt-6 mb-3">
-              Soft Skills
-            </h2>
-            <ul className="mt-2 text-gray-700 space-y-2">
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">📌</span> Méthodes agiles (Scrum & Kanban)
-              </li>
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">👂</span> À l'écoute
-              </li>
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">🔥</span> Motivé
-              </li>
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">✅</span> Sérieux
-              </li>
-              <li className="flex items-center bg-gray-50 px-4 py-2 rounded-lg shadow-sm hover:bg-gray-100 transition">
-                <span className="text-blue-500 mr-3">🎯</span> Rigoureux
-              </li>
-            </ul>
-          </section>
+          <p className="mt-3 text-base sm:text-lg text-gray-500 max-w-xl mx-auto font-normal">
+            Aperçu des technologies, outils et compétences transversales que je maîtrise et mets en pratique au quotidien.
+          </p>
         </div>
+
+        {/* Grille des catégories - 2 blocs par ligne sur grand écran */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {skillCategories.map((category, index) => (
+            <section 
+              key={index}
+              className="bg-white border border-gray-100 p-6 sm:p-8 shadow-md rounded-2xl flex flex-col justify-between hover:shadow-lg transition-shadow duration-300"
+            >
+              <div>
+                {/* En-tête de catégorie */}
+                <h2 className="text-xl font-bold text-gray-800 border-l-4 border-blue-600 pl-3 mb-6">
+                  {category.title}
+                </h2>
+                
+                {/* Grille des compétences compactes à 2 colonnes */}
+                <div className="grid grid-cols-2 gap-3">
+                  {category.skills.map((skill, idx) => {
+                    const IconComponent = skill.icon;
+                    return (
+                      <div 
+                        key={idx}
+                        className="flex items-center gap-3 bg-gray-50/50 hover:bg-gray-100/70 px-3.5 py-3 rounded-xl border border-gray-100/30 hover:border-gray-200/60 shadow-sm hover:shadow hover:-translate-y-0.5 transition-all duration-300 group"
+                      >
+                        {/* Wrapper d'icône */}
+                        <div className={`flex-shrink-0 p-1.5 bg-white rounded-lg border border-gray-100 shadow-sm ${skill.color} group-hover:scale-105 transition-transform duration-300`}>
+                          {IconComponent ? (
+                            <IconComponent className="w-5 h-5" />
+                          ) : (
+                            <div className="w-5 h-5 bg-gray-100 rounded"></div>
+                          )}
+                        </div>
+                        {/* Nom de la compétence */}
+                        <span className="text-xs sm:text-sm font-semibold text-gray-700 leading-tight">
+                          {skill.name}
+                        </span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </section>
+          ))}
+        </div>
+
       </div>
+    </div>
   );
 };
 
