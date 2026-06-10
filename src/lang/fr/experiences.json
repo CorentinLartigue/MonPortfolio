@@ -1,0 +1,56 @@
+{
+  "title": "Mes Expériences",
+  "headings": {
+    "missions": "Missions",
+    "opinion": "Mon Avis"
+  },
+  "btnViewProject": "Voir le projet",
+  "xp1": {
+    "title": "Alternance 3 ème année Bachelor Informatique Ynov",
+    "period": "Depuis le 23/12/2024",
+    "desc": "Développement et maintenance de solutions e-commerce",
+    "mission1": "Technologies et outils : Laravel, Linux, Bash, GitHub, Bases de Données (BDD), ERP, CMS",
+    "mission2": "Maintenance et amélioration des modules de synchronisation pour Prestashop - Shopify / Fastmag - Joolan.",
+    "mission3": "Création de solutions applicatives pour Shopify ou Prestashop, adaptées aux besoins des utilisateurs avec une synchronisation avec les ERP Fastmag ou Joolan.",
+    "mission4": "Support technique et applicatif pour les clients, assurant une expérience utilisateur fluide et optimale.",
+    "mission5": "Création d'environnements de développement pour les nouveaux employés sous Docker.",
+    "opinion": "J'ai rejoint une équipe incroyablement accueillante, avec une ambiance chaleureuse et presque familiale. Les projets sont stimulants, portés par des technologies modernes et passionnantes, offrant de belles opportunités d'apprentissage. Un environnement motivant où il fait bon évoluer !"
+  },
+  "xp2": {
+    "title": "Stage 2ème année BTS SIO option SLAM",
+    "period": "29/01/2024 - 22/03/2024",
+    "desc": "Développement et maintenance d'une solution logicielle complète.",
+    "mission1": "Technos : Framework maison (EzFrame) sur la base de Symfony, PHP, JQUERY, TWIG, Ajax et Bootstrap5.",
+    "mission2": "Implémentation d'une fonctionnalité de création d'offre avec un stepper (Smart Wizard) et génération PDF.",
+    "mission3": "Début de Tests unitaires PHP Unit.",
+    "mission4": "Méthode agile scrum, participation aux réunions (daily) et sprint de 3 semaines (meeting, planification et introspection).",
+    "mission5": "Rédaction de documentation utilisateur.",
+    "opinion": "Une expérience très enrichissante, où j'ai pu développer mes compétences techniques et apprendre à travailler dans un environnement agile. La collaboration avec l'équipe a été très agréable, et j'ai pu prendre part à des projets importants."
+  },
+  "xp3": {
+    "title": "Stage 1ère année BTS SIO option SLAM",
+    "period": "22/05/2023 - 23/06/2023",
+    "desc": "Formation JS, mini projets en JS et site statique.",
+    "mission1": "Technos : HTML, CSS, JavaScript et Figma.",
+    "mission2": "Implémenter un site statique à l'aide d'une maquette pré définie.",
+    "opinion": "Ce stage a été une première expérience très formatrice, où j'ai appris les bases du développement web en front-end et la mise en œuvre de sites statiques. La collaboration avec mon équipe a été constructive et m'a permis d'acquérir de solides compétences."
+  },
+  "xp4": {
+    "title": "Job étudiant intérim Manutention",
+    "period": "2022 - 2024",
+    "desc": "Travail en équipe, divers et varié.",
+    "mission1": "Rangement des produits, gestion des stocks.",
+    "mission2": "Travail manuel en équipe.",
+    "opinion": "Une expérience utile pour apprendre à travailler en équipe et à gérer des tâches pratiques. Bien que ce travail ne soit pas lié directement à l’informatique, il m’a permis de développer des compétences en organisation et en gestion du temps."
+  },
+  "xp5": {
+    "title": "Stage d'observation 3ème - Vignoble Ducourt",
+    "period": "2019",
+    "desc": "Stage d’observation dans un domaine viticole.",
+    "mission1": "Observation des différentes étapes de la production viticole.",
+    "mission2": "Apprentissage des métiers liés à la production du vin.",
+    "mission3": "Trie et rédaction de fiches sanitaires.",
+    "mission4": "Observation de l'administration et de la comptabilité.",
+    "opinion": "Une expérience agréable qui m’a permis de découvrir un domaine du travail pour la première fois, très enrichissant. Bien que ce stage ne soit pas directement lié à ma carrière en informatique, il m’a apporté de la perspective sur le travail dans un environnement rural."
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "title": "My Education",
+  "headings": {
+    "positives": "Positive Points",
+    "negatives": "Negative Points"
+  },
+  "btnViewTraining": "View Course",
+  "form1": {
+    "title": "Bachelor 3 and Master's in Web Development",
+    "period": "2024 - 2027",
+    "desc": "Specialized training in web development, covering front-end and back-end technologies. This course provides mastery of modern programming languages as well as frameworks used in the industry.",
+    "positive1": "Degree recognized by the Ministry of Labor and companies",
+    "positive2": "The program offers a good foundation in front-end and back-end development, with practical projects and appreciated professional support.",
+    "positive3": "Many practical projects that allow students to develop the acquired knowledge fairly quickly",
+    "negative1": "However, interdisciplinary projects (Ydays) lack clarity and guidance, and some courses could be more in-depth with more sessions.",
+    "school": "YNOV Campus Bordeaux"
+  },
+  "form2": {
+    "title": "BTS SIO option SLAM",
+    "period": "2022 - 2024",
+    "desc": "The BTS Services Informatiques aux Organisations (SIO) option Solutions Logicielles et Applications Métiers (SLAM) trains in the skills required to develop software solutions adapted to business needs.",
+    "positive1": "Solid training with a good balance of theory and practice",
+    "positive2": "Internship in a company providing real experience",
+    "positive3": "Good foundation for working in software development",
+    "negative1": "Lack of advanced specialization on some topics, especially regarding Front-End and Frameworks in general",
+    "negative2": "Relatively short and somewhat outdated program with certain aspects needing review",
+    "school": "Gustave Eiffel High School Bordeaux"
+  },
+  "form3": {
+    "title": "General Baccalaureate, Mathematics and Computer Science Specialty",
+    "period": "2019 - 2022",
+    "desc": "The General Baccalaureate with specialties in Mathematics and Computer Science (NSI) provides a solid foundation in mathematics. For IT, it is more of an introduction to the field with some basic programming concepts but mainly oriented towards mathematical logic and computer science. A good start to pursue studies in web or software development.",
+    "positive1": "Good preparation for computer science studies",
+    "positive2": "A fairly complete curriculum for a start",
+    "positive3": "Deepening of scientific and logical concepts",
+    "negative1": "Demanding curriculum requiring practice and reflection",
+    "negative2": "Lack of practical depth in computer projects and lack of diversification in computer science fields (cybersecurity, data, etc.)",
+    "school": "Jean Renou High School La Réole"
+  }
+}

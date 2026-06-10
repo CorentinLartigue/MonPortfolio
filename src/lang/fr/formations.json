@@ -1,0 +1,40 @@
+{
+  "title": "Mes Formations",
+  "headings": {
+    "positives": "Points Positifs",
+    "negatives": "Points Négatifs"
+  },
+  "btnViewTraining": "Voir la formation",
+  "form1": {
+    "title": "Bachelor 3 et Mastère Développement Web",
+    "period": "2024 - 2027",
+    "desc": "Formation spécialisée en développement web, couvrant les technologies front-end et back-end. Cette formation permet une maîtrise des langages de programmation modernes ainsi que des frameworks utilisés dans l'industrie.",
+    "positive1": "Formation reconnue par le ministère du travail et les entreprises",
+    "positive2": "La formation offre une bonne base en développement front-end et back-end, avec des projets pratiques et un accompagnement professionnel apprécié.",
+    "positive3": "De nombreux projets pratiques qui permettent de développer plutôt vite les connaissances apprises",
+    "negative1": "Cependant, les projets interfiliaires (Ydays) manquent de clarté et d'encadrement, et certains cours pourraient être plus approfondis avec davantage de séances.",
+    "school": "YNOV Campus Bordeaux"
+  },
+  "form2": {
+    "title": "BTS SIO option SLAM",
+    "period": "2022 - 2024",
+    "desc": "Le BTS Services Informatiques aux Organisations (SIO) option Solutions Logicielles et Applications Métiers (SLAM) forme aux compétences nécessaires pour développer des solutions informatiques adaptées aux besoins des entreprises.",
+    "positive1": "Formation solide avec un bon équilibre théorie/pratique",
+    "positive2": "Stage en entreprise permettant une expérience réelle",
+    "positive3": "Bonne base pour travailler dans le développement logiciel",
+    "negative1": "Manque de spécialisation poussée sur certains sujets notamment au niveau du Front-End et des Frameworks en général",
+    "negative2": "Formation relativement courte et trop ancienne avec certains points à revoir",
+    "school": "Lycée Gustave Eiffel Bordeaux"
+  },
+  "form3": {
+    "title": "Bac Général Spécialité Maths et NSI",
+    "period": "2019 - 2022",
+    "desc": "Le Bac général avec des spécialités en Mathématiques et en Numérique et Sciences Informatiques (NSI) permet d’acquérir une base solide en mathématiques et pour ce qui est de l'informatique, on est plus sur une ouverture au domaine avec quelques notions de base en programmation mais essentiellement orienté logique mathématique et science de l'informatique. Un bon début pour poursuivre des études dans le domaine du développement web ou logiciel.",
+    "positive1": "Bonne préparation pour des études en informatique",
+    "positive2": "Un programme assez complet pour un début",
+    "positive3": "Approfondissement des notions scientifiques et logiques",
+    "negative1": "Programme exigeant de la pratique et de la réflexion",
+    "negative2": "Manque d'approfondissement pratique sur les projets informatiques et de diversification au niveau des domaines en informatique (cybersécurité, data, ...)",
+    "school": "Lycée Jean Renou La Réole"
+  }
+}

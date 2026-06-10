@@ -1,0 +1,59 @@
+.xp-container {
+    @apply max-w-3xl mx-auto flex flex-col items-center;
+}
+
+.xp-title {
+    @apply text-3xl sm:text-4xl font-extrabold text-slate-800 text-center mb-10 tracking-tight;
+}
+
+.xp-card {
+    @apply w-full bg-white p-6 sm:p-8 border border-slate-100 shadow-xl rounded-2xl space-y-6 mb-8 hover:shadow-2xl transition-shadow duration-300;
+}
+
+.xp-header {
+    @apply flex items-center space-x-4 border-b border-slate-50 pb-4;
+}
+
+.xp-logo {
+    @apply w-16 h-16 rounded-2xl object-contain border border-slate-100 bg-slate-50 p-1 flex-shrink-0;
+}
+
+.xp-header-text {
+    @apply flex flex-col;
+}
+
+.xp-job-title {
+    @apply text-xl sm:text-2xl font-bold text-slate-800 leading-tight;
+}
+
+.xp-meta {
+    @apply text-xs sm:text-sm text-slate-500 font-medium;
+}
+
+.xp-desc {
+    @apply text-sm sm:text-base text-slate-600 leading-relaxed;
+}
+
+.xp-section {
+    @apply space-y-3;
+}
+
+.xp-section-title {
+    @apply text-base sm:text-lg font-bold text-slate-800 border-l-4 border-blue-600 pl-3 tracking-tight;
+}
+
+.xp-missions-list {
+    @apply list-disc pl-5 text-slate-600 space-y-2 text-sm sm:text-base;
+}
+
+.xp-opinion-text {
+    @apply text-sm sm:text-base text-slate-600 italic leading-relaxed bg-slate-50/50 p-4 rounded-xl border border-slate-100/30;
+}
+
+.xp-link-container {
+    @apply pt-4 border-t border-slate-50 text-center;
+}
+
+.xp-link {
+    @apply inline-flex items-center gap-1 text-blue-600 hover:text-blue-800 text-sm sm:text-base font-semibold hover:underline;
+}

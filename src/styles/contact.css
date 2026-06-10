@@ -1,0 +1,99 @@
+.contact-info-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 gap-4;
+}
+
+.contact-card-item {
+    @apply flex items-center gap-4 p-5 bg-slate-50/60 border border-slate-100 rounded-2xl hover:bg-slate-50 transition-colors duration-300;
+}
+
+.contact-icon-wrapper {
+    @apply flex-shrink-0 w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center shadow-sm;
+}
+
+.contact-phone-label, .contact-email-label {
+    @apply text-[10px] text-slate-400 font-bold uppercase tracking-wider;
+}
+
+.contact-phone-link, .contact-email-link {
+    @apply text-base font-extrabold text-slate-700 hover:text-blue-600 transition-colors break-all;
+}
+
+.contact-socials-row {
+    @apply flex justify-center gap-8 sm:gap-12;
+}
+
+.contact-social-item {
+    @apply flex flex-col items-center transition duration-300 transform hover:scale-105;
+}
+
+.contact-social-icon-blue {
+    @apply w-14 h-14 bg-blue-600 hover:bg-blue-700 rounded-2xl flex items-center justify-center mb-2 shadow-md group-hover:shadow-lg transition-all duration-300;
+}
+
+.contact-social-icon-dark {
+    @apply w-14 h-14 bg-slate-800 hover:bg-slate-900 rounded-2xl flex items-center justify-center mb-2 shadow-md group-hover:shadow-lg transition-all duration-300;
+}
+
+.contact-social-label {
+    @apply text-sm font-bold text-slate-600 group-hover:text-blue-600 transition-colors;
+}
+
+.contact-social-label-dark {
+    @apply text-sm font-bold text-slate-600 group-hover:text-slate-900 transition-colors;
+}
+
+.contact-btn-dark {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-slate-800 hover:bg-slate-900 text-white font-bold rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 transform active:scale-95 text-sm sm:text-base w-full sm:w-auto;
+}
+
+.contact-btn-blue {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 transform active:scale-95 text-sm sm:text-base w-full sm:w-auto;
+}
+
+.contact-card {
+    @apply p-6 sm:p-10 space-y-10;
+}
+
+.contact-header {
+    @apply text-center space-y-2;
+}
+
+.contact-section-small {
+    @apply space-y-4;
+}
+
+.contact-section-large {
+    @apply space-y-6;
+}
+
+.contact-section-desc {
+    @apply section-text max-w-xl;
+}
+
+.contact-cv-actions {
+    @apply flex flex-col sm:flex-row justify-center items-center gap-4 pt-6 border-t border-slate-100;
+}
+
+.contact-cta-section {
+    @apply text-center bg-slate-50/60 border border-slate-100 p-6 rounded-2xl;
+}
+
+.contact-cta-title {
+    @apply text-base sm:text-lg font-bold text-slate-800 mb-1;
+}
+
+.contact-cta-text {
+    @apply text-xs sm:text-sm text-slate-500;
+}
+
+.contact-icon-small {
+    @apply w-5 h-5 text-white;
+}
+
+.contact-icon-large {
+    @apply w-7 h-7 text-white;
+}
+
+.contact-btn-icon {
+    @apply w-4 h-4;
+}

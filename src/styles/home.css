@@ -1,0 +1,155 @@
+.home-section {
+    @apply relative min-h-[calc(100vh-76px)] flex items-center justify-center bg-gradient-to-br from-slate-50 via-white to-slate-100/60 overflow-hidden py-16 px-4 sm:px-6 lg:px-8;
+}
+
+.home-glow-blue {
+    @apply absolute top-1/4 left-[10%] w-72 h-72 sm:w-96 sm:h-96 bg-blue-400/10 rounded-full blur-3xl -z-10 pointer-events-none;
+}
+
+.home-glow-indigo {
+    @apply absolute bottom-1/4 right-[10%] w-72 h-72 sm:w-96 sm:h-96 bg-indigo-400/10 rounded-full blur-3xl -z-10 pointer-events-none;
+}
+
+.home-container {
+    @apply container mx-auto max-w-6xl;
+}
+
+.home-grid {
+    @apply grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center;
+}
+
+.home-content {
+    @apply lg:col-span-7 text-center lg:text-left space-y-6 sm:space-y-8 order-2 lg:order-1;
+}
+
+.home-badge {
+    @apply inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50/80 border border-blue-100 shadow-sm;
+}
+
+.home-badge-dot {
+    @apply w-2 h-2 rounded-full bg-blue-500 animate-pulse;
+}
+
+.home-badge-text {
+    @apply text-[11px] font-bold uppercase tracking-wider text-blue-700;
+}
+
+.home-intro {
+    @apply space-y-4;
+}
+
+.home-title {
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1];
+}
+
+.home-title-accent {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600;
+}
+
+.home-paragraph {
+    @apply text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0;
+}
+
+.home-text-highlight {
+    @apply font-semibold text-slate-800;
+}
+
+.home-actions {
+    @apply flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4;
+}
+
+.home-btn-primary {
+    @apply w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-indigo-600 hover:to-blue-600 text-white font-bold rounded-2xl shadow-lg shadow-blue-500/20 hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300 transform active:scale-95;
+}
+
+.home-btn-secondary {
+    @apply w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white hover:bg-slate-50 text-slate-800 font-bold rounded-2xl border border-slate-200 hover:border-slate-300 shadow-sm hover:shadow transition-all duration-300 transform active:scale-95;
+}
+
+.home-techs {
+    @apply pt-6 border-t border-slate-100 space-y-3;
+}
+
+.home-techs-title {
+    @apply text-xs font-bold uppercase tracking-wider text-slate-400;
+}
+
+.home-techs-list {
+    @apply flex flex-wrap justify-center lg:justify-start gap-3;
+}
+
+.home-tech-card {
+    @apply flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white border border-slate-100 shadow-sm hover:shadow hover:-translate-y-0.5 transition-all duration-300;
+}
+
+.home-media {
+    @apply lg:col-span-5 flex justify-center order-1 lg:order-2;
+}
+
+.home-image-wrapper {
+    @apply relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80;
+}
+
+.home-image-glow {
+    @apply absolute inset-0 bg-gradient-to-tr from-blue-500 via-indigo-500 to-purple-500 rounded-3xl opacity-40 blur-lg group-hover:opacity-70 group-hover:blur-xl transition duration-500;
+}
+
+.home-image-frame {
+    @apply relative w-full h-full rounded-3xl overflow-hidden border-2 border-white/60 bg-white p-3 shadow-2xl shadow-indigo-200/40 group-hover:scale-[1.02] transition-transform duration-500;
+}
+
+.home-image-inner {
+    @apply w-full h-full rounded-2xl overflow-hidden bg-slate-100 relative;
+}
+
+.home-profile-pic {
+    @apply w-full h-full object-cover transition duration-500 group-hover:scale-105;
+}
+
+.home-image-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-slate-900/10 via-transparent to-transparent;
+}
+
+.home-floating-badge {
+    @apply absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 bg-white border border-slate-100 px-4 py-3 rounded-2xl shadow-xl flex items-center gap-3;
+}
+
+.home-btn-icon {
+    @apply w-5 h-5;
+}
+
+.home-tech-icon-react {
+    @apply w-4 h-4 text-[#61DAFB] group-hover:scale-110 transition-transform;
+}
+
+.home-tech-icon-angular {
+    @apply w-4 h-4 text-[#DD0031] group-hover:scale-110 transition-transform;
+}
+
+.home-tech-icon-laravel {
+    @apply w-4 h-4 text-[#FF2D20] group-hover:scale-110 transition-transform;
+}
+
+.home-tech-icon-nestjs {
+    @apply w-4 h-4 text-[#E0234E] group-hover:scale-110 transition-transform;
+}
+
+.home-tech-name {
+    @apply text-xs font-bold text-slate-700;
+}
+
+.home-badge-icon-wrapper {
+    @apply p-2 bg-indigo-50 rounded-xl;
+}
+
+.home-floating-icon {
+    @apply w-5 h-5 text-[#61DAFB];
+}
+
+.home-floating-title {
+    @apply text-[10px] font-bold uppercase tracking-wider text-slate-400;
+}
+
+.home-floating-desc {
+    @apply text-xs font-extrabold text-slate-800;
+}

@@ -1,0 +1,154 @@
+/* ERROR 404 */
+.error404-container {
+    @apply relative overflow-hidden flex items-center justify-center;
+}
+
+.error404-card {
+    @apply relative z-10 border border-slate-100 shadow-2xl rounded-3xl bg-white/95 backdrop-blur-sm transition-all duration-300 p-8 sm:p-12 text-center max-w-xl w-full flex flex-col items-center justify-center space-y-6 sm:space-y-8;
+}
+
+.error404-icon-wrapper {
+    @apply relative w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center rounded-2xl bg-blue-50 border border-blue-100 text-blue-600;
+}
+
+.error404-icon {
+    @apply w-10 h-10 sm:w-12 sm:h-12;
+}
+
+.error404-icon-pulse {
+    @apply absolute inset-0 rounded-2xl bg-blue-500/10 animate-ping -z-10;
+}
+
+.error404-code-container {
+    @apply relative select-none;
+}
+
+.error404-code {
+    @apply text-7xl sm:text-8xl md:text-9xl font-black tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 leading-none;
+}
+
+.error404-code-shadow {
+    @apply absolute top-1.5 left-1.5 text-7xl sm:text-8xl md:text-9xl font-black tracking-widest text-slate-100/50 leading-none -z-10 blur-[1px];
+}
+
+.error404-text-wrapper {
+    @apply space-y-3;
+}
+
+.error404-title {
+    @apply text-2xl sm:text-3xl font-extrabold text-slate-800;
+}
+
+.error404-desc {
+    @apply text-slate-500 max-w-md mx-auto text-sm sm:text-base leading-relaxed;
+}
+
+.error404-actions {
+    @apply flex flex-col sm:flex-row items-center justify-center gap-4 w-full pt-4;
+}
+
+.error404-btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-indigo-600 hover:to-blue-600 text-white font-bold rounded-2xl shadow-lg shadow-blue-500/20 hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300 transform active:scale-95 w-full sm:w-auto;
+}
+
+.error404-btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-slate-50 hover:bg-slate-100 text-slate-700 font-bold rounded-2xl border border-slate-200 hover:border-slate-300 transition-all duration-300 transform active:scale-95 w-full sm:w-auto;
+}
+
+.error404-btn-icon {
+    @apply w-4 h-4;
+}
+
+/* ERROR 503 */
+.error503-container {
+    @apply relative overflow-hidden flex items-center justify-center;
+}
+
+.error503-card {
+    @apply relative z-10 border border-slate-100 shadow-2xl rounded-3xl bg-white/95 backdrop-blur-sm transition-all duration-300 p-8 sm:p-12 text-center max-w-xl w-full flex flex-col items-center justify-center space-y-6 sm:space-y-8;
+}
+
+.error503-glow-1 {
+    @apply absolute top-1/4 left-1/4 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl -z-10 pointer-events-none;
+}
+
+.error503-glow-2 {
+    @apply absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-400/10 rounded-full blur-3xl -z-10 pointer-events-none;
+}
+
+.error503-icon-wrapper {
+    @apply relative w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center rounded-2xl bg-blue-50 border border-blue-100 text-blue-600;
+}
+
+.error503-icon {
+    @apply w-10 h-10 sm:w-12 sm:h-12;
+}
+
+.error503-icon-pulse {
+    @apply absolute inset-0 rounded-2xl bg-blue-500/10 animate-ping -z-10;
+}
+
+.error503-text-wrapper {
+    @apply space-y-3;
+}
+
+.error503-title {
+    @apply text-2xl sm:text-4xl font-extrabold text-slate-800;
+}
+
+.error503-desc {
+    @apply text-slate-500 max-w-md mx-auto text-sm sm:text-base leading-relaxed;
+}
+
+.error503-progress-container {
+    @apply w-full max-w-xs space-y-2;
+}
+
+.error503-progress-header {
+    @apply flex justify-between text-xs font-bold text-slate-400 uppercase tracking-wider;
+}
+
+.error503-progress-status-label {
+    @apply animate-pulse;
+}
+
+.error503-progress-track {
+    @apply w-full h-1.5 bg-slate-100 rounded-full overflow-hidden;
+}
+
+.error503-progress-bar {
+    animation: progressAnimation 2s infinite ease-in-out;
+    width: 70%;
+}
+
+@keyframes progressAnimation {
+    0% {
+        transform: translateX(-100%);
+    }
+    50% {
+        transform: translateX(20%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.error503-contact-section {
+    @apply space-y-4 pt-4 border-t border-slate-100 w-full;
+}
+
+.error503-contact-title {
+    @apply text-xs font-bold text-slate-400 uppercase tracking-wider;
+}
+
+.error503-social-icons {
+    @apply flex items-center justify-center gap-4;
+}
+
+.error503-social-btn {
+    @apply w-11 h-11 flex items-center justify-center rounded-xl bg-slate-50 border border-slate-200 text-slate-600 hover:text-blue-600 hover:bg-blue-50 hover:border-blue-200 transition-all duration-300 transform active:scale-95;
+}
+
+.error503-social-icon {
+    @apply w-5 h-5;
+}

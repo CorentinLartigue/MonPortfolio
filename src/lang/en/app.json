@@ -1,0 +1,18 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "experiences": "Experiences",
+    "formations": "Education",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "footer": {
+    "copyright": "@2024 Corentin Lartigue. All rights reserved.",
+    "terms": "Terms of Use",
+    "privacy": "Privacy Policy"
+  },
+  "buttons": {
+    "back": "Back to projects"
+  }
+}

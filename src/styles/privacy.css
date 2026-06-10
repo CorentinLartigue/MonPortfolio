@@ -1,0 +1,19 @@
+.privacy-card-content {
+    @apply p-6 sm:p-10 space-y-6;
+}
+
+.privacy-subtitle {
+    @apply page-subtitle text-center;
+}
+
+.privacy-section-title {
+    @apply section-title mt-8;
+}
+
+.privacy-section-text {
+    @apply section-text mt-2;
+}
+
+.privacy-link {
+    @apply text-blue-600 hover:underline font-medium;
+}

@@ -1,0 +1,237 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* NAVBAR */
+.navbar {
+    @apply sticky top-0 z-50 transition-all duration-300;
+}
+
+.navbar-scrolled {
+    @apply bg-slate-900/90 backdrop-blur-md border-b border-slate-800/80 py-3 shadow-lg shadow-slate-950/20;
+}
+
+.navbar-default {
+    @apply bg-slate-900/95 border-b border-slate-800 py-4 sm:py-5;
+}
+
+.navbar-container {
+    @apply container mx-auto px-4 sm:px-6 flex items-center justify-between;
+}
+
+.navbar-logo-wrapper {
+    @apply flex items-center space-x-3;
+}
+
+.navbar-logo-glow {
+    @apply absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full blur opacity-50 group-hover:opacity-80 transition duration-300;
+}
+
+.navbar-logo-img {
+    @apply relative w-10 h-10 sm:w-11 sm:h-11 rounded-full object-cover border border-slate-800;
+}
+
+.navbar-brand-name {
+    @apply text-white font-bold tracking-wide text-sm sm:text-base leading-tight group-hover:text-blue-400 transition-colors duration-300;
+}
+
+.navbar-brand-sub {
+    @apply text-[10px] sm:text-xs text-slate-400 font-medium;
+}
+
+.navbar-menu-desktop {
+    @apply hidden md:flex items-center space-x-1;
+}
+
+.navbar-link {
+    @apply relative px-4 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 flex items-center;
+}
+
+.navbar-link-active {
+    @apply text-white bg-slate-800/60 shadow-inner;
+}
+
+.navbar-link-inactive {
+    @apply text-slate-300 hover:text-white hover:bg-slate-800/30;
+}
+
+.navbar-link-indicator {
+    @apply absolute bottom-0 left-4 right-4 h-0.5 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full;
+}
+
+.navbar-toggle-btn {
+    @apply md:hidden flex items-center justify-center w-10 h-10 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800/50 transition-colors duration-300 focus:outline-none;
+}
+
+.navbar-menu-mobile {
+    @apply md:hidden absolute top-full left-0 right-0 bg-slate-900 border-b border-slate-800 overflow-hidden transition-all duration-300 ease-in-out;
+}
+
+.navbar-menu-mobile-open {
+    @apply max-h-[380px] border-t border-slate-800/40 py-3 shadow-xl;
+}
+
+.navbar-menu-mobile-closed {
+    @apply max-h-0 border-t-0 py-0;
+}
+
+.navbar-mobile-links-container {
+    @apply px-4 space-y-1;
+}
+
+.navbar-mobile-link {
+    @apply flex items-center px-4 py-3 rounded-xl text-sm font-bold transition-all duration-300;
+}
+
+.navbar-mobile-link-active {
+    @apply text-white bg-slate-800/80 border-l-4 border-blue-500;
+}
+
+.navbar-mobile-link-inactive {
+    @apply text-slate-300 hover:text-white hover:bg-slate-800/30;
+}
+
+/* Language selector */
+.navbar-lang-selector {
+    @apply flex items-center bg-slate-800/40 border border-slate-700/50 rounded-xl px-3 py-1.5 ml-4;
+}
+
+.navbar-lang-icon {
+    @apply text-slate-400 w-4 h-4;
+}
+
+.navbar-lang-btn {
+    @apply text-xs font-bold text-slate-400 hover:text-white transition-colors duration-200 focus:outline-none cursor-pointer bg-transparent border-none p-0;
+}
+
+.navbar-lang-btn-active {
+    @apply text-blue-400 font-extrabold;
+}
+
+.navbar-lang-separator {
+    @apply text-slate-700 mx-2 text-xs select-none;
+}
+
+.navbar-lang-selector-mobile {
+    @apply flex items-center justify-center bg-slate-800/40 border border-slate-700/50 rounded-xl px-4 py-2.5 mt-3 mb-2;
+}
+
+.navbar-lang-btn-mobile {
+    @apply text-sm font-bold text-slate-400 hover:text-white transition-colors duration-200 focus:outline-none cursor-pointer bg-transparent border-none p-0;
+}
+
+.navbar-lang-btn-mobile-active {
+    @apply text-blue-400 font-extrabold;
+}
+
+.navbar-lang-separator-mobile {
+    @apply text-slate-700 mx-3 text-sm select-none;
+}
+
+/* FOOTER */
+.footer {
+    @apply bg-gray-900 text-white py-6;
+}
+
+.footer-container {
+    @apply container mx-auto flex flex-col sm:flex-row justify-between items-center px-4;
+}
+
+.footer-copyright {
+    @apply text-sm text-gray-400 mb-4 sm:mb-0 sm:ml-10;
+}
+
+.footer-links {
+    @apply flex flex-col sm:flex-row sm:space-x-8 mt-4 sm:mt-0 text-center sm:text-left sm:mr-10;
+}
+
+.footer-link {
+    @apply text-sm text-gray-400 hover:text-gray-200 transition-colors duration-200;
+}
+
+/* RETURN BUTTON */
+.return-btn {
+    @apply inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-800 transition-colors mb-6 cursor-pointer border-none bg-transparent p-0 focus:outline-none;
+}
+
+.return-btn-icon {
+    @apply w-3.5 h-3.5 transition-transform;
+}
+
+.return-btn:hover .return-btn-icon {
+    transform: translateX(-4px);
+}
+
+/* Shared keyframe animations */
+@keyframes spin-slow {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin-slow {
+    animation: spin-slow 20s linear infinite;
+}
+
+@keyframes bounce-slow {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+.animate-bounce-slow {
+    animation: bounce-slow 4.5s ease-in-out infinite;
+}
+
+@layer components {
+    .page-container {
+        @apply min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100/50 py-12 px-4 sm:px-6 lg:px-8;
+    }
+
+    .page-back-wrapper {
+        @apply max-w-5xl mx-auto mb-6;
+    }
+
+    .page-title {
+        @apply text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-800 tracking-tight text-center;
+    }
+
+    .page-subtitle {
+        @apply mt-3 text-base sm:text-lg text-slate-500 max-w-xl mx-auto text-center font-normal leading-relaxed;
+    }
+
+    .content-card {
+        @apply max-w-5xl mx-auto bg-white border border-slate-100/80 shadow-xl rounded-2xl overflow-hidden;
+    }
+
+    .card-header {
+        @apply bg-slate-900 text-white p-8 sm:p-10 border-b border-slate-800 flex flex-col items-center justify-center text-center gap-4;
+    }
+
+    .card-header-title {
+        @apply text-3xl sm:text-4xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-100 to-slate-300;
+    }
+
+    .card-header-desc {
+        @apply text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed font-medium;
+    }
+
+    .card-body {
+        @apply p-6 sm:p-10 space-y-10;
+    }
+
+    .section-title {
+        @apply text-xl sm:text-2xl font-bold text-slate-800 border-l-4 border-blue-600 pl-3 mb-6 tracking-tight flex items-center;
+    }
+
+    .section-text {
+        @apply text-slate-600 text-sm sm:text-base leading-relaxed text-justify;
+    }
+}
+

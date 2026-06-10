@@ -1,50 +1,55 @@
-import { createBrowserRouter } from 'react-router-dom';
+import {createBrowserRouter} from 'react-router-dom';
 import MainLayout from '../layouts/MainLayout';
-import HomePage from '../pages/HomePage';
-import ProjectPage from '../pages/ProjectPage';
-import ContactPage from '../pages/ContactPage';
-import ExperiencePage from '../pages/ExperiencePage';
-import TrainingPage from '../pages/TrainingPage';
-import SkillPage from '../pages/SkillPage';
-import TermsPage from '../pages/TermsPage';
-import PrivacyPage from '../pages/PrivacyPage';
-import BerroyerPage from '../pages/BerroyerPage';
-import SneakyPage from '../pages/SneakyPage';
-import PortfolioPage from '../pages/PortfolioPage';
-import EchecsPage from '../pages/EchecsPage';
-import YsportPage from '../pages/YsportPage';
-import AmphitryonPage from '../pages/AmphitryonPage';
-import BiorelaiPage from '../pages/BiorelaiPage';
-import M2LPage from '../pages/M2LPage';
+import Home from '../pages/Home.tsx';
+import Projects from '../pages/Projects.tsx';
+import Contact from '../pages/Contact.tsx';
+import Experiences from '../pages/Experiences.tsx';
+import Training from '../pages/Training.tsx';
+import Skills from '../pages/Skills.tsx';
+import Terms from '../pages/Terms.tsx';
+import Privacy from '../pages/Privacy.tsx';
+import Berroyer from '../pages/projects/Berroyer.tsx';
+import Sneaky from '../pages/projects/Sneaky.tsx';
+import Portfolio from '../pages/projects/Portfolio.tsx';
+import Echecs from '../pages/projects/Echecs.tsx';
+import Ysport from '../pages/projects/Ysport.tsx';
+import Amphitryon from '../pages/projects/Amphitryon.tsx';
+import Biorelai from '../pages/projects/Biorelai.tsx';
+import M2L from '../pages/projects/M2L.tsx';
+import Error404Page from '../pages/errors/404';
+import Error503Page from '../pages/errors/503';
 
 const router = createBrowserRouter(
-  [
+    [
+        {
+            path: '/',
+            element: <MainLayout/>,
+            children: [
+                {path: '/', element: <Home/>},
+                {path: '/projects', element: <Projects/>},
+                {path: '/experiences', element: <Experiences/>},
+                {path: '/formations', element: <Training/>},
+                {path: '/competences', element: <Skills/>},
+                {path: '/contact', element: <Contact/>},
+                {path: '/terms', element: <Terms/>},
+                {path: '/privacy', element: <Privacy/>},
+                {path: '/projects/berroyer', element: <Berroyer/>},
+                {path: '/projects/sneaky', element: <Sneaky/>},
+                {path: '/projects/portfolio', element: <Portfolio/>},
+                {path: '/projects/echecs', element: <Echecs/>},
+                {path: '/projects/ysport', element: <Ysport/>},
+                {path: '/projects/amphitryon', element: <Amphitryon/>},
+                {path: '/projects/biorelai', element: <Biorelai/>},
+                {path: '/projects/m2l', element: <M2L/>},
+                {path: '/503', element: <Error503Page/>},
+                {path: '/maintenance', element: <Error503Page/>},
+                {path: '*', element: <Error404Page/>},
+            ],
+        },
+    ],
     {
-      path: '/',
-      element: <MainLayout />,
-      children: [
-        { path: '/', element: <HomePage /> },
-        { path: '/projects', element: <ProjectPage /> },
-        { path: '/experiences', element: <ExperiencePage /> },
-        { path: '/formations', element: <TrainingPage /> },
-        { path: '/competences', element: <SkillPage /> },
-        { path: '/contact', element: <ContactPage /> },
-        { path: '/terms', element: <TermsPage /> },
-        { path: '/privacy', element: <PrivacyPage /> },
-        { path: '/projects/berroyer', element: <BerroyerPage /> },
-        { path: '/projects/sneaky', element: <SneakyPage /> },
-        { path: '/projects/portfolio', element: <PortfolioPage /> },
-        { path: '/projects/echecs', element: <EchecsPage /> },
-        { path: '/projects/ysport', element: <YsportPage /> },
-        { path: '/projects/amphitryon', element: <AmphitryonPage /> },
-        { path: '/projects/biorelai', element: <BiorelaiPage /> },
-        { path: '/projects/m2l', element: <M2LPage /> },
-      ],
-    },
-  ],
-  {
-    basename: '/MonPortfolio/', 
-  }
+        basename: '/MonPortfolio/',
+    }
 );
 
 export default router;

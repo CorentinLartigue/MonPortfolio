@@ -1,0 +1,19 @@
+.terms-card-content {
+    @apply p-6 sm:p-10 space-y-6;
+}
+
+.terms-subtitle {
+    @apply page-subtitle text-center;
+}
+
+.terms-section-title {
+    @apply section-title mt-8;
+}
+
+.terms-section-text {
+    @apply section-text mt-2;
+}
+
+.terms-link {
+    @apply text-blue-600 hover:underline font-medium;
+}

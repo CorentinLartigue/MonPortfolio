@@ -1,0 +1,56 @@
+{
+  "title": "My Experience",
+  "headings": {
+    "missions": "Missions",
+    "opinion": "My Opinion"
+  },
+  "btnViewProject": "View Project",
+  "xp1": {
+    "title": "Apprenticeship - 3rd Year Bachelor in Computer Science Ynov",
+    "period": "Since 2024-12-23",
+    "desc": "Development and maintenance of e-commerce solutions",
+    "mission1": "Technologies and tools: Laravel, Linux, Bash, GitHub, Databases, ERP, CMS",
+    "mission2": "Maintenance and improvement of synchronization modules for Prestashop - Shopify / Fastmag - Joolan.",
+    "mission3": "Creation of application solutions for Shopify or Prestashop, adapted to users' needs with synchronization with Fastmag or Joolan ERPs.",
+    "mission4": "Technical and application support for clients, ensuring a smooth and optimal user experience.",
+    "mission5": "Creation of development environments for new employees using Docker.",
+    "opinion": "I joined an incredibly welcoming team, with a warm and almost family-like atmosphere. The projects are stimulating, driven by modern and exciting technologies, offering great learning opportunities. A motivating environment in which to evolve!"
+  },
+  "xp2": {
+    "title": "Internship - 2nd Year BTS SIO option SLAM",
+    "period": "2024-01-29 - 2024-03-22",
+    "desc": "Development and maintenance of a complete software solution.",
+    "mission1": "Techs: In-house framework (EzFrame) based on Symfony, PHP, JQUERY, TWIG, Ajax and Bootstrap5.",
+    "mission2": "Implementation of an offer creation feature with a stepper (Smart Wizard) and PDF generation.",
+    "mission3": "Beginning of PHP Unit tests.",
+    "mission4": "Agile Scrum methodology, participation in daily meetings and 3-week sprints (planning, review, and retrospective).",
+    "mission5": "Writing user documentation.",
+    "opinion": "A very enriching experience, where I was able to develop my technical skills and learn to work in an agile environment. The collaboration with the team was very pleasant, and I was able to take part in important projects."
+  },
+  "xp3": {
+    "title": "Internship - 1st Year BTS SIO option SLAM",
+    "period": "2023-05-22 - 2023-06-23",
+    "desc": "JS training, mini projects in JS and static site.",
+    "mission1": "Techs: HTML, CSS, JavaScript and Figma.",
+    "mission2": "Implementing a static site based on a pre-defined layout.",
+    "opinion": "This internship was a highly educational first experience, where I learned the basics of front-end web development and the implementation of static sites. The collaboration with my team was constructive and allowed me to acquire solid skills."
+  },
+  "xp4": {
+    "title": "Student Job - Manutention (Temporary Work)",
+    "period": "2022 - 2024",
+    "desc": "Teamwork, diverse and varied tasks.",
+    "mission1": "Product sorting, inventory management.",
+    "mission2": "Manual teamwork.",
+    "opinion": "A useful experience for learning teamwork and managing practical tasks. Although this work is not directly related to computer science, it allowed me to develop organizational and time management skills."
+  },
+  "xp5": {
+    "title": "Observation Internship (3rd Year Secondary School) - Vignoble Ducourt",
+    "period": "2019",
+    "desc": "Observation internship in a vineyard.",
+    "mission1": "Observation of the different stages of wine production.",
+    "mission2": "Learning about professions related to wine production.",
+    "mission3": "Sorting and writing sanitary sheets.",
+    "mission4": "Observation of administration and accounting.",
+    "opinion": "A pleasant experience that allowed me to discover the work environment for the first time, which was very enriching. Although this internship was not directly related to my career in IT, it gave me perspective on working in a rural environment."
+  }
+}
