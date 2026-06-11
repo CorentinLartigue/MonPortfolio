@@ -48,6 +48,26 @@
     "sneaky": {
       "title": "Sneaky",
       "desc": "Un site web statique à partir d'une maquette Figma autour de la mode et du design."
+    },
+    "dovinyle": {
+      "title": "Dovinyle",
+      "desc": "Une application web de gestion et d'achat de vinyles réalisée dans le cadre de mes études. Elle comporte un front-end en React et un back-end en Node.js."
+    },
+    "cheerzup": {
+      "title": "CheerzUp",
+      "desc": "Une solution complète de gestion pour les établissements (bars), incluant catalogues, horaires et interactions clients/personnel, développée en équipe."
+    },
+    "locpriority": {
+      "title": "Location Priority",
+      "desc": "Une application Shopify professionnelle conçue pour automatiser et optimiser l'orchestration des commandes multi-stocks et multi-emplacements."
+    },
+    "ytellerie": {
+      "title": "Y.tellerie",
+      "desc": "Une application hôtelière complète pour la gestion des réservations. Structurée autour d'un front-end Angular et d'un back-end NestJS conteneurisés avec Docker."
+    },
+    "horamanea": {
+      "title": "Horamanea",
+      "desc": "Un projet collaboratif de gestion de plannings et d'horaires partagés développé avec des amis, comprenant un front-end React et un back-end Node.js."
     }
   },
   "amphitryon": {
@@ -289,5 +309,78 @@
     "extraBullet1": "Accès à des informations détaillées sur chaque complexe (adresse, contact, horaires d’ouverture).",
     "techLeaflet": "Leaflet (carte interactive)",
     "techJava": "Java (Spring Boot backend)"
+  },
+  "dovinyle": {
+    "title": "Dovinyle",
+    "desc": "Une application web complète pour les collectionneurs et passionnés de vinyles, réalisée dans le cadre d'un projet universitaire.",
+    "introTitle": "Présentation du projet",
+    "introText": "Développé en binôme, Dovinyle répond au besoin de centraliser et d'animer une communauté d'amateurs de disques vinyles. Le projet propose un catalogue interactif, des fonctions de gestion de collection personnelle, et des flux de transaction.",
+    "techTitle": "Technologies utilisées",
+    "techFront": "React & TailwindCSS pour l'interface utilisateur dynamique.",
+    "techBack": "Node.js & Express pour l'API REST.",
+    "techDb": "PostgreSQL pour la modélisation relationnelle des données de vinyles et des utilisateurs.",
+    "featTitle": "Fonctionnalités clés",
+    "feat1": "Recherche et filtres avancés par genre, artiste ou année d'édition.",
+    "feat2": "Gestion d'une collection personnelle de vinyles (ma discothèque).",
+    "feat3": "Système de favoris et paniers d'achat simulés.",
+    "feat4": "Visualisation de détails enrichis grâce à l'intégration d'API musicales."
+  },
+  "cheerzup": {
+    "title": "CheerzUp",
+    "desc": "API backend pour la gestion d'établissements et l'interaction clients/personnel.",
+    "introTitle": "Présentation du projet",
+    "introText": "CheerzUp est un projet mené en groupe d'amis visant à créer une plateforme moderne pour les bars et leur clientèle. L'API gère la structure des établissements, leurs produits et les interactions en temps réel.",
+    "techTitle": "Technologies et Concepts",
+    "techHexa": "Architecture Hexagonale (Ports & Adaptateurs) garantissant un découplage total de la logique métier.",
+    "techFramework": "NestJS & TypeScript pour un backend robuste et modulaire.",
+    "techDb": "PostgreSQL géré avec TypeORM.",
+    "techDocker": "Docker & Docker Compose pour la conteneurisation complète.",
+    "featTitle": "Fonctionnalités",
+    "feat1": "Gestion d'établissements multiples, de catalogues de produits et d'horaires.",
+    "feat2": "Architecture modulaire et documentation d'API interactive avec Swagger.",
+    "feat3": "Authentification sécurisée incluant le support de Google Auth.",
+    "feat4": "Collection Bruno pour les tests automatisés des endpoints."
+  },
+  "locpriority": {
+    "title": "Location Priority",
+    "desc": "Application Shopify professionnelle pour l'orchestration intelligente des stocks multi-emplacements.",
+    "introTitle": "Contexte professionnel",
+    "introText": "Développée chez Home-made.io, Location Priority surmonte les limites de la gestion de commandes native de Shopify pour les marchands exploitant plusieurs entrepôts ou boutiques physiques.",
+    "techTitle": "Technologies utilisées",
+    "techShopify": "Intégration d'API Shopify avancée (Graphql & Admin API).",
+    "techFront": "Interface marchande en React & Polaris.",
+    "techBack": "Backend Node.js pour le traitement rapide et asynchrone des webhooks Shopify.",
+    "featTitle": "Fonctionnalités principales",
+    "feat1": "Orchestration intelligente et routage automatique des commandes selon la disponibilité des stocks.",
+    "feat2": "Règles dynamiques de priorité des emplacements en fonction des quotas quotidiens.",
+    "feat3": "Optimisation logistique réduisant les coûts de livraison et les temps de préparation."
+  },
+  "ytellerie": {
+    "title": "Y.tellerie",
+    "desc": "Une application d'hôtellerie modulaire conteneurisée et architecturée en microservices/modules.",
+    "introTitle": "Contexte académique",
+    "introText": "Conçu dans le cadre d'un cours d'architecture logicielle, Y.tellerie est un système complet de gestion hôtelière (chambres, réservations et services).",
+    "techTitle": "Architecture et Technologies",
+    "techFront": "Frontend Angular avec gestion avancée des états et intercepteurs HTTP.",
+    "techBack": "Backend NestJS structuré et documenté via OpenAPI (Swagger).",
+    "techDocker": "Configuration multi-conteneurs Docker gérée par un reverse-proxy Nginx.",
+    "featTitle": "Fonctionnalités et Principes",
+    "feat1": "Gestion complète des chambres, réservations et profils clients.",
+    "feat2": "Sécurité renforcée par injection automatique de Bearer Tokens (JWT).",
+    "feat3": "Conception orientée DDD (Domain-Driven Design) avec contextes délimités."
+  },
+  "horamanea": {
+    "title": "Horamanea",
+    "desc": "Application collaborative de gestion d'horaires et d'agendas partagés développée en équipe.",
+    "introTitle": "Présentation du projet",
+    "introText": "Horamanea est une plateforme simple et moderne née de la collaboration entre amis pour résoudre le problème de la planification des horaires de groupe.",
+    "techTitle": "Technologies clés",
+    "techFront": "React & CSS pour une interface utilisateur réactive.",
+    "techBack": "Node.js & Express pour l'API backend.",
+    "techCollab": "Méthode agile et partage des tâches via GitHub.",
+    "featTitle": "Fonctionnalités",
+    "feat1": "Création d'agendas de groupe et partage instantané d'horaires.",
+    "feat2": "Visualisation intuitive des plannings hebdomadaires.",
+    "feat3": "Système de notification en temps réel pour les modifications."
   }
 }

@@ -1,10 +1,12 @@
 import {IconType} from 'react-icons';
 import {
-    FaReact, FaHtml5, FaGithub, FaJs, FaPhp, FaAndroid, FaJava, FaCss3Alt, FaSync, FaCode
+    FaReact, FaHtml5, FaGithub, FaJs, FaPhp, FaAndroid, FaJava, FaCss3Alt, FaSync, FaCode,
+    FaNodeJs
 } from 'react-icons/fa';
 import {
     SiTailwindcss, SiFigma, SiJquery, SiSymfony, SiBootstrap, SiSpringboot,
-    SiLeaflet, SiTrello
+    SiLeaflet, SiTrello, SiNestjs, SiTypescript, SiPostgresql, SiDocker,
+    SiShopify, SiGraphql, SiAngular, SiNginx, SiExpress
 } from 'react-icons/si';
 
 export interface Technology {
@@ -154,6 +156,79 @@ export const projects: Projet[] = [
             {name: 'JavaScript', icon: FaJs, color: 'text-yellow-500'},
             {name: 'Figma', icon: SiFigma, color: 'text-purple-500'},
             {name: 'Trello', icon: SiTrello, color: 'text-blue-500'}
+        ]
+    },
+    {
+        id: 'dovinyle',
+        titreKey: 'project.list.dovinyle.title',
+        descriptionKey: 'project.list.dovinyle.desc',
+        image: `${baseUrl}images/projects/dovinyle.webp`,
+        lien: '/projects/dovinyle',
+        category: 'web',
+        technologies: [
+            {name: 'React', icon: FaReact, color: 'text-cyan-400'},
+            {name: 'NodeJS', icon: FaNodeJs, color: 'text-green-500'},
+            {name: 'Express', icon: SiExpress, color: 'text-gray-500'},
+            {name: 'Tailwind', icon: SiTailwindcss, color: 'text-blue-400'},
+            {name: 'Github', icon: FaGithub, color: 'text-gray-900'}
+        ]
+    },
+    {
+        id: 'cheerzup',
+        titreKey: 'project.list.cheerzup.title',
+        descriptionKey: 'project.list.cheerzup.desc',
+        image: `${baseUrl}images/projects/cheerzup.webp`,
+        lien: '/projects/cheerzup',
+        category: 'web',
+        technologies: [
+            {name: 'NestJS', icon: SiNestjs, color: 'text-red-600'},
+            {name: 'TypeScript', icon: SiTypescript, color: 'text-blue-600'},
+            {name: 'PostgreSQL', icon: SiPostgresql, color: 'text-blue-400'},
+            {name: 'Docker', icon: SiDocker, color: 'text-blue-500'}
+        ]
+    },
+    {
+        id: 'locpriority',
+        titreKey: 'project.list.locpriority.title',
+        descriptionKey: 'project.list.locpriority.desc',
+        image: `${baseUrl}images/projects/locpriority.webp`,
+        lien: '/projects/locpriority',
+        category: 'web',
+        technologies: [
+            {name: 'Shopify', icon: SiShopify, color: 'text-green-600'},
+            {name: 'React', icon: FaReact, color: 'text-cyan-400'},
+            {name: 'NodeJS', icon: FaNodeJs, color: 'text-green-500'},
+            {name: 'GraphQL', icon: SiGraphql, color: 'text-pink-600'},
+            {name: 'TypeScript', icon: SiTypescript, color: 'text-blue-600'}
+        ]
+    },
+    {
+        id: 'ytellerie',
+        titreKey: 'project.list.ytellerie.title',
+        descriptionKey: 'project.list.ytellerie.desc',
+        image: `${baseUrl}images/projects/ytellerie.webp`,
+        lien: '/projects/ytellerie',
+        category: 'web',
+        technologies: [
+            {name: 'Angular', icon: SiAngular, color: 'text-red-600'},
+            {name: 'NestJS', icon: SiNestjs, color: 'text-red-600'},
+            {name: 'PostgreSQL', icon: SiPostgresql, color: 'text-blue-400'},
+            {name: 'Docker', icon: SiDocker, color: 'text-blue-500'},
+            {name: 'Nginx', icon: SiNginx, color: 'text-green-600'}
+        ]
+    },
+    {
+        id: 'horamanea',
+        titreKey: 'project.list.horamanea.title',
+        descriptionKey: 'project.list.horamanea.desc',
+        image: `${baseUrl}images/projects/horamanea.webp`,
+        lien: '/projects/horamanea',
+        category: 'web',
+        technologies: [
+            {name: 'React', icon: FaReact, color: 'text-cyan-400'},
+            {name: 'NodeJS', icon: FaNodeJs, color: 'text-green-500'},
+            {name: 'Express', icon: SiExpress, color: 'text-gray-500'},
+            {name: 'Github', icon: FaGithub, color: 'text-gray-900'}
         ]
     }
 ];

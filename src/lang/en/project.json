@@ -48,6 +48,26 @@
     "sneaky": {
       "title": "Sneaky",
       "desc": "A static website built from a Figma mockup themed around fashion and design."
+    },
+    "dovinyle": {
+      "title": "Dovinyle",
+      "desc": "A web application for vinyl record catalog management and shopping developed as a school project, featuring a React frontend and Node.js backend."
+    },
+    "cheerzup": {
+      "title": "CheerzUp",
+      "desc": "A comprehensive management backend for establishments (bars), including catalogs, schedules, and client/staff interactions, built as a team project."
+    },
+    "locpriority": {
+      "title": "Location Priority",
+      "desc": "A professional Shopify application designed to automate and optimize order orchestration across multiple inventory locations."
+    },
+    "ytellerie": {
+      "title": "Y.tellerie",
+      "desc": "A modular hotel management and booking system with an Angular frontend and NestJS backend, containerized using Docker."
+    },
+    "horamanea": {
+      "title": "Horamanea",
+      "desc": "A collaborative scheduling and shared agenda web application built with friends, featuring a React frontend and Node.js backend."
     }
   },
   "amphitryon": {
@@ -289,5 +309,78 @@
     "extraBullet1": "Access to detailed information on each complex (address, contact, opening hours).",
     "techLeaflet": "Leaflet (interactive map)",
     "techJava": "Java (Spring Boot backend)"
+  },
+  "dovinyle": {
+    "title": "Dovinyle",
+    "desc": "A complete web application for vinyl record collectors and music enthusiasts, developed as a university project.",
+    "introTitle": "Project Overview",
+    "introText": "Developed in a team of two, Dovinyle addresses the need to centralize and animate a community of vinyl record lovers. The project offers an interactive catalog, personal collection management features, and transaction flows.",
+    "techTitle": "Technologies Used",
+    "techFront": "React & TailwindCSS for a dynamic user interface.",
+    "techBack": "Node.js & Express for the REST API.",
+    "techDb": "PostgreSQL for relational data modeling of vinyls and users.",
+    "featTitle": "Key Features",
+    "feat1": "Advanced search and filtering by genre, artist, or release year.",
+    "feat2": "Personal vinyl collection management (my library).",
+    "feat3": "Favorites system and simulated shopping carts.",
+    "feat4": "Enriched details display using third-party music API integrations."
+  },
+  "cheerzup": {
+    "title": "CheerzUp",
+    "desc": "Backend API for establishment management and client/staff interactions.",
+    "introTitle": "Project Overview",
+    "introText": "CheerzUp is a project developed with a group of friends aimed at creating a modern platform for bars and their customers. The API manages establishment structures, products, and real-time interactions.",
+    "techTitle": "Technologies & Concepts",
+    "techHexa": "Hexagonal Architecture (Ports & Adapters) ensuring complete decoupling of business logic.",
+    "techFramework": "NestJS & TypeScript for a robust and modular backend.",
+    "techDb": "PostgreSQL managed with TypeORM.",
+    "techDocker": "Docker & Docker Compose for full containerization.",
+    "featTitle": "Key Features",
+    "feat1": "Management of multiple establishments, product catalogs, and schedules.",
+    "feat2": "Modular architecture with interactive API documentation using Swagger.",
+    "feat3": "Secure authentication including Google Auth support.",
+    "feat4": "Bruno collection for automated API endpoint testing."
+  },
+  "locpriority": {
+    "title": "Location Priority",
+    "desc": "Professional Shopify application for intelligent multi-location inventory routing.",
+    "introTitle": "Professional Context",
+    "introText": "Developed at Home-made.io, Location Priority overcomes the limits of Shopify's native fulfillment logic for merchants operating multiple warehouses or physical retail stores.",
+    "techTitle": "Technologies Used",
+    "techShopify": "Advanced Shopify API integration (GraphQL & Admin API).",
+    "techFront": "Merchant interface built with React & Shopify Polaris.",
+    "techBack": "Node.js backend for fast, asynchronous processing of Shopify webhooks.",
+    "featTitle": "Key Features",
+    "feat1": "Intelligent orchestration and automated order routing based on stock availability.",
+    "feat2": "Dynamic location priority rules based on daily preparation quotas.",
+    "feat3": "Logistics optimization reducing delivery costs and processing times."
+  },
+  "ytellerie": {
+    "title": "Y.tellerie",
+    "desc": "Modular hotel management and booking system containerized with Docker.",
+    "introTitle": "Academic Context",
+    "introText": "Designed as part of a software architecture course, Y.tellerie is a complete hotel management system covering rooms, bookings, and customer services.",
+    "techTitle": "Architecture & Technologies",
+    "techFront": "Angular frontend with advanced state management and HTTP interceptors.",
+    "techBack": "NestJS backend structured and documented using OpenAPI (Swagger).",
+    "techDocker": "Multi-container Docker setup managed behind an Nginx reverse-proxy.",
+    "featTitle": "Features & Principles",
+    "feat1": "Full management of rooms, bookings, and customer profiles.",
+    "feat2": "Enhanced security via automatic Bearer Token (JWT) injection.",
+    "feat3": "Domain-Driven Design (DDD) approach with clearly defined bounded contexts."
+  },
+  "horamanea": {
+    "title": "Horamanea",
+    "desc": "Collaborative scheduling and shared agenda application developed as a team project.",
+    "introTitle": "Project Overview",
+    "introText": "Horamanea is a simple and modern platform born from a collaboration among friends to solve the issue of scheduling and coordinating group activities.",
+    "techTitle": "Key Technologies",
+    "techFront": "React & CSS for a responsive UI.",
+    "techBack": "Node.js & Express for the backend API.",
+    "techCollab": "Agile workflow and tasks sharing via GitHub.",
+    "featTitle": "Key Features",
+    "feat1": "Group agenda creation and instant schedule sharing.",
+    "feat2": "Intuitive weekly schedule visualization.",
+    "feat3": "Real-time notification system for schedule changes."
   }
 }

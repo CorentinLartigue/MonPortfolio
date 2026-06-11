@@ -16,6 +16,11 @@ import Ysport from '../pages/projects/Ysport.tsx';
 import Amphitryon from '../pages/projects/Amphitryon.tsx';
 import Biorelai from '../pages/projects/Biorelai.tsx';
 import M2L from '../pages/projects/M2L.tsx';
+import Dovinyle from '../pages/projects/Dovinyle.tsx';
+import Cheerzup from '../pages/projects/Cheerzup.tsx';
+import LocPriority from '../pages/projects/LocPriority.tsx';
+import Ytellerie from '../pages/projects/Ytellerie.tsx';
+import Horamanea from '../pages/projects/Horamanea.tsx';
 import Error404Page from '../pages/errors/404';
 import Error503Page from '../pages/errors/503';
 
@@ -41,6 +46,11 @@ const router = createBrowserRouter(
                 {path: '/projects/amphitryon', element: <Amphitryon/>},
                 {path: '/projects/biorelai', element: <Biorelai/>},
                 {path: '/projects/m2l', element: <M2L/>},
+                {path: '/projects/dovinyle', element: <Dovinyle/>},
+                {path: '/projects/cheerzup', element: <Cheerzup/>},
+                {path: '/projects/locpriority', element: <LocPriority/>},
+                {path: '/projects/ytellerie', element: <Ytellerie/>},
+                {path: '/projects/horamanea', element: <Horamanea/>},
                 {path: '/503', element: <Error503Page/>},
                 {path: '/maintenance', element: <Error503Page/>},
                 {path: '*', element: <Error404Page/>},
