@@ -1,9 +1,9 @@
 import React from 'react';
-import amphitryon_acces from '/amphitryon_acces.png';
-import amphitryon_plats from '/amphitryon_plats.png';
-import amphitryon_plat_detail from '/amphitryon_plat_detail.png';
-import amphitryon_services from '/amphitryon_services.png';
-import amphitryon_plats_service from '/amphitryon_plats_service.png';
+import amphitryon_acces from '/images/projects/amphitryon-acces.png';
+import amphitryon_plats from '/images/projects/amphitryon-plats.png';
+import amphitryon_plat_detail from '/images/projects/amphitryon-plat-detail.png';
+import amphitryon_services from '/images/projects/amphitryon-services.png';
+import amphitryon_plats_service from '/images/projects/amphitryon-plats-service.png';
 import ReturnButton from '../../components/ReturnButton.tsx';
 import {useTranslate} from '../../hooks/useTranslate';
 import '../../styles/projects.css';

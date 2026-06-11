@@ -1,10 +1,10 @@
 import React from 'react';
-import step1 from '/step1.png';
-import step2 from '/step2.png';
-import step3 from '/step3.png';
-import step4 from '/step4.png';
-import step5 from '/step5.png';
-import step6 from '/step6.png';
+import step1 from '/images/projects/step-1.png';
+import step2 from '/images/projects/step-2.png';
+import step3 from '/images/projects/step-3.png';
+import step4 from '/images/projects/step-4.png';
+import step5 from '/images/projects/step-5.png';
+import step6 from '/images/projects/step-6.png';
 import ReturnButton from '../../components/ReturnButton.tsx';
 import {useTranslate} from '../../hooks/useTranslate';
 import '../../styles/projects.css';

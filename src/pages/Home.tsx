@@ -4,7 +4,7 @@ import {FiArrowRight, FiMail} from 'react-icons/fi';
 import {FaReact, FaAngular, FaLaravel} from 'react-icons/fa';
 import {SiNestjs} from 'react-icons/si';
 import {useTranslate} from '../hooks/useTranslate.ts';
-import photoProfil from '/photo_profil.jpg';
+import photoProfil from '/images/profile/photo-profil.jpg';
 import '../styles/home.css';
 
 const Home: React.FC = () => {
@@ -67,7 +67,7 @@ const Home: React.FC = () => {
                             <div className="home-techs-list">
                                 <div className="home-tech-card group">
                                     <FaReact className="home-tech-icon-react"/>
-                                    <span className="home-tech-name">React</span>
+                                    <span className="home-tech-name">React.js</span>
                                 </div>
                                 <div className="home-tech-card group">
                                     <FaAngular className="home-tech-icon-angular"/>
@@ -79,7 +79,7 @@ const Home: React.FC = () => {
                                 </div>
                                 <div className="home-tech-card group">
                                     <SiNestjs className="home-tech-icon-nestjs"/>
-                                    <span className="home-tech-name">NestJS</span>
+                                    <span className="home-tech-name">Nest.js</span>
                                 </div>
                             </div>
                         </div>

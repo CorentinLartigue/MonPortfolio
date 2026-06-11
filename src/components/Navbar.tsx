@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {Link, useLocation} from 'react-router-dom';
 import {FiMenu, FiX, FiHome, FiFolder, FiBriefcase, FiAward, FiCpu, FiMail, FiGlobe} from 'react-icons/fi';
 import {useTranslate} from '../hooks/useTranslate.ts';
-import logo from '/logo.png';
+import logo from '/images/logos/logo.png';
 import '../styles/app.css';
 
 const Navbar: React.FC = () => {

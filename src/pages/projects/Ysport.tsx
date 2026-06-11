@@ -1,9 +1,9 @@
 import React from 'react';
-import ysport_carte from '/ysport_carte.png';
-import ysport_filtres from '/ysport_filtres.png';
-import ysport_petit_cluster from '/ysport_petit_cluster.png';
-import ysport_grand_cluster from '/ysport_grand_cluster.png';
-import ysport_complexe from '/ysport_complexe.png';
+import ysport_carte from '/images/projects/ysport-carte.png';
+import ysport_filtres from '/images/projects/ysport-filtres.png';
+import ysport_petit_cluster from '/images/projects/ysport-petit-cluster.png';
+import ysport_grand_cluster from '/images/projects/ysport-grand-cluster.png';
+import ysport_complexe from '/images/projects/ysport-complexe.png';
 import ReturnButton from '../../components/ReturnButton.tsx';
 import {useTranslate} from '../../hooks/useTranslate';
 import '../../styles/projects.css';

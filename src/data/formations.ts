@@ -25,7 +25,7 @@ export const formations: Formation[] = [
             'formations.form1.negative1'
         ],
         lien: 'https://www.ynov.com/campus/bordeaux/',
-        logo: `${baseUrl}ynov.png`,
+        logo: `${baseUrl}images/logos/ynov.png`,
         ecoleKey: 'formations.form1.school'
     },
     {
@@ -42,7 +42,7 @@ export const formations: Formation[] = [
             'formations.form2.negative2'
         ],
         lien: 'https://www.eiffel-bordeaux.org/formations/bts-sio-cybersecurite/',
-        logo: `${baseUrl}gustave-eiffel.jpg`,
+        logo: `${baseUrl}images/logos/gustave-eiffel.jpg`,
         ecoleKey: 'formations.form2.school'
     },
     {
@@ -59,7 +59,7 @@ export const formations: Formation[] = [
             'formations.form3.negative2'
         ],
         lien: 'https://lyceejeanrenou-lareole.net/la-seconde-generale-et-technologique-une-classe-dorientation/',
-        logo: `${baseUrl}jean-renou.jpg`,
+        logo: `${baseUrl}images/logos/jean-renou.jpg`,
         ecoleKey: 'formations.form3.school'
     }
 ];

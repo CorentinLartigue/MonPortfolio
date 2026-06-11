@@ -1,6 +1,6 @@
 import React from 'react';
-import echecs_regles from '/echecs_regles.png';
-import echecs_jeux from '/echecs_jeux.png';
+import echecs_regles from '/images/projects/echecs-regles.png';
+import echecs_jeux from '/images/projects/echecs-jeux.png';
 import ReturnButton from '../../components/ReturnButton.tsx';
 import {useTranslate} from '../../hooks/useTranslate';
 import '../../styles/projects.css';

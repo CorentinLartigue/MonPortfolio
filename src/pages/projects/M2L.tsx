@@ -1,7 +1,7 @@
 import React from 'react';
-import M2L_statique_ligue from '/M2L_statique_ligue.png';
-import M2L_dynamique_ligue from '/M2L_dynamique_ligue.png';
-import M2L_trello from '/M2L_trello.png';
+import M2L_statique_ligue from '/images/projects/m2l-statique-ligue.png';
+import M2L_dynamique_ligue from '/images/projects/m2l-dynamique-ligue.png';
+import M2L_trello from '/images/projects/m2l-trello.png';
 import ReturnButton from '../../components/ReturnButton.tsx';
 import {useTranslate} from '../../hooks/useTranslate';
 import '../../styles/projects.css';

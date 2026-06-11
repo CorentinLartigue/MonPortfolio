@@ -15,7 +15,7 @@ export const experiences: XP[] = [
     {
         titreKey: 'experiences.xp1.title',
         entreprise: 'Home Made IO',
-        logo: `${baseUrl}home-made-io.jpg`,
+        logo: `${baseUrl}images/logos/home-made-io.jpg`,
         periodeKey: 'experiences.xp1.period',
         descriptionKey: 'experiences.xp1.desc',
         missionsKeys: [
@@ -30,7 +30,7 @@ export const experiences: XP[] = [
     {
         titreKey: 'experiences.xp2.title',
         entreprise: 'Groupe FBO',
-        logo: `${baseUrl}groupeFBO.png`,
+        logo: `${baseUrl}images/logos/groupe-fbo.png`,
         periodeKey: 'experiences.xp2.period',
         descriptionKey: 'experiences.xp2.desc',
         missionsKeys: [
@@ -46,7 +46,7 @@ export const experiences: XP[] = [
     {
         titreKey: 'experiences.xp3.title',
         entreprise: 'DevOpti',
-        logo: `${baseUrl}devopti.png`,
+        logo: `${baseUrl}images/logos/devopti.png`,
         periodeKey: 'experiences.xp3.period',
         descriptionKey: 'experiences.xp3.desc',
         missionsKeys: [
@@ -59,7 +59,7 @@ export const experiences: XP[] = [
     {
         titreKey: 'experiences.xp4.title',
         entreprise: 'Divers',
-        logo: `${baseUrl}proman.png`,
+        logo: `${baseUrl}images/logos/proman.png`,
         periodeKey: 'experiences.xp4.period',
         descriptionKey: 'experiences.xp4.desc',
         missionsKeys: [
@@ -71,7 +71,7 @@ export const experiences: XP[] = [
     {
         titreKey: 'experiences.xp5.title',
         entreprise: 'Vignoble Ducourt',
-        logo: `${baseUrl}ducourt.png`,
+        logo: `${baseUrl}images/logos/ducourt.png`,
         periodeKey: 'experiences.xp5.period',
         descriptionKey: 'experiences.xp5.desc',
         missionsKeys: [

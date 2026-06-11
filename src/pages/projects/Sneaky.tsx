@@ -1,5 +1,5 @@
 import React from 'react';
-import maquette_sneaky from '/maquette_sneaky.png';
+import maquette_sneaky from '/images/projects/maquette-sneaky.png';
 import ReturnButton from '../../components/ReturnButton.tsx';
 import {useTranslate} from '../../hooks/useTranslate';
 import '../../styles/projects.css';
