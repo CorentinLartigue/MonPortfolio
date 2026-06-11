@@ -27,15 +27,23 @@ const Projects: React.FC = () => {
         let loadedImages = 0;
         const totalImages = projects.length;
 
+        if (totalImages === 0) {
+            setIsImagesLoaded(true);
+            return;
+        }
+
+        const handleImageLoad = () => {
+            loadedImages += 1;
+            if (loadedImages === totalImages) {
+                setIsImagesLoaded(true);
+            }
+        };
+
         projects.forEach((projet) => {
             const img = new Image();
             img.src = projet.image;
-            img.onload = () => {
-                loadedImages += 1;
-                if (loadedImages === totalImages) {
-                    setIsImagesLoaded(true);
-                }
-            };
+            img.onload = handleImageLoad;
+            img.onerror = handleImageLoad;
         });
     }, []);
 
