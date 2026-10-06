@@ -13,7 +13,15 @@ import '../../styles/projects.css';
 const Berroyer: React.FC = () => {
     const {t} = useTranslate();
 
-    const StepBlock = ({ title, desc, img, bullets = [], num }: any) => (
+    interface StepBlockProps {
+        title: string;
+        desc: string;
+        img: string;
+        bullets?: string[];
+        num: number;
+    }
+
+    const StepBlock = ({ title, desc, img, bullets = [], num }: StepBlockProps) => (
         <div className="relative pl-12 md:pl-0">
             {/* Timeline dot */}
             <div className="hidden md:flex absolute left-1/2 -ml-5 top-8 w-10 h-10 rounded-full bg-blue-600 border-4 border-slate-900 items-center justify-center text-white font-bold z-10">
