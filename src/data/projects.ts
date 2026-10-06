@@ -6,7 +6,7 @@ import {
 import {
     SiTailwindcss, SiFigma, SiJquery, SiSymfony, SiBootstrap, SiSpringboot,
     SiLeaflet, SiTrello, SiNestjs, SiTypescript, SiPostgresql, SiDocker,
-    SiShopify, SiGraphql, SiAngular, SiNginx, SiExpress
+    SiShopify, SiGraphql, SiAngular, SiNginx, SiExpress, SiLaravel, SiRedis
 } from 'react-icons/si';
 
 export interface Technology {
@@ -64,15 +64,16 @@ export const projects: Projet[] = [
         id: 'locpriority',
         titreKey: 'project.list.locpriority.title',
         descriptionKey: 'project.list.locpriority.desc',
-        image: `${baseUrl}images/projects/locpriority.webp`,
+        image: `${baseUrl}images/projects/locpriority/dashboard.png`,
         lien: '/projects/locpriority',
         category: 'web',
         technologies: [
-            {name: 'Shopify', icon: SiShopify, color: 'text-green-600'},
+            {name: 'Laravel', icon: SiLaravel, color: 'text-red-600'},
             {name: 'React', icon: FaReact, color: 'text-cyan-400'},
-            {name: 'NodeJS', icon: FaNodeJs, color: 'text-green-500'},
+            {name: 'Shopify', icon: SiShopify, color: 'text-green-600'},
+            {name: 'Redis', icon: SiRedis, color: 'text-red-500'},
             {name: 'GraphQL', icon: SiGraphql, color: 'text-pink-600'},
-            {name: 'TypeScript', icon: SiTypescript, color: 'text-blue-600'}
+            {name: 'Tailwind', icon: SiTailwindcss, color: 'text-blue-400'}
         ]
     },
     {
