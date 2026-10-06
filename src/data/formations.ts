@@ -22,7 +22,9 @@ export const formations: Formation[] = [
             'formations.form1.positive3'
         ],
         pointsNegatifsKeys: [
-            'formations.form1.negative1'
+            'formations.form1.negative1',
+            'formations.form1.negative2',
+            'formations.form1.negative3'
         ],
         lien: 'https://www.ynov.com/campus/bordeaux/',
         logo: `${baseUrl}images/logos/ynov.png`,
