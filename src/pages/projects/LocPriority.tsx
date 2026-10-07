@@ -111,13 +111,13 @@ const LocPriority: React.FC = () => {
                 {/* Stack Badges */}
                 <div className="flex flex-wrap justify-center gap-2.5 mt-8 z-10">
                     <span className="px-3 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-medium text-slate-300 flex items-center gap-1.5">
-                        <SiLaravel className="text-red-500" /> Laravel 13
+                        <SiLaravel className="text-red-500" /> Laravel
                     </span>
                     <span className="px-3 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-medium text-slate-300 flex items-center gap-1.5">
-                        <FaReact className="text-cyan-400" /> React 19 & Inertia 2
+                        <FaReact className="text-cyan-400" /> React & Inertia
                     </span>
                     <span className="px-3 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-medium text-slate-300 flex items-center gap-1.5">
-                        <FaShopify className="text-green-500" /> App Bridge v4
+                        <FaShopify className="text-green-500" /> Shopify App Bridge
                     </span>
                     <span className="px-3 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-medium text-slate-300 flex items-center gap-1.5">
                         <SiRedis className="text-red-400" /> Redis Queues & Cache
