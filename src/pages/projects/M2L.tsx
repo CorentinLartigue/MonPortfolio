@@ -5,62 +5,62 @@ import M2L_trello from '/images/projects/m2l-trello.png';
 import ReturnButton from '../../components/ReturnButton.tsx';
 import {useTranslate} from '../../hooks/useTranslate';
 import { FaRunning, FaDesktop, FaServer, FaTasks } from 'react-icons/fa';
-import '../../styles/projects.css';
+import '../../styles/projects/m2l.css';
 
 const M2L: React.FC = () => {
     const {t} = useTranslate();
 
     return (
-        <div className="min-h-screen bg-slate-900 text-slate-200 font-sans selection:bg-cyan-500/30">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-4">
+        <div className="m2l-page">
+            <div className="m2l-nav-wrapper">
                 <ReturnButton />
             </div>
 
             {/* Header */}
-            <div className="relative bg-gradient-to-r from-blue-900 to-cyan-900 py-32 px-6 overflow-hidden">
-                <div className="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiNmZmYiLz48L3N2Zz4=')]"></div>
-                <div className="max-w-6xl mx-auto relative z-10 flex flex-col items-center text-center">
-                    <div className="w-20 h-20 bg-cyan-500 rounded-full flex items-center justify-center mb-8 shadow-[0_0_30px_rgba(6,182,212,0.5)]">
-                        <FaRunning className="text-4xl text-slate-900" />
+            <div className="m2l-header">
+                <div className="m2l-header-pattern"></div>
+                <div className="m2l-header-content">
+                    <div className="m2l-badge-icon">
+                        <FaRunning className="m2l-badge-svg" />
                     </div>
-                    <h1 className="text-5xl md:text-7xl font-black text-white tracking-tighter mb-6 uppercase italic">
+                    <h1 className="m2l-title">
                         {t('project.m2l.title')}
                     </h1>
-                    <p className="text-xl text-cyan-100 max-w-3xl font-medium">
+                    <p className="m2l-desc">
                         {t('project.m2l.desc')}
                     </p>
                 </div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-6 py-20 space-y-32">
+            <div className="m2l-main-content">
                 
                 {/* Intro */}
-                <div className="bg-slate-800 p-10 rounded-2xl border-l-8 border-cyan-500 shadow-xl">
-                    <h2 className="text-3xl font-bold text-white mb-6 uppercase tracking-wider">{t('project.m2l.introTitle')}</h2>
-                    <p className="text-lg text-slate-300 leading-relaxed">
+                <div className="m2l-intro-card">
+                    <h2 className="m2l-intro-title">{t('project.m2l.introTitle')}</h2>
+                    <p className="m2l-intro-text">
                         {t('project.m2l.introText')}
                     </p>
                 </div>
 
                 {/* Compare Section */}
                 <div>
-                    <h2 className="text-4xl font-black text-white text-center mb-16 uppercase italic text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">{t('project.m2l.compareTitle')}</h2>
+                    <h2 className="m2l-compare-title">{t('project.m2l.compareTitle')}</h2>
                     
-                    <div className="grid lg:grid-cols-2 gap-12">
+                    <div className="m2l-compare-grid">
                         {/* Static */}
-                        <div className="bg-slate-800 rounded-3xl overflow-hidden border border-slate-700 shadow-2xl group hover:-translate-y-2 transition-transform duration-300">
-                            <div className="bg-blue-950 p-6 flex items-center gap-4 border-b border-blue-900">
-                                <FaDesktop className="text-3xl text-blue-400" />
-                                <h3 className="text-2xl font-bold text-white uppercase">{t('project.m2l.staticTitle')}</h3>
+                        <div className="m2l-compare-card group">
+                            <div className="m2l-card-header-static">
+                                <FaDesktop className="m2l-card-icon-static" />
+                                <h3 className="m2l-card-title">{t('project.m2l.staticTitle')}</h3>
                             </div>
-                            <div className="p-8 space-y-6">
-                                <img src={M2L_statique_ligue} alt="Site statique" className="w-full rounded-xl border-4 border-slate-700 shadow-lg group-hover:border-blue-500 transition-colors" />
-                                <p className="text-slate-300">{t('project.m2l.staticText')}</p>
-                                <ul className="space-y-3 bg-slate-900 p-6 rounded-xl">
+                            <div className="m2l-card-body">
+                                <img src={M2L_statique_ligue} alt="Site statique" className="m2l-card-img-static" />
+                                <p className="m2l-card-text">{t('project.m2l.staticText')}</p>
+                                <ul className="m2l-bullet-list">
                                     {[1, 2, 3, 4].map(i => (
-                                        <li key={i} className="flex items-start gap-3">
-                                            <div className="mt-1.5 w-2 h-2 rounded bg-blue-500 shrink-0"></div>
-                                            <span className="text-sm text-slate-400">{t(`project.m2l.staticBullet${i}`)}</span>
+                                        <li key={i} className="m2l-bullet-item">
+                                            <div className="m2l-bullet-dot-static"></div>
+                                            <span className="m2l-bullet-label">{t(`project.m2l.staticBullet${i}`)}</span>
                                         </li>
                                     ))}
                                 </ul>
@@ -68,19 +68,19 @@ const M2L: React.FC = () => {
                         </div>
 
                         {/* Dynamic */}
-                        <div className="bg-slate-800 rounded-3xl overflow-hidden border border-slate-700 shadow-2xl group hover:-translate-y-2 transition-transform duration-300">
-                            <div className="bg-cyan-950 p-6 flex items-center gap-4 border-b border-cyan-900">
-                                <FaServer className="text-3xl text-cyan-400" />
-                                <h3 className="text-2xl font-bold text-white uppercase">{t('project.m2l.dynamicTitle')}</h3>
+                        <div className="m2l-compare-card group">
+                            <div className="m2l-card-header-dynamic">
+                                <FaServer className="m2l-card-icon-dynamic" />
+                                <h3 className="m2l-card-title">{t('project.m2l.dynamicTitle')}</h3>
                             </div>
-                            <div className="p-8 space-y-6">
-                                <img src={M2L_dynamique_ligue} alt="Site dynamique" className="w-full rounded-xl border-4 border-slate-700 shadow-lg group-hover:border-cyan-500 transition-colors" />
-                                <p className="text-slate-300">{t('project.m2l.dynamicText')}</p>
-                                <ul className="space-y-3 bg-slate-900 p-6 rounded-xl">
+                            <div className="m2l-card-body">
+                                <img src={M2L_dynamique_ligue} alt="Site dynamique" className="m2l-card-img-dynamic" />
+                                <p className="m2l-card-text">{t('project.m2l.dynamicText')}</p>
+                                <ul className="m2l-bullet-list">
                                     {[1, 2, 3, 4].map(i => (
-                                        <li key={i} className="flex items-start gap-3">
-                                            <div className="mt-1.5 w-2 h-2 rounded bg-cyan-500 shrink-0"></div>
-                                            <span className="text-sm text-slate-400">{t(`project.m2l.dynamicBullet${i}`)}</span>
+                                        <li key={i} className="m2l-bullet-item">
+                                            <div className="m2l-bullet-dot-dynamic"></div>
+                                            <span className="m2l-bullet-label">{t(`project.m2l.dynamicBullet${i}`)}</span>
                                         </li>
                                     ))}
                                 </ul>
@@ -90,33 +90,33 @@ const M2L: React.FC = () => {
                 </div>
 
                 {/* Tech Stack */}
-                <div className="grid md:grid-cols-2 gap-8">
-                    <div className="bg-blue-900/20 p-8 rounded-2xl border border-blue-800">
-                        <h3 className="text-xl font-bold text-blue-400 mb-6 uppercase tracking-widest">{t('project.m2l.staticTitle')} Stack</h3>
-                        <div className="flex flex-wrap gap-3">
+                <div className="m2l-tech-grid">
+                    <div className="m2l-tech-box-static">
+                        <h3 className="m2l-tech-title-static">{t('project.m2l.staticTitle')} Stack</h3>
+                        <div className="m2l-tech-tags">
                             {[t('project.m2l.techStatic1'), t('project.m2l.techStatic2'), t('project.m2l.techStatic3')].map(tech => (
-                                <span key={tech} className="px-4 py-2 bg-slate-800 rounded-full text-sm font-medium border border-slate-600">{tech}</span>
+                                <span key={tech} className="m2l-tech-tag">{tech}</span>
                             ))}
                         </div>
                     </div>
-                    <div className="bg-cyan-900/20 p-8 rounded-2xl border border-cyan-800">
-                        <h3 className="text-xl font-bold text-cyan-400 mb-6 uppercase tracking-widest">{t('project.m2l.dynamicTitle')} Stack</h3>
-                        <div className="flex flex-wrap gap-3">
+                    <div className="m2l-tech-box-dynamic">
+                        <h3 className="m2l-tech-title-dynamic">{t('project.m2l.dynamicTitle')} Stack</h3>
+                        <div className="m2l-tech-tags">
                             {[t('project.m2l.techDynamic1'), t('project.m2l.techDynamic2'), t('project.m2l.techDynamic3')].map(tech => (
-                                <span key={tech} className="px-4 py-2 bg-slate-800 rounded-full text-sm font-medium border border-slate-600">{tech}</span>
+                                <span key={tech} className="m2l-tech-tag">{tech}</span>
                             ))}
                         </div>
                     </div>
                 </div>
 
                 {/* Methodology */}
-                <div className="bg-slate-800 p-10 md:p-16 rounded-3xl border border-slate-700 text-center">
-                    <div className="inline-flex items-center justify-center p-4 bg-slate-900 rounded-full mb-8">
-                        <FaTasks className="text-3xl text-cyan-500" />
+                <div className="m2l-method-card">
+                    <div className="m2l-method-badge">
+                        <FaTasks className="m2l-method-icon" />
                     </div>
-                    <h2 className="text-3xl font-bold text-white mb-10 uppercase tracking-widest">{t('project.m2l.methodTitle')}</h2>
-                    <img src={M2L_trello} alt="Trello" className="max-w-2xl w-full mx-auto rounded-xl shadow-2xl mb-10 border-4 border-slate-700" />
-                    <p className="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
+                    <h2 className="m2l-method-title">{t('project.m2l.methodTitle')}</h2>
+                    <img src={M2L_trello} alt="Trello" className="m2l-method-img" />
+                    <p className="m2l-method-text">
                         {t('project.m2l.methodText')}
                     </p>
                 </div>

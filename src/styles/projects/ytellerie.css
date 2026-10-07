@@ -1,0 +1,99 @@
+/* Ytellerie - Styles du projet */
+
+.ytellerie-container {
+    @apply min-h-screen bg-slate-950 text-slate-200;
+}
+
+.ytellerie-return-wrapper {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-4;
+}
+
+.ytellerie-layout {
+    @apply flex flex-col lg:flex-row min-h-screen;
+}
+
+/* Sidebar Gauche Fixe */
+.ytellerie-sidebar {
+    @apply lg:w-1/3 lg:sticky lg:top-0 lg:h-screen p-12 flex flex-col justify-center border-r border-indigo-900/30 bg-slate-950/80 backdrop-blur-xl z-10;
+}
+
+.ytellerie-title {
+    @apply text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-br from-indigo-400 to-purple-600 mb-6;
+}
+
+.ytellerie-desc {
+    @apply text-lg text-slate-400 leading-relaxed mb-12;
+}
+
+.ytellerie-tech-section {
+    @apply space-y-6;
+}
+
+.ytellerie-tech-heading {
+    @apply text-sm font-bold tracking-widest uppercase text-indigo-500;
+}
+
+.ytellerie-tech-list {
+    @apply flex flex-wrap gap-4;
+}
+
+.ytellerie-tech-badge {
+    @apply flex items-center gap-2 bg-indigo-950/50 px-4 py-2 rounded-full border border-indigo-800/50 text-indigo-300;
+}
+
+.ytellerie-github-link {
+    @apply mt-auto inline-flex items-center gap-3 text-slate-300 hover:text-white pt-12;
+}
+
+.ytellerie-github-icon-box {
+    @apply p-3 bg-slate-900 rounded-full group-hover:bg-indigo-600 transition-colors;
+}
+
+.ytellerie-github-text {
+    @apply font-semibold underline decoration-indigo-500/30 group-hover:decoration-indigo-500 transition-all;
+}
+
+/* Contenu Défilant Droit */
+.ytellerie-main {
+    @apply lg:w-2/3 p-8 md:p-16 lg:p-24 space-y-24 mt-12 lg:mt-0;
+}
+
+.ytellerie-intro-title {
+    @apply text-3xl font-bold mb-6 text-white border-l-4 border-indigo-500 pl-4;
+}
+
+.ytellerie-intro-text {
+    @apply text-slate-300 text-lg leading-relaxed max-w-3xl;
+}
+
+.ytellerie-features-section {
+    @apply space-y-12;
+}
+
+.ytellerie-feature-block {
+    @apply space-y-6;
+}
+
+.ytellerie-placeholder {
+    @apply flex flex-col items-center justify-center w-full h-72 bg-indigo-900/20 rounded-2xl border-2 border-dashed border-indigo-500/30 text-indigo-400 group-hover:border-indigo-400/60 group-hover:bg-indigo-900/40 transition-all duration-300;
+}
+
+.ytellerie-placeholder-icon {
+    @apply text-5xl mb-4 opacity-50;
+}
+
+.ytellerie-placeholder-text {
+    @apply font-medium tracking-widest text-sm uppercase;
+}
+
+.ytellerie-feature-card {
+    @apply bg-slate-900/50 p-8 rounded-2xl border border-slate-800;
+}
+
+.ytellerie-feature-title {
+    @apply text-xl font-bold text-indigo-400 mb-3;
+}
+
+.ytellerie-feature-text {
+    @apply text-slate-300;
+}

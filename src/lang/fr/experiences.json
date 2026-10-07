@@ -6,14 +6,14 @@
   },
   "btnViewProject": "Voir le projet",
   "xp1": {
-    "title": "Alternance - Bachelor 3 & Mastère Développement Web",
-    "period": "Depuis le 23/12/2024",
-    "desc": "Développement et maintenance de solutions e-commerce",
-    "mission1": "Technologies et outils : Laravel, Linux, Bash, GitHub, Bases de Données (BDD), ERP, CMS",
-    "mission2": "Maintenance et amélioration des modules de synchronisation pour Prestashop - Shopify / Fastmag - Joolan.",
-    "mission3": "Création de solutions applicatives pour Shopify ou Prestashop, adaptées aux besoins des utilisateurs avec une synchronisation avec les ERP Fastmag ou Joolan.",
-    "mission4": "Support technique et applicatif pour les clients, assurant une expérience utilisateur fluide et optimale.",
-    "mission5": "Création d'environnements de développement pour les nouveaux employés sous Docker.",
+    "title": "Alternance - Mastère Expert en Développement Logiciel",
+    "period": "Depuis le 23/12/2024 (En cours)",
+    "desc": "Conception, développement et commercialisation de solutions e-commerce & logistiques",
+    "mission1": "Conception et développement de l'application publique Shopify Location Priority (Order Routing & Stock Balance) avec Laravel, React, Inertia, Redis et App Bridge.",
+    "mission2": "Architecture événementielle connectée à l'API Shopify : ingestion des webhooks et mapping vers des jobs asynchrones supervisés.",
+    "mission3": "Création et pilotage de la communication produit : campagnes Shopify Ads, vidéos YouTube et publications Instagram.",
+    "mission4": "Maintenance et optimisation des modules de synchronisation multicanaux (Shopify, PrestaShop, ERP Fastmag, Joolan).",
+    "mission5": "Support technique client, intégrations spécifiques et environnements Docker pour l'équipe.",
     "opinion": "J'ai rejoint une équipe incroyablement accueillante, avec une ambiance chaleureuse et presque familiale. Les projets sont stimulants, portés par des technologies modernes et passionnantes, offrant de belles opportunités d'apprentissage. Un environnement motivant où il fait bon évoluer !"
   },
   "xp2": {

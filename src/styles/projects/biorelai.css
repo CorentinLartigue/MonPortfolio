@@ -1,0 +1,113 @@
+/* Biorelai - Styles du projet */
+
+.biorelai-page {
+  @apply min-h-screen bg-[#f8fafc] text-slate-800 font-sans selection:bg-blue-200;
+}
+
+.biorelai-nav-wrapper {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-4;
+}
+
+.biorelai-header {
+  @apply relative overflow-hidden bg-gradient-to-br from-blue-900 to-green-950 text-white py-32 px-6 rounded-b-[4rem] shadow-2xl;
+}
+
+.biorelai-header-bg-icon {
+  @apply absolute -top-24 -right-24 text-white/5;
+}
+
+.biorelai-header-content {
+  @apply max-w-4xl mx-auto text-center relative z-10;
+}
+
+.biorelai-badge-icon {
+  @apply inline-flex items-center justify-center p-4 bg-white/10 backdrop-blur-md rounded-full mb-8;
+}
+
+.biorelai-title {
+  @apply text-5xl md:text-7xl font-black mb-6 tracking-tight;
+}
+
+.biorelai-subtitle {
+  @apply text-xl text-blue-100 max-w-2xl mx-auto font-medium;
+}
+
+.biorelai-main-content {
+  @apply max-w-6xl mx-auto px-6 py-20 space-y-24;
+}
+
+.biorelai-intro-card {
+  @apply bg-white p-10 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100;
+}
+
+.biorelai-intro-title {
+  @apply text-3xl font-bold text-green-900 mb-6;
+}
+
+.biorelai-intro-text {
+  @apply text-lg text-slate-600 leading-relaxed font-medium;
+}
+
+.biorelai-section-title {
+  @apply text-3xl font-bold text-center text-green-900 mb-12;
+}
+
+.biorelai-roles-grid {
+  @apply grid md:grid-cols-2 lg:grid-cols-4 gap-6;
+}
+
+.biorelai-role-card {
+  @apply bg-white p-8 rounded-3xl shadow-lg shadow-slate-200/50 border border-slate-100 hover:border-blue-500 hover:-translate-y-2 transition-all duration-300;
+}
+
+.biorelai-role-icon {
+  @apply text-4xl text-blue-600 mb-6 group-hover:scale-110 transition-transform origin-left;
+}
+
+.biorelai-role-title {
+  @apply text-xl font-bold text-slate-800 mb-4;
+}
+
+.biorelai-role-list {
+  @apply space-y-3 text-slate-600;
+}
+
+.biorelai-role-item {
+  @apply flex items-start gap-2;
+}
+
+.biorelai-role-bullet {
+  @apply mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0;
+}
+
+.biorelai-split-grid {
+  @apply grid md:grid-cols-2 gap-8;
+}
+
+.biorelai-tech-card {
+  @apply bg-blue-50 p-10 rounded-3xl border border-blue-100;
+}
+
+.biorelai-tech-title {
+  @apply text-2xl font-bold text-green-900 mb-6;
+}
+
+.biorelai-tech-tags {
+  @apply flex flex-wrap gap-3;
+}
+
+.biorelai-tech-tag {
+  @apply px-5 py-2.5 bg-white text-green-800 font-bold rounded-full shadow-sm;
+}
+
+.biorelai-method-card {
+  @apply bg-green-900 p-10 rounded-3xl text-white shadow-xl shadow-green-900/20;
+}
+
+.biorelai-method-title {
+  @apply text-2xl font-bold text-blue-400 mb-6;
+}
+
+.biorelai-method-text {
+  @apply text-green-50 leading-relaxed text-lg;
+}

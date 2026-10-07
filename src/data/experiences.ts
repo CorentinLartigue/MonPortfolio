@@ -25,7 +25,8 @@ export const experiences: XP[] = [
             'experiences.xp1.mission4',
             'experiences.xp1.mission5'
         ],
-        avisKey: 'experiences.xp1.opinion'
+        avisKey: 'experiences.xp1.opinion',
+        lienProjet: '/projects/locpriority'
     },
     {
         titreKey: 'experiences.xp2.title',

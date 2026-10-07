@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import {FiArrowRight, FiMail} from 'react-icons/fi';
+import {FiArrowRight, FiMail, FiCode} from 'react-icons/fi';
 import {FaReact, FaAngular, FaLaravel} from 'react-icons/fa';
 import {SiNestjs} from 'react-icons/si';
 import {useTranslate} from '../hooks/useTranslate.ts';
@@ -103,7 +103,7 @@ const Home: React.FC = () => {
 
                             <div className="home-floating-badge animate-bounce-slow">
                                 <div className="home-badge-icon-wrapper">
-                                    <FaReact className="home-floating-icon animate-spin-slow"/>
+                                    <FiCode className="home-floating-icon"/>
                                 </div>
                                 <div>
                                     <p className="home-floating-title">{t('home.floatingRole')}</p>

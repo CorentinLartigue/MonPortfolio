@@ -6,14 +6,14 @@
   },
   "btnViewProject": "View Project",
   "xp1": {
-    "title": "Apprenticeship - Bachelor 3 & Master's in Web Development",
-    "period": "Since 2024-12-23",
-    "desc": "Development and maintenance of e-commerce solutions",
-    "mission1": "Technologies and tools: Laravel, Linux, Bash, GitHub, Databases, ERP, CMS",
-    "mission2": "Maintenance and improvement of synchronization modules for Prestashop - Shopify / Fastmag - Joolan.",
-    "mission3": "Creation of application solutions for Shopify or Prestashop, adapted to users' needs with synchronization with Fastmag or Joolan ERPs.",
-    "mission4": "Technical and application support for clients, ensuring a smooth and optimal user experience.",
-    "mission5": "Creation of development environments for new employees using Docker.",
+    "title": "Apprenticeship - Master's in Software Engineering",
+    "period": "Since 2024-12-23 (Ongoing)",
+    "desc": "Design, development, and marketing of e-commerce & logistics software solutions",
+    "mission1": "Design and development of the public Shopify app Location Priority (Order Routing & Stock Balance) using Laravel, React, Inertia, Redis, and App Bridge.",
+    "mission2": "Event-driven architecture integrated with the Shopify API: webhook event ingestion and mapping to supervised asynchronous queue jobs.",
+    "mission3": "Product marketing and outreach strategy: execution of Shopify Ads campaigns, YouTube demonstration videos, and Instagram posts.",
+    "mission4": "Maintenance and enhancement of multichannel synchronization modules (Shopify, PrestaShop, Fastmag ERP, Joolan).",
+    "mission5": "Client technical support, custom integrations, and Docker development environments setup.",
     "opinion": "I joined an incredibly welcoming team, with a warm and almost family-like atmosphere. The projects are stimulating, driven by modern and exciting technologies, offering great learning opportunities. A motivating environment in which to evolve!"
   },
   "xp2": {

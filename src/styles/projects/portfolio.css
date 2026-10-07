@@ -1,0 +1,187 @@
+/* Portfolio - Styles du projet */
+
+.portfolio-container {
+    @apply min-h-screen bg-gray-950 text-gray-300 font-mono selection:bg-cyan-500/30;
+}
+
+.portfolio-return-wrapper {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-4;
+}
+
+/* Terminal Header */
+.portfolio-terminal-wrapper {
+    @apply max-w-5xl mx-auto px-6 pt-32 pb-16;
+}
+
+.portfolio-terminal-bar {
+    @apply w-full bg-gray-900 rounded-t-xl h-10 flex items-center px-4 gap-2 border border-b-0 border-gray-800;
+}
+
+.portfolio-terminal-dot-red {
+    @apply w-3 h-3 rounded-full bg-red-500;
+}
+
+.portfolio-terminal-dot-yellow {
+    @apply w-3 h-3 rounded-full bg-yellow-500;
+}
+
+.portfolio-terminal-dot-green {
+    @apply w-3 h-3 rounded-full bg-green-500;
+}
+
+.portfolio-terminal-path {
+    @apply ml-4 text-xs text-gray-500 font-sans;
+}
+
+.portfolio-terminal-body {
+    @apply w-full bg-gray-950 p-8 md:p-12 border border-gray-800 rounded-b-xl shadow-2xl relative overflow-hidden;
+}
+
+.portfolio-terminal-bg-icon {
+    @apply absolute -bottom-10 -right-10 text-9xl text-gray-800 opacity-50;
+}
+
+.portfolio-terminal-content {
+    @apply relative z-10 space-y-6;
+}
+
+.portfolio-terminal-command {
+    @apply text-cyan-400 font-bold;
+}
+
+.portfolio-terminal-title {
+    @apply text-5xl md:text-7xl font-black text-white tracking-tighter;
+}
+
+.portfolio-terminal-desc {
+    @apply text-xl text-gray-400 max-w-2xl leading-relaxed border-l-4 border-cyan-500 pl-6;
+}
+
+/* Main Content */
+.portfolio-main {
+    @apply max-w-5xl mx-auto px-6 pb-32 space-y-24;
+}
+
+/* Objective */
+.portfolio-objective-grid {
+    @apply grid md:grid-cols-3 gap-8 items-start;
+}
+
+.portfolio-objective-aside {
+    @apply md:col-span-1 text-cyan-500 flex flex-col gap-4;
+}
+
+.portfolio-objective-icon {
+    @apply text-5xl;
+}
+
+.portfolio-objective-title {
+    @apply text-2xl font-bold uppercase tracking-widest text-white;
+}
+
+.portfolio-objective-body {
+    @apply md:col-span-2 bg-gray-900 p-8 rounded-xl border border-gray-800 text-lg leading-relaxed;
+}
+
+/* Features */
+.portfolio-features-section {
+    @apply space-y-12;
+}
+
+.portfolio-features-header {
+    @apply text-3xl font-bold text-white flex items-center gap-4 border-b border-gray-800 pb-4;
+}
+
+.portfolio-features-icon {
+    @apply text-cyan-500;
+}
+
+.portfolio-features-grid {
+    @apply grid md:grid-cols-2 gap-6;
+}
+
+.portfolio-feature-card {
+    @apply bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-cyan-500/50 transition-colors;
+}
+
+.portfolio-feature-title {
+    @apply text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors;
+}
+
+.portfolio-feature-arrow {
+    @apply text-cyan-500 mr-2;
+}
+
+.portfolio-feature-desc {
+    @apply text-gray-400 text-sm leading-relaxed;
+}
+
+/* Tech Stack */
+.portfolio-stack-box {
+    @apply bg-gradient-to-br from-gray-900 to-gray-950 p-10 rounded-2xl border border-gray-800 shadow-2xl;
+}
+
+.portfolio-stack-title {
+    @apply text-3xl font-bold text-white mb-10 text-center flex items-center justify-center gap-4;
+}
+
+.portfolio-stack-grid {
+    @apply grid md:grid-cols-3 gap-8;
+}
+
+.portfolio-stack-item {
+    @apply flex flex-col items-center text-center space-y-3;
+}
+
+.portfolio-stack-num {
+    @apply w-12 h-12 rounded-full bg-cyan-500/10 flex items-center justify-center text-cyan-400 font-bold text-xl border border-cyan-500/20;
+}
+
+.portfolio-stack-item-title {
+    @apply text-white font-bold;
+}
+
+.portfolio-stack-item-desc {
+    @apply text-xs text-gray-500;
+}
+
+/* Challenges & Learning */
+.portfolio-insights-grid {
+    @apply grid md:grid-cols-2 gap-12;
+}
+
+.portfolio-challenges-box {
+    @apply space-y-8 border-l-2 border-red-500/30 pl-8;
+}
+
+.portfolio-challenges-title {
+    @apply text-2xl font-bold text-white;
+}
+
+.portfolio-challenges-list {
+    @apply space-y-6;
+}
+
+.portfolio-challenge-label {
+    @apply block text-red-400 mb-1;
+}
+
+.portfolio-challenge-text {
+    @apply text-sm text-gray-400 leading-relaxed;
+}
+
+.portfolio-learning-card {
+    @apply bg-gray-900 p-8 rounded-xl border border-gray-800 relative;
+}
+
+.portfolio-learning-icon {
+    @apply absolute top-8 right-8 text-6xl text-gray-800 opacity-30;
+}
+
+.portfolio-learning-title {
+    @apply text-2xl font-bold text-white mb-6 relative z-10;
+}
+
+.portfolio-learning-desc {
+    @apply text-gray-400 leading-relaxed relative z-10;
+}

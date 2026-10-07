@@ -1,0 +1,137 @@
+/* Horamanea - Styles du projet */
+
+.horamanea-container {
+    @apply min-h-screen bg-slate-950 text-slate-200;
+}
+
+.horamanea-return-wrapper {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-4;
+}
+
+.horamanea-main {
+    @apply max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8 space-y-16;
+}
+
+/* Header Dashboard Style */
+.horamanea-hero-card {
+    @apply bg-slate-900 rounded-3xl p-8 md:p-12 border border-slate-800 flex flex-col md:flex-row items-center justify-between gap-12 shadow-2xl relative overflow-hidden;
+}
+
+.horamanea-hero-glow {
+    @apply absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3;
+}
+
+.horamanea-hero-content {
+    @apply z-10 max-w-2xl;
+}
+
+.horamanea-hero-badge {
+    @apply inline-block px-4 py-1.5 rounded-full bg-blue-500/20 text-blue-400 font-bold text-sm mb-6 uppercase tracking-widest;
+}
+
+.horamanea-hero-title {
+    @apply text-5xl font-black text-white mb-6;
+}
+
+.horamanea-hero-desc {
+    @apply text-xl text-slate-400;
+}
+
+.horamanea-hero-actions {
+    @apply z-10 flex flex-col gap-4 w-full md:w-auto;
+}
+
+.horamanea-repo-btn {
+    @apply flex items-center justify-center gap-3 bg-slate-800 hover:bg-blue-600 hover:text-white transition-all text-slate-300 px-6 py-4 rounded-xl font-bold border border-slate-700;
+}
+
+/* Grille de Contenu */
+.horamanea-grid-layout {
+    @apply grid md:grid-cols-3 gap-8;
+}
+
+.horamanea-col-left {
+    @apply md:col-span-1 space-y-8;
+}
+
+.horamanea-intro-card {
+    @apply bg-slate-900 rounded-3xl p-8 border border-slate-800;
+}
+
+.horamanea-intro-title {
+    @apply text-xl font-bold text-white mb-4 border-b border-slate-800 pb-4;
+}
+
+.horamanea-intro-text {
+    @apply text-slate-400 leading-relaxed;
+}
+
+.horamanea-tech-card {
+    @apply bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 border border-slate-800;
+}
+
+.horamanea-tech-title {
+    @apply text-xl font-bold text-blue-400 mb-6;
+}
+
+.horamanea-tech-list {
+    @apply space-y-4;
+}
+
+.horamanea-tech-item {
+    @apply flex items-center gap-4 bg-slate-950/50 p-4 rounded-xl;
+}
+
+/* Colonne Droite */
+.horamanea-col-right {
+    @apply md:col-span-2 space-y-8;
+}
+
+.horamanea-features-card {
+    @apply bg-slate-900 rounded-3xl p-8 border border-slate-800;
+}
+
+.horamanea-features-title {
+    @apply text-2xl font-bold text-white mb-8;
+}
+
+.horamanea-features-grid {
+    @apply grid sm:grid-cols-2 gap-6;
+}
+
+.horamanea-feature-item {
+    @apply p-6 bg-slate-950 rounded-2xl border border-slate-800 hover:border-blue-500/50 transition-colors;
+}
+
+.horamanea-feature-item-full {
+    @apply p-6 bg-slate-950 rounded-2xl border border-slate-800 hover:border-blue-500/50 transition-colors sm:col-span-2;
+}
+
+.horamanea-feature-num {
+    @apply text-blue-500 font-bold mb-2;
+}
+
+.horamanea-feature-text {
+    @apply text-slate-300 font-medium;
+}
+
+/* Screenshot & Cadre */
+.horamanea-screen-wrapper {
+    @apply bg-slate-900 rounded-3xl p-2 border border-slate-800 shadow-2xl;
+}
+
+.horamanea-screen-inner {
+    @apply bg-slate-950 rounded-[1.25rem] border border-slate-800 h-96 flex flex-col items-center justify-center text-slate-700 relative overflow-hidden;
+}
+
+.horamanea-screen-bar {
+    @apply absolute top-0 left-0 w-full h-12 bg-slate-900 border-b border-slate-800 flex items-center px-4 gap-2;
+}
+
+.horamanea-screen-icon {
+    @apply text-6xl mb-4 group-hover:text-blue-500/50 transition-colors;
+}
+
+.horamanea-screen-label {
+    @apply font-bold tracking-widest uppercase;
+}

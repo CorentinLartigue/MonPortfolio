@@ -3,14 +3,15 @@ import ReturnButton from '../../components/ReturnButton.tsx';
 import { useTranslate } from '../../hooks/useTranslate';
 import {
     FaShopify, FaReact, FaExternalLinkAlt, FaExchangeAlt,
-    FaShieldAlt, FaSlidersH, FaBolt, FaTimes, FaSearchPlus
+    FaShieldAlt, FaSlidersH, FaBolt, FaTimes, FaSearchPlus,
+    FaYoutube, FaInstagram
 } from 'react-icons/fa';
 import { SiLaravel, SiRedis, SiTailwindcss } from 'react-icons/si';
 import locprioritySchema from '/images/projects/locpriority/schema_priorite.png';
 import locpriorityDashboard from '/images/projects/locpriority/dashboard.png';
 import locpriorityRules from '/images/projects/locpriority/rules_priority.png';
 import locpriorityEditRule from '/images/projects/locpriority/edit_rule_priority.png';
-import '../../styles/projects.css';
+import '../../styles/projects/locpriority.css';
 
 interface GalleryItem {
     id: string;
@@ -82,97 +83,97 @@ const LocPriority: React.FC = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-slate-950 text-slate-300 font-sans selection:bg-cyan-500/30">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-4">
+        <div className="locpriority-container">
+            <div className="locpriority-return-wrapper">
                 <ReturnButton />
             </div>
 
             {/* Hero Section */}
-            <header className="relative pt-24 pb-20 px-6 lg:px-12 flex flex-col items-center text-center border-b border-slate-800 bg-gradient-to-b from-slate-900 to-slate-950">
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-cyan-900/20 via-slate-950 to-slate-950 pointer-events-none"></div>
+            <header className="locpriority-hero">
+                <div className="locpriority-hero-glow"></div>
                 
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-cyan-500/30 bg-cyan-950/40 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-6 z-10">
+                <div className="locpriority-hero-badge">
                     <FaShopify className="text-sm" />
                     <span>{t('project.locpriority.badge')}</span>
                 </div>
 
-                <h1 className="text-4xl sm:text-6xl md:text-7xl font-black text-white mb-3 tracking-tight z-10">
+                <h1 className="locpriority-hero-title">
                     {t('project.locpriority.title')}
                 </h1>
 
-                <p className="text-xl md:text-2xl font-medium text-cyan-400 mb-6 tracking-wide z-10">
+                <p className="locpriority-hero-subtitle">
                     {t('project.locpriority.subtitle')}
                 </p>
 
-                <p className="text-base md:text-lg text-slate-400 max-w-3xl leading-relaxed z-10">
+                <p className="locpriority-hero-desc">
                     {t('project.locpriority.desc')}
                 </p>
 
                 {/* Stack Badges */}
-                <div className="flex flex-wrap justify-center gap-2.5 mt-8 z-10">
-                    <span className="px-3 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-medium text-slate-300 flex items-center gap-1.5">
+                <div className="locpriority-hero-tech-list">
+                    <span className="locpriority-hero-tech-pill">
                         <SiLaravel className="text-red-500" /> Laravel
                     </span>
-                    <span className="px-3 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-medium text-slate-300 flex items-center gap-1.5">
+                    <span className="locpriority-hero-tech-pill">
                         <FaReact className="text-cyan-400" /> React & Inertia
                     </span>
-                    <span className="px-3 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-medium text-slate-300 flex items-center gap-1.5">
+                    <span className="locpriority-hero-tech-pill">
                         <FaShopify className="text-green-500" /> Shopify App Bridge
                     </span>
-                    <span className="px-3 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-medium text-slate-300 flex items-center gap-1.5">
+                    <span className="locpriority-hero-tech-pill">
                         <SiRedis className="text-red-400" /> Redis Queues & Cache
                     </span>
-                    <span className="px-3 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-medium text-slate-300 flex items-center gap-1.5">
+                    <span className="locpriority-hero-tech-pill">
                         <SiTailwindcss className="text-sky-400" /> Tailwind CSS
                     </span>
                 </div>
             </header>
 
             {/* Main Content */}
-            <main className="max-w-6xl mx-auto px-6 py-20 space-y-28">
+            <main className="locpriority-main">
 
                 {/* Architecture & Context Bento Grid */}
-                <section className="grid grid-cols-1 md:grid-cols-5 gap-8">
-                    <div className="md:col-span-3 bg-slate-900 p-8 rounded-3xl border border-slate-800 shadow-xl flex flex-col justify-between">
+                <section className="locpriority-bento-grid">
+                    <div className="locpriority-bento-main">
                         <div>
-                            <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                                <span className="w-1.5 h-7 bg-cyan-500 rounded-full"></span>
+                            <h2 className="locpriority-bento-title">
+                                <span className="locpriority-bento-bar"></span>
                                 {t('project.locpriority.introTitle')}
                             </h2>
-                            <p className="text-slate-300 leading-relaxed text-base">
+                            <p className="locpriority-bento-text">
                                 {t('project.locpriority.introText')}
                             </p>
                         </div>
-                        <div className="mt-6 pt-6 border-t border-slate-800 grid grid-cols-2 gap-4 text-xs text-slate-400">
+                        <div className="locpriority-bento-meta">
                             <div>
-                                <span className="block text-slate-500 uppercase tracking-wider font-semibold">Mode d'exécution</span>
-                                <span className="text-slate-200 font-medium">Asynchrone post-achat</span>
+                                <span className="locpriority-bento-meta-label">Mode d'exécution</span>
+                                <span className="locpriority-bento-meta-val">Asynchrone post-achat</span>
                             </div>
                             <div>
-                                <span className="block text-slate-500 uppercase tracking-wider font-semibold">Intégration</span>
-                                <span className="text-slate-200 font-medium">Shopify Embedded App</span>
+                                <span className="locpriority-bento-meta-label">Intégration</span>
+                                <span className="locpriority-bento-meta-val">Shopify Embedded App</span>
                             </div>
                         </div>
                     </div>
 
-                    <div className="md:col-span-2 bg-slate-900 p-8 rounded-3xl border border-slate-800 shadow-xl">
-                        <h2 className="text-xl font-bold text-cyan-400 mb-6 flex items-center gap-2">
+                    <div className="locpriority-bento-side">
+                        <h2 className="locpriority-bento-side-title">
                             {t('project.locpriority.archTitle')}
                         </h2>
-                        <ul className="space-y-4 text-sm text-slate-300">
-                            <li className="flex items-start gap-3">
+                        <ul className="locpriority-bento-list">
+                            <li className="locpriority-bento-list-item">
                                 <SiLaravel className="text-red-500 text-lg mt-0.5 shrink-0" />
                                 <span>{t('project.locpriority.techLaravel')}</span>
                             </li>
-                            <li className="flex items-start gap-3">
+                            <li className="locpriority-bento-list-item">
                                 <FaReact className="text-cyan-400 text-lg mt-0.5 shrink-0" />
                                 <span>{t('project.locpriority.techReact')}</span>
                             </li>
-                            <li className="flex items-start gap-3">
+                            <li className="locpriority-bento-list-item">
                                 <FaExchangeAlt className="text-emerald-400 text-base mt-0.5 shrink-0" />
                                 <span>{t('project.locpriority.techLedger')}</span>
                             </li>
-                            <li className="flex items-start gap-3">
+                            <li className="locpriority-bento-list-item">
                                 <FaBolt className="text-amber-400 text-base mt-0.5 shrink-0" />
                                 <span>{t('project.locpriority.techRealtime')}</span>
                             </li>
@@ -181,30 +182,30 @@ const LocPriority: React.FC = () => {
                 </section>
 
                 {/* Orchestration Scheme (Full Width Highlight) */}
-                <section className="space-y-6">
-                    <div className="text-center max-w-3xl mx-auto space-y-3">
-                        <h2 className="text-3xl md:text-4xl font-extrabold text-white">
+                <section className="locpriority-schema-section">
+                    <div className="locpriority-schema-header">
+                        <h2 className="locpriority-schema-title">
                             {t('project.locpriority.schemaTitle')}
                         </h2>
-                        <p className="text-cyan-400 text-sm font-semibold tracking-wide uppercase">
+                        <p className="locpriority-schema-subtitle">
                             {t('project.locpriority.schemaSubtitle')}
                         </p>
-                        <p className="text-slate-400 text-sm md:text-base leading-relaxed">
+                        <p className="locpriority-schema-desc">
                             {t('project.locpriority.schemaDesc')}
                         </p>
                     </div>
 
                     <div
                         onClick={() => setSelectedImage({ src: locprioritySchema, title: t('project.locpriority.schemaTitle') })}
-                        className="group relative cursor-pointer overflow-hidden rounded-3xl border border-slate-800 bg-slate-900 shadow-2xl hover:border-cyan-500/50 transition-all p-3 md:p-6"
+                        className="locpriority-schema-card group"
                     >
-                        <div className="relative overflow-hidden rounded-2xl bg-slate-950">
+                        <div className="locpriority-schema-inner">
                             <img
                                 src={locprioritySchema}
                                 alt={t('project.locpriority.schemaTitle')}
-                                className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-[1.01]"
+                                className="locpriority-schema-img"
                             />
-                            <div className="absolute inset-0 bg-slate-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 text-cyan-300 font-semibold text-sm">
+                            <div className="locpriority-schema-overlay">
                                 <FaSearchPlus className="text-lg" />
                                 <span>Agrandir le schéma</span>
                             </div>
@@ -213,45 +214,45 @@ const LocPriority: React.FC = () => {
                 </section>
 
                 {/* Merchant Screens Gallery */}
-                <section className="space-y-10">
-                    <div className="text-center max-w-2xl mx-auto">
-                        <h2 className="text-3xl font-extrabold text-white mb-2">
+                <section className="locpriority-gallery-section">
+                    <div className="locpriority-gallery-header">
+                        <h2 className="locpriority-gallery-title">
                             {t('project.locpriority.galleryTitle')}
                         </h2>
-                        <p className="text-slate-400 text-sm">
+                        <p className="locpriority-gallery-subtitle">
                             {t('project.locpriority.gallerySubtitle')}
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="locpriority-gallery-grid">
                         {galleryScreens.map((screen) => (
                             <article
                                 key={screen.id}
-                                className="group bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden shadow-lg hover:border-cyan-500/40 transition-all flex flex-col"
+                                className="locpriority-gallery-card group"
                             >
                                 <div
                                     onClick={() => setSelectedImage({ src: screen.image, title: t(screen.titleKey) })}
-                                    className="relative cursor-pointer overflow-hidden bg-slate-950 border-b border-slate-800"
+                                    className="locpriority-gallery-thumb"
                                 >
                                     <img
                                         src={screen.image}
                                         alt={t(screen.titleKey)}
-                                        className="w-full h-52 object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                                        className="locpriority-gallery-img"
                                     />
-                                    <div className="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-slate-950/80 backdrop-blur-md text-xs font-semibold text-cyan-400 border border-slate-700/50">
+                                    <div className="locpriority-gallery-tag">
                                         {screen.tag}
                                     </div>
-                                    <div className="absolute inset-0 bg-slate-950/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs gap-1.5 font-medium">
+                                    <div className="locpriority-gallery-zoom">
                                         <FaSearchPlus />
                                         <span>Agrandir</span>
                                     </div>
                                 </div>
-                                <div className="p-6 flex-1 flex flex-col justify-between">
+                                <div className="locpriority-gallery-body">
                                     <div>
-                                        <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                                        <h3 className="locpriority-gallery-item-title">
                                             {t(screen.titleKey)}
                                         </h3>
-                                        <p className="text-slate-400 text-xs leading-relaxed">
+                                        <p className="locpriority-gallery-item-desc">
                                             {t(screen.descKey)}
                                         </p>
                                     </div>
@@ -262,25 +263,25 @@ const LocPriority: React.FC = () => {
                 </section>
 
                 {/* Core Engine Features Grid */}
-                <section className="space-y-10">
-                    <h2 className="text-3xl font-extrabold text-center text-white">
+                <section className="locpriority-features-section">
+                    <h2 className="locpriority-features-title">
                         {t('project.locpriority.featuresTitle')}
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="locpriority-features-grid">
                         {engineFeatures.map((feat, idx) => {
                             const IconComponent = feat.icon;
                             return (
                                 <div
                                     key={idx}
-                                    className="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/40 hover:bg-slate-900 transition-all shadow-md group"
+                                    className="locpriority-feature-card group"
                                 >
-                                    <div className="w-10 h-10 rounded-xl bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 flex items-center justify-center mb-4 text-lg group-hover:scale-110 transition-transform">
+                                    <div className="locpriority-feature-icon-box">
                                         <IconComponent />
                                     </div>
-                                    <h3 className="text-base font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
+                                    <h3 className="locpriority-feature-title">
                                         {t(feat.titleKey)}
                                     </h3>
-                                    <p className="text-slate-400 text-xs leading-relaxed">
+                                    <p className="locpriority-feature-desc">
                                         {t(feat.descKey)}
                                     </p>
                                 </div>
@@ -289,43 +290,124 @@ const LocPriority: React.FC = () => {
                     </div>
                 </section>
 
+                {/* Multichannel Marketing & Outreach */}
+                <section className="locpriority-marketing-section">
+                    <div className="locpriority-marketing-header">
+                        <h2 className="locpriority-marketing-title">
+                            {t('project.locpriority.marketingTitle')}
+                        </h2>
+                        <p className="locpriority-marketing-subtitle">
+                            {t('project.locpriority.marketingSubtitle')}
+                        </p>
+                    </div>
+
+                    <div className="locpriority-marketing-grid">
+                        {/* YouTube Card */}
+                        <a
+                            href="https://www.youtube.com/@Home-Made-IO"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="locpriority-marketing-card-yt group"
+                        >
+                            <div>
+                                <div className="flex items-center justify-between mb-4">
+                                    <div className="locpriority-marketing-icon-yt">
+                                        <FaYoutube />
+                                    </div>
+                                    <FaExternalLinkAlt className="text-xs text-slate-500 group-hover:text-red-400 transition-colors" />
+                                </div>
+                                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-red-400 transition-colors">
+                                    {t('project.locpriority.marketingYtTitle')}
+                                </h3>
+                                <p className="text-slate-400 text-xs leading-relaxed">
+                                    {t('project.locpriority.marketingYtDesc')}
+                                </p>
+                            </div>
+                            <div className="locpriority-marketing-link-yt">
+                                <span>{t('project.locpriority.marketingYtLink')}</span>
+                            </div>
+                        </a>
+
+                        {/* Instagram Card */}
+                        <a
+                            href="https://www.instagram.com/homemade.io/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="locpriority-marketing-card-insta group"
+                        >
+                            <div>
+                                <div className="flex items-center justify-between mb-4">
+                                    <div className="locpriority-marketing-icon-insta">
+                                        <FaInstagram />
+                                    </div>
+                                    <FaExternalLinkAlt className="text-xs text-slate-500 group-hover:text-pink-400 transition-colors" />
+                                </div>
+                                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-pink-300 transition-colors">
+                                    {t('project.locpriority.marketingInstaTitle')}
+                                </h3>
+                                <p className="text-slate-400 text-xs leading-relaxed">
+                                    {t('project.locpriority.marketingInstaDesc')}
+                                </p>
+                            </div>
+                            <div className="locpriority-marketing-link-insta">
+                                <span>{t('project.locpriority.marketingInstaLink')}</span>
+                            </div>
+                        </a>
+
+                        {/* Shopify Ads Card */}
+                        <div className="locpriority-marketing-card-shopify group">
+                            <div>
+                                <div className="locpriority-marketing-icon-shopify">
+                                    <FaShopify />
+                                </div>
+                                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors">
+                                    {t('project.locpriority.marketingShopifyTitle')}
+                                </h3>
+                                <p className="text-slate-400 text-xs leading-relaxed">
+                                    {t('project.locpriority.marketingShopifyDesc')}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 {/* External Production Links */}
-                <section className="pt-8">
-                    <h2 className="text-2xl font-bold text-center text-white mb-8">
+                <section className="locpriority-links-section">
+                    <h2 className="locpriority-links-title">
                         {t('project.locpriority.linksTitle')}
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="locpriority-links-grid">
                         <a
                             href="https://apps.shopify.com/location-priority?locale=fr"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex flex-col items-center p-8 bg-slate-900 hover:bg-cyan-950/30 rounded-2xl border border-slate-800 hover:border-cyan-500/40 transition-all text-center group shadow-lg"
+                            className="locpriority-link-card group"
                         >
-                            <FaShopify className="text-3xl text-emerald-400 mb-4 group-hover:scale-110 transition-transform" />
-                            <span className="font-bold text-white mb-1.5">{t('project.locpriority.linkAppStore')}</span>
-                            <span className="text-xs text-slate-400">apps.shopify.com</span>
+                            <FaShopify className="locpriority-link-icon-store" />
+                            <span className="locpriority-link-label">{t('project.locpriority.linkAppStore')}</span>
+                            <span className="locpriority-link-sub">apps.shopify.com</span>
                         </a>
 
                         <a
                             href="https://www.home-made.io/portfolio/location-priority/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex flex-col items-center p-8 bg-slate-900 hover:bg-cyan-950/30 rounded-2xl border border-slate-800 hover:border-cyan-500/40 transition-all text-center group shadow-lg"
+                            className="locpriority-link-card group"
                         >
-                            <FaExternalLinkAlt className="text-2xl text-cyan-400 mb-4 group-hover:scale-110 transition-transform" />
-                            <span className="font-bold text-white mb-1.5">{t('project.locpriority.linkPortfolio')}</span>
-                            <span className="text-xs text-slate-400">home-made.io</span>
+                            <FaExternalLinkAlt className="locpriority-link-icon-ext" />
+                            <span className="locpriority-link-label">{t('project.locpriority.linkPortfolio')}</span>
+                            <span className="locpriority-link-sub">home-made.io</span>
                         </a>
 
                         <a
                             href="https://www.home-made.io/welcome-location-priority"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex flex-col items-center p-8 bg-slate-900 hover:bg-cyan-950/30 rounded-2xl border border-slate-800 hover:border-cyan-500/40 transition-all text-center group shadow-lg"
+                            className="locpriority-link-card group"
                         >
-                            <FaExternalLinkAlt className="text-2xl text-cyan-400 mb-4 group-hover:scale-110 transition-transform" />
-                            <span className="font-bold text-white mb-1.5">{t('project.locpriority.linkWelcome')}</span>
-                            <span className="text-xs text-slate-400">Documentation onboarding</span>
+                            <FaExternalLinkAlt className="locpriority-link-icon-ext" />
+                            <span className="locpriority-link-label">{t('project.locpriority.linkWelcome')}</span>
+                            <span className="locpriority-link-sub">Documentation onboarding</span>
                         </a>
                     </div>
                 </section>
@@ -334,30 +416,30 @@ const LocPriority: React.FC = () => {
             {/* Modal Zoom Image */}
             {selectedImage && (
                 <div
-                    className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/90 backdrop-blur-md p-4"
+                    className="locpriority-modal-backdrop"
                     onClick={() => setSelectedImage(null)}
                 >
                     <div
-                        className="relative max-w-6xl max-h-[90vh] bg-slate-900 rounded-2xl border border-slate-700 overflow-hidden shadow-2xl flex flex-col"
+                        className="locpriority-modal-content"
                         onClick={(e) => e.stopPropagation()}
                     >
-                        <div className="flex items-center justify-between px-6 py-4 border-b border-slate-800 bg-slate-950">
-                            <h3 className="text-base font-bold text-white truncate mr-4">
+                        <div className="locpriority-modal-header">
+                            <h3 className="locpriority-modal-title">
                                 {selectedImage.title}
                             </h3>
                             <button
                                 onClick={() => setSelectedImage(null)}
-                                className="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800 transition-colors"
+                                className="locpriority-modal-close-btn"
                                 aria-label="Fermer"
                             >
                                 <FaTimes className="text-lg" />
                             </button>
                         </div>
-                        <div className="overflow-auto p-4 flex items-center justify-center bg-slate-950">
+                        <div className="locpriority-modal-body">
                             <img
                                 src={selectedImage.src}
                                 alt={selectedImage.title}
-                                className="max-h-[75vh] w-auto object-contain rounded-lg"
+                                className="locpriority-modal-img"
                             />
                         </div>
                     </div>

@@ -1,0 +1,144 @@
+/* Sneaky - Styles du projet */
+
+.sneaky-container {
+    @apply min-h-screen bg-[#020617] text-slate-300 font-sans selection:bg-indigo-500/30;
+}
+
+.sneaky-return-wrapper {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-4;
+}
+
+/* Hero Section */
+.sneaky-hero {
+    @apply relative pt-32 pb-20 px-6 overflow-hidden;
+}
+
+.sneaky-hero-glow {
+    @apply absolute top-0 left-1/2 -translate-x-1/2 w-[200%] h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-900/20 via-[#020617] to-[#020617] -z-10;
+}
+
+.sneaky-hero-content {
+    @apply max-w-7xl mx-auto flex flex-col items-center text-center space-y-8;
+}
+
+.sneaky-hero-icon {
+    @apply text-7xl text-indigo-500 -rotate-12 drop-shadow-[0_0_15px_rgba(249,115,22,0.5)];
+}
+
+.sneaky-hero-title {
+    @apply text-7xl md:text-9xl font-black uppercase tracking-tighter;
+    -webkit-text-stroke: 2px #f97316;
+    color: transparent;
+}
+
+.sneaky-hero-desc {
+    @apply text-2xl font-bold text-indigo-400 uppercase tracking-widest max-w-2xl;
+}
+
+/* Main Content */
+.sneaky-main {
+    @apply max-w-6xl mx-auto px-6 py-20 space-y-32;
+}
+
+/* Intro Paragraphs */
+.sneaky-intro-card {
+    @apply bg-slate-900/50 p-10 md:p-16 rounded-[3rem] border border-slate-800 text-center space-y-8 shadow-2xl backdrop-blur-sm;
+}
+
+.sneaky-intro-lead {
+    @apply text-xl md:text-2xl text-slate-300 font-medium leading-relaxed max-w-4xl mx-auto;
+}
+
+.sneaky-intro-sub {
+    @apply text-lg text-slate-500 max-w-3xl mx-auto;
+}
+
+/* Grille Fonctionnalités & Technologies */
+.sneaky-grid-sections {
+    @apply grid md:grid-cols-2 gap-12;
+}
+
+.sneaky-section-block {
+    @apply space-y-10;
+}
+
+.sneaky-section-header {
+    @apply flex items-center gap-4 border-b-2 border-indigo-500 pb-4;
+}
+
+.sneaky-section-icon {
+    @apply text-4xl text-indigo-500;
+}
+
+.sneaky-section-title {
+    @apply text-4xl font-black text-white uppercase tracking-tight;
+}
+
+.sneaky-feature-list {
+    @apply space-y-8;
+}
+
+.sneaky-feature-card {
+    @apply bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:border-indigo-500/50 transition-colors;
+}
+
+.sneaky-feature-title {
+    @apply text-2xl font-bold text-white mb-3 group-hover:text-indigo-500 transition-colors uppercase;
+}
+
+.sneaky-feature-desc {
+    @apply text-slate-400;
+}
+
+/* Mission & Design */
+.sneaky-mission-outer {
+    @apply bg-indigo-500 p-1 rounded-[3rem] shadow-[0_0_50px_rgba(249,115,22,0.15)];
+}
+
+.sneaky-mission-inner {
+    @apply bg-slate-950 p-10 md:p-16 rounded-[2.8rem] space-y-12;
+}
+
+.sneaky-mission-title {
+    @apply text-5xl font-black text-center text-white uppercase tracking-tighter mb-12;
+}
+
+.sneaky-mockup-wrapper {
+    @apply overflow-hidden rounded-2xl border border-slate-800 shadow-2xl;
+}
+
+.sneaky-mockup-img {
+    @apply w-full hover:scale-105 transition-transform duration-700;
+}
+
+.sneaky-mission-grid {
+    @apply grid md:grid-cols-2 gap-12 text-lg;
+}
+
+.sneaky-mission-text-block {
+    @apply space-y-6;
+}
+
+.sneaky-mission-text-primary {
+    @apply text-slate-300 leading-relaxed font-medium;
+}
+
+.sneaky-mission-text-secondary {
+    @apply text-slate-500 leading-relaxed;
+}
+
+.sneaky-bullets-card {
+    @apply bg-slate-900 p-8 rounded-2xl border border-slate-800 flex flex-col justify-center;
+}
+
+.sneaky-bullets-list {
+    @apply space-y-4;
+}
+
+.sneaky-bullet-item {
+    @apply flex items-center gap-4 text-slate-300 font-bold uppercase tracking-wider;
+}
+
+.sneaky-bullet-num {
+    @apply w-8 h-8 rounded-full bg-indigo-500 text-slate-950 flex items-center justify-center shrink-0;
+}

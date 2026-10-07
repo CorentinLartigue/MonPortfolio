@@ -1,0 +1,330 @@
+/* Location Priority - Styles du projet */
+
+.locpriority-container {
+    @apply min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-cyan-500/30;
+}
+
+.locpriority-return-wrapper {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-4;
+}
+
+/* Hero Section */
+.locpriority-hero {
+    @apply relative pt-24 pb-20 px-6 lg:px-12 flex flex-col items-center text-center border-b border-slate-800 bg-gradient-to-b from-slate-900 to-slate-950;
+}
+
+.locpriority-hero-glow {
+    @apply absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-cyan-900/20 via-slate-950 to-slate-950 pointer-events-none;
+}
+
+.locpriority-hero-badge {
+    @apply inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-cyan-500/30 bg-cyan-950/40 text-cyan-400 text-xs font-semibold uppercase tracking-wider mb-6 z-10;
+}
+
+.locpriority-hero-title {
+    @apply text-4xl sm:text-6xl md:text-7xl font-black text-white mb-3 tracking-tight z-10;
+}
+
+.locpriority-hero-subtitle {
+    @apply text-xl md:text-2xl font-medium text-cyan-400 mb-6 tracking-wide z-10;
+}
+
+.locpriority-hero-desc {
+    @apply text-base md:text-lg text-slate-400 max-w-3xl leading-relaxed z-10;
+}
+
+.locpriority-hero-tech-list {
+    @apply flex flex-wrap justify-center gap-2.5 mt-8 z-10;
+}
+
+.locpriority-hero-tech-pill {
+    @apply px-3 py-1 rounded-md bg-slate-900 border border-slate-800 text-xs font-medium text-slate-300 flex items-center gap-1.5;
+}
+
+/* Conteneur principal */
+.locpriority-main {
+    @apply max-w-6xl mx-auto px-6 py-20 space-y-28;
+}
+
+/* Architecture & Context Bento Grid */
+.locpriority-bento-grid {
+    @apply grid grid-cols-1 md:grid-cols-5 gap-8;
+}
+
+.locpriority-bento-main {
+    @apply md:col-span-3 bg-slate-900 p-8 rounded-3xl border border-slate-800 shadow-xl flex flex-col justify-between;
+}
+
+.locpriority-bento-title {
+    @apply text-2xl font-bold text-white mb-4 flex items-center gap-3;
+}
+
+.locpriority-bento-bar {
+    @apply w-1.5 h-7 bg-cyan-500 rounded-full;
+}
+
+.locpriority-bento-text {
+    @apply text-slate-300 leading-relaxed text-base;
+}
+
+.locpriority-bento-meta {
+    @apply mt-6 pt-6 border-t border-slate-800 grid grid-cols-2 gap-4 text-xs text-slate-400;
+}
+
+.locpriority-bento-meta-label {
+    @apply block text-slate-500 uppercase tracking-wider font-semibold;
+}
+
+.locpriority-bento-meta-val {
+    @apply text-slate-200 font-medium;
+}
+
+.locpriority-bento-side {
+    @apply md:col-span-2 bg-slate-900 p-8 rounded-3xl border border-slate-800 shadow-xl;
+}
+
+.locpriority-bento-side-title {
+    @apply text-xl font-bold text-cyan-400 mb-6 flex items-center gap-2;
+}
+
+.locpriority-bento-list {
+    @apply space-y-4 text-sm text-slate-300;
+}
+
+.locpriority-bento-list-item {
+    @apply flex items-start gap-3;
+}
+
+/* Schéma d'Orchestration Dynamique */
+.locpriority-schema-section {
+    @apply space-y-6;
+}
+
+.locpriority-schema-header {
+    @apply text-center max-w-3xl mx-auto space-y-3;
+}
+
+.locpriority-schema-title {
+    @apply text-3xl md:text-4xl font-extrabold text-white;
+}
+
+.locpriority-schema-subtitle {
+    @apply text-cyan-400 text-sm font-semibold tracking-wide uppercase;
+}
+
+.locpriority-schema-desc {
+    @apply text-slate-400 text-sm md:text-base leading-relaxed;
+}
+
+.locpriority-schema-card {
+    @apply relative cursor-pointer overflow-hidden rounded-3xl border border-slate-800 bg-slate-900 shadow-2xl hover:border-cyan-500/50 transition-all p-3 md:p-6;
+}
+
+.locpriority-schema-inner {
+    @apply relative overflow-hidden rounded-2xl bg-slate-950;
+}
+
+.locpriority-schema-img {
+    @apply w-full h-auto object-contain transition-transform duration-500 group-hover:scale-[1.01];
+}
+
+.locpriority-schema-overlay {
+    @apply absolute inset-0 bg-slate-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 text-cyan-300 font-semibold text-sm;
+}
+
+/* Galerie des Écrans Marchands */
+.locpriority-gallery-section {
+    @apply space-y-10;
+}
+
+.locpriority-gallery-header {
+    @apply text-center max-w-2xl mx-auto;
+}
+
+.locpriority-gallery-title {
+    @apply text-3xl font-extrabold text-white mb-2;
+}
+
+.locpriority-gallery-subtitle {
+    @apply text-slate-400 text-sm;
+}
+
+.locpriority-gallery-grid {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-8;
+}
+
+.locpriority-gallery-card {
+    @apply bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden shadow-lg hover:border-cyan-500/40 transition-all flex flex-col;
+}
+
+.locpriority-gallery-thumb {
+    @apply relative cursor-pointer overflow-hidden bg-slate-950 border-b border-slate-800;
+}
+
+.locpriority-gallery-img {
+    @apply w-full h-52 object-cover object-top transition-transform duration-500 group-hover:scale-105;
+}
+
+.locpriority-gallery-tag {
+    @apply absolute top-3 left-3 px-2.5 py-1 rounded-md bg-slate-950/80 backdrop-blur-md text-xs font-semibold text-cyan-400 border border-slate-700/50;
+}
+
+.locpriority-gallery-zoom {
+    @apply absolute inset-0 bg-slate-950/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs gap-1.5 font-medium;
+}
+
+.locpriority-gallery-body {
+    @apply p-6 flex-1 flex flex-col justify-between;
+}
+
+.locpriority-gallery-item-title {
+    @apply text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors;
+}
+
+.locpriority-gallery-item-desc {
+    @apply text-slate-400 text-xs leading-relaxed;
+}
+
+/* Fonctionnalités Moteur */
+.locpriority-features-section {
+    @apply space-y-10;
+}
+
+.locpriority-features-title {
+    @apply text-3xl font-extrabold text-center text-white;
+}
+
+.locpriority-features-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+.locpriority-feature-card {
+    @apply p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/40 hover:bg-slate-900 transition-all shadow-md;
+}
+
+.locpriority-feature-icon-box {
+    @apply w-10 h-10 rounded-xl bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 flex items-center justify-center mb-4 text-lg group-hover:scale-110 transition-transform;
+}
+
+.locpriority-feature-title {
+    @apply text-base font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors;
+}
+
+.locpriority-feature-desc {
+    @apply text-slate-400 text-xs leading-relaxed;
+}
+
+/* Communication & Promotion Multicanale */
+.locpriority-marketing-section {
+    @apply space-y-10;
+}
+
+.locpriority-marketing-header {
+    @apply text-center max-w-2xl mx-auto;
+}
+
+.locpriority-marketing-title {
+    @apply text-3xl font-extrabold text-white mb-2;
+}
+
+.locpriority-marketing-subtitle {
+    @apply text-slate-400 text-sm;
+}
+
+.locpriority-marketing-grid {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-6;
+}
+
+.locpriority-marketing-card-yt {
+    @apply p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-red-500/50 hover:bg-red-950/10 transition-all shadow-lg flex flex-col justify-between cursor-pointer;
+}
+
+.locpriority-marketing-card-insta {
+    @apply p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-pink-500/50 hover:bg-pink-950/10 transition-all shadow-lg flex flex-col justify-between cursor-pointer;
+}
+
+.locpriority-marketing-card-shopify {
+    @apply p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-emerald-500/40 transition-all shadow-lg flex flex-col justify-between;
+}
+
+.locpriority-marketing-icon-yt {
+    @apply w-12 h-12 rounded-xl bg-red-950/60 border border-red-500/30 text-red-500 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform;
+}
+
+.locpriority-marketing-icon-insta {
+    @apply w-12 h-12 rounded-xl bg-pink-950/60 border border-pink-500/30 text-pink-400 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform;
+}
+
+.locpriority-marketing-icon-shopify {
+    @apply w-12 h-12 rounded-xl bg-emerald-950/60 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mb-4 text-2xl group-hover:scale-110 transition-transform;
+}
+
+.locpriority-marketing-link-yt {
+    @apply mt-6 pt-4 border-t border-slate-800/80 flex items-center gap-2 text-xs font-semibold text-red-400 group-hover:underline;
+}
+
+.locpriority-marketing-link-insta {
+    @apply mt-6 pt-4 border-t border-slate-800/80 flex items-center gap-2 text-xs font-semibold text-pink-400 group-hover:underline;
+}
+
+/* Liens Externes / Documentation */
+.locpriority-links-section {
+    @apply pt-8;
+}
+
+.locpriority-links-title {
+    @apply text-2xl font-bold text-center text-white mb-8;
+}
+
+.locpriority-links-grid {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-6;
+}
+
+.locpriority-link-card {
+    @apply flex flex-col items-center p-8 bg-slate-900 hover:bg-cyan-950/30 rounded-2xl border border-slate-800 hover:border-cyan-500/40 transition-all text-center shadow-lg;
+}
+
+.locpriority-link-icon-store {
+    @apply text-3xl text-emerald-400 mb-4 group-hover:scale-110 transition-transform;
+}
+
+.locpriority-link-icon-ext {
+    @apply text-2xl text-cyan-400 mb-4 group-hover:scale-110 transition-transform;
+}
+
+.locpriority-link-label {
+    @apply font-bold text-white mb-1.5;
+}
+
+.locpriority-link-sub {
+    @apply text-xs text-slate-400;
+}
+
+/* Modale Agrandissement Image */
+.locpriority-modal-backdrop {
+    @apply fixed inset-0 z-50 flex items-center justify-center bg-slate-950/90 backdrop-blur-md p-4;
+}
+
+.locpriority-modal-content {
+    @apply relative max-w-6xl max-h-[90vh] bg-slate-900 rounded-2xl border border-slate-700 overflow-hidden shadow-2xl flex flex-col;
+}
+
+.locpriority-modal-header {
+    @apply flex items-center justify-between px-6 py-4 border-b border-slate-800 bg-slate-950;
+}
+
+.locpriority-modal-title {
+    @apply text-base font-bold text-white truncate mr-4;
+}
+
+.locpriority-modal-close-btn {
+    @apply text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800 transition-colors;
+}
+
+.locpriority-modal-body {
+    @apply overflow-auto p-4 flex items-center justify-center bg-slate-950;
+}
+
+.locpriority-modal-img {
+    @apply max-h-[75vh] w-auto object-contain rounded-lg;
+}
