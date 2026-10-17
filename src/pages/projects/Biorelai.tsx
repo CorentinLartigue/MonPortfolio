@@ -1,5 +1,5 @@
 import React from 'react';
-import ReturnButton from '../../components/ReturnButton.tsx';
+import ProjectHero from '../../components/ProjectHero.tsx';
 import {useTranslate} from '../../hooks/useTranslate';
 import { FaLeaf, FaSeedling, FaTractor, FaAppleAlt } from 'react-icons/fa';
 import '../../styles/projects/biorelai.css';
@@ -16,82 +16,58 @@ const Biorelai: React.FC = () => {
 
     return (
         <div className="biorelai-page">
-            <div className="biorelai-nav-wrapper">
-                <ReturnButton />
-            </div>
+            <ProjectHero
+                badgeIcon={<FaLeaf />}
+                badgeLabel={t('project.biorelai.badge')}
+                title={t('project.biorelai.title')}
+                subtitle={t('project.biorelai.subtitle')}
+                description={t('project.biorelai.desc')}
+                techTags={['PHP', 'HTML5', 'CSS3', 'Trello', 'Architecture MVC']}
+                theme="emerald"
+            />
 
-            {/* Header */}
-            <div className="biorelai-header">
-                <div className="biorelai-header-bg-icon">
-                    <FaLeaf className="text-[20rem]" />
-                </div>
-                <div className="biorelai-header-content">
-                    <div className="biorelai-badge-icon">
-                        <FaLeaf className="text-3xl text-blue-400" />
-                    </div>
-                    <h1 className="biorelai-title">
-                        {t('project.biorelai.title')}
-                    </h1>
-                    <p className="biorelai-subtitle">
-                        {t('project.biorelai.desc')}
-                    </p>
-                </div>
-            </div>
+            <main className="biorelai-main-content">
+                {
+                    // Introduction context card
+                }
+                <article className="biorelai-intro-card">
+                    <h2>{t('project.biorelai.introTitle')}</h2>
+                    <p>{t('project.biorelai.introText')}</p>
+                </article>
 
-            <div className="biorelai-main-content">
-                
-                {/* Intro */}
-                <div className="biorelai-intro-card">
-                    <h2 className="biorelai-intro-title">{t('project.biorelai.introTitle')}</h2>
-                    <p className="biorelai-intro-text">
-                        {t('project.biorelai.introText')}
-                    </p>
-                </div>
-
-                {/* Features / Roles Grid */}
-                <div>
-                    <h2 className="biorelai-section-title">{t('project.biorelai.featuresTitle')}</h2>
+                <section>
+                    <h2>{t('project.biorelai.featuresTitle')}</h2>
                     <div className="biorelai-roles-grid">
                         {roles.map((role, idx) => (
-                            <div key={idx} className="biorelai-role-card group">
+                            <article key={idx} className="biorelai-role-card group">
                                 <div className="biorelai-role-icon">{role.icon}</div>
-                                <h3 className="biorelai-role-title">{role.title}</h3>
-                                <ul className="biorelai-role-list">
-                                    <li className="biorelai-role-item">
-                                        <div className="biorelai-role-bullet"></div>
+                                <h3>{role.title}</h3>
+                                <ul>
+                                    <li>
+                                        <span></span>
                                         {role.b1}
                                     </li>
-                                    <li className="biorelai-role-item">
-                                        <div className="biorelai-role-bullet"></div>
+                                    <li>
+                                        <span></span>
                                         {role.b2}
                                     </li>
                                 </ul>
-                            </div>
+                            </article>
                         ))}
                     </div>
-                </div>
+                </section>
 
-                {/* Tech & Method */}
-                <div className="biorelai-split-grid">
-                    <div className="biorelai-tech-card">
-                        <h2 className="biorelai-tech-title">{t('project.biorelai.techTitle')}</h2>
-                        <div className="biorelai-tech-tags">
-                            {['PHP Objet', 'MySQL', 'Modèle MVC', 'HTML / CSS', 'API REST'].map(tech => (
-                                <span key={tech} className="biorelai-tech-tag">
-                                    {tech}
-                                </span>
-                            ))}
-                        </div>
-                    </div>
-                    
-                    <div className="biorelai-method-card">
-                        <h2 className="biorelai-method-title">{t('project.biorelai.methodTitle')}</h2>
-                        <p className="biorelai-method-text">
-                            {t('project.biorelai.methodText')}
-                        </p>
-                    </div>
-                </div>
-            </div>
+                <section className="biorelai-method-card">
+                    <h2>{t('project.biorelai.methodTitle')}</h2>
+                    <p>
+                        {t('project.biorelai.methodText')}
+                    </p>
+                    <h3>{t('project.biorelai.methodTitle_2')}</h3>
+                    <p>
+                        {t('project.biorelai.methodText_2')}
+                    </p>
+                </section>
+            </main>
         </div>
     );
 };

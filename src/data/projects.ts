@@ -1,12 +1,40 @@
 import {IconType} from 'react-icons';
 import {
-    FaReact, FaHtml5, FaGithub, FaJs, FaPhp, FaAndroid, FaJava, FaCss3Alt, FaSync, FaCode,
-    FaNodeJs
+    FaReact,
+    FaHtml5,
+    FaGithub,
+    FaJs,
+    FaPhp,
+    FaAndroid,
+    FaJava,
+    FaCss3Alt,
+    FaSync,
+    FaCode
 } from 'react-icons/fa';
 import {
-    SiTailwindcss, SiFigma, SiJquery, SiSymfony, SiBootstrap, SiSpringboot,
-    SiLeaflet, SiTrello, SiNestjs, SiTypescript, SiPostgresql, SiDocker,
-    SiShopify, SiGraphql, SiAngular, SiNginx, SiExpress, SiLaravel, SiRedis
+    SiTailwindcss,
+    SiFigma,
+    SiJquery,
+    SiSymfony,
+    SiBootstrap,
+    SiSpringboot,
+    SiLeaflet,
+    SiTrello,
+    SiNextdotjs,
+    SiSupabase,
+    SiNestjs,
+    SiPostgresql,
+    SiDocker,
+    SiStripe,
+    SiShopify,
+    SiGraphql,
+    SiAngular,
+    SiFlutter,
+    SiNginx,
+    SiLaravel,
+    SiRedis,
+    SiTypescript,
+    SiMysql
 } from 'react-icons/si';
 
 export interface Technology {
@@ -34,28 +62,32 @@ export const projects: Projet[] = [
         id: 'dovinyle',
         titreKey: 'project.list.dovinyle.title',
         descriptionKey: 'project.list.dovinyle.desc',
-        image: `${baseUrl}images/projects/dovinyle.png`,
+        image: `${baseUrl}images/projects/dovinyle/couverture.png`,
         lien: '/projects/dovinyle',
         category: 'web',
         technologies: [
-            {name: 'React', icon: FaReact, color: 'text-cyan-400'},
+            {name: 'Next.js', icon: SiNextdotjs, color: 'text-white'},
             {name: 'NestJS', icon: SiNestjs, color: 'text-red-600'},
             {name: 'PostgreSQL', icon: SiPostgresql, color: 'text-blue-400'},
-            {name: 'Tailwind', icon: SiTailwindcss, color: 'text-blue-400'},
+            {name: 'Stripe', icon: SiStripe, color: 'text-purple-400'},
             {name: 'Docker', icon: SiDocker, color: 'text-blue-500'},
-            {name: 'Github', icon: FaGithub, color: 'text-gray-900'}
+            {name: 'Tailwind', icon: SiTailwindcss, color: 'text-cyan-400'},
+            {name: 'Supabase', icon: SiSupabase, color: 'text-emerald-400'},
+            {name: 'Figma', icon: SiFigma, color: 'text-purple-500'},
+            {name: 'Github', icon: FaGithub, color: 'text-gray-400'}
         ]
     },
     {
         id: 'cheerzup',
         titreKey: 'project.list.cheerzup.title',
         descriptionKey: 'project.list.cheerzup.desc',
-        image: `${baseUrl}images/projects/cheerzup.webp`,
+        image: `${baseUrl}images/projects/cheerzup/couverture.png`,
         lien: '/projects/cheerzup',
-        category: 'web',
+        category: 'mobile',
         technologies: [
+            {name: 'Flutter', icon: SiFlutter, color: 'text-cyan-400'},
             {name: 'NestJS', icon: SiNestjs, color: 'text-red-600'},
-            {name: 'TypeScript', icon: SiTypescript, color: 'text-blue-600'},
+            {name: 'Angular', icon: SiAngular, color: 'text-red-600'},
             {name: 'PostgreSQL', icon: SiPostgresql, color: 'text-blue-400'},
             {name: 'Docker', icon: SiDocker, color: 'text-blue-500'}
         ]
@@ -80,7 +112,7 @@ export const projects: Projet[] = [
         id: 'ytellerie',
         titreKey: 'project.list.ytellerie.title',
         descriptionKey: 'project.list.ytellerie.desc',
-        image: `${baseUrl}images/projects/ytellerie.webp`,
+        image: `${baseUrl}images/projects/ytellerie/couverture.png`,
         lien: '/projects/ytellerie',
         category: 'web',
         technologies: [
@@ -95,21 +127,24 @@ export const projects: Projet[] = [
         id: 'horamanea',
         titreKey: 'project.list.horamanea.title',
         descriptionKey: 'project.list.horamanea.desc',
-        image: `${baseUrl}images/projects/horamanea.webp`,
+        image: `${baseUrl}images/projects/horamanea/couverture.png`,
         lien: '/projects/horamanea',
         category: 'web',
         technologies: [
-            {name: 'React', icon: FaReact, color: 'text-cyan-400'},
-            {name: 'NodeJS', icon: FaNodeJs, color: 'text-green-500'},
-            {name: 'Express', icon: SiExpress, color: 'text-gray-500'},
-            {name: 'Github', icon: FaGithub, color: 'text-gray-900'}
+            {name: 'Angular', icon: SiAngular, color: 'text-red-600'},
+            {name: 'TypeScript', icon: SiTypescript, color: 'text-blue-500'},
+            {name: 'Tailwind CSS', icon: SiTailwindcss, color: 'text-cyan-400'},
+            {name: 'Spring Boot', icon: SiSpringboot, color: 'text-green-500'},
+            {name: 'MySQL', icon: SiMysql, color: 'text-blue-600'},
+            {name: 'Stripe', icon: SiStripe, color: 'text-indigo-400'},
+            {name: 'Figma', icon: SiFigma, color: 'text-purple-400'}
         ]
     },
     {
         id: 'portfolio',
         titreKey: 'project.list.portfolio.title',
         descriptionKey: 'project.list.portfolio.desc',
-        image: `${baseUrl}images/projects/portfolio.webp`,
+        image: `${baseUrl}images/projects/portfolio/couverture.png`,
         lien: '/projects/portfolio',
         category: 'web',
         technologies: [
@@ -123,7 +158,7 @@ export const projects: Projet[] = [
         id: 'echecs',
         titreKey: 'project.list.echecs.title',
         descriptionKey: 'project.list.echecs.desc',
-        image: `${baseUrl}images/projects/echecs.webp`,
+        image: `${baseUrl}images/projects/echecs/couverture.png`,
         lien: '/projects/echecs',
         category: 'web',
         technologies: [
@@ -136,7 +171,7 @@ export const projects: Projet[] = [
         id: 'ysport',
         titreKey: 'project.list.ysport.title',
         descriptionKey: 'project.list.ysport.desc',
-        image: `${baseUrl}images/projects/ysport.webp`,
+        image: `${baseUrl}images/projects/ysport/couverture.png`,
         lien: '/projects/ysport',
         category: 'web',
         technologies: [
@@ -151,7 +186,7 @@ export const projects: Projet[] = [
         id: 'berroyer',
         titreKey: 'project.list.berroyer.title',
         descriptionKey: 'project.list.berroyer.desc',
-        image: `${baseUrl}images/projects/berroyer.webp`,
+        image: `${baseUrl}images/projects/berroyer/couverture.png`,
         lien: '/projects/berroyer',
         category: 'web',
         technologies: [
@@ -165,7 +200,7 @@ export const projects: Projet[] = [
         id: 'amphitryon',
         titreKey: 'project.list.amphitryon.title',
         descriptionKey: 'project.list.amphitryon.desc',
-        image: `${baseUrl}images/projects/amphitryon.webp`,
+        image: `${baseUrl}images/projects/amphitryon/couverture.png`,
         lien: '/projects/amphitryon',
         category: 'mobile',
         technologies: [
@@ -179,7 +214,7 @@ export const projects: Projet[] = [
         id: 'biorelai',
         titreKey: 'project.list.biorelai.title',
         descriptionKey: 'project.list.biorelai.desc',
-        image: `${baseUrl}images/projects/biorelai.webp`,
+        image: `${baseUrl}images/projects/biorelai/couverture.png`,
         lien: '/projects/biorelai',
         category: 'web',
         technologies: [
@@ -193,7 +228,7 @@ export const projects: Projet[] = [
         id: 'm2l_statique',
         titreKey: 'project.list.m2l_statique.title',
         descriptionKey: 'project.list.m2l_statique.desc',
-        image: `${baseUrl}images/projects/m2l-statique.webp`,
+        image: `${baseUrl}images/projects/m2l/statique.webp`,
         lien: '/projects/m2l',
         category: 'web',
         technologies: [
@@ -207,7 +242,7 @@ export const projects: Projet[] = [
         id: 'm2l_dynamique',
         titreKey: 'project.list.m2l_dynamique.title',
         descriptionKey: 'project.list.m2l_dynamique.desc',
-        image: `${baseUrl}images/projects/m2l-dynamique.webp`,
+        image: `${baseUrl}images/projects/m2l/dynamique.webp`,
         lien: '/projects/m2l',
         category: 'web',
         technologies: [
@@ -222,7 +257,7 @@ export const projects: Projet[] = [
         id: 'sneaky',
         titreKey: 'project.list.sneaky.title',
         descriptionKey: 'project.list.sneaky.desc',
-        image: `${baseUrl}images/projects/sneaky.webp`,
+        image: `${baseUrl}images/projects/sneaky/couverture.webp`,
         lien: '/projects/sneaky',
         category: 'web',
         technologies: [

@@ -1,17 +1,29 @@
-import React from 'react';
-import step1 from '/images/projects/step-1.png';
-import step2 from '/images/projects/step-2.png';
-import step3 from '/images/projects/step-3.png';
-import step4 from '/images/projects/step-4.png';
-import step5 from '/images/projects/step-5.png';
-import step6 from '/images/projects/step-6.png';
-import ReturnButton from '../../components/ReturnButton.tsx';
-import {useTranslate} from '../../hooks/useTranslate';
-import { FaCogs, FaSitemap, FaBook } from 'react-icons/fa';
+import React, { useState } from 'react';
+import step1 from '/images/projects/berroyer/step-client.png';
+import step2 from '/images/projects/berroyer/step-produit.png';
+import step3 from '/images/projects/berroyer/step-configuration.png';
+import step4 from '/images/projects/berroyer/step-options.png';
+import step5 from '/images/projects/berroyer/step-finition.png';
+import step6 from '/images/projects/berroyer/step-synthese.png';
+import ProjectHero from '../../components/ProjectHero.tsx';
+import ImageModal from '../../components/ImageModal.tsx';
+import { useTranslate } from '../../hooks/useTranslate';
+import { FaCogs, FaBook, FaSearchPlus, FaSitemap } from 'react-icons/fa';
 import '../../styles/projects/berroyer.css';
 
+interface ModalImage {
+    src: string;
+    title: string;
+    desc?: string;
+}
+
 const Berroyer: React.FC = () => {
-    const {t} = useTranslate();
+    const { t } = useTranslate();
+    const [selectedImage, setSelectedImage] = useState<ModalImage | null>(null);
+
+    const openModal = (src: string, title: string, desc?: string) => {
+        setSelectedImage({ src, title, desc });
+    };
 
     interface StepBlockProps {
         title: string;
@@ -22,84 +34,54 @@ const Berroyer: React.FC = () => {
     }
 
     const StepBlock = ({ title, desc, img, bullets = [], num }: StepBlockProps) => (
-        <div className="berroyer-step-wrapper">
-            {/* Timeline dot */}
-            <div className="berroyer-step-dot">
-                {num}
-            </div>
-            <div className={`berroyer-step-row ${num % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
-                <div className="berroyer-step-card">
-                    <div className="berroyer-step-header">
-                        <span className="berroyer-step-badge-mobile">{num}</span>
-                        <h2 className="berroyer-step-title">{title}</h2>
-                    </div>
-                    <img src={img} alt={`Step ${num}`} className="berroyer-step-img" />
-                    <p className="berroyer-step-desc">{desc}</p>
-                    {bullets.length > 0 && (
-                        <ul className="berroyer-step-bullets">
-                            {bullets.map((b: string, i: number) => (
-                                <li key={i} className="berroyer-step-bullet-item">
-                                    <div className="berroyer-step-bullet-dot"></div>
-                                    {b}
-                                </li>
-                            ))}
-                        </ul>
-                    )}
+        <article className="berroyer-step-card">
+            <figure
+                className="project-zoomable-container"
+                onClick={() => openModal(img, title, desc)}
+            >
+                <img src={img} alt={title} className="project-zoomable-img" />
+                <div className="project-zoomable-overlay">
+                    <FaSearchPlus />
+                    <span>{t('app.buttons.zoom')}</span>
                 </div>
-            </div>
-        </div>
+            </figure>
+            <section>
+                <header>
+                    <span>{num}</span>
+                    <h2>{title}</h2>
+                </header>
+                <p>{desc}</p>
+                {bullets.length > 0 && (
+                    <ul>
+                        {bullets.map((b: string, i: number) => (
+                            <li key={i}>
+                                <span></span>
+                                {b}
+                            </li>
+                        ))}
+                    </ul>
+                )}
+            </section>
+        </article>
     );
 
     return (
         <div className="berroyer-container">
-            <div className="berroyer-return-wrapper">
-                <ReturnButton />
-            </div>
+            <ProjectHero
+                badgeIcon={<FaCogs />}
+                badgeLabel={t('project.berroyer.badge')}
+                title={t('project.berroyer.title')}
+                subtitle={t('project.berroyer.subtitle')}
+                description={t('project.berroyer.intro')}
+                techTags={['Symfony', 'Twig', 'Ajax', 'jQuery', 'Bootstrap', 'Smart Wizard', 'EasyFrame']}
+                theme="blue"
+            />
 
-            {/* Header */}
-            <div className="berroyer-header">
-                <div className="berroyer-header-pattern"></div>
-                <div className="berroyer-header-content">
-                    <div className="berroyer-header-icon-box">
-                        <FaCogs className="berroyer-header-icon" />
-                    </div>
-                    <h1 className="berroyer-header-title">
-                        {t('project.berroyer.title')}
-                    </h1>
-                    <p className="berroyer-header-desc">
-                        {t('project.berroyer.desc')}
-                    </p>
-                </div>
-            </div>
-
-            <div className="berroyer-main">
-                
-                {/* Intro & Tech */}
-                <div className="berroyer-intro-grid">
-                    <div className="berroyer-intro-card">
-                        <h2 className="berroyer-intro-title">Introduction</h2>
-                        <p className="berroyer-intro-text">
-                            {t('project.berroyer.intro')}
-                        </p>
-                    </div>
-                    
-                    <div className="berroyer-tech-card">
-                        <h2 className="berroyer-tech-title">
-                            <FaSitemap /> {t('project.berroyer.techTitle')}
-                        </h2>
-                        <div className="berroyer-tech-list">
-                            {['PHP', 'JavaScript', 'Jquery', 'Ajax', 'Twig', 'HTML/CSS', 'Font Awesome', 'Bootstrap', t('project.berroyer.techEasyframe')].map(tech => (
-                                <span key={tech} className="berroyer-tech-pill">
-                                    {tech}
-                                </span>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-
-                {/* Steps Timeline */}
-                <div className="berroyer-timeline">
-                    <div className="berroyer-timeline-line"></div>
+            <main className="berroyer-main">
+                {
+                    // Steps interactive timeline
+                }
+                <section className="berroyer-timeline">
                     
                     <StepBlock num={1} title={t('project.berroyer.step1Title')} desc={t('project.berroyer.step1Desc')} img={step1} bullets={[t('project.berroyer.step1Bullet1'), t('project.berroyer.step1Bullet2'), t('project.berroyer.step1Bullet3'), t('project.berroyer.step1Bullet4')]} />
                     <StepBlock num={2} title={t('project.berroyer.step2Title')} desc={t('project.berroyer.step2Desc')} img={step2} bullets={[t('project.berroyer.step2Bullet1'), t('project.berroyer.step2Bullet2'), t('project.berroyer.step2Bullet3'), t('project.berroyer.step2Bullet4')]} />
@@ -107,35 +89,76 @@ const Berroyer: React.FC = () => {
                     <StepBlock num={4} title={t('project.berroyer.step4Title')} desc={t('project.berroyer.step4Desc')} img={step4} bullets={[t('project.berroyer.step4Bullet1'), t('project.berroyer.step4Bullet2'), t('project.berroyer.step4Bullet3')]} />
                     <StepBlock num={5} title={t('project.berroyer.step5Title')} desc={t('project.berroyer.step5Desc')} img={step5} bullets={[t('project.berroyer.step5Bullet1'), t('project.berroyer.step5Bullet2'), t('project.berroyer.step5Bullet3'), t('project.berroyer.step5Bullet4')]} />
                     <StepBlock num={6} title={t('project.berroyer.step6Title')} desc={t('project.berroyer.step6Desc')} img={step6} bullets={[t('project.berroyer.step6Bullet1'), t('project.berroyer.step6Bullet2'), t('project.berroyer.step6Bullet3')]} />
-                </div>
+                </section>
 
-                {/* Additional Info */}
-                <div className="berroyer-info-grid">
-                    <div className="berroyer-info-card">
-                        <h3 className="berroyer-info-title">{t('project.berroyer.hierarchyTitle')}</h3>
-                        <p className="berroyer-info-text">{t('project.berroyer.hierarchyDesc')}</p>
-                        <ol className="berroyer-info-list">
-                            <li>{t('project.berroyer.hierarchyItem1')}</li>
-                            <li>{t('project.berroyer.hierarchyItem2')}</li>
-                            <li>{t('project.berroyer.hierarchyItem3')}</li>
-                            <li>{t('project.berroyer.hierarchyItem4')}</li>
-                            <li>{t('project.berroyer.hierarchyItem5')}</li>
-                        </ol>
-                    </div>
-                    <div className="berroyer-info-card">
-                        <h3 className="berroyer-info-title">{t('project.berroyer.agileTitle')}</h3>
-                        <p className="berroyer-info-lead">{t('project.berroyer.agileDesc')}</p>
-                    </div>
-                    <div className="berroyer-info-card">
-                        <div className="flex items-center gap-3 mb-4">
-                            <FaBook className="text-blue-400 text-xl" />
-                            <h3 className="berroyer-info-title">{t('project.berroyer.docTitle')}</h3>
-                        </div>
-                        <p className="berroyer-info-lead">{t('project.berroyer.docDesc')}</p>
-                    </div>
-                </div>
+                {
+                    // Additional project information
+                }
+                <section className="berroyer-hierarchy-card">
+                    <header>
+                        <FaSitemap />
+                        <h3>{t('project.berroyer.hierarchyTitle')}</h3>
+                    </header>
+                    <p>{t('project.berroyer.hierarchyDesc')}</p>
+                    <ol>
+                        <li>
+                            <span>1</span>
+                            <p>{t('project.berroyer.hierarchyItem1')}</p>
+                        </li>
+                        <li>
+                            <span>2</span>
+                            <p>{t('project.berroyer.hierarchyItem2')}</p>
+                        </li>
+                        <li>
+                            <span>3</span>
+                            <p>{t('project.berroyer.hierarchyItem3')}</p>
+                        </li>
+                        <li>
+                            <span>4</span>
+                            <p>{t('project.berroyer.hierarchyItem4')}</p>
+                        </li>
+                        <li>
+                            <span>5</span>
+                            <p>{t('project.berroyer.hierarchyItem5')}</p>
+                        </li>
+                    </ol>
+                </section>
 
-            </div>
+                <section className="berroyer-info-grid">
+                    <article className="berroyer-info-card">
+                        <h3>{t('project.berroyer.agileTitle')}</h3>
+                        <p>{t('project.berroyer.agileDesc')}</p>
+                    </article>
+                    <article className="berroyer-info-card">
+                        <header>
+                            <FaBook />
+                            <h3>{t('project.berroyer.docTitle')}</h3>
+                        </header>
+                        <p>{t('project.berroyer.docDesc')}</p>
+                    </article>
+                    <article className="berroyer-info-card">
+                        <header>
+                            <FaSitemap />
+                            <h3>{t('project.berroyer.techTitle')}</h3>
+                        </header>
+                        <p>
+                            Architecture articulée autour de {t('project.berroyer.techEasyframe')}.
+                        </p>
+                    </article>
+                </section>
+
+            </main>
+
+            {
+                // High definition modal viewer
+            }
+            <ImageModal
+                isOpen={!!selectedImage}
+                src={selectedImage?.src || ''}
+                title={selectedImage?.title || ''}
+                desc={selectedImage?.desc}
+                onClose={() => setSelectedImage(null)}
+            />
         </div>
     );
 };

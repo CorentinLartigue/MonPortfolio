@@ -1,4 +1,5 @@
-/* ERROR 404 */
+/*======= ERROR 404 ========*/
+
 .error404-container {
     @apply relative overflow-hidden flex items-center justify-center;
 }
@@ -11,7 +12,7 @@
     @apply relative w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center rounded-2xl bg-blue-50 border border-blue-100 text-blue-600;
 }
 
-.error404-icon {
+.error404-icon-wrapper svg {
     @apply w-10 h-10 sm:w-12 sm:h-12;
 }
 
@@ -23,43 +24,50 @@
     @apply relative select-none;
 }
 
-.error404-code {
+.error404-code-container h1 {
     @apply text-7xl sm:text-8xl md:text-9xl font-black tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 leading-none;
 }
 
-.error404-code-shadow {
+.error404-code-container div {
     @apply absolute top-1.5 left-1.5 text-7xl sm:text-8xl md:text-9xl font-black tracking-widest text-slate-100/50 leading-none -z-10 blur-[1px];
 }
 
-.error404-text-wrapper {
+.error404-card > div:nth-of-type(2) {
     @apply space-y-3;
 }
 
-.error404-title {
+.error404-card h2 {
     @apply text-2xl sm:text-3xl font-extrabold text-slate-800;
 }
 
-.error404-desc {
+.error404-card p {
     @apply text-slate-500 max-w-md mx-auto text-sm sm:text-base leading-relaxed;
 }
 
-.error404-actions {
+/* Actions navigation */
+.error404-card nav {
     @apply flex flex-col sm:flex-row items-center justify-center gap-4 w-full pt-4;
 }
 
-.error404-btn-primary {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-indigo-600 hover:to-blue-600 text-white font-bold rounded-2xl shadow-lg shadow-blue-500/20 hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300 transform active:scale-95 w-full sm:w-auto;
+.error404-card nav a {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 font-bold rounded-2xl transition-all duration-300 transform active:scale-95 w-full sm:w-auto;
 }
 
-.error404-btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-slate-50 hover:bg-slate-100 text-slate-700 font-bold rounded-2xl border border-slate-200 hover:border-slate-300 transition-all duration-300 transform active:scale-95 w-full sm:w-auto;
+.error404-card nav a:first-child {
+    @apply bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-indigo-600 hover:to-blue-600 text-white shadow-lg shadow-blue-500/20 hover:shadow-xl hover:shadow-blue-500/30;
 }
 
-.error404-btn-icon {
+.error404-card nav a:last-child {
+    @apply bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200 hover:border-slate-300;
+}
+
+.error404-card nav a svg {
     @apply w-4 h-4;
 }
 
-/* ERROR 503 */
+
+/*======= ERROR 503 ========*/
+
 .error503-container {
     @apply relative overflow-hidden flex items-center justify-center;
 }
@@ -80,7 +88,7 @@
     @apply relative w-20 h-20 sm:w-24 sm:h-24 flex items-center justify-center rounded-2xl bg-blue-50 border border-blue-100 text-blue-600;
 }
 
-.error503-icon {
+.error503-icon-wrapper svg {
     @apply w-10 h-10 sm:w-12 sm:h-12;
 }
 
@@ -88,18 +96,19 @@
     @apply absolute inset-0 rounded-2xl bg-blue-500/10 animate-ping -z-10;
 }
 
-.error503-text-wrapper {
+.error503-card > div:nth-of-type(3) {
     @apply space-y-3;
 }
 
-.error503-title {
+.error503-card h1 {
     @apply text-2xl sm:text-4xl font-extrabold text-slate-800;
 }
 
-.error503-desc {
+.error503-card > div:nth-of-type(3) p {
     @apply text-slate-500 max-w-md mx-auto text-sm sm:text-base leading-relaxed;
 }
 
+/* Progress bar section */
 .error503-progress-container {
     @apply w-full max-w-xs space-y-2;
 }
@@ -108,7 +117,7 @@
     @apply flex justify-between text-xs font-bold text-slate-400 uppercase tracking-wider;
 }
 
-.error503-progress-status-label {
+.error503-progress-header span:last-child {
     @apply animate-pulse;
 }
 
@@ -117,6 +126,7 @@
 }
 
 .error503-progress-bar {
+    @apply h-full bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full;
     animation: progressAnimation 2s infinite ease-in-out;
     width: 70%;
 }
@@ -133,22 +143,23 @@
     }
 }
 
-.error503-contact-section {
+/* Contact information section */
+.error503-card section {
     @apply space-y-4 pt-4 border-t border-slate-100 w-full;
 }
 
-.error503-contact-title {
+.error503-card section p {
     @apply text-xs font-bold text-slate-400 uppercase tracking-wider;
 }
 
-.error503-social-icons {
+.error503-card section nav {
     @apply flex items-center justify-center gap-4;
 }
 
-.error503-social-btn {
+.error503-card section nav a {
     @apply w-11 h-11 flex items-center justify-center rounded-xl bg-slate-50 border border-slate-200 text-slate-600 hover:text-blue-600 hover:bg-blue-50 hover:border-blue-200 transition-all duration-300 transform active:scale-95;
 }
 
-.error503-social-icon {
+.error503-card section nav a svg {
     @apply w-5 h-5;
 }

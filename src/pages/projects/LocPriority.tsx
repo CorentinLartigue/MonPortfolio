@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
-import ReturnButton from '../../components/ReturnButton.tsx';
+import ProjectHero from '../../components/ProjectHero.tsx';
+import ImageModal from '../../components/ImageModal.tsx';
 import { useTranslate } from '../../hooks/useTranslate';
 import {
     FaShopify, FaReact, FaExternalLinkAlt, FaExchangeAlt,
-    FaShieldAlt, FaSlidersH, FaBolt, FaTimes, FaSearchPlus,
+    FaShieldAlt, FaSlidersH, FaBolt, FaSearchPlus,
     FaYoutube, FaInstagram
 } from 'react-icons/fa';
-import { SiLaravel, SiRedis, SiTailwindcss } from 'react-icons/si';
-import locprioritySchema from '/images/projects/locpriority/schema_priorite.png';
+import { SiLaravel, SiRedis } from 'react-icons/si';
+import locprioritySchema from '/images/projects/locpriority/schema-priorite.png';
 import locpriorityDashboard from '/images/projects/locpriority/dashboard.png';
-import locpriorityRules from '/images/projects/locpriority/rules_priority.png';
-import locpriorityEditRule from '/images/projects/locpriority/edit_rule_priority.png';
+import locpriorityRules from '/images/projects/locpriority/rules-priority.png';
+import locpriorityEditRule from '/images/projects/locpriority/edit-rule-priority.png';
 import '../../styles/projects/locpriority.css';
 
 interface GalleryItem {
@@ -84,145 +85,119 @@ const LocPriority: React.FC = () => {
 
     return (
         <div className="locpriority-container">
-            <div className="locpriority-return-wrapper">
-                <ReturnButton />
-            </div>
+            <ProjectHero
+                badgeIcon={<FaShopify />}
+                badgeLabel={t('project.locpriority.badge')}
+                title={t('project.locpriority.title')}
+                subtitle={t('project.locpriority.subtitle')}
+                description={t('project.locpriority.desc')}
+                techTags={['Laravel', 'React & Inertia', 'Shopify App Bridge', 'Redis Queues & Cache', 'Tailwind CSS']}
+                theme="emerald"
+            />
 
-            {/* Hero Section */}
-            <header className="locpriority-hero">
-                <div className="locpriority-hero-glow"></div>
-                
-                <div className="locpriority-hero-badge">
-                    <FaShopify className="text-sm" />
-                    <span>{t('project.locpriority.badge')}</span>
-                </div>
-
-                <h1 className="locpriority-hero-title">
-                    {t('project.locpriority.title')}
-                </h1>
-
-                <p className="locpriority-hero-subtitle">
-                    {t('project.locpriority.subtitle')}
-                </p>
-
-                <p className="locpriority-hero-desc">
-                    {t('project.locpriority.desc')}
-                </p>
-
-                {/* Stack Badges */}
-                <div className="locpriority-hero-tech-list">
-                    <span className="locpriority-hero-tech-pill">
-                        <SiLaravel className="text-red-500" /> Laravel
-                    </span>
-                    <span className="locpriority-hero-tech-pill">
-                        <FaReact className="text-cyan-400" /> React & Inertia
-                    </span>
-                    <span className="locpriority-hero-tech-pill">
-                        <FaShopify className="text-green-500" /> Shopify App Bridge
-                    </span>
-                    <span className="locpriority-hero-tech-pill">
-                        <SiRedis className="text-red-400" /> Redis Queues & Cache
-                    </span>
-                    <span className="locpriority-hero-tech-pill">
-                        <SiTailwindcss className="text-sky-400" /> Tailwind CSS
-                    </span>
-                </div>
-            </header>
-
-            {/* Main Content */}
+            {
+                // Main project showcase content
+            }
             <main className="locpriority-main">
 
-                {/* Architecture & Context Bento Grid */}
+                {
+                    // Architecture and context bento grid
+                }
                 <section className="locpriority-bento-grid">
-                    <div className="locpriority-bento-main">
+                    <article className="locpriority-bento-main">
                         <div>
-                            <h2 className="locpriority-bento-title">
-                                <span className="locpriority-bento-bar"></span>
+                            <h2>
+                                <span></span>
                                 {t('project.locpriority.introTitle')}
                             </h2>
-                            <p className="locpriority-bento-text">
+                            <p>
                                 {t('project.locpriority.introText')}
                             </p>
                         </div>
                         <div className="locpriority-bento-meta">
                             <div>
-                                <span className="locpriority-bento-meta-label">Mode d'exécution</span>
-                                <span className="locpriority-bento-meta-val">Asynchrone post-achat</span>
+                                <span>Mode d'exécution</span>
+                                <span>Asynchrone post-achat</span>
                             </div>
                             <div>
-                                <span className="locpriority-bento-meta-label">Intégration</span>
-                                <span className="locpriority-bento-meta-val">Shopify Embedded App</span>
+                                <span>Intégration</span>
+                                <span>Shopify Embedded App</span>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
-                    <div className="locpriority-bento-side">
-                        <h2 className="locpriority-bento-side-title">
+                    <article className="locpriority-bento-side">
+                        <h2>
                             {t('project.locpriority.archTitle')}
                         </h2>
-                        <ul className="locpriority-bento-list">
-                            <li className="locpriority-bento-list-item">
-                                <SiLaravel className="text-red-500 text-lg mt-0.5 shrink-0" />
+                        <p>
+                            {t('project.locpriority.archDesc')}
+                        </p>
+                        <ul>
+                            <li>
+                                <SiLaravel />
                                 <span>{t('project.locpriority.techLaravel')}</span>
                             </li>
-                            <li className="locpriority-bento-list-item">
-                                <FaReact className="text-cyan-400 text-lg mt-0.5 shrink-0" />
+                            <li>
+                                <FaReact />
                                 <span>{t('project.locpriority.techReact')}</span>
                             </li>
-                            <li className="locpriority-bento-list-item">
-                                <FaExchangeAlt className="text-emerald-400 text-base mt-0.5 shrink-0" />
+                            <li>
+                                <FaExchangeAlt />
                                 <span>{t('project.locpriority.techLedger')}</span>
                             </li>
-                            <li className="locpriority-bento-list-item">
-                                <FaBolt className="text-amber-400 text-base mt-0.5 shrink-0" />
+                            <li>
+                                <FaBolt />
                                 <span>{t('project.locpriority.techRealtime')}</span>
                             </li>
                         </ul>
-                    </div>
+                    </article>
                 </section>
 
-                {/* Orchestration Scheme (Full Width Highlight) */}
+                {
+                    // Orchestration scheme
+                }
                 <section className="locpriority-schema-section">
-                    <div className="locpriority-schema-header">
-                        <h2 className="locpriority-schema-title">
+                    <header className="locpriority-schema-header">
+                        <h2>
                             {t('project.locpriority.schemaTitle')}
                         </h2>
-                        <p className="locpriority-schema-subtitle">
+                        <p>
                             {t('project.locpriority.schemaSubtitle')}
                         </p>
-                        <p className="locpriority-schema-desc">
+                        <p>
                             {t('project.locpriority.schemaDesc')}
                         </p>
-                    </div>
+                    </header>
 
-                    <div
+                    <figure
                         onClick={() => setSelectedImage({ src: locprioritySchema, title: t('project.locpriority.schemaTitle') })}
-                        className="locpriority-schema-card group"
+                        className="project-zoomable-container locpriority-schema-card"
                     >
-                        <div className="locpriority-schema-inner">
-                            <img
-                                src={locprioritySchema}
-                                alt={t('project.locpriority.schemaTitle')}
-                                className="locpriority-schema-img"
-                            />
-                            <div className="locpriority-schema-overlay">
-                                <FaSearchPlus className="text-lg" />
-                                <span>Agrandir le schéma</span>
-                            </div>
+                        <img
+                            src={locprioritySchema}
+                            alt={t('project.locpriority.schemaTitle')}
+                            className="project-zoomable-img"
+                        />
+                        <div className="project-zoomable-overlay">
+                            <FaSearchPlus />
+                            <span>Agrandir le schéma</span>
                         </div>
-                    </div>
+                    </figure>
                 </section>
 
-                {/* Merchant Screens Gallery */}
+                {
+                    // Merchant screens gallery
+                }
                 <section className="locpriority-gallery-section">
-                    <div className="locpriority-gallery-header">
-                        <h2 className="locpriority-gallery-title">
+                    <header className="locpriority-gallery-header">
+                        <h2>
                             {t('project.locpriority.galleryTitle')}
                         </h2>
-                        <p className="locpriority-gallery-subtitle">
+                        <p>
                             {t('project.locpriority.gallerySubtitle')}
                         </p>
-                    </div>
+                    </header>
 
                     <div className="locpriority-gallery-grid">
                         {galleryScreens.map((screen) => (
@@ -230,221 +205,201 @@ const LocPriority: React.FC = () => {
                                 key={screen.id}
                                 className="locpriority-gallery-card group"
                             >
-                                <div
+                                <figure
                                     onClick={() => setSelectedImage({ src: screen.image, title: t(screen.titleKey) })}
-                                    className="locpriority-gallery-thumb"
+                                    className="project-zoomable-container"
                                 >
                                     <img
                                         src={screen.image}
                                         alt={t(screen.titleKey)}
-                                        className="locpriority-gallery-img"
+                                        className="project-zoomable-img"
                                     />
-                                    <div className="locpriority-gallery-tag">
+                                    <figcaption>
                                         {screen.tag}
-                                    </div>
-                                    <div className="locpriority-gallery-zoom">
+                                    </figcaption>
+                                    <div className="project-zoomable-overlay">
                                         <FaSearchPlus />
                                         <span>Agrandir</span>
                                     </div>
-                                </div>
-                                <div className="locpriority-gallery-body">
-                                    <div>
-                                        <h3 className="locpriority-gallery-item-title">
-                                            {t(screen.titleKey)}
-                                        </h3>
-                                        <p className="locpriority-gallery-item-desc">
-                                            {t(screen.descKey)}
-                                        </p>
-                                    </div>
+                                </figure>
+                                <div>
+                                    <h3>
+                                        {t(screen.titleKey)}
+                                    </h3>
+                                    <p>
+                                        {t(screen.descKey)}
+                                    </p>
                                 </div>
                             </article>
                         ))}
                     </div>
                 </section>
 
-                {/* Core Engine Features Grid */}
+                {
+                    // Core engine features grid
+                }
                 <section className="locpriority-features-section">
-                    <h2 className="locpriority-features-title">
+                    <h2>
                         {t('project.locpriority.featuresTitle')}
                     </h2>
                     <div className="locpriority-features-grid">
                         {engineFeatures.map((feat, idx) => {
                             const IconComponent = feat.icon;
                             return (
-                                <div
+                                <article
                                     key={idx}
-                                    className="locpriority-feature-card group"
+                                    className="group"
                                 >
-                                    <div className="locpriority-feature-icon-box">
+                                    <span>
                                         <IconComponent />
-                                    </div>
-                                    <h3 className="locpriority-feature-title">
+                                    </span>
+                                    <h3>
                                         {t(feat.titleKey)}
                                     </h3>
-                                    <p className="locpriority-feature-desc">
+                                    <p>
                                         {t(feat.descKey)}
                                     </p>
-                                </div>
+                                </article>
                             );
                         })}
                     </div>
                 </section>
 
-                {/* Multichannel Marketing & Outreach */}
+                {
+                    // Multichannel marketing and outreach
+                }
                 <section className="locpriority-marketing-section">
-                    <div className="locpriority-marketing-header">
-                        <h2 className="locpriority-marketing-title">
+                    <header className="locpriority-marketing-header">
+                        <h2>
                             {t('project.locpriority.marketingTitle')}
                         </h2>
-                        <p className="locpriority-marketing-subtitle">
+                        <p>
                             {t('project.locpriority.marketingSubtitle')}
                         </p>
-                    </div>
+                    </header>
 
                     <div className="locpriority-marketing-grid">
-                        {/* YouTube Card */}
+                        {
+                            // YouTube card
+                        }
                         <a
                             href="https://www.youtube.com/@Home-Made-IO"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="locpriority-marketing-card-yt group"
                         >
-                            <div>
-                                <div className="flex items-center justify-between mb-4">
-                                    <div className="locpriority-marketing-icon-yt">
-                                        <FaYoutube />
-                                    </div>
-                                    <FaExternalLinkAlt className="text-xs text-slate-500 group-hover:text-red-400 transition-colors" />
-                                </div>
-                                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-red-400 transition-colors">
-                                    {t('project.locpriority.marketingYtTitle')}
-                                </h3>
-                                <p className="text-slate-400 text-xs leading-relaxed">
-                                    {t('project.locpriority.marketingYtDesc')}
-                                </p>
-                            </div>
-                            <div className="locpriority-marketing-link-yt">
+                            <header>
+                                <span>
+                                    <FaYoutube />
+                                </span>
+                                <FaExternalLinkAlt />
+                            </header>
+                            <h3>
+                                {t('project.locpriority.marketingYtTitle')}
+                            </h3>
+                            <p>
+                                {t('project.locpriority.marketingYtDesc')}
+                            </p>
+                            <footer>
                                 <span>{t('project.locpriority.marketingYtLink')}</span>
-                            </div>
+                            </footer>
                         </a>
 
-                        {/* Instagram Card */}
+                        {
+                            // Instagram card
+                        }
                         <a
                             href="https://www.instagram.com/homemade.io/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="locpriority-marketing-card-insta group"
                         >
-                            <div>
-                                <div className="flex items-center justify-between mb-4">
-                                    <div className="locpriority-marketing-icon-insta">
-                                        <FaInstagram />
-                                    </div>
-                                    <FaExternalLinkAlt className="text-xs text-slate-500 group-hover:text-pink-400 transition-colors" />
-                                </div>
-                                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-pink-300 transition-colors">
-                                    {t('project.locpriority.marketingInstaTitle')}
-                                </h3>
-                                <p className="text-slate-400 text-xs leading-relaxed">
-                                    {t('project.locpriority.marketingInstaDesc')}
-                                </p>
-                            </div>
-                            <div className="locpriority-marketing-link-insta">
+                            <header>
+                                <span>
+                                    <FaInstagram />
+                                </span>
+                                <FaExternalLinkAlt />
+                            </header>
+                            <h3>
+                                {t('project.locpriority.marketingInstaTitle')}
+                            </h3>
+                            <p>
+                                {t('project.locpriority.marketingInstaDesc')}
+                            </p>
+                            <footer>
                                 <span>{t('project.locpriority.marketingInstaLink')}</span>
-                            </div>
+                            </footer>
                         </a>
 
-                        {/* Shopify Ads Card */}
-                        <div className="locpriority-marketing-card-shopify group">
-                            <div>
-                                <div className="locpriority-marketing-icon-shopify">
+                        {
+                            // Shopify app ads card
+                        }
+                        <article className="locpriority-marketing-card-shopify group">
+                            <header>
+                                <span>
                                     <FaShopify />
-                                </div>
-                                <h3 className="text-lg font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors">
-                                    {t('project.locpriority.marketingShopifyTitle')}
-                                </h3>
-                                <p className="text-slate-400 text-xs leading-relaxed">
-                                    {t('project.locpriority.marketingShopifyDesc')}
-                                </p>
-                            </div>
-                        </div>
+                                </span>
+                            </header>
+                            <h3>
+                                {t('project.locpriority.marketingShopifyTitle')}
+                            </h3>
+                            <p>
+                                {t('project.locpriority.marketingShopifyDesc')}
+                            </p>
+                        </article>
                     </div>
                 </section>
 
-                {/* External Production Links */}
+                {
+                    // External production links
+                }
                 <section className="locpriority-links-section">
-                    <h2 className="locpriority-links-title">
+                    <h2>
                         {t('project.locpriority.linksTitle')}
                     </h2>
-                    <div className="locpriority-links-grid">
+                    <nav className="locpriority-links-grid" aria-label="Liens externes de production">
                         <a
                             href="https://apps.shopify.com/location-priority?locale=fr"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="locpriority-link-card group"
+                            className="group"
                         >
-                            <FaShopify className="locpriority-link-icon-store" />
-                            <span className="locpriority-link-label">{t('project.locpriority.linkAppStore')}</span>
-                            <span className="locpriority-link-sub">apps.shopify.com</span>
+                            <FaShopify />
+                            <span>{t('project.locpriority.linkAppStore')}</span>
+                            <small>apps.shopify.com</small>
                         </a>
 
                         <a
                             href="https://www.home-made.io/portfolio/location-priority/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="locpriority-link-card group"
+                            className="group"
                         >
-                            <FaExternalLinkAlt className="locpriority-link-icon-ext" />
-                            <span className="locpriority-link-label">{t('project.locpriority.linkPortfolio')}</span>
-                            <span className="locpriority-link-sub">home-made.io</span>
+                            <FaExternalLinkAlt />
+                            <span>{t('project.locpriority.linkPortfolio')}</span>
+                            <small>home-made.io</small>
                         </a>
 
                         <a
                             href="https://www.home-made.io/welcome-location-priority"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="locpriority-link-card group"
+                            className="group"
                         >
-                            <FaExternalLinkAlt className="locpriority-link-icon-ext" />
-                            <span className="locpriority-link-label">{t('project.locpriority.linkWelcome')}</span>
-                            <span className="locpriority-link-sub">Documentation onboarding</span>
+                            <FaExternalLinkAlt />
+                            <span>{t('project.locpriority.linkWelcome')}</span>
+                            <small>Documentation onboarding</small>
                         </a>
-                    </div>
+                    </nav>
                 </section>
             </main>
 
-            {/* Modal Zoom Image */}
-            {selectedImage && (
-                <div
-                    className="locpriority-modal-backdrop"
-                    onClick={() => setSelectedImage(null)}
-                >
-                    <div
-                        className="locpriority-modal-content"
-                        onClick={(e) => e.stopPropagation()}
-                    >
-                        <div className="locpriority-modal-header">
-                            <h3 className="locpriority-modal-title">
-                                {selectedImage.title}
-                            </h3>
-                            <button
-                                onClick={() => setSelectedImage(null)}
-                                className="locpriority-modal-close-btn"
-                                aria-label="Fermer"
-                            >
-                                <FaTimes className="text-lg" />
-                            </button>
-                        </div>
-                        <div className="locpriority-modal-body">
-                            <img
-                                src={selectedImage.src}
-                                alt={selectedImage.title}
-                                className="locpriority-modal-img"
-                            />
-                        </div>
-                    </div>
-                </div>
-            )}
+            <ImageModal
+                isOpen={!!selectedImage}
+                onClose={() => setSelectedImage(null)}
+                src={selectedImage?.src || ''}
+                title={selectedImage?.title || ''}
+            />
         </div>
     );
 };

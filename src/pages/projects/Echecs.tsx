@@ -1,53 +1,83 @@
-import React from 'react';
-import echecs_regles from '/images/projects/echecs-regles.png';
-import echecs_jeux from '/images/projects/echecs-jeux.png';
-import ReturnButton from '../../components/ReturnButton.tsx';
-import {useTranslate} from '../../hooks/useTranslate';
-import { FaChessKnight, FaChessBoard, FaTrophy, FaLightbulb } from 'react-icons/fa';
+import React, { useState } from 'react';
+import echecs_regles from '/images/projects/echecs/regles.png';
+import echecs_jeux from '/images/projects/echecs/jeux.png';
+import ProjectHero from '../../components/ProjectHero.tsx';
+import ImageModal from '../../components/ImageModal.tsx';
+import { useTranslate } from '../../hooks/useTranslate';
+import {
+    FaChessKnight, FaChessBoard, FaTrophy,
+    FaLightbulb, FaSearchPlus
+} from 'react-icons/fa';
 import '../../styles/projects/echecs.css';
 
+interface ModalImage {
+    src: string;
+    title: string;
+    desc?: string;
+}
+
 const Echecs: React.FC = () => {
-    const {t} = useTranslate();
+    const { t } = useTranslate();
+    const [selectedImage, setSelectedImage] = useState<ModalImage | null>(null);
+
+    const openModal = (src: string, title: string, desc?: string) => {
+        setSelectedImage({ src, title, desc });
+    };
 
     return (
         <div className="echecs-page">
-            <div className="echecs-nav-wrapper">
-                <ReturnButton />
-            </div>
+            <ProjectHero
+                badgeIcon={<FaChessKnight />}
+                badgeLabel={t('project.echecs.badge')}
+                title={t('project.echecs.title')}
+                subtitle={t('project.echecs.subtitle')}
+                description={t('project.echecs.desc')}
+                techTags={['React', 'TypeScript', 'Tailwind CSS', "Algorithmique d'échecs", 'GitHub']}
+                theme="blue"
+            />
 
-            {/* Checkerboard Header */}
-            <div className="echecs-header">
-                <div className="echecs-header-pattern"></div>
-                <FaChessKnight className="echecs-header-icon" />
-                <h1 className="echecs-header-title">
-                    {t('project.echecs.title')}
-                </h1>
-                <p className="echecs-header-desc">
-                    {t('project.echecs.desc')}
-                </p>
-            </div>
-
-            <div className="echecs-main-content">
+            <main className="echecs-main-content">
                 
-                {/* About & Game Preview */}
-                <div className="echecs-about-card">
-                    <div className="echecs-about-content">
-                        <div className="echecs-about-header">
-                            <FaChessBoard className="echecs-about-icon" />
-                            <h2 className="echecs-about-title">{t('project.echecs.aboutTitle')}</h2>
-                        </div>
-                        <p className="echecs-about-text">
+                {
+                    // About and game preview
+                }
+                <article className="echecs-about-card">
+                    <div>
+                        <header>
+                            <FaChessBoard />
+                            <h2>{t('project.echecs.aboutTitle')}</h2>
+                        </header>
+                        <p>
                             {t('project.echecs.aboutText')}
                         </p>
                     </div>
-                    <div>
-                        <img src={echecs_jeux} alt="Plateau de jeu" className="echecs-about-img" />
-                    </div>
-                </div>
+                    <figure>
+                        <div
+                            className="project-zoomable-container"
+                            onClick={() => openModal(
+                                echecs_jeux,
+                                t('project.echecs.aboutTitle'),
+                                t('project.echecs.aboutText')
+                            )}
+                        >
+                            <img
+                                src={echecs_jeux}
+                                alt="Plateau de jeu"
+                                className="project-zoomable-img"
+                            />
+                            <div className="project-zoomable-overlay">
+                                <FaSearchPlus />
+                                <span>{t('app.buttons.zoom')}</span>
+                            </div>
+                        </div>
+                    </figure>
+                </article>
 
-                {/* Features */}
-                <div>
-                    <h2 className="echecs-features-section-title">{t('project.echecs.featuresTitle')}</h2>
+                {
+                    // Game feature rules and logic
+                }
+                <section className="echecs-features-section">
+                    <h2>{t('project.echecs.featuresTitle')}</h2>
                     <div className="echecs-features-grid">
                         <div className="echecs-features-list">
                             {[
@@ -56,66 +86,96 @@ const Echecs: React.FC = () => {
                                 { title: t('project.echecs.feature3Title'), text: t('project.echecs.feature3Text') },
                                 { title: t('project.echecs.feature4Title'), text: t('project.echecs.feature4Text') }
                             ].map((feat, i) => (
-                                <div key={i} className="echecs-feature-item group">
-                                    <div className="echecs-feature-number">0{i+1}.</div>
+                                <article key={i} className="echecs-feature-item">
+                                    <span>0{i+1}.</span>
                                     <div>
-                                        <h3 className="echecs-feature-title">{feat.title}</h3>
-                                        <p className="echecs-feature-text">{feat.text}</p>
+                                        <h3>{feat.title}</h3>
+                                        <p>{feat.text}</p>
                                     </div>
-                                </div>
+                                </article>
                             ))}
                         </div>
-                        <div>
-                            <img src={echecs_regles} alt="Règles" className="echecs-features-img" />
-                        </div>
+                        <figure>
+                            <div
+                                className="project-zoomable-container"
+                                onClick={() => openModal(
+                                    echecs_regles,
+                                    t('project.echecs.featuresTitle'),
+                                    t('project.echecs.feature2Text')
+                                )}
+                            >
+                                <img
+                                    src={echecs_regles}
+                                    alt="Règles"
+                                    className="project-zoomable-img"
+                                />
+                                <div className="project-zoomable-overlay">
+                                    <FaSearchPlus />
+                                    <span>{t('app.buttons.zoom')}</span>
+                                </div>
+                            </div>
+                        </figure>
                     </div>
-                </div>
+                </section>
 
-                {/* Challenges & Learning */}
-                <div className="echecs-challenges-grid">
-                    <div className="echecs-challenges-card">
-                        <div className="echecs-challenges-header">
-                            <FaTrophy className="echecs-challenges-icon" />
-                            <h2 className="echecs-challenges-title">{t('project.echecs.challengesTitle')}</h2>
-                        </div>
-                        <ul className="echecs-challenges-list">
+                {
+                    // Technical challenges and key learnings
+                }
+                <section className="echecs-challenges-grid">
+                    <article className="echecs-challenges-card">
+                        <header>
+                            <FaTrophy />
+                            <h2>{t('project.echecs.challengesTitle')}</h2>
+                        </header>
+                        <ul>
                             {[
                                 { title: t('project.echecs.challenge1Title'), text: t('project.echecs.challenge1Text') },
                                 { title: t('project.echecs.challenge2Title'), text: t('project.echecs.challenge2Text') },
                                 { title: t('project.echecs.challenge3Title'), text: t('project.echecs.challenge3Text') }
                             ].map((c, i) => (
                                 <li key={i}>
-                                    <strong className="echecs-challenge-title">{c.title}</strong>
-                                    <span className="echecs-challenge-text">{c.text}</span>
+                                    <strong>{c.title}</strong>
+                                    <span>{c.text}</span>
                                 </li>
                             ))}
                         </ul>
-                    </div>
+                    </article>
 
-                    <div className="echecs-learned-card">
+                    <article className="echecs-learned-card">
                         <div>
-                            <div className="echecs-learned-header">
-                                <FaLightbulb className="echecs-learned-icon" />
-                                <h2 className="echecs-learned-title">{t('project.echecs.learnedTitle')}</h2>
-                            </div>
-                            <p className="echecs-learned-text">
+                            <header>
+                                <FaLightbulb />
+                                <h2>{t('project.echecs.learnedTitle')}</h2>
+                            </header>
+                            <p>
                                 "{t('project.echecs.learnedText')}"
                             </p>
                         </div>
                         
-                        <div className="echecs-tech-box">
-                            <h3 className="echecs-tech-title">{t('project.echecs.techTitle')}</h3>
+                        <footer className="echecs-tech-box">
+                            <h3>{t('project.echecs.techTitle')}</h3>
                             <div className="echecs-tech-grid">
-                                <div><strong className="echecs-tech-label">{t('project.echecs.tech1Title')}</strong> {t('project.echecs.tech1Text')}</div>
-                                <div><strong className="echecs-tech-label">{t('project.echecs.tech2Title')}</strong> {t('project.echecs.tech2Text')}</div>
-                                <div><strong className="echecs-tech-label">{t('project.echecs.tech3Title')}</strong> {t('project.echecs.tech3Text')}</div>
-                                <div><strong className="echecs-tech-label">{t('project.echecs.tech4Title')}</strong> {t('project.echecs.tech4Text')}</div>
+                                <div><strong>{t('project.echecs.tech1Title')}</strong> {t('project.echecs.tech1Text')}</div>
+                                <div><strong>{t('project.echecs.tech2Title')}</strong> {t('project.echecs.tech2Text')}</div>
+                                <div><strong>{t('project.echecs.tech3Title')}</strong> {t('project.echecs.tech3Text')}</div>
+                                <div><strong>{t('project.echecs.tech4Title')}</strong> {t('project.echecs.tech4Text')}</div>
                             </div>
-                        </div>
-                    </div>
-                </div>
+                        </footer>
+                    </article>
+                </section>
 
-            </div>
+            </main>
+
+            {
+                // High definition modal viewer
+            }
+            <ImageModal
+                isOpen={!!selectedImage}
+                src={selectedImage?.src || ''}
+                title={selectedImage?.title || ''}
+                desc={selectedImage?.desc}
+                onClose={() => setSelectedImage(null)}
+            />
         </div>
     );
 };

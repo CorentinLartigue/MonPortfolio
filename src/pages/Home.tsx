@@ -1,121 +1,104 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-import {FiArrowRight, FiMail, FiCode} from 'react-icons/fi';
-import {FaReact, FaAngular, FaLaravel} from 'react-icons/fa';
-import {SiNestjs} from 'react-icons/si';
-import {useTranslate} from '../hooks/useTranslate.ts';
+import { Link } from 'react-router-dom';
+import { FiArrowRight, FiMail, FiCode } from 'react-icons/fi';
+import { FaReact, FaAngular, FaLaravel } from 'react-icons/fa';
+import { SiNestjs } from 'react-icons/si';
+import { useTranslate } from '../hooks/useTranslate.ts';
 import photoProfil from '/images/profile/photo-profil.jpg';
 import '../styles/home.css';
 
 const Home: React.FC = () => {
-    const {t} = useTranslate();
+    const { t } = useTranslate();
 
     return (
-        <div className="home-section">
+        <section className="home-hero">
             <div className="home-glow-blue"></div>
             <div className="home-glow-indigo"></div>
 
             <div className="home-container">
-                <div className="home-grid">
+                <article>
+                    <header>
+                        <span className="home-badge">
+                            <span className="dot"></span>
+                            {t('home.badge')}
+                        </span>
 
-                    <div className="home-content">
-                        <div className="home-badge">
-                            <span className="home-badge-dot"></span>
-                            <span className="home-badge-text">{t('home.badge')}</span>
-                        </div>
+                        <h1>
+                            {t('home.welcome')}{' '}
+                            <span>{t('home.portfolio')}</span>
+                        </h1>
+                        <p>
+                            {t('home.paragraph1_1')}
+                            <strong>{t('home.paragraph1_highlight')}</strong>
+                            {t('home.paragraph1_2')}
+                        </p>
+                        <p>
+                            {t('home.paragraph2_1')}
+                            <strong>{t('home.paragraph2_highlight1')}</strong>
+                            {t('home.paragraph2_2')}
+                            <strong>{t('home.paragraph2_highlight2')}</strong>
+                            {t('home.paragraph2_3')}
+                        </p>
+                    </header>
 
-                        <div className="home-intro">
-                            <h1 className="home-title">
-                                {t('home.welcome')}{' '}
-                                <span className="home-title-accent">{t('home.portfolio')}</span>
-                            </h1>
-                            <p className="home-paragraph">
-                                {t('home.paragraph1_1')}
-                                <span className="home-text-highlight">{t('home.paragraph1_highlight')}</span>
-                                {t('home.paragraph1_2')}
-                            </p>
-                            <p className="home-paragraph">
-                                {t('home.paragraph2_1')}
-                                <span className="home-text-highlight">{t('home.paragraph2_highlight1')}</span>
-                                {t('home.paragraph2_2')}
-                                <span className="home-text-highlight">{t('home.paragraph2_highlight2')}</span>
-                                {t('home.paragraph2_3')}
-                            </p>
-                        </div>
+                    <nav>
+                        <Link to="/projects">
+                            {t('home.btnProjects')}
+                            <FiArrowRight />
+                        </Link>
+                        <Link to="/contact">
+                            <FiMail />
+                            {t('home.btnContact')}
+                        </Link>
+                    </nav>
 
-                        <div className="home-actions">
-                            <Link
-                                to="/projects"
-                                className="home-btn-primary"
-                            >
-                                {t('home.btnProjects')}
-                                <FiArrowRight className="home-btn-icon"/>
-                            </Link>
-                            <Link
-                                to="/contact"
-                                className="home-btn-secondary"
-                            >
-                                <FiMail className="home-btn-icon"/>
-                                {t('home.btnContact')}
-                            </Link>
-                        </div>
+                    <footer>
+                        <p>{t('home.techsTitle')}</p>
+                        <ul>
+                            <li>
+                                <FaReact className="home-icon-react" />
+                                <span>React.js</span>
+                            </li>
+                            <li>
+                                <FaAngular className="home-icon-angular" />
+                                <span>Angular</span>
+                            </li>
+                            <li>
+                                <FaLaravel className="home-icon-laravel" />
+                                <span>Laravel</span>
+                            </li>
+                            <li>
+                                <SiNestjs className="home-icon-nestjs" />
+                                <span>Nest.js</span>
+                            </li>
+                        </ul>
+                    </footer>
+                </article>
 
-                        <div className="home-techs">
-                            <p className="home-techs-title">
-                                {t('home.techsTitle')}
-                            </p>
-                            <div className="home-techs-list">
-                                <div className="home-tech-card group">
-                                    <FaReact className="home-tech-icon-react"/>
-                                    <span className="home-tech-name">React.js</span>
-                                </div>
-                                <div className="home-tech-card group">
-                                    <FaAngular className="home-tech-icon-angular"/>
-                                    <span className="home-tech-name">Angular</span>
-                                </div>
-                                <div className="home-tech-card group">
-                                    <FaLaravel className="home-tech-icon-laravel"/>
-                                    <span className="home-tech-name">Laravel</span>
-                                </div>
-                                <div className="home-tech-card group">
-                                    <SiNestjs className="home-tech-icon-nestjs"/>
-                                    <span className="home-tech-name">Nest.js</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="home-media">
-                        <div className="home-image-wrapper group">
-
-                            <div className="home-image-glow"></div>
-
-                            <div className="home-image-frame">
-                                <div className="home-image-inner">
-                                    <img
-                                        src={photoProfil}
-                                        alt="Photo de profil de Corentin"
-                                        className="home-profile-pic"
-                                    />
-                                    <div className="home-image-overlay"></div>
-                                </div>
-                            </div>
-
-                            <div className="home-floating-badge animate-bounce-slow">
-                                <div className="home-badge-icon-wrapper">
-                                    <FiCode className="home-floating-icon"/>
-                                </div>
-                                <div>
-                                    <p className="home-floating-title">{t('home.floatingRole')}</p>
-                                    <p className="home-floating-desc">{t('home.floatingTitle')}</p>
-                                </div>
-                            </div>
+                <figure>
+                    <div className="home-image-glow"></div>
+                    <div className="home-image-frame">
+                        <div className="home-image-inner">
+                            <img
+                                src={photoProfil}
+                                alt="Photo de profil de Corentin"
+                            />
+                            <div className="home-image-overlay"></div>
                         </div>
                     </div>
 
-                </div>
+                    <figcaption className="animate-bounce-slow">
+                        <span>
+                            <FiCode />
+                        </span>
+                        <div>
+                            <p>{t('home.floatingRole')}</p>
+                            <p>{t('home.floatingTitle')}</p>
+                        </div>
+                    </figcaption>
+                </figure>
             </div>
-        </div>
+        </section>
     );
 };
 

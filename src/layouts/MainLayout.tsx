@@ -1,13 +1,15 @@
-import {Outlet} from 'react-router-dom';
+import React from 'react';
+import {Outlet, ScrollRestoration} from 'react-router-dom';
 import Navbar from '../components/Navbar.tsx';
 import Footer from '../components/Footer.tsx';
 
 const MainLayout: React.FC = () => {
     return (
-        <div className="flex flex-col min-h-screen">
+        <div className="app-layout">
+            <ScrollRestoration />
             <Navbar/>
-            <div className="flex-grow">
-                <div className="min-h-screen flex flex-col">
+            <div className="app-main-content">
+                <div className="app-content-wrapper">
                     <Outlet/>
                 </div>
             </div>

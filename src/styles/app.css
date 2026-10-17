@@ -2,7 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-/* NAVBAR */
+/*======= APP LAYOUT ========*/
+.App {
+    @apply flex-grow;
+}
+
+.app-layout {
+    @apply flex flex-col min-h-screen;
+}
+
+.app-main-content {
+    @apply flex-grow;
+}
+
+.app-content-wrapper {
+    @apply min-h-screen flex flex-col;
+}
+
+/*======= NAVBAR ========*/
 .navbar {
     @apply sticky top-0 z-50 transition-all duration-300;
 }
@@ -23,12 +40,20 @@
     @apply flex items-center space-x-3;
 }
 
+.navbar-logo-box {
+    @apply relative flex-shrink-0;
+}
+
 .navbar-logo-glow {
     @apply absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full blur opacity-50 group-hover:opacity-80 transition duration-300;
 }
 
 .navbar-logo-img {
     @apply relative w-10 h-10 sm:w-11 sm:h-11 rounded-full object-cover border border-slate-800;
+}
+
+.navbar-brand-text {
+    @apply flex flex-col;
 }
 
 .navbar-brand-name {
@@ -47,6 +72,10 @@
     @apply relative px-4 py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 flex items-center;
 }
 
+.navbar-link > span:first-child {
+    @apply relative z-10 flex items-center;
+}
+
 .navbar-link-active {
     @apply text-white bg-slate-800/60 shadow-inner;
 }
@@ -61,6 +90,10 @@
 
 .navbar-toggle-btn {
     @apply md:hidden flex items-center justify-center w-10 h-10 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800/50 transition-colors duration-300 focus:outline-none;
+}
+
+.navbar-toggle-btn svg {
+    @apply w-6 h-6;
 }
 
 .navbar-menu-mobile {
@@ -83,6 +116,10 @@
     @apply flex items-center px-4 py-3 rounded-xl text-sm font-bold transition-all duration-300;
 }
 
+.navbar-mobile-link svg {
+    @apply w-5 h-5 mr-3 shrink-0;
+}
+
 .navbar-mobile-link-active {
     @apply text-white bg-slate-800/80 border-l-4 border-blue-500;
 }
@@ -97,14 +134,14 @@
 }
 
 .navbar-lang-icon {
-    @apply text-slate-400 w-4 h-4;
+    @apply text-slate-400 w-4 h-4 mr-2;
 }
 
 .navbar-lang-btn {
     @apply text-xs font-bold text-slate-400 hover:text-white transition-colors duration-200 focus:outline-none cursor-pointer bg-transparent border-none p-0;
 }
 
-.navbar-lang-btn-active {
+.navbar-lang-btn.active, .navbar-lang-btn-active {
     @apply text-blue-400 font-extrabold;
 }
 
@@ -116,11 +153,15 @@
     @apply flex items-center justify-center bg-slate-800/40 border border-slate-700/50 rounded-xl px-4 py-2.5 mt-3 mb-2;
 }
 
+.navbar-lang-selector-mobile svg {
+    @apply text-slate-400 w-4 h-4 mr-2;
+}
+
 .navbar-lang-btn-mobile {
     @apply text-sm font-bold text-slate-400 hover:text-white transition-colors duration-200 focus:outline-none cursor-pointer bg-transparent border-none p-0;
 }
 
-.navbar-lang-btn-mobile-active {
+.navbar-lang-btn-mobile.active, .navbar-lang-btn-mobile-active {
     @apply text-blue-400 font-extrabold;
 }
 
@@ -128,7 +169,7 @@
     @apply text-slate-700 mx-3 text-sm select-none;
 }
 
-/* FOOTER */
+/*======= FOOTER ========*/
 .footer {
     @apply bg-gray-900 text-white py-6;
 }
@@ -137,28 +178,28 @@
     @apply container mx-auto flex flex-col sm:flex-row justify-between items-center px-4;
 }
 
-.footer-copyright {
+.footer-container > p {
     @apply text-sm text-gray-400 mb-4 sm:mb-0 sm:ml-10;
 }
 
-.footer-links {
+.footer-container > nav {
     @apply flex flex-col sm:flex-row sm:space-x-8 mt-4 sm:mt-0 text-center sm:text-left sm:mr-10;
 }
 
-.footer-link {
+.footer-container > nav a {
     @apply text-sm text-gray-400 hover:text-gray-200 transition-colors duration-200;
 }
 
-/* RETURN BUTTON */
+/*======= RETURN BUTTON ========*/
 .return-btn {
-    @apply inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-800 transition-colors mb-6 cursor-pointer border-none bg-transparent p-0 focus:outline-none;
+    @apply inline-flex items-center gap-2 text-sm font-semibold text-blue-400 hover:text-blue-300 transition-colors cursor-pointer border-none bg-transparent p-0 focus:outline-none;
 }
 
-.return-btn-icon {
+.return-btn svg {
     @apply w-3.5 h-3.5 transition-transform;
 }
 
-.return-btn:hover .return-btn-icon {
+.return-btn:hover svg {
     transform: translateX(-4px);
 }
 
@@ -187,6 +228,15 @@
 
 .animate-bounce-slow {
     animation: bounce-slow 4.5s ease-in-out infinite;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @layer components {
@@ -232,6 +282,69 @@
 
     .section-text {
         @apply text-slate-600 text-sm sm:text-base leading-relaxed text-justify;
+    }
+
+    /* MODAL ZOOM IMAGE HD */
+    .image-modal-backdrop {
+        @apply fixed inset-0 z-50 bg-black/90 backdrop-blur-md p-4 sm:p-8 flex items-center justify-center;
+        animation: fade-in 0.2s ease-out;
+    }
+
+    .image-modal-content {
+        @apply relative max-w-6xl w-full bg-slate-900 rounded-2xl border border-slate-700 shadow-2xl overflow-hidden flex flex-col max-h-[92vh];
+    }
+
+    .image-modal-header {
+        @apply p-4 sm:p-6 border-b border-slate-800 flex items-center justify-between;
+    }
+
+    .image-modal-title {
+        @apply text-lg sm:text-xl font-bold text-white;
+    }
+
+    .image-modal-close-btn {
+        @apply text-slate-400 hover:text-white p-2 rounded-lg hover:bg-slate-800 transition-colors focus:outline-none;
+    }
+
+    .image-modal-close-btn svg {
+        @apply text-xl;
+    }
+
+    .image-modal-body {
+        @apply p-4 sm:p-6 overflow-y-auto flex flex-col items-center gap-4;
+    }
+
+    .image-modal-img {
+        @apply max-h-[70vh] w-auto max-w-full rounded-lg object-contain border border-slate-800;
+    }
+
+    .image-modal-desc {
+        @apply text-slate-300 text-sm sm:text-base text-center max-w-3xl leading-relaxed;
+    }
+
+    /* CONTENEUR IMAGE ZOOMABLE UNIFIÉ */
+    .project-zoomable-container {
+        @apply relative overflow-hidden rounded-2xl border border-slate-800/80 bg-slate-950/80 cursor-pointer shadow-md transition-all duration-300;
+    }
+
+    .project-zoomable-img {
+        @apply w-full h-auto object-contain transition-transform duration-500;
+    }
+
+    .project-zoomable-container:hover .project-zoomable-img {
+        transform: scale(1.02);
+    }
+
+    .project-zoomable-overlay {
+        @apply absolute inset-0 bg-black/60 opacity-0 transition-opacity duration-300 flex items-center justify-center gap-2 text-white font-semibold text-sm backdrop-blur-[2px];
+    }
+
+    .project-zoomable-container:hover .project-zoomable-overlay {
+        @apply opacity-100;
+    }
+
+    .project-zoomable-overlay svg {
+        @apply text-xl;
     }
 }
 

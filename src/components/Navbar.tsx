@@ -29,12 +29,12 @@ const Navbar: React.FC = () => {
     }, [location]);
 
     const navLinks = [
-        {name: t('app.nav.home'), path: '/', icon: <FiHome className="w-5 h-5 mr-3"/>},
-        {name: t('app.nav.projects'), path: '/projects', icon: <FiFolder className="w-5 h-5 mr-3"/>},
-        {name: t('app.nav.experiences'), path: '/experiences', icon: <FiBriefcase className="w-5 h-5 mr-3"/>},
-        {name: t('app.nav.formations'), path: '/formations', icon: <FiAward className="w-5 h-5 mr-3"/>},
-        {name: t('app.nav.skills'), path: '/competences', icon: <FiCpu className="w-5 h-5 mr-3"/>},
-        {name: t('app.nav.contact'), path: '/contact', icon: <FiMail className="w-5 h-5 mr-3"/>},
+        {name: t('app.nav.home'), path: '/', icon: <FiHome />},
+        {name: t('app.nav.projects'), path: '/projects', icon: <FiFolder />},
+        {name: t('app.nav.experiences'), path: '/experiences', icon: <FiBriefcase />},
+        {name: t('app.nav.formations'), path: '/formations', icon: <FiAward />},
+        {name: t('app.nav.skills'), path: '/competences', icon: <FiCpu />},
+        {name: t('app.nav.contact'), path: '/contact', icon: <FiMail />},
     ];
 
     const isActive = (path: string) => {
@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
         <nav className={`navbar ${scrolled ? 'navbar-scrolled' : 'navbar-default'}`}>
             <div className="navbar-container">
                 <Link to="/" className="navbar-logo-wrapper group">
-                    <div className="relative flex-shrink-0">
+                    <div className="navbar-logo-box">
                         <div className="navbar-logo-glow"></div>
                         <img
                             src={logo}
@@ -56,7 +56,7 @@ const Navbar: React.FC = () => {
                             className="navbar-logo-img"
                         />
                     </div>
-                    <div className="flex flex-col">
+                    <div className="navbar-brand-text">
                         <span className="navbar-brand-name">Corentin Lartigue</span>
                         <span className="navbar-brand-sub">Portfolio</span>
                     </div>
@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
                                 to={link.path}
                                 className={`navbar-link ${active ? 'navbar-link-active' : 'navbar-link-inactive'}`}
                             >
-                                <span className="relative z-10 flex items-center">{link.name}</span>
+                                <span>{link.name}</span>
                                 {active && (
                                     <span className="navbar-link-indicator"></span>
                                 )}
@@ -80,17 +80,17 @@ const Navbar: React.FC = () => {
                     })}
 
                     <div className="navbar-lang-selector">
-                        <FiGlobe className="navbar-lang-icon mr-2"/>
+                        <FiGlobe className="navbar-lang-icon"/>
                         <button
                             onClick={() => changeLanguage('fr')}
-                            className={`navbar-lang-btn ${currentLanguage.startsWith('fr') ? 'navbar-lang-btn-active' : ''}`}
+                            className={`navbar-lang-btn ${currentLanguage.startsWith('fr') ? 'active' : ''}`}
                         >
                             FR
                         </button>
                         <span className="navbar-lang-separator">|</span>
                         <button
                             onClick={() => changeLanguage('en')}
-                            className={`navbar-lang-btn ${currentLanguage.startsWith('en') ? 'navbar-lang-btn-active' : ''}`}
+                            className={`navbar-lang-btn ${currentLanguage.startsWith('en') ? 'active' : ''}`}
                         >
                             EN
                         </button>
@@ -102,7 +102,7 @@ const Navbar: React.FC = () => {
                     className="navbar-toggle-btn"
                     aria-label="Toggle menu"
                 >
-                    {isOpen ? <FiX className="w-6 h-6"/> : <FiMenu className="w-6 h-6"/>}
+                    {isOpen ? <FiX /> : <FiMenu />}
                 </button>
             </div>
 
@@ -119,23 +119,23 @@ const Navbar: React.FC = () => {
                                 className={`navbar-mobile-link ${active ? 'navbar-mobile-link-active' : 'navbar-mobile-link-inactive'}`}
                             >
                                 {link.icon}
-                                {link.name}
+                                <span>{link.name}</span>
                             </Link>
                         );
                     })}
 
                     <div className="navbar-lang-selector-mobile">
-                        <FiGlobe className="navbar-lang-icon mr-2"/>
+                        <FiGlobe className="navbar-lang-icon"/>
                         <button
                             onClick={() => changeLanguage('fr')}
-                            className={`navbar-lang-btn-mobile ${currentLanguage.startsWith('fr') ? 'navbar-lang-btn-mobile-active' : ''}`}
+                            className={`navbar-lang-btn-mobile ${currentLanguage.startsWith('fr') ? 'active' : ''}`}
                         >
                             FR
                         </button>
                         <span className="navbar-lang-separator-mobile">|</span>
                         <button
                             onClick={() => changeLanguage('en')}
-                            className={`navbar-lang-btn-mobile ${currentLanguage.startsWith('en') ? 'navbar-lang-btn-mobile-active' : ''}`}
+                            className={`navbar-lang-btn-mobile ${currentLanguage.startsWith('en') ? 'active' : ''}`}
                         >
                             EN
                         </button>

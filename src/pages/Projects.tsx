@@ -1,28 +1,54 @@
-import React, {useEffect, useState} from 'react';
-import {Link, useSearchParams} from 'react-router-dom';
-import {projects, ProjectCategory} from '../data/projects.ts';
-import {FaChevronLeft, FaChevronRight} from 'react-icons/fa';
-import {useTranslate} from '../hooks/useTranslate.ts';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useInView } from 'react-intersection-observer';
+import { projects, ProjectCategory } from '../data/projects.ts';
+import { useTranslate } from '../hooks/useTranslate.ts';
 import '../styles/projects.css';
 
-const Projects: React.FC = () => {
-    const {t} = useTranslate();
-    const [searchParams, setSearchParams] = useSearchParams();
-    const [isImagesLoaded, setIsImagesLoaded] = useState(false);
+const STORAGE_KEY_CATEGORY = 'portfolio_active_category';
+const STORAGE_KEY_VISIBLE_COUNT = 'portfolio_visible_count';
+const INITIAL_BATCH = 6;
+const BATCH_SIZE = 6;
 
-    const projectsPerPage = 6;
+// Retrieve initial active category from session storage
+const getInitialCategory = (categories: ProjectCategory[]): ProjectCategory | 'tous' => {
+    try {
+        const saved = sessionStorage.getItem(STORAGE_KEY_CATEGORY);
+        if (saved && (saved === 'tous' || categories.includes(saved as ProjectCategory))) {
+            return saved as ProjectCategory | 'tous';
+        }
+    } catch {
+        // Fallback silently if session storage is unavailable
+    }
+    return 'tous';
+};
+
+// Retrieve initial visible count from session storage
+const getInitialVisibleCount = (): number => {
+    try {
+        const saved = sessionStorage.getItem(STORAGE_KEY_VISIBLE_COUNT);
+        const parsed = saved ? parseInt(saved, 10) : INITIAL_BATCH;
+        return isNaN(parsed) || parsed < INITIAL_BATCH ? INITIAL_BATCH : parsed;
+    } catch {
+        return INITIAL_BATCH;
+    }
+};
+
+const Projects: React.FC = () => {
+    const { t } = useTranslate();
+    const [isImagesLoaded, setIsImagesLoaded] = useState(false);
 
     const categories: ProjectCategory[] = Array.from(new Set(projects.map(p => p.category)));
 
-    const categoryParam = searchParams.get('category');
-    const activeCategory: ProjectCategory | 'tous' =
-        (categoryParam && (categoryParam === 'tous' || categories.includes(categoryParam as ProjectCategory)))
-            ? (categoryParam as ProjectCategory | 'tous')
-            : 'tous';
+    const [activeCategory, setActiveCategory] = useState<ProjectCategory | 'tous'>(() => getInitialCategory(categories));
+    const [visibleCount, setVisibleCount] = useState<number>(() => getInitialVisibleCount());
 
-    const urlPage = parseInt(searchParams.get('page') || '1', 10);
-    const currentPage = isNaN(urlPage) || urlPage < 1 ? 1 : urlPage;
+    // Intersection observer watching for the bottom scroll sentinel
+    const { ref: sentinelRef, inView } = useInView({
+        rootMargin: '200px',
+    });
 
+    // Preload project covers
     useEffect(() => {
         let loadedImages = 0;
         const totalImages = projects.length;
@@ -47,38 +73,56 @@ const Projects: React.FC = () => {
         });
     }, []);
 
-    const filteredProjects = activeCategory === 'tous' ? projects : projects.filter((projet) => projet.category === activeCategory);
-    const totalPages = Math.ceil(filteredProjects.length / projectsPerPage) || 1;
-    const activePage = currentPage > totalPages ? totalPages : currentPage;
-    const startIndex = (activePage - 1) * projectsPerPage;
-    const endIndex = startIndex + projectsPerPage;
-    const paginatedProjects = filteredProjects.slice(startIndex, endIndex);
+    const filteredProjects = activeCategory === 'tous'
+        ? projects
+        : projects.filter((projet) => projet.category === activeCategory);
+
+    // Increment visible projects progressively as user scrolls down
+    useEffect(() => {
+        if (inView && visibleCount < filteredProjects.length) {
+            setVisibleCount((prev) => {
+                const next = Math.min(prev + BATCH_SIZE, filteredProjects.length);
+                try {
+                    sessionStorage.setItem(STORAGE_KEY_VISIBLE_COUNT, String(next));
+                } catch {
+                    // Ignore storage errors
+                }
+                return next;
+            });
+        }
+    }, [inView, visibleCount, filteredProjects.length]);
+
+    const displayedProjects = filteredProjects.slice(0, visibleCount);
 
     const handleFilterChange = (category: ProjectCategory | 'tous') => {
-        setSearchParams({category, page: '1'}, {replace: true});
-    };
-
-    const handlePageChange = (pageNumber: number) => {
-        setSearchParams({category: activeCategory, page: String(pageNumber)}, {replace: true});
+        setActiveCategory(category);
+        setVisibleCount(INITIAL_BATCH);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        try {
+            sessionStorage.setItem(STORAGE_KEY_CATEGORY, category);
+            sessionStorage.setItem(STORAGE_KEY_VISIBLE_COUNT, String(INITIAL_BATCH));
+        } catch {
+            // Ignore storage errors
+        }
     };
 
     return (
         <div className="projects-page-container">
             <div className="projects-wrapper">
 
-                <div>
+                <header>
                     <h1 className="projects-title">
                         {t('project.title')}
                     </h1>
                     <p className="projects-subtitle">
                         {t('project.subtitle')}
                     </p>
-                </div>
+                </header>
 
-                <div className="filters-container">
+                <nav className="projects-filters" aria-label="Filtres de catégories">
                     <button
                         onClick={() => handleFilterChange('tous')}
-                        className={`filter-tab ${activeCategory === 'tous' ? 'filter-tab-active' : ''}`}
+                        className={activeCategory === 'tous' ? 'active' : ''}
                     >
                         {t('project.filterAll')} ({projects.length})
                     </button>
@@ -86,120 +130,88 @@ const Projects: React.FC = () => {
                         <button
                             key={category}
                             onClick={() => handleFilterChange(category)}
-                            className={`filter-tab ${activeCategory === category ? 'filter-tab-active' : ''}`}
+                            className={activeCategory === category ? 'active' : ''}
                         >
                             {t(`project.categories.${category}`)} ({projects.filter(p => p.category === category).length})
                         </button>
                     ))}
-                </div>
+                </nav>
 
-                <div
-                    key={`${activeCategory}-${activePage}`}
+                <main
+                    key={activeCategory}
                     className="projects-grid animate-list-fade"
                 >
-                    {paginatedProjects.length === 0 ? (
+                    {displayedProjects.length === 0 ? (
                         <p className="projects-no-results">{t('project.emptyMessage')}</p>
                     ) : (
-                        paginatedProjects.map((project) => (
-                            <div
-                                key={project.id}
-                                className="project-grid-card"
-                            >
-                                <div className="project-grid-image-container">
+                        displayedProjects.map((project) => (
+                            <article key={project.id}>
+                                <figure>
                                     {!isImagesLoaded ? (
-                                        <div className="absolute inset-0 bg-gray-200 animate-pulse"></div>
+                                        <div className="project-grid-skeleton"></div>
                                     ) : (
                                         <img
                                             src={project.image}
                                             alt={t(project.titreKey)}
-                                            className="project-grid-image"
+                                            loading="lazy"
                                         />
                                     )}
-                                    <div className="project-grid-image-shadow"></div>
-                                </div>
+                                    <div className="project-grid-shadow"></div>
+                                </figure>
 
-                                <div className="project-grid-content">
-                                    <div className="project-grid-info">
-                                        <div className="project-grid-title-area">
-                                            <h2 className="project-grid-title">
-                                                {t(project.titreKey)}
-                                            </h2>
-                                            <span
-                                                className="project-grid-badge">{t(`project.categories.${project.category}`)}</span>
-                                        </div>
+                                <div>
+                                    <div>
+                                        <header>
+                                            <h2>{t(project.titreKey)}</h2>
+                                            <span>{t(`project.categories.${project.category}`)}</span>
+                                        </header>
 
-                                        <p className="project-grid-desc">
-                                            {t(project.descriptionKey)}
-                                        </p>
+                                        <p>{t(project.descriptionKey)}</p>
 
-                                        <div>
-                                            <div className="tech-list">
-                                                {project.technologies.map((tech, idx) => {
-                                                    const IconComponent = tech.icon;
-                                                    return (
-                                                        <div
-                                                            key={idx}
-                                                            className="tech-badge"
-                                                            title={tech.name}
-                                                        >
-                                                            {IconComponent ? (
-                                                                <IconComponent
-                                                                    className={`tech-icon ${tech.color || 'text-gray-600'}`}/>
-                                                            ) : (
-                                                                <div className="tech-badge-placeholder-icon"></div>
-                                                            )}
-                                                            <span className="tech-name">{tech.name}</span>
-                                                        </div>
-                                                    );
-                                                })}
-                                            </div>
-                                        </div>
+                                        <ul>
+                                            {project.technologies.map((tech, idx) => {
+                                                const IconComponent = tech.icon;
+                                                return (
+                                                    <li
+                                                        key={idx}
+                                                        title={tech.name}
+                                                    >
+                                                        {IconComponent ? (
+                                                            <IconComponent
+                                                                className={tech.color || 'text-gray-600'}
+                                                            />
+                                                        ) : (
+                                                            <div></div>
+                                                        )}
+                                                        <span>{tech.name}</span>
+                                                    </li>
+                                                );
+                                            })}
+                                        </ul>
                                     </div>
 
-                                    <div className="project-grid-action">
-                                        <Link
-                                            to={project.lien}
-                                            className="btn-view-project w-full"
-                                        >
+                                    <footer>
+                                        <Link to={project.lien}>
                                             {t('project.btnDetails')}
                                         </Link>
-                                    </div>
+                                    </footer>
                                 </div>
-                            </div>
+                            </article>
                         ))
                     )}
-                </div>
+                </main>
 
-                {totalPages > 1 && (
-                    <div className="pagination-container">
-                        <button
-                            onClick={() => handlePageChange(activePage - 1)}
-                            disabled={activePage === 1}
-                            className="pagination-btn"
-                            aria-label="Page précédente"
-                        >
-                            <FaChevronLeft className="pagination-btn-icon"/>
-                        </button>
-
-                        {Array.from({length: totalPages}, (_, i) => i + 1).map((pageNum) => (
-                            <button
-                                key={pageNum}
-                                onClick={() => handlePageChange(pageNum)}
-                                className={`page-num-btn ${activePage === pageNum ? 'page-num-btn-active' : ''}`}
-                            >
-                                {pageNum}
-                            </button>
-                        ))}
-
-                        <button
-                            onClick={() => handlePageChange(activePage + 1)}
-                            disabled={activePage === totalPages}
-                            className="pagination-btn"
-                            aria-label="Page suivante"
-                        >
-                            <FaChevronRight className="pagination-btn-icon"/>
-                        </button>
-                    </div>
+                {
+                    // Bottom sentinel triggers next batch; displays completion indicator once all are shown
+                }
+                {visibleCount < filteredProjects.length ? (
+                    <div ref={sentinelRef} className="projects-scroll-sentinel" aria-hidden="true" />
+                ) : (
+                    displayedProjects.length > 0 && (
+                        <footer className="projects-end-indicator">
+                            <p>{t('project.endMessage', { count: filteredProjects.length })}</p>
+                        </footer>
+                    )
                 )}
 
             </div>

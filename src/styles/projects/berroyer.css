@@ -1,158 +1,138 @@
-/* Berroyer - Styles du projet */
+/*======= BERROYER PROJECT STYLES ========*/
 
+/* Root layout and container styling */
 .berroyer-container {
-    @apply min-h-screen bg-slate-900 text-slate-200 font-sans;
+    @apply min-h-screen bg-slate-950 text-slate-200 font-sans;
 }
 
-.berroyer-return-wrapper {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-4;
-}
+/*======= MAIN CONTENT ========*/
 
-/* Header */
-.berroyer-header {
-    @apply bg-slate-950 py-24 border-b border-slate-800 relative overflow-hidden;
-}
-
-.berroyer-header-pattern {
-    @apply absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiMzMzQxNTUiLz48L3N2Zz4=')] opacity-20;
-}
-
-.berroyer-header-content {
-    @apply max-w-5xl mx-auto px-6 relative z-10 text-center;
-}
-
-.berroyer-header-icon-box {
-    @apply inline-flex items-center justify-center p-4 bg-blue-900/30 rounded-2xl mb-8 border border-blue-500/30;
-}
-
-.berroyer-header-icon {
-    @apply text-4xl text-blue-400;
-}
-
-.berroyer-header-title {
-    @apply text-5xl md:text-7xl font-black text-white mb-6 tracking-tight;
-}
-
-.berroyer-header-desc {
-    @apply text-xl text-blue-200/70 max-w-2xl mx-auto;
-}
-
-/* Main Content */
 .berroyer-main {
     @apply max-w-6xl mx-auto px-6 py-20 space-y-24;
 }
 
-/* Intro & Technologies */
-.berroyer-intro-grid {
-    @apply grid md:grid-cols-2 gap-12 items-start;
-}
+/*======= STEPS TIMELINE ========*/
 
-.berroyer-intro-card {
-    @apply bg-slate-800/50 p-8 rounded-3xl border border-slate-700;
-}
-
-.berroyer-intro-title {
-    @apply text-2xl font-bold text-white mb-4 border-b border-slate-700 pb-4;
-}
-
-.berroyer-intro-text {
-    @apply text-slate-300 leading-relaxed text-lg;
-}
-
-.berroyer-tech-card {
-    @apply bg-blue-900/20 p-8 rounded-3xl border border-blue-500/30;
-}
-
-.berroyer-tech-title {
-    @apply text-2xl font-bold text-blue-300 mb-6 flex items-center gap-3;
-}
-
-.berroyer-tech-list {
-    @apply flex flex-wrap gap-3;
-}
-
-.berroyer-tech-pill {
-    @apply px-4 py-2 bg-slate-900 rounded-lg text-sm font-medium text-slate-300 border border-slate-700;
-}
-
-/* Timeline des Étapes */
+/* Interactive steps list */
 .berroyer-timeline {
-    @apply relative space-y-16 py-12;
+    @apply space-y-12 py-4;
 }
 
-.berroyer-timeline-line {
-    @apply hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-slate-800 -translate-x-1/2;
-}
-
-.berroyer-step-wrapper {
-    @apply relative pl-12 md:pl-0;
-}
-
-.berroyer-step-dot {
-    @apply hidden md:flex absolute left-1/2 -ml-5 top-8 w-10 h-10 rounded-full bg-blue-600 border-4 border-slate-900 items-center justify-center text-white font-bold z-10;
-}
-
-.berroyer-step-row {
-    @apply md:flex items-center justify-between w-full;
-}
-
+/* Horizontal card container */
 .berroyer-step-card {
-    @apply md:w-[45%] bg-slate-800 p-8 rounded-2xl border border-slate-700 shadow-xl hover:border-blue-500 transition-colors;
+    @apply bg-slate-900/80 p-6 md:p-8 rounded-3xl border border-slate-800 shadow-xl flex flex-col md:flex-row items-center gap-8 md:gap-12 hover:border-blue-500/60 transition-colors;
 }
 
-.berroyer-step-header {
-    @apply flex items-center gap-4 mb-4;
+.berroyer-step-card:nth-child(even) {
+    @apply md:flex-row-reverse;
 }
 
-.berroyer-step-badge-mobile {
-    @apply md:hidden flex w-8 h-8 rounded-full bg-blue-600 text-white font-bold items-center justify-center;
+/* Media column inside step card */
+.berroyer-step-card figure {
+    @apply w-full md:w-1/2 shrink-0 m-0;
 }
 
-.berroyer-step-title {
-    @apply text-2xl font-bold text-white;
+/* Text column inside step card */
+.berroyer-step-card section {
+    @apply w-full md:w-1/2 flex flex-col justify-center;
 }
 
-.berroyer-step-img {
-    @apply w-full h-auto rounded-xl mb-6 shadow-md border border-slate-700;
+.berroyer-step-card header {
+    @apply flex items-center gap-3 mb-4;
 }
 
-.berroyer-step-desc {
-    @apply text-slate-300 mb-4 leading-relaxed;
+.berroyer-step-card header span {
+    @apply flex w-10 h-10 rounded-full bg-blue-600 text-white font-bold items-center justify-center shrink-0 shadow-lg text-lg;
 }
 
-.berroyer-step-bullets {
-    @apply space-y-2;
+.berroyer-step-card h2 {
+    @apply text-xl md:text-2xl font-bold text-white;
 }
 
-.berroyer-step-bullet-item {
+.berroyer-step-card p {
+    @apply text-slate-300 mb-5 leading-relaxed text-base;
+}
+
+.berroyer-step-card ul {
+    @apply space-y-2.5 list-none p-0 m-0;
+}
+
+.berroyer-step-card li {
     @apply flex items-start gap-3 text-sm text-slate-400;
 }
 
-.berroyer-step-bullet-dot {
+.berroyer-step-card li span {
     @apply mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-400 shrink-0;
 }
 
-/* Informations Complémentaires */
+/*======= ADDITIONAL INFO ========*/
+
+/* Full-width workflow hierarchy card */
+.berroyer-hierarchy-card {
+    @apply bg-slate-900/80 p-8 rounded-3xl border border-slate-800 shadow-xl space-y-6;
+}
+
+.berroyer-hierarchy-card header {
+    @apply flex items-center gap-3;
+}
+
+.berroyer-hierarchy-card header svg {
+    @apply text-blue-400 text-xl;
+}
+
+.berroyer-hierarchy-card h3 {
+    @apply text-xl font-bold text-blue-400 m-0;
+}
+
+.berroyer-hierarchy-card > p {
+    @apply text-slate-300 leading-relaxed text-sm sm:text-base max-w-3xl;
+}
+
+.berroyer-hierarchy-card ol {
+    @apply grid sm:grid-cols-2 lg:grid-cols-5 gap-4 list-none p-0 m-0;
+}
+
+.berroyer-hierarchy-card li {
+    @apply p-4 rounded-2xl bg-slate-800/80 border border-slate-700/80 flex flex-col gap-2 transition-colors hover:border-blue-500/50;
+}
+
+.berroyer-hierarchy-card li span {
+    @apply flex w-7 h-7 rounded-full bg-blue-600/30 border border-blue-500/40 text-blue-300 font-bold text-xs items-center justify-center;
+}
+
+.berroyer-hierarchy-card li p {
+    @apply text-slate-200 text-sm font-medium m-0 leading-snug;
+}
+
+/* Three-column engineering and documentation grid */
 .berroyer-info-grid {
-    @apply grid md:grid-cols-3 gap-8 pt-12 border-t border-slate-800;
+    @apply grid md:grid-cols-3 gap-6;
 }
 
 .berroyer-info-card {
-    @apply bg-slate-800 p-8 rounded-2xl border border-slate-700;
+    @apply bg-slate-900/80 p-8 rounded-3xl border border-slate-800 shadow-xl flex flex-col;
 }
 
-.berroyer-info-title {
-    @apply text-xl font-bold text-white mb-4 text-blue-400;
+.berroyer-info-card header {
+    @apply flex items-center gap-3 mb-4;
 }
 
-.berroyer-info-text {
-    @apply text-sm text-slate-400 mb-4;
+.berroyer-info-card header svg {
+    @apply text-blue-400 text-xl;
 }
 
-.berroyer-info-lead {
-    @apply text-slate-300 leading-relaxed;
+.berroyer-info-card h3 {
+    @apply text-xl font-bold text-blue-400 mb-4;
 }
 
-.berroyer-info-list {
-    @apply list-decimal list-inside space-y-2 text-slate-300 text-sm;
+.berroyer-info-card p {
+    @apply text-slate-300 leading-relaxed text-sm sm:text-base;
+}
+
+.berroyer-info-card ul {
+    @apply flex flex-wrap gap-2 list-none p-0 m-0 mt-4;
+}
+
+.berroyer-info-card ul li {
+    @apply px-3 py-1.5 rounded-xl bg-slate-800 border border-slate-700 text-xs text-blue-300 font-medium;
 }

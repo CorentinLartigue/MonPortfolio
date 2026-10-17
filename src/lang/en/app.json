@@ -13,6 +13,7 @@
     "privacy": "Privacy Policy"
   },
   "buttons": {
-    "back": "Back to projects"
+    "back": "Back to projects",
+    "zoom": "View in high definition"
   }
 }

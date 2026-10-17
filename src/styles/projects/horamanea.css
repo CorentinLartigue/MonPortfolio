@@ -1,137 +1,225 @@
-/* Horamanea - Styles du projet */
+/*======= HORAMANEA PROJECT ========*/
 
 .horamanea-container {
     @apply min-h-screen bg-slate-950 text-slate-200;
 }
 
-.horamanea-return-wrapper {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-4;
-}
+/*======= MAIN CONTENT LAYOUT ========*/
 
 .horamanea-main {
-    @apply max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8 space-y-16;
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 space-y-20;
 }
 
-/* Header Dashboard Style */
-.horamanea-hero-card {
-    @apply bg-slate-900 rounded-3xl p-8 md:p-12 border border-slate-800 flex flex-col md:flex-row items-center justify-between gap-12 shadow-2xl relative overflow-hidden;
-}
-
-.horamanea-hero-glow {
-    @apply absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3;
-}
-
-.horamanea-hero-content {
-    @apply z-10 max-w-2xl;
-}
-
-.horamanea-hero-badge {
-    @apply inline-block px-4 py-1.5 rounded-full bg-blue-500/20 text-blue-400 font-bold text-sm mb-6 uppercase tracking-widest;
-}
-
-.horamanea-hero-title {
-    @apply text-5xl font-black text-white mb-6;
-}
-
-.horamanea-hero-desc {
-    @apply text-xl text-slate-400;
-}
-
-.horamanea-hero-actions {
-    @apply z-10 flex flex-col gap-4 w-full md:w-auto;
-}
-
-.horamanea-repo-btn {
-    @apply flex items-center justify-center gap-3 bg-slate-800 hover:bg-blue-600 hover:text-white transition-all text-slate-300 px-6 py-4 rounded-xl font-bold border border-slate-700;
-}
-
-/* Grille de Contenu */
-.horamanea-grid-layout {
-    @apply grid md:grid-cols-3 gap-8;
-}
-
-.horamanea-col-left {
-    @apply md:col-span-1 space-y-8;
-}
+/*======= INTRODUCTION CARD ========*/
 
 .horamanea-intro-card {
-    @apply bg-slate-900 rounded-3xl p-8 border border-slate-800;
+    @apply bg-slate-900/90 rounded-3xl p-8 sm:p-10 border border-slate-800 shadow-2xl relative overflow-hidden backdrop-blur-sm;
 }
 
-.horamanea-intro-title {
-    @apply text-xl font-bold text-white mb-4 border-b border-slate-800 pb-4;
+.horamanea-intro-card::before {
+    content: '';
+    @apply absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-blue-500 via-indigo-600 to-red-500;
 }
 
-.horamanea-intro-text {
-    @apply text-slate-400 leading-relaxed;
+.horamanea-intro-card h2 {
+    @apply text-2xl sm:text-3xl font-bold text-white mb-4 tracking-tight;
 }
 
-.horamanea-tech-card {
-    @apply bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 border border-slate-800;
+.horamanea-intro-card p {
+    @apply text-base sm:text-lg text-slate-300 leading-relaxed font-normal m-0;
 }
 
-.horamanea-tech-title {
-    @apply text-xl font-bold text-blue-400 mb-6;
+/*======= SECTION HEADERS ========*/
+
+.horamanea-section-header {
+    @apply flex items-center gap-4 border-b border-slate-800/80 pb-5 mb-8;
 }
 
-.horamanea-tech-list {
-    @apply space-y-4;
+.horamanea-section-icon {
+    @apply w-12 h-12 rounded-2xl bg-slate-900 border border-slate-800 flex items-center justify-center text-xl flex-shrink-0;
 }
 
-.horamanea-tech-item {
-    @apply flex items-center gap-4 bg-slate-950/50 p-4 rounded-xl;
+.horamanea-design-section .horamanea-section-icon {
+    @apply text-purple-400 border-purple-900/30 bg-purple-950/20;
 }
 
-/* Colonne Droite */
-.horamanea-col-right {
-    @apply md:col-span-2 space-y-8;
+.horamanea-live-section .horamanea-section-icon {
+    @apply text-blue-400 border-blue-900/30 bg-blue-950/20;
 }
 
-.horamanea-features-card {
-    @apply bg-slate-900 rounded-3xl p-8 border border-slate-800;
+.horamanea-section-header h2 {
+    @apply text-2xl sm:text-3xl font-bold text-white tracking-tight m-0;
 }
 
-.horamanea-features-title {
-    @apply text-2xl font-bold text-white mb-8;
+.horamanea-section-header p {
+    @apply text-sm sm:text-base text-slate-400 m-0 mt-1;
 }
 
-.horamanea-features-grid {
-    @apply grid sm:grid-cols-2 gap-6;
+/* Pill badges */
+.horamanea-badge-pill {
+    @apply inline-block px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase mb-3 bg-blue-500/10 text-blue-400 border border-blue-500/20;
 }
 
-.horamanea-feature-item {
-    @apply p-6 bg-slate-950 rounded-2xl border border-slate-800 hover:border-blue-500/50 transition-colors;
+/*======= TECHNICAL BENTO GRID ========*/
+
+.horamanea-bento-section {
+    @apply space-y-6;
 }
 
-.horamanea-feature-item-full {
-    @apply p-6 bg-slate-950 rounded-2xl border border-slate-800 hover:border-blue-500/50 transition-colors sm:col-span-2;
+.horamanea-bento-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6;
 }
 
-.horamanea-feature-num {
-    @apply text-blue-500 font-bold mb-2;
+.horamanea-bento-grid article {
+    @apply bg-slate-900/70 rounded-2xl p-6 border border-slate-800 hover:border-slate-700 transition-all duration-300 flex flex-col justify-between;
 }
 
-.horamanea-feature-text {
-    @apply text-slate-300 font-medium;
+.horamanea-bento-icons {
+    @apply flex items-center gap-3 text-2xl mb-4 text-blue-400;
 }
 
-/* Screenshot & Cadre */
-.horamanea-screen-wrapper {
-    @apply bg-slate-900 rounded-3xl p-2 border border-slate-800 shadow-2xl;
+.horamanea-bento-grid article:nth-child(2) .horamanea-bento-icons {
+    @apply text-green-400;
 }
 
-.horamanea-screen-inner {
-    @apply bg-slate-950 rounded-[1.25rem] border border-slate-800 h-96 flex flex-col items-center justify-center text-slate-700 relative overflow-hidden;
+.horamanea-bento-grid article:nth-child(3) .horamanea-bento-icons {
+    @apply text-indigo-400;
 }
 
-.horamanea-screen-bar {
-    @apply absolute top-0 left-0 w-full h-12 bg-slate-900 border-b border-slate-800 flex items-center px-4 gap-2;
+.horamanea-bento-grid article:nth-child(4) .horamanea-bento-icons {
+    @apply text-purple-400;
 }
 
-.horamanea-screen-icon {
-    @apply text-6xl mb-4 group-hover:text-blue-500/50 transition-colors;
+.horamanea-bento-grid article h3 {
+    @apply text-lg font-bold text-white mb-2;
 }
 
-.horamanea-screen-label {
-    @apply font-bold tracking-widest uppercase;
+.horamanea-bento-grid article p {
+    @apply text-xs sm:text-sm text-slate-400 leading-relaxed m-0;
+}
+
+/*======= ACT I: GRAPHIC DESIGN & WIREFRAMES ========*/
+
+.horamanea-design-section {
+    @apply space-y-8;
+}
+
+.horamanea-design-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-8;
+}
+
+.horamanea-design-card {
+    @apply bg-slate-900/60 rounded-3xl p-5 border border-slate-800 hover:border-purple-500/40 transition-all duration-300 flex flex-col;
+}
+
+.horamanea-design-card figure {
+    @apply m-0 flex flex-col flex-1;
+}
+
+.horamanea-design-card figcaption {
+    @apply pt-5 px-1;
+}
+
+.horamanea-design-card figcaption h3 {
+    @apply text-lg sm:text-xl font-bold text-white mb-2 tracking-tight;
+}
+
+.horamanea-design-card figcaption p {
+    @apply text-xs sm:text-sm text-slate-400 leading-relaxed m-0;
+}
+
+/*======= ACT II: LIVE PLATFORM & USER EXPERIENCE ========*/
+
+.horamanea-live-section {
+    @apply space-y-10;
+}
+
+/* Panoramic Browser Hero */
+.horamanea-panoramic-card {
+    @apply bg-slate-900/80 rounded-3xl p-4 sm:p-6 border border-slate-800 hover:border-blue-500/30 transition-all duration-300 shadow-2xl space-y-6;
+}
+
+.horamanea-browser-frame {
+    @apply bg-slate-950 rounded-2xl border border-slate-800 overflow-hidden shadow-inner;
+}
+
+.horamanea-browser-bar {
+    @apply h-11 bg-slate-900/90 border-b border-slate-800 px-4 flex items-center justify-between text-xs text-slate-400;
+}
+
+.horamanea-browser-dots {
+    @apply flex items-center gap-2;
+}
+
+.horamanea-browser-dots span {
+    @apply w-3 h-3 rounded-full;
+}
+
+.horamanea-browser-dots span:nth-child(1) {
+    @apply bg-red-500/70;
+}
+
+.horamanea-browser-dots span:nth-child(2) {
+    @apply bg-amber-500/70;
+}
+
+.horamanea-browser-dots span:nth-child(3) {
+    @apply bg-blue-500/70;
+}
+
+.horamanea-browser-url {
+    @apply font-mono text-[11px] tracking-wider text-slate-500 bg-slate-950 px-3 py-1 rounded-md border border-slate-800/80;
+}
+
+.horamanea-browser-frame figure {
+    @apply m-0;
+}
+
+.horamanea-panoramic-info {
+    @apply px-2 pb-2;
+}
+
+.horamanea-panoramic-info h3 {
+    @apply text-xl sm:text-2xl font-bold text-white mb-2 tracking-tight;
+}
+
+.horamanea-panoramic-info p {
+    @apply text-sm sm:text-base text-slate-300 leading-relaxed m-0;
+}
+
+/* Functional Triptych */
+.horamanea-triptych-grid {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-8;
+}
+
+.horamanea-triptych-card {
+    @apply bg-slate-900/60 rounded-3xl p-4 border border-slate-800 hover:border-blue-500/40 transition-all duration-300 flex flex-col justify-between;
+}
+
+.horamanea-triptych-card figure {
+    @apply m-0;
+}
+
+.horamanea-card-meta {
+    @apply pt-5 px-1 flex flex-col flex-1;
+}
+
+.horamanea-card-meta header {
+    @apply flex items-center gap-2 text-xs font-semibold text-blue-400 mb-2 uppercase tracking-wider;
+}
+
+.horamanea-triptych-card:nth-child(2) .horamanea-card-meta header {
+    @apply text-red-400;
+}
+
+.horamanea-triptych-card:nth-child(3) .horamanea-card-meta header {
+    @apply text-indigo-400;
+}
+
+.horamanea-card-meta h3 {
+    @apply text-base sm:text-lg font-bold text-white mb-2 tracking-tight;
+}
+
+.horamanea-card-meta p {
+    @apply text-xs sm:text-sm text-slate-400 leading-relaxed m-0;
 }

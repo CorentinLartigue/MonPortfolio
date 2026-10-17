@@ -1,149 +1,236 @@
-import React from 'react';
-import ysport_carte from '/images/projects/ysport-carte.png';
-import ysport_filtres from '/images/projects/ysport-filtres.png';
-import ysport_petit_cluster from '/images/projects/ysport-petit-cluster.png';
-import ysport_grand_cluster from '/images/projects/ysport-grand-cluster.png';
-import ysport_complexe from '/images/projects/ysport-complexe.png';
-import ReturnButton from '../../components/ReturnButton.tsx';
-import {useTranslate} from '../../hooks/useTranslate';
-import { FaMapMarkedAlt, FaFilter, FaLayerGroup, FaPlusCircle, FaCode } from 'react-icons/fa';
+import React, { useState } from 'react';
+import ysport_carte from '/images/projects/ysport/carte.png';
+import ysport_filtres from '/images/projects/ysport/filtres.png';
+import ysport_petit_cluster from '/images/projects/ysport/petit-cluster.png';
+import ysport_grand_cluster from '/images/projects/ysport/grand-cluster.png';
+import ysport_complexe from '/images/projects/ysport/complexe.png';
+import ProjectHero from '../../components/ProjectHero.tsx';
+import ImageModal from '../../components/ImageModal.tsx';
+import { useTranslate } from '../../hooks/useTranslate';
+import {
+    FaMapMarkedAlt, FaFilter, FaLayerGroup,
+    FaPlusCircle, FaSearchPlus
+} from 'react-icons/fa';
 import '../../styles/projects/ysport.css';
 
+interface ModalImage {
+    src: string;
+    title: string;
+    desc?: string;
+}
+
 const Ysport: React.FC = () => {
-    const {t} = useTranslate();
+    const { t } = useTranslate();
+    const [selectedImage, setSelectedImage] = useState<ModalImage | null>(null);
+
+    const openModal = (src: string, title: string, desc?: string) => {
+        setSelectedImage({ src, title, desc });
+    };
 
     return (
         <div className="ysport-container">
-            <div className="ysport-return-wrapper">
-                <ReturnButton />
-            </div>
+            <ProjectHero
+                badgeIcon={<FaMapMarkedAlt />}
+                badgeLabel={t('project.ysport.badge')}
+                title={t('project.ysport.title')}
+                subtitle={t('project.ysport.subtitle')}
+                description={t('project.ysport.introText')}
+                techTags={['React', 'SpringBoot', 'Leaflet', 'Bootstrap', 'API Gouvernementale', 'Figma']}
+                theme="cyan"
+            />
 
-            {/* Header Map Themed */}
-            <div className="ysport-header">
-                <div className="ysport-header-bg"></div>
-                <div className="ysport-header-content">
-                    <div className="ysport-header-left">
-                        <div className="ysport-header-badge">
-                            <FaMapMarkedAlt /> Application Cartographique
+            <main className="ysport-main">
+                {
+                    // Map feature presentation
+                }
+                <section className="ysport-feature-grid">
+                    <figure>
+                        <div
+                            className="project-zoomable-container"
+                            onClick={() => openModal(
+                                ysport_carte,
+                                t('project.ysport.mapTitle'),
+                                t('project.ysport.mapText')
+                            )}
+                        >
+                            <img
+                                src={ysport_carte}
+                                alt={t('project.ysport.mapTitle')}
+                                className="project-zoomable-img"
+                            />
+                            <div className="project-zoomable-overlay">
+                                <FaSearchPlus />
+                                <span>{t('app.buttons.zoom')}</span>
+                            </div>
                         </div>
-                        <h1 className="ysport-header-title">
-                            {t('project.ysport.title')}
-                        </h1>
-                        <p className="ysport-header-desc">
-                            {t('project.ysport.desc')}
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div className="ysport-main">
-                
-                {/* Intro & Tech */}
-                <div className="ysport-intro-grid">
-                    <div className="ysport-intro-card">
-                        <p className="ysport-intro-text">
-                            {t('project.ysport.introText')}
-                        </p>
-                    </div>
-                    <div className="ysport-tech-card">
-                        <h2 className="ysport-tech-title">
-                            <FaCode className="text-cyan-600" /> {t('project.ysport.techTitle')}
-                        </h2>
-                        <ul className="ysport-tech-list">
-                            {['React.js', 'Vite', t('project.ysport.techLeaflet'), t('project.ysport.techJava'), 'API REST', 'CSS / Bootstrap CSS'].map(tech => (
-                                <li key={tech} className="ysport-tech-item">
-                                    <div className="ysport-tech-dot"></div>
-                                    {tech}
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
-
-                {/* Map Feature */}
-                <div className="ysport-feature-grid">
-                    <div className="order-2 md:order-1">
-                        <img src={ysport_carte} alt="Carte interactive" className="ysport-feature-img-card-map" />
-                    </div>
-                    <div className="space-y-6 order-1 md:order-2">
-                        <div className="ysport-feature-icon-blue">
+                    </figure>
+                    <article>
+                        <span>
                             <FaMapMarkedAlt />
-                        </div>
-                        <h2 className="ysport-feature-title">{t('project.ysport.mapTitle')}</h2>
-                        <p className="ysport-feature-desc">
+                        </span>
+                        <h2>{t('project.ysport.mapTitle')}</h2>
+                        <p>
                             {t('project.ysport.mapText')}
                         </p>
-                    </div>
-                </div>
+                    </article>
+                </section>
 
-                {/* Filter Feature */}
-                <div className="ysport-feature-grid">
-                    <div className="space-y-6">
-                        <div className="ysport-feature-icon-purple">
+                {
+                    // Filter feature presentation
+                }
+                <section className="ysport-feature-grid">
+                    <article>
+                        <span>
                             <FaFilter />
-                        </div>
-                        <h2 className="ysport-feature-title">{t('project.ysport.filterTitle')}</h2>
-                        <p className="ysport-feature-desc">
+                        </span>
+                        <h2>{t('project.ysport.filterTitle')}</h2>
+                        <p>
                             {t('project.ysport.filterText')}
                         </p>
-                        <ul className="ysport-filter-list">
+                        <ul>
                             {[1, 2, 3].map(i => (
-                                <li key={i} className="ysport-filter-item">
-                                    <div className="ysport-filter-num">{i}</div>
+                                <li key={i}>
+                                    <span>{i}</span>
                                     {t(`project.ysport.filterBullet${i}`)}
                                 </li>
                             ))}
                         </ul>
-                    </div>
-                    <div>
-                        <img src={ysport_filtres} alt="Filtres" className="ysport-feature-img-card-filter" />
-                    </div>
-                </div>
+                    </article>
+                    <figure>
+                        <div
+                            className="project-zoomable-container"
+                            onClick={() => openModal(
+                                ysport_filtres,
+                                t('project.ysport.filterTitle'),
+                                t('project.ysport.filterText')
+                            )}
+                        >
+                            <img
+                                src={ysport_filtres}
+                                alt={t('project.ysport.filterTitle')}
+                                className="project-zoomable-img"
+                            />
+                            <div className="project-zoomable-overlay">
+                                <FaSearchPlus />
+                                <span>{t('app.buttons.zoom')}</span>
+                            </div>
+                        </div>
+                    </figure>
+                </section>
 
-                {/* Clusters Feature */}
-                <div className="ysport-cluster-box">
-                    <div className="ysport-cluster-header">
+                {
+                    // Geographic cluster grouping feature
+                }
+                <section className="ysport-cluster-box">
+                    <header className="ysport-cluster-header">
                         <div className="ysport-cluster-icon">
                             <FaLayerGroup />
                         </div>
-                        <h2 className="ysport-cluster-title">{t('project.ysport.clusterTitle')}</h2>
-                        <p className="ysport-cluster-desc">
+                        <h2>{t('project.ysport.clusterTitle')}</h2>
+                        <p>
                             {t('project.ysport.clusterText')}
                         </p>
-                    </div>
+                    </header>
                     
                     <div className="ysport-cluster-grid">
-                        <div className="ysport-cluster-card">
-                            <img src={ysport_petit_cluster} alt="Petit Cluster" className="ysport-cluster-img" />
-                            <div className="ysport-cluster-label">Vue Rapprochée</div>
-                        </div>
-                        <div className="ysport-cluster-card">
-                            <img src={ysport_grand_cluster} alt="Grand Cluster" className="ysport-cluster-img" />
-                            <div className="ysport-cluster-label">Vue Globale</div>
-                        </div>
+                        <article className="ysport-cluster-card">
+                            <figure>
+                                <div
+                                    className="project-zoomable-container"
+                                    onClick={() => openModal(
+                                        ysport_petit_cluster,
+                                        'Vue Rapprochée - Cluster',
+                                        t('project.ysport.clusterText')
+                                    )}
+                                >
+                                    <img
+                                        src={ysport_petit_cluster}
+                                        alt="Petit Cluster"
+                                        className="project-zoomable-img"
+                                    />
+                                    <div className="project-zoomable-overlay">
+                                        <FaSearchPlus />
+                                        <span>{t('app.buttons.zoom')}</span>
+                                    </div>
+                                </div>
+                                <figcaption className="ysport-cluster-label">Vue Rapprochée</figcaption>
+                            </figure>
+                        </article>
+                        <article className="ysport-cluster-card">
+                            <figure>
+                                <div
+                                    className="project-zoomable-container"
+                                    onClick={() => openModal(
+                                        ysport_grand_cluster,
+                                        'Vue Globale - Cluster',
+                                        t('project.ysport.clusterText')
+                                    )}
+                                >
+                                    <img
+                                        src={ysport_grand_cluster}
+                                        alt="Grand Cluster"
+                                        className="project-zoomable-img"
+                                    />
+                                    <div className="project-zoomable-overlay">
+                                        <FaSearchPlus />
+                                        <span>{t('app.buttons.zoom')}</span>
+                                    </div>
+                                </div>
+                                <figcaption className="ysport-cluster-label">Vue Globale</figcaption>
+                            </figure>
+                        </article>
                     </div>
-                </div>
+                </section>
 
-                {/* Extras Feature */}
-                <div className="ysport-feature-grid-pb">
-                    <div>
-                        <img src={ysport_complexe} alt="Extras" className="ysport-feature-img-card-extra" />
-                    </div>
-                    <div className="space-y-6">
-                        <div className="ysport-feature-icon-blue">
-                            <FaPlusCircle />
+                {
+                    // Additional facilities feature
+                }
+                <section className="ysport-feature-grid-pb">
+                    <figure>
+                        <div
+                            className="project-zoomable-container"
+                            onClick={() => openModal(
+                                ysport_complexe,
+                                t('project.ysport.extraTitle'),
+                                t('project.ysport.extraText')
+                            )}
+                        >
+                            <img
+                                src={ysport_complexe}
+                                alt={t('project.ysport.extraTitle')}
+                                className="project-zoomable-img"
+                            />
+                            <div className="project-zoomable-overlay">
+                                <FaSearchPlus />
+                                <span>{t('app.buttons.zoom')}</span>
+                            </div>
                         </div>
-                        <h2 className="ysport-feature-title">{t('project.ysport.extraTitle')}</h2>
-                        <p className="ysport-feature-desc">
+                    </figure>
+                    <article>
+                        <span>
+                            <FaPlusCircle />
+                        </span>
+                        <h2>{t('project.ysport.extraTitle')}</h2>
+                        <p>
                             {t('project.ysport.extraText')}
                         </p>
-                        <div className="ysport-extra-card">
+                        <aside className="ysport-extra-card">
                             {t('project.ysport.extraBullet1')}
-                        </div>
-                    </div>
-                </div>
+                        </aside>
+                    </article>
+                </section>
+            </main>
 
-            </div>
+            {
+                // High definition modal viewer
+            }
+            <ImageModal
+                isOpen={!!selectedImage}
+                src={selectedImage?.src || ''}
+                title={selectedImage?.title || ''}
+                desc={selectedImage?.desc}
+                onClose={() => setSelectedImage(null)}
+            />
         </div>
     );
 };

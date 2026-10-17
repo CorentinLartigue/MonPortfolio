@@ -1,4 +1,7 @@
-.home-section {
+/*======= HOME COMPONENT ========*/
+
+/* Hero container and background lighting */
+.home-hero {
     @apply relative min-h-[calc(100vh-76px)] flex items-center justify-center bg-gradient-to-br from-slate-50 via-white to-slate-100/60 overflow-hidden py-16 px-4 sm:px-6 lg:px-8;
 }
 
@@ -11,145 +14,147 @@
 }
 
 .home-container {
-    @apply container mx-auto max-w-6xl;
+    @apply container mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center;
 }
 
-.home-grid {
-    @apply grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center;
-}
+/*======= ARTICLE CONTENT ========*/
 
-.home-content {
+.home-container article {
     @apply lg:col-span-7 text-center lg:text-left space-y-6 sm:space-y-8 order-2 lg:order-1;
 }
 
 .home-badge {
-    @apply inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50/80 border border-blue-100 shadow-sm;
+    @apply inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50/80 border border-blue-100 shadow-sm text-[11px] font-bold uppercase tracking-wider text-blue-700;
 }
 
-.home-badge-dot {
+.home-badge .dot {
     @apply w-2 h-2 rounded-full bg-blue-500 animate-pulse;
 }
 
-.home-badge-text {
-    @apply text-[11px] font-bold uppercase tracking-wider text-blue-700;
-}
-
-.home-intro {
+.home-container article header {
     @apply space-y-4;
 }
 
-.home-title {
+.home-container article h1 {
     @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1];
 }
 
-.home-title-accent {
+.home-container article h1 span {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600;
 }
 
-.home-paragraph {
+.home-container article p {
     @apply text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0;
 }
 
-.home-text-highlight {
+.home-container article p strong {
     @apply font-semibold text-slate-800;
 }
 
-.home-actions {
+/* Call to action navigation */
+.home-container article nav {
     @apply flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4;
 }
 
-.home-btn-primary {
+.home-container article nav a:first-of-type {
     @apply w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-indigo-600 hover:to-blue-600 text-white font-bold rounded-2xl shadow-lg shadow-blue-500/20 hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300 transform active:scale-95;
 }
 
-.home-btn-secondary {
+.home-container article nav a:last-of-type {
     @apply w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white hover:bg-slate-50 text-slate-800 font-bold rounded-2xl border border-slate-200 hover:border-slate-300 shadow-sm hover:shadow transition-all duration-300 transform active:scale-95;
 }
 
-.home-techs {
+.home-container article nav a svg {
+    @apply w-5 h-5;
+}
+
+/* Technologies footer list */
+.home-container article footer {
     @apply pt-6 border-t border-slate-100 space-y-3;
 }
 
-.home-techs-title {
+.home-container article footer p {
     @apply text-xs font-bold uppercase tracking-wider text-slate-400;
 }
 
-.home-techs-list {
+.home-container article footer ul {
     @apply flex flex-wrap justify-center lg:justify-start gap-3;
 }
 
-.home-tech-card {
+.home-container article footer li {
     @apply flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white border border-slate-100 shadow-sm hover:shadow hover:-translate-y-0.5 transition-all duration-300;
 }
 
-.home-media {
-    @apply lg:col-span-5 flex justify-center order-1 lg:order-2;
+.home-container article footer li span {
+    @apply text-xs font-bold text-slate-700;
 }
 
-.home-image-wrapper {
-    @apply relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80;
+.home-icon-react {
+    @apply w-4 h-4 text-[#61DAFB] hover:scale-110 transition-transform;
+}
+
+.home-icon-angular {
+    @apply w-4 h-4 text-[#DD0031] hover:scale-110 transition-transform;
+}
+
+.home-icon-laravel {
+    @apply w-4 h-4 text-[#FF2D20] hover:scale-110 transition-transform;
+}
+
+.home-icon-nestjs {
+    @apply w-4 h-4 text-[#E0234E] hover:scale-110 transition-transform;
+}
+
+/*======= PROFILE FIGURE ========*/
+
+.home-container figure {
+    @apply lg:col-span-5 flex justify-center order-1 lg:order-2 relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 mx-auto;
 }
 
 .home-image-glow {
-    @apply absolute inset-0 bg-gradient-to-tr from-blue-500 via-indigo-500 to-purple-500 rounded-3xl opacity-40 blur-lg group-hover:opacity-70 group-hover:blur-xl transition duration-500;
+    @apply absolute inset-0 bg-gradient-to-tr from-blue-500 via-indigo-500 to-purple-500 rounded-3xl opacity-40 blur-lg transition duration-500;
+}
+
+.home-container figure:hover .home-image-glow {
+    @apply opacity-70 blur-xl;
 }
 
 .home-image-frame {
-    @apply relative w-full h-full rounded-3xl overflow-hidden border-2 border-white/60 bg-white p-3 shadow-2xl shadow-indigo-200/40 group-hover:scale-[1.02] transition-transform duration-500;
+    @apply relative w-full h-full rounded-3xl overflow-hidden border-2 border-white/60 bg-white p-3 shadow-2xl shadow-indigo-200/40 transition-transform duration-500;
+}
+
+.home-container figure:hover .home-image-frame {
+    @apply scale-[1.02];
 }
 
 .home-image-inner {
     @apply w-full h-full rounded-2xl overflow-hidden bg-slate-100 relative;
 }
 
-.home-profile-pic {
-    @apply w-full h-full object-cover transition duration-500 group-hover:scale-105;
+.home-container figure img {
+    @apply w-full h-full object-cover transition duration-500;
+}
+
+.home-container figure:hover img {
+    @apply scale-105;
 }
 
 .home-image-overlay {
     @apply absolute inset-0 bg-gradient-to-t from-slate-900/10 via-transparent to-transparent;
 }
 
-.home-floating-badge {
-    @apply absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 bg-white border border-slate-100 px-4 py-3 rounded-2xl shadow-xl flex items-center gap-3;
+.home-container figcaption {
+    @apply absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 bg-white border border-slate-100 px-4 py-3 rounded-2xl shadow-xl flex items-center gap-3 z-10;
 }
 
-.home-btn-icon {
-    @apply w-5 h-5;
+.home-container figcaption > span {
+    @apply p-2 bg-indigo-50 rounded-xl text-indigo-600;
 }
 
-.home-tech-icon-react {
-    @apply w-4 h-4 text-[#61DAFB] group-hover:scale-110 transition-transform;
-}
-
-.home-tech-icon-angular {
-    @apply w-4 h-4 text-[#DD0031] group-hover:scale-110 transition-transform;
-}
-
-.home-tech-icon-laravel {
-    @apply w-4 h-4 text-[#FF2D20] group-hover:scale-110 transition-transform;
-}
-
-.home-tech-icon-nestjs {
-    @apply w-4 h-4 text-[#E0234E] group-hover:scale-110 transition-transform;
-}
-
-.home-tech-name {
-    @apply text-xs font-bold text-slate-700;
-}
-
-.home-badge-icon-wrapper {
-    @apply p-2 bg-indigo-50 rounded-xl;
-}
-
-.home-floating-icon {
-    @apply w-5 h-5 text-indigo-600;
-}
-
-.home-floating-title {
+.home-container figcaption p:first-of-type {
     @apply text-[10px] font-bold uppercase tracking-wider text-slate-400;
 }
 
-.home-floating-desc {
+.home-container figcaption p:last-of-type {
     @apply text-xs font-extrabold text-slate-800;
 }

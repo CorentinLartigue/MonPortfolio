@@ -26,8 +26,8 @@ const ReturnButton: React.FC<ReturnButtonProps> = ({fallback = '/projects', labe
             onClick={handleBack}
             className="return-btn"
         >
-            <FaArrowLeft className="return-btn-icon"/>
-            {label || t('app.buttons.back')}
+            <FaArrowLeft />
+            <span>{label || t('app.buttons.back')}</span>
         </button>
     );
 };
