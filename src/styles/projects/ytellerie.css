@@ -1,0 +1,119 @@
+/*======= YTELLERIE PROJECT ========*/
+
+.ytellerie-container {
+    @apply min-h-screen bg-slate-950 text-slate-200;
+}
+
+/*======= MAIN CONTENT ========*/
+
+.ytellerie-main {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 space-y-16;
+}
+
+/*======= INTRO CARD ========*/
+
+.ytellerie-intro-card {
+    @apply bg-slate-900/40 border border-slate-800 rounded-3xl p-8 sm:p-10;
+}
+
+.ytellerie-intro-card h2 {
+    @apply text-2xl font-bold mb-4 text-white border-l-4 border-amber-500 pl-4;
+}
+
+.ytellerie-intro-card p {
+    @apply text-slate-300 text-base sm:text-lg leading-relaxed;
+}
+
+/*======= TEAM ORGANIZATION SECTION (4 DEVS) ========*/
+
+.ytellerie-team-section h2 {
+    @apply text-2xl sm:text-3xl font-bold text-white mb-8 border-l-4 border-amber-500 pl-4;
+}
+
+.ytellerie-team-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6;
+}
+
+.ytellerie-team-grid article {
+    @apply bg-slate-900/50 border border-slate-800 rounded-2xl p-6 flex flex-col items-start hover:border-amber-500/40 transition-colors;
+}
+
+.ytellerie-team-grid article div {
+    @apply p-3 bg-amber-950/60 rounded-xl text-amber-400 text-2xl mb-4 border border-amber-800/40;
+}
+
+.ytellerie-team-grid article h3 {
+    @apply text-base sm:text-lg font-bold text-white mb-2;
+}
+
+.ytellerie-team-grid article p {
+    @apply text-sm text-slate-300 leading-relaxed;
+}
+
+/*======= C4 MODEL & DDD SECTION ========*/
+
+.ytellerie-c4-section h2 {
+    @apply text-2xl sm:text-3xl font-bold text-white mb-3 border-l-4 border-amber-500 pl-4;
+}
+
+.ytellerie-c4-section > p {
+    @apply text-slate-300 text-base sm:text-lg leading-relaxed mb-8 max-w-4xl;
+}
+
+.ytellerie-c4-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-8;
+}
+
+.ytellerie-c4-grid article {
+    @apply bg-slate-900/40 border border-slate-800 rounded-2xl p-4 sm:p-5 hover:border-amber-500/30 transition-colors;
+}
+
+.ytellerie-c4-grid figure {
+    @apply m-0 flex flex-col gap-4;
+}
+
+.ytellerie-c4-grid figcaption {
+    @apply mt-2;
+}
+
+.ytellerie-c4-grid figcaption h3 {
+    @apply text-base sm:text-lg font-bold text-amber-300 mb-1;
+}
+
+.ytellerie-c4-grid figcaption p {
+    @apply text-xs sm:text-sm text-slate-400;
+}
+
+/*======= REAL FEATURES & SCREENSHOTS SECTION ========*/
+
+.ytellerie-features-section h2 {
+    @apply text-2xl sm:text-3xl font-bold text-white mb-8 border-l-4 border-amber-500 pl-4;
+}
+
+.ytellerie-features-grid {
+    @apply space-y-12;
+}
+
+.ytellerie-feature-card {
+    @apply bg-slate-900/40 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6 hover:border-amber-500/20 transition-colors;
+}
+
+.ytellerie-feature-card header h3 {
+    @apply text-xl sm:text-2xl font-bold text-white mb-2 border-l-4 border-amber-400 pl-3;
+}
+
+.ytellerie-feature-card header p {
+    @apply text-slate-300 text-sm sm:text-base;
+}
+
+.ytellerie-screens-grid {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-6;
+}
+
+.ytellerie-screens-grid figure {
+    @apply m-0 flex flex-col gap-2;
+}
+
+.ytellerie-screens-grid figcaption {
+    @apply text-xs sm:text-sm text-slate-400 text-center font-medium;
+}

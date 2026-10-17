@@ -9,7 +9,7 @@ import './config/i18n';
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
         <ErrorBoundary>
-            <div className="App flex-grow">
+            <div className="App">
                 <RouterProvider router={router}/>
             </div>
         </ErrorBoundary>

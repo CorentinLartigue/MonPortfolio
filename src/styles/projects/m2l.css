@@ -1,0 +1,140 @@
+/*======= M2L PROJECT STYLES ========*/
+
+/* Root layout and container styling */
+.m2l-page {
+  @apply min-h-screen bg-slate-900 text-slate-200 font-sans selection:bg-cyan-500/30;
+}
+
+/*======= MAIN CONTENT ========*/
+
+.m2l-main-content {
+  @apply max-w-7xl mx-auto px-6 py-20 space-y-24;
+}
+
+/* Intro card */
+.m2l-intro-card {
+  @apply bg-slate-800/80 p-8 sm:p-10 rounded-3xl border border-slate-700 shadow-xl;
+}
+
+.m2l-intro-card h2 {
+  @apply text-2xl font-bold text-white mb-4 border-l-4 border-cyan-400 pl-4;
+}
+
+.m2l-intro-card p {
+  @apply text-slate-300 text-base sm:text-lg leading-relaxed;
+}
+
+/*======= COMPARISON SECTION ========*/
+
+.m2l-compare-section > h2 {
+  @apply text-4xl font-black text-white text-center mb-16 uppercase italic text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400;
+}
+
+.m2l-compare-grid {
+  @apply grid lg:grid-cols-2 gap-12;
+}
+
+.m2l-compare-card {
+  @apply bg-slate-800 rounded-3xl overflow-hidden border border-slate-700 shadow-2xl hover:-translate-y-2 transition-transform duration-300;
+}
+
+.m2l-card-header-static {
+  @apply bg-blue-950 p-6 flex items-center gap-4 border-b border-blue-900;
+}
+
+.m2l-card-header-static svg {
+  @apply text-3xl text-blue-400;
+}
+
+.m2l-card-header-dynamic {
+  @apply bg-cyan-950 p-6 flex items-center gap-4 border-b border-cyan-900;
+}
+
+.m2l-card-header-dynamic svg {
+  @apply text-3xl text-cyan-400;
+}
+
+.m2l-card-header-static h3,
+.m2l-card-header-dynamic h3 {
+  @apply text-2xl font-bold text-white uppercase;
+}
+
+.m2l-compare-card > div {
+  @apply p-8 space-y-6;
+}
+
+.m2l-compare-card > div p {
+  @apply text-slate-300;
+}
+
+.m2l-compare-card > div ul {
+  @apply space-y-3 bg-slate-900 p-6 rounded-xl list-none m-0;
+}
+
+.m2l-compare-card > div li {
+  @apply flex items-start gap-3;
+}
+
+.m2l-compare-card:first-child li > span:first-child {
+  @apply mt-1.5 w-2 h-2 rounded bg-blue-500 shrink-0;
+}
+
+.m2l-compare-card:last-child li > span:first-child {
+  @apply mt-1.5 w-2 h-2 rounded bg-cyan-500 shrink-0;
+}
+
+.m2l-compare-card > div li span:last-child {
+  @apply text-sm text-slate-400;
+}
+
+/*======= TECH STACKS ========*/
+
+.m2l-tech-grid {
+  @apply grid md:grid-cols-2 gap-8;
+}
+
+.m2l-tech-box-static {
+  @apply bg-blue-900/20 p-8 rounded-2xl border border-blue-800;
+}
+
+.m2l-tech-box-dynamic {
+  @apply bg-cyan-900/20 p-8 rounded-2xl border border-cyan-800;
+}
+
+.m2l-tech-box-static h3 {
+  @apply text-xl font-bold text-blue-400 mb-6 uppercase tracking-widest;
+}
+
+.m2l-tech-box-dynamic h3 {
+  @apply text-xl font-bold text-cyan-400 mb-6 uppercase tracking-widest;
+}
+
+.m2l-tech-grid ul {
+  @apply flex flex-wrap gap-3 list-none p-0 m-0;
+}
+
+.m2l-tech-grid li {
+  @apply px-4 py-2 bg-slate-800 rounded-full text-sm font-medium border border-slate-600;
+}
+
+/*======= METHODOLOGY ========*/
+
+.m2l-method-card {
+  @apply bg-slate-800 p-10 md:p-16 rounded-3xl border border-slate-700 text-center;
+}
+
+.m2l-method-badge {
+  @apply inline-flex items-center justify-center p-4 bg-slate-900 rounded-full mb-8 text-3xl text-cyan-500;
+}
+
+.m2l-method-card h2 {
+  @apply text-3xl font-bold text-white mb-10 uppercase tracking-widest;
+}
+
+.m2l-method-card figure {
+  @apply max-w-2xl w-full mx-auto mb-10;
+}
+
+.m2l-method-card p {
+  @apply text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed;
+}

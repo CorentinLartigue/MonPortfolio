@@ -1,0 +1,138 @@
+/*======= BERROYER PROJECT STYLES ========*/
+
+/* Root layout and container styling */
+.berroyer-container {
+    @apply min-h-screen bg-slate-950 text-slate-200 font-sans;
+}
+
+/*======= MAIN CONTENT ========*/
+
+.berroyer-main {
+    @apply max-w-6xl mx-auto px-6 py-20 space-y-24;
+}
+
+/*======= STEPS TIMELINE ========*/
+
+/* Interactive steps list */
+.berroyer-timeline {
+    @apply space-y-12 py-4;
+}
+
+/* Horizontal card container */
+.berroyer-step-card {
+    @apply bg-slate-900/80 p-6 md:p-8 rounded-3xl border border-slate-800 shadow-xl flex flex-col md:flex-row items-center gap-8 md:gap-12 hover:border-blue-500/60 transition-colors;
+}
+
+.berroyer-step-card:nth-child(even) {
+    @apply md:flex-row-reverse;
+}
+
+/* Media column inside step card */
+.berroyer-step-card figure {
+    @apply w-full md:w-1/2 shrink-0 m-0;
+}
+
+/* Text column inside step card */
+.berroyer-step-card section {
+    @apply w-full md:w-1/2 flex flex-col justify-center;
+}
+
+.berroyer-step-card header {
+    @apply flex items-center gap-3 mb-4;
+}
+
+.berroyer-step-card header span {
+    @apply flex w-10 h-10 rounded-full bg-blue-600 text-white font-bold items-center justify-center shrink-0 shadow-lg text-lg;
+}
+
+.berroyer-step-card h2 {
+    @apply text-xl md:text-2xl font-bold text-white;
+}
+
+.berroyer-step-card p {
+    @apply text-slate-300 mb-5 leading-relaxed text-base;
+}
+
+.berroyer-step-card ul {
+    @apply space-y-2.5 list-none p-0 m-0;
+}
+
+.berroyer-step-card li {
+    @apply flex items-start gap-3 text-sm text-slate-400;
+}
+
+.berroyer-step-card li span {
+    @apply mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-400 shrink-0;
+}
+
+/*======= ADDITIONAL INFO ========*/
+
+/* Full-width workflow hierarchy card */
+.berroyer-hierarchy-card {
+    @apply bg-slate-900/80 p-8 rounded-3xl border border-slate-800 shadow-xl space-y-6;
+}
+
+.berroyer-hierarchy-card header {
+    @apply flex items-center gap-3;
+}
+
+.berroyer-hierarchy-card header svg {
+    @apply text-blue-400 text-xl;
+}
+
+.berroyer-hierarchy-card h3 {
+    @apply text-xl font-bold text-blue-400 m-0;
+}
+
+.berroyer-hierarchy-card > p {
+    @apply text-slate-300 leading-relaxed text-sm sm:text-base max-w-3xl;
+}
+
+.berroyer-hierarchy-card ol {
+    @apply grid sm:grid-cols-2 lg:grid-cols-5 gap-4 list-none p-0 m-0;
+}
+
+.berroyer-hierarchy-card li {
+    @apply p-4 rounded-2xl bg-slate-800/80 border border-slate-700/80 flex flex-col gap-2 transition-colors hover:border-blue-500/50;
+}
+
+.berroyer-hierarchy-card li span {
+    @apply flex w-7 h-7 rounded-full bg-blue-600/30 border border-blue-500/40 text-blue-300 font-bold text-xs items-center justify-center;
+}
+
+.berroyer-hierarchy-card li p {
+    @apply text-slate-200 text-sm font-medium m-0 leading-snug;
+}
+
+/* Three-column engineering and documentation grid */
+.berroyer-info-grid {
+    @apply grid md:grid-cols-3 gap-6;
+}
+
+.berroyer-info-card {
+    @apply bg-slate-900/80 p-8 rounded-3xl border border-slate-800 shadow-xl flex flex-col;
+}
+
+.berroyer-info-card header {
+    @apply flex items-center gap-3 mb-4;
+}
+
+.berroyer-info-card header svg {
+    @apply text-blue-400 text-xl;
+}
+
+.berroyer-info-card h3 {
+    @apply text-xl font-bold text-blue-400 mb-4;
+}
+
+.berroyer-info-card p {
+    @apply text-slate-300 leading-relaxed text-sm sm:text-base;
+}
+
+.berroyer-info-card ul {
+    @apply flex flex-wrap gap-2 list-none p-0 m-0 mt-4;
+}
+
+.berroyer-info-card ul li {
+    @apply px-3 py-1.5 rounded-xl bg-slate-800 border border-slate-700 text-xs text-blue-300 font-medium;
+}

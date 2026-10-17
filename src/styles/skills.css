@@ -1,43 +1,59 @@
+/*======= SKILLS COMPONENT ========*/
+
+/* Main page layout */
+.skills-page {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8 py-12 max-w-5xl space-y-12;
+}
+
+.skills-page > header {
+    @apply text-center space-y-4;
+}
+
+.skills-page > header h1 {
+    @apply text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight;
+}
+
+.skills-page > header p {
+    @apply text-lg text-slate-600 max-w-2xl mx-auto;
+}
+
+/* Category cards grid */
 .skills-grid {
     @apply grid grid-cols-1 md:grid-cols-2 gap-8;
 }
 
-.skills-category-card {
+.skills-grid section {
     @apply bg-white border border-slate-100 p-6 sm:p-8 shadow-md rounded-2xl flex flex-col justify-between hover:shadow-lg transition-all duration-300;
 }
 
-.skills-items-grid {
+.skills-grid section h2 {
+    @apply text-xl font-bold text-slate-900 border-l-4 border-blue-500 pl-3 mb-6;
+}
+
+.skills-grid section ul {
     @apply grid grid-cols-2 gap-3;
 }
 
-.skill-item-wrapper {
+.skills-grid section li {
     @apply flex items-center gap-3 bg-slate-50/50 hover:bg-slate-100/70 px-3.5 py-3 rounded-xl border border-slate-100/30 hover:border-slate-200/60 shadow-sm hover:shadow hover:-translate-y-0.5 transition-all duration-300;
 }
 
-.skill-icon-wrapper {
-    @apply flex-shrink-0 p-1.5 bg-white rounded-lg border border-slate-100 shadow-sm group-hover:scale-105 transition-transform duration-300;
+.skills-grid section li > span {
+    @apply flex-shrink-0 p-1.5 bg-white rounded-lg border border-slate-100 shadow-sm transition-transform duration-300;
 }
 
-.skill-name-text {
-    @apply text-xs sm:text-sm font-semibold text-slate-700 leading-tight;
+.skills-grid section li:hover > span {
+    @apply scale-105;
 }
 
-.skills-container {
-    @apply max-w-5xl mx-auto space-y-12;
-}
-
-.skills-header {
-    @apply text-center;
-}
-
-.skills-category-title {
-    @apply section-title pl-3 mb-6;
-}
-
-.skill-icon {
+.skills-grid section li svg {
     @apply w-5 h-5;
 }
 
-.skill-placeholder-icon {
+.skills-grid section li .placeholder-icon {
     @apply w-5 h-5 bg-slate-100 rounded;
+}
+
+.skills-grid section li strong {
+    @apply text-xs sm:text-sm font-semibold text-slate-700 leading-tight font-normal;
 }

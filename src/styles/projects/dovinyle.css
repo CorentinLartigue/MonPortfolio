@@ -1,0 +1,185 @@
+/*======= DOVINYLE PROJECT ========*/
+
+.dovinyle-container {
+    @apply min-h-screen bg-slate-950 text-slate-100 selection:bg-amber-500/30;
+}
+
+/*======= MAIN CONTENT ========*/
+.dovinyle-main-content {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 space-y-24;
+}
+
+/* Context & Intro card */
+.dovinyle-intro-card {
+    @apply bg-slate-900/60 border border-slate-800/80 rounded-3xl p-8 sm:p-12 space-y-4;
+}
+
+.dovinyle-intro-card h2 {
+    @apply flex items-center gap-3 text-xl sm:text-2xl font-bold text-white;
+}
+
+.dovinyle-intro-card h2 span:first-child {
+    @apply w-1.5 h-6 bg-amber-500 rounded-full;
+}
+
+.dovinyle-intro-card p {
+    @apply text-slate-300 text-sm sm:text-base leading-relaxed;
+}
+
+/* Section headers */
+.dovinyle-section-header {
+    @apply text-center mb-12 space-y-3;
+}
+
+.dovinyle-section-header h2 {
+    @apply text-2xl sm:text-4xl font-extrabold text-white tracking-tight;
+}
+
+.dovinyle-section-header p {
+    @apply text-sm sm:text-base text-slate-400 max-w-2xl mx-auto;
+}
+
+/* Architecture Bento Grid */
+.dovinyle-bento-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6;
+}
+
+.dovinyle-bento-grid article {
+    @apply bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 flex flex-col justify-between hover:border-amber-500/40 transition-all duration-300 space-y-4;
+}
+
+.dovinyle-bento-grid article > span {
+    @apply w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 text-2xl;
+}
+
+.dovinyle-bento-icon-group {
+    @apply flex items-center gap-3 text-2xl text-amber-400;
+}
+
+.dovinyle-bento-grid article h3 {
+    @apply text-base font-bold text-white mb-1.5;
+}
+
+.dovinyle-bento-grid article p {
+    @apply text-xs sm:text-sm text-slate-400 leading-relaxed;
+}
+
+/* Key Features Grid */
+.dovinyle-features-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+.dovinyle-features-grid article {
+    @apply bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 hover:border-amber-500/30 transition-all duration-300 space-y-3;
+}
+
+.dovinyle-features-grid article > span {
+    @apply w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 text-lg;
+}
+
+.dovinyle-features-grid article h3 {
+    @apply text-base font-bold text-white;
+}
+
+.dovinyle-features-grid article p {
+    @apply text-xs sm:text-sm text-slate-400 leading-relaxed;
+}
+
+/* UI Mockup card */
+.dovinyle-mockup-card {
+    @apply max-w-4xl mx-auto bg-slate-900/50 border border-slate-800/80 rounded-2xl overflow-hidden hover:border-amber-500/40 transition-all duration-300;
+}
+
+.dovinyle-mockup-card figure {
+    @apply m-0 aspect-[16/9] w-full;
+}
+
+.dovinyle-mockup-card > div {
+    @apply p-6 space-y-2;
+}
+
+.dovinyle-mockup-card h3 {
+    @apply flex items-center gap-2 text-lg font-bold text-white;
+}
+
+.dovinyle-mockup-card h3 svg {
+    @apply text-purple-400;
+}
+
+.dovinyle-mockup-card p {
+    @apply text-xs sm:text-sm text-slate-400 leading-relaxed;
+}
+
+/* Panoramic Preview card */
+.dovinyle-panoramic-wrapper {
+    @apply max-w-4xl mx-auto bg-slate-900/50 border border-slate-800/80 rounded-2xl overflow-hidden hover:border-amber-500/40 transition-all duration-300 mb-12;
+}
+
+.dovinyle-panoramic-wrapper figure {
+    @apply m-0 aspect-video w-full;
+}
+
+.dovinyle-panoramic-wrapper > div {
+    @apply p-6 space-y-2;
+}
+
+.dovinyle-panoramic-wrapper h3 {
+    @apply text-lg font-bold text-white;
+}
+
+.dovinyle-panoramic-wrapper p {
+    @apply text-xs sm:text-sm text-slate-400 leading-relaxed;
+}
+
+/* Browser Gallery Screens Grid */
+.dovinyle-gallery-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-8;
+}
+
+.dovinyle-browser-card {
+    @apply bg-slate-900/50 border border-slate-800/80 rounded-2xl overflow-hidden hover:border-amber-500/40 transition-all duration-300;
+}
+
+.dovinyle-browser-card header {
+    @apply bg-slate-900 border-b border-slate-800 px-4 py-2.5 flex items-center gap-3;
+}
+
+.dovinyle-browser-card header > div {
+    @apply flex items-center gap-1.5;
+}
+
+.dovinyle-browser-card header > div span {
+    @apply w-2.5 h-2.5 rounded-full;
+}
+
+.dovinyle-browser-card header > div span:nth-child(1) {
+    @apply bg-red-500/70;
+}
+
+.dovinyle-browser-card header > div span:nth-child(2) {
+    @apply bg-yellow-500/70;
+}
+
+.dovinyle-browser-card header > div span:nth-child(3) {
+    @apply bg-green-500/70;
+}
+
+.dovinyle-browser-card header > span {
+    @apply text-xs font-mono text-slate-400 bg-slate-950/60 px-3 py-1 rounded-md border border-slate-800/60 flex-grow;
+}
+
+.dovinyle-browser-card figure {
+    @apply m-0 aspect-video w-full;
+}
+
+.dovinyle-browser-card > div {
+    @apply p-6 space-y-2;
+}
+
+.dovinyle-browser-card h3 {
+    @apply text-lg font-bold text-white;
+}
+
+.dovinyle-browser-card p {
+    @apply text-xs sm:text-sm text-slate-400 leading-relaxed;
+}

@@ -1,119 +1,90 @@
 import React from 'react';
-import ReturnButton from '../../components/ReturnButton.tsx';
+import ProjectHero from '../../components/ProjectHero.tsx';
 import {useTranslate} from '../../hooks/useTranslate';
-import '../../styles/projects.css';
+import { FaCode, FaRocket, FaTools, FaBrain, FaTerminal } from 'react-icons/fa';
+import '../../styles/projects/portfolio.css';
 
 const Portfolio: React.FC = () => {
     const {t} = useTranslate();
 
     return (
-        <div className="page-container">
-            <div className="page-back-wrapper">
-                <ReturnButton/>
-            </div>
-            <div className="content-card">
-                <header className="card-header">
-                    <h1 className="card-header-title">{t('project.portfolio.title')}</h1>
-                    <p className="card-header-desc">
-                        {t('project.portfolio.desc')}
-                    </p>
-                </header>
+        <div className="portfolio-container">
+            <ProjectHero
+                badgeIcon={<FaTerminal />}
+                badgeLabel={t('project.portfolio.badge')}
+                title={t('project.portfolio.title')}
+                subtitle={t('project.portfolio.subtitle')}
+                description={t('project.portfolio.desc')}
+                techTags={['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'i18n', 'GitHub Pages']}
+                theme="blue"
+            />
 
-                <div className="card-body">
+            <main className="portfolio-main">
+                
+                <article className="portfolio-objective-grid">
+                    <aside>
+                        <FaRocket />
+                        <h2>{t('project.portfolio.objectiveTitle')}</h2>
+                    </aside>
+                    <div>
+                        {t('project.portfolio.objectiveText')}
+                    </div>
+                </article>
 
-                    <section className="project-detail-section">
-                        <h2 className="project-detail-subtitle">{t('project.portfolio.objectiveTitle')}</h2>
-                        <p className="project-detail-text">
-                            {t('project.portfolio.objectiveText')}
-                        </p>
-                    </section>
+                <section className="portfolio-features-section">
+                    <h2>
+                        <FaCode /> {t('project.portfolio.featuresTitle')}
+                    </h2>
+                    <div className="portfolio-features-grid">
+                        {[1, 2, 3, 4, 5].map(i => (
+                            <article key={i} className="group">
+                                <h3>
+                                    <span>&gt;</span>{t(`project.portfolio.feature${i}Title`)}
+                                </h3>
+                                <p>{t(`project.portfolio.feature${i}Text`)}</p>
+                            </article>
+                        ))}
+                    </div>
+                </section>
 
-                    <section className="project-detail-section">
-                        <h2 className="project-detail-subtitle">{t('project.portfolio.featuresTitle')}</h2>
-                        <ul className="project-detail-bullets">
-                            <li>
-                                <strong
-                                    className="project-detail-strong">{t('project.portfolio.feature1Title')}</strong>
-                                {t('project.portfolio.feature1Text')}
-                            </li>
-                            <li>
-                                <strong
-                                    className="project-detail-strong">{t('project.portfolio.feature2Title')}</strong>
-                                {t('project.portfolio.feature2Text')}
-                            </li>
-                            <li>
-                                <strong
-                                    className="project-detail-strong">{t('project.portfolio.feature3Title')}</strong>
-                                {t('project.portfolio.feature3Text')}
-                            </li>
-                            <li>
-                                <strong
-                                    className="project-detail-strong">{t('project.portfolio.feature4Title')}</strong>
-                                {t('project.portfolio.feature4Text')}
-                            </li>
-                            <li>
-                                <strong
-                                    className="project-detail-strong">{t('project.portfolio.feature5Title')}</strong>
-                                {t('project.portfolio.feature5Text')}
-                            </li>
+                <section className="portfolio-stack-box">
+                    <h2>
+                        <FaTools /> {t('project.portfolio.techTitle')}
+                    </h2>
+                    <div className="portfolio-stack-grid">
+                        {[1, 2, 3, 4, 5].map(i => (
+                            <article key={i}>
+                                <span>{i}</span>
+                                <h3>{t(`project.portfolio.tech${i}Title`)}</h3>
+                                <p>{t(`project.portfolio.tech${i}Text`)}</p>
+                            </article>
+                        ))}
+                    </div>
+                </section>
+
+                <div className="portfolio-insights-grid">
+                    <section className="portfolio-challenges-box">
+                        <h2>{t('project.portfolio.challengesTitle')}</h2>
+                        <ul>
+                            {[1, 2, 3].map(i => (
+                                <li key={i}>
+                                    <strong>{t(`project.portfolio.challenge${i}Title`)}</strong>
+                                    <span>{t(`project.portfolio.challenge${i}Text`)}</span>
+                                </li>
+                            ))}
                         </ul>
                     </section>
 
-                    <section className="project-detail-section">
-                        <h2 className="project-detail-subtitle">{t('project.portfolio.techTitle')}</h2>
-                        <ul className="project-detail-bullets">
-                            <li>
-                                <strong className="project-detail-strong">{t('project.portfolio.tech1Title')}</strong>
-                                {t('project.portfolio.tech1Text')}
-                            </li>
-                            <li>
-                                <strong className="project-detail-strong">{t('project.portfolio.tech2Title')}</strong>
-                                {t('project.portfolio.tech2Text')}
-                            </li>
-                            <li>
-                                <strong className="project-detail-strong">{t('project.portfolio.tech3Title')}</strong>
-                                {t('project.portfolio.tech3Text')}
-                            </li>
-                            <li>
-                                <strong className="project-detail-strong">{t('project.portfolio.tech4Title')}</strong>
-                                {t('project.portfolio.tech4Text')}
-                            </li>
-                            <li>
-                                <strong className="project-detail-strong">{t('project.portfolio.tech5Title')}</strong>
-                                {t('project.portfolio.tech5Text')}
-                            </li>
-                        </ul>
-                    </section>
-
-                    <section className="project-detail-section">
-                        <h2 className="project-detail-subtitle">{t('project.portfolio.challengesTitle')}</h2>
-                        <ul className="project-detail-bullets">
-                            <li>
-                                <strong
-                                    className="project-detail-strong">{t('project.portfolio.challenge1Title')}</strong>
-                                {t('project.portfolio.challenge1Text')}
-                            </li>
-                            <li>
-                                <strong
-                                    className="project-detail-strong">{t('project.portfolio.challenge2Title')}</strong>
-                                {t('project.portfolio.challenge2Text')}
-                            </li>
-                            <li>
-                                <strong
-                                    className="project-detail-strong">{t('project.portfolio.challenge3Title')}</strong>
-                                {t('project.portfolio.challenge3Text')}
-                            </li>
-                        </ul>
-                    </section>
-
-                    <section className="project-detail-section">
-                        <h2 className="project-detail-subtitle">{t('project.portfolio.learnedTitle')}</h2>
-                        <p className="project-detail-text">
+                    <article className="portfolio-learning-card">
+                        <FaBrain />
+                        <h2>{t('project.portfolio.learnedTitle')}</h2>
+                        <p>
                             {t('project.portfolio.learnedText')}
                         </p>
-                    </section>
+                    </article>
                 </div>
-            </div>
+
+            </main>
         </div>
     );
 };

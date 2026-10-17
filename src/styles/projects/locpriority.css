@@ -1,0 +1,304 @@
+/*======= LOCPRIORITY PROJECT ========*/
+
+.locpriority-container {
+    @apply min-h-screen bg-slate-950 text-slate-100 selection:bg-emerald-500/30;
+}
+
+/*======= MAIN CONTENT ========*/
+.locpriority-main {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 space-y-24;
+}
+
+/* Bento Architecture Grid */
+.locpriority-bento-grid {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-6;
+}
+
+.locpriority-bento-main {
+    @apply md:col-span-2 bg-slate-900/60 border border-slate-800/80 rounded-3xl p-8 sm:p-12 flex flex-col justify-between space-y-8;
+}
+
+.locpriority-bento-main h2 {
+    @apply flex items-center gap-3 text-xl sm:text-2xl font-bold text-white mb-4;
+}
+
+.locpriority-bento-main h2 span {
+    @apply w-1.5 h-6 bg-emerald-500 rounded-full;
+}
+
+.locpriority-bento-main p {
+    @apply text-slate-300 text-sm sm:text-base leading-relaxed;
+}
+
+.locpriority-bento-meta {
+    @apply grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6 border-t border-slate-800;
+}
+
+.locpriority-bento-meta > div span:first-child {
+    @apply block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1;
+}
+
+.locpriority-bento-meta > div span:last-child {
+    @apply text-sm font-semibold text-emerald-400;
+}
+
+.locpriority-bento-side {
+    @apply bg-slate-900/60 border border-slate-800/80 rounded-3xl p-8 sm:p-10 flex flex-col justify-between space-y-6;
+}
+
+.locpriority-bento-side h2 {
+    @apply text-xl font-bold text-white;
+}
+
+.locpriority-bento-side p {
+    @apply text-slate-400 text-xs sm:text-sm leading-relaxed;
+}
+
+.locpriority-bento-side ul {
+    @apply space-y-4 list-none p-0 m-0;
+}
+
+.locpriority-bento-side li {
+    @apply flex items-start gap-3 text-sm text-slate-300;
+}
+
+.locpriority-bento-side li:nth-child(1) svg {
+    @apply text-red-500 text-lg mt-0.5 shrink-0;
+}
+
+.locpriority-bento-side li:nth-child(2) svg {
+    @apply text-cyan-400 text-lg mt-0.5 shrink-0;
+}
+
+.locpriority-bento-side li:nth-child(3) svg {
+    @apply text-emerald-400 text-base mt-0.5 shrink-0;
+}
+
+.locpriority-bento-side li:nth-child(4) svg {
+    @apply text-amber-400 text-base mt-0.5 shrink-0;
+}
+
+/* Orchestration Scheme section */
+.locpriority-schema-section {
+    @apply space-y-8;
+}
+
+.locpriority-schema-header {
+    @apply text-center max-w-3xl mx-auto space-y-3;
+}
+
+.locpriority-schema-header h2 {
+    @apply text-2xl sm:text-4xl font-extrabold text-white tracking-tight;
+}
+
+.locpriority-schema-header p:first-of-type {
+    @apply text-base font-bold text-emerald-400;
+}
+
+.locpriority-schema-header p:last-of-type {
+    @apply text-sm text-slate-400 leading-relaxed;
+}
+
+.locpriority-schema-card {
+    @apply max-w-4xl mx-auto aspect-video w-full m-0;
+}
+
+/* Gallery Section */
+.locpriority-gallery-section {
+    @apply space-y-8;
+}
+
+.locpriority-gallery-header {
+    @apply text-center max-w-2xl mx-auto space-y-2;
+}
+
+.locpriority-gallery-header h2 {
+    @apply text-2xl sm:text-4xl font-extrabold text-white tracking-tight;
+}
+
+.locpriority-gallery-header p {
+    @apply text-sm text-slate-400;
+}
+
+.locpriority-gallery-grid {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-6;
+}
+
+.locpriority-gallery-card {
+    @apply bg-slate-900/60 border border-slate-800/80 rounded-2xl overflow-hidden hover:border-emerald-500/40 transition-all duration-300 flex flex-col;
+}
+
+.locpriority-gallery-card figure {
+    @apply m-0 aspect-video w-full relative;
+}
+
+.locpriority-gallery-card figcaption {
+    @apply absolute top-3 left-3 px-2.5 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-slate-700/60 text-[10px] font-bold uppercase tracking-wider text-emerald-400 z-10;
+}
+
+.locpriority-gallery-card > div {
+    @apply p-5 flex-grow;
+}
+
+.locpriority-gallery-card h3 {
+    @apply text-base font-bold text-white mb-2;
+}
+
+.locpriority-gallery-card p {
+    @apply text-xs text-slate-400 leading-relaxed;
+}
+
+/* Features Grid */
+.locpriority-features-section {
+    @apply space-y-8;
+}
+
+.locpriority-features-section > h2 {
+    @apply text-2xl sm:text-4xl font-extrabold text-white tracking-tight text-center;
+}
+
+.locpriority-features-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6;
+}
+
+.locpriority-features-grid article {
+    @apply bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 hover:border-emerald-500/40 transition-all duration-300 space-y-3;
+}
+
+.locpriority-features-grid article > span {
+    @apply w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-xl;
+}
+
+.locpriority-features-grid article h3 {
+    @apply text-base font-bold text-white;
+}
+
+.locpriority-features-grid article p {
+    @apply text-xs sm:text-sm text-slate-400 leading-relaxed;
+}
+
+/* Multichannel Marketing section */
+.locpriority-marketing-section {
+    @apply space-y-8;
+}
+
+.locpriority-marketing-header {
+    @apply text-center max-w-2xl mx-auto space-y-2;
+}
+
+.locpriority-marketing-header h2 {
+    @apply text-2xl sm:text-4xl font-extrabold text-white tracking-tight;
+}
+
+.locpriority-marketing-header p {
+    @apply text-sm text-slate-400;
+}
+
+.locpriority-marketing-grid {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-6;
+}
+
+.locpriority-marketing-card-yt {
+    @apply bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 hover:border-red-500/40 transition-all duration-300 flex flex-col justify-between space-y-4;
+}
+
+.locpriority-marketing-card-yt header {
+    @apply flex items-center justify-between mb-4;
+}
+
+.locpriority-marketing-card-yt header span {
+    @apply w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-500 text-2xl;
+}
+
+.locpriority-marketing-card-yt header svg:last-child {
+    @apply text-xs text-slate-500 group-hover:text-red-400 transition-colors;
+}
+
+.locpriority-marketing-card-yt h3 {
+    @apply text-lg font-bold text-white mb-2 group-hover:text-red-400 transition-colors;
+}
+
+.locpriority-marketing-card-yt p {
+    @apply text-slate-400 text-xs leading-relaxed;
+}
+
+.locpriority-marketing-card-yt footer {
+    @apply text-xs font-bold text-red-400 pt-3 border-t border-slate-800/60 flex items-center;
+}
+
+.locpriority-marketing-card-insta {
+    @apply bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 hover:border-pink-500/40 transition-all duration-300 flex flex-col justify-between space-y-4;
+}
+
+.locpriority-marketing-card-insta header {
+    @apply flex items-center justify-between mb-4;
+}
+
+.locpriority-marketing-card-insta header span {
+    @apply w-12 h-12 rounded-xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-400 text-2xl;
+}
+
+.locpriority-marketing-card-insta header svg:last-child {
+    @apply text-xs text-slate-500 group-hover:text-pink-400 transition-colors;
+}
+
+.locpriority-marketing-card-insta h3 {
+    @apply text-lg font-bold text-white mb-2 group-hover:text-pink-300 transition-colors;
+}
+
+.locpriority-marketing-card-insta p {
+    @apply text-slate-400 text-xs leading-relaxed;
+}
+
+.locpriority-marketing-card-insta footer {
+    @apply text-xs font-bold text-pink-400 pt-3 border-t border-slate-800/60 flex items-center;
+}
+
+.locpriority-marketing-card-shopify {
+    @apply bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 hover:border-emerald-500/40 transition-all duration-300 flex flex-col justify-between space-y-4;
+}
+
+.locpriority-marketing-card-shopify header {
+    @apply flex items-center justify-between mb-4;
+}
+
+.locpriority-marketing-card-shopify header span {
+    @apply w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-2xl;
+}
+
+.locpriority-marketing-card-shopify h3 {
+    @apply text-lg font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors;
+}
+
+.locpriority-marketing-card-shopify p {
+    @apply text-slate-400 text-xs leading-relaxed;
+}
+
+/* External Production Links */
+.locpriority-links-section {
+    @apply space-y-8;
+}
+
+.locpriority-links-section > h2 {
+    @apply text-2xl sm:text-4xl font-extrabold text-white tracking-tight text-center;
+}
+
+.locpriority-links-grid {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-6;
+}
+
+.locpriority-links-grid a {
+    @apply bg-slate-900/60 border border-slate-800/80 rounded-2xl p-6 hover:border-emerald-500/40 hover:bg-slate-900 transition-all duration-300 flex flex-col items-center text-center space-y-3;
+}
+
+.locpriority-links-grid a > svg {
+    @apply text-3xl text-emerald-400 mb-1;
+}
+
+.locpriority-links-grid a > span {
+    @apply text-sm font-bold text-white group-hover:text-emerald-400 transition-colors;
+}
+
+.locpriority-links-grid a > small {
+    @apply text-xs text-slate-500;
+}

@@ -8,50 +8,50 @@ const Privacy: React.FC = () => {
 
     return (
         <div className="page-container">
-            <div className="content-card privacy-card-content">
+            <main className="content-card privacy-page">
                 <h1 className="page-title">{t('privacy.title')}</h1>
 
-                <p className="privacy-subtitle">
+                <p>
                     {t('privacy.subtitle')}
                 </p>
 
                 <section>
-                    <h2 className="privacy-section-title">{t('privacy.sec1Title')}</h2>
-                    <p className="privacy-section-text">
+                    <h2>{t('privacy.sec1Title')}</h2>
+                    <p>
                         {t('privacy.sec1Text')}
                     </p>
                 </section>
 
                 <section>
-                    <h2 className="privacy-section-title">{t('privacy.sec2Title')}</h2>
-                    <p className="privacy-section-text">
+                    <h2>{t('privacy.sec2Title')}</h2>
+                    <p>
                         {t('privacy.sec2Text')}
                     </p>
                 </section>
 
                 <section>
-                    <h2 className="privacy-section-title">{t('privacy.sec3Title')}</h2>
-                    <p className="privacy-section-text">
+                    <h2>{t('privacy.sec3Title')}</h2>
+                    <p>
                         {t('privacy.sec3Text')}
                     </p>
                 </section>
 
                 <section>
-                    <h2 className="privacy-section-title">{t('privacy.sec4Title')}</h2>
-                    <p className="privacy-section-text">
+                    <h2>{t('privacy.sec4Title')}</h2>
+                    <p>
                         {t('privacy.sec4Text')}
                     </p>
                 </section>
 
                 <section>
-                    <h2 className="privacy-section-title">{t('privacy.sec5Title')}</h2>
-                    <p className="privacy-section-text">
+                    <h2>{t('privacy.sec5Title')}</h2>
+                    <p>
                         {t('privacy.sec5Text1')}
-                        <Link to="/contact" className="privacy-link">{t('privacy.sec5LinkText')}</Link>
+                        <Link to="/contact">{t('privacy.sec5LinkText')}</Link>
                         {t('privacy.sec5Text2')}
                     </p>
                 </section>
-            </div>
+            </main>
         </div>
     );
 };

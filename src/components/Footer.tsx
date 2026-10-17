@@ -9,18 +9,18 @@ const Footer: React.FC = () => {
     return (
         <footer className="footer">
             <div className="footer-container">
-                <p className="footer-copyright">
+                <p>
                     {t('app.footer.copyright')}
                 </p>
 
-                <div className="footer-links">
-                    <Link to="/terms" className="footer-link">
+                <nav aria-label="Liens de pied de page">
+                    <Link to="/terms">
                         {t('app.footer.terms')}
                     </Link>
-                    <Link to="/privacy" className="footer-link">
+                    <Link to="/privacy">
                         {t('app.footer.privacy')}
                     </Link>
-                </div>
+                </nav>
             </div>
         </footer>
     );

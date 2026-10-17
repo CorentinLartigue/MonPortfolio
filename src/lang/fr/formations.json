@@ -6,13 +6,15 @@
   },
   "btnViewTraining": "Voir la formation",
   "form1": {
-    "title": "Bachelor 3 et Mastère Développement Web",
-    "period": "2024 - 2027",
-    "desc": "Formation spécialisée en développement web, couvrant les technologies front-end et back-end. Cette formation permet une maîtrise des langages de programmation modernes ainsi que des frameworks utilisés dans l'industrie.",
-    "positive1": "Formation reconnue par le ministère du travail et les entreprises",
-    "positive2": "La formation offre une bonne base en développement front-end et back-end, avec des projets pratiques et un accompagnement professionnel apprécié.",
-    "positive3": "De nombreux projets pratiques qui permettent de développer plutôt vite les connaissances apprises",
-    "negative1": "Cependant, les projets interfiliaires (Ydays) manquent de clarté et d'encadrement, et certains cours pourraient être plus approfondis avec davantage de séances.",
+    "title": "Expert en Développement Logiciel (RNCP39583 - Niveau 7) - Mastère Full Stack",
+    "period": "2024 - 2027 (Actuellement en Mastère 2)",
+    "desc": "Cursus de niveau Bac+5 combinant enseignement théorique, alternance en entreprise et réalisations pratiques en solo ou en équipe.",
+    "positive1": "Titre certifié RNCP niveau 7 (Bac+5) reconnu par l'État et le monde professionnel.",
+    "positive2": "Volume important de projets concrets permettant de coder et pratiquer de manière bien plus soutenue que dans d'autres cursus.",
+    "positive3": "Développement d'une solide autonomie technique et d'une vraie polyvalence sur l'ensemble de la chaîne de développement.",
+    "negative1": "Rythme serré : les délais accordés aux projets sont souvent trop restreints pour les pousser jusqu'à un niveau d'aboutissement complet.",
+    "negative2": "Rythme de progression parfois ralenti pour s'aligner sur les niveaux les plus faibles, freinant l'atteinte du niveau de complexité technique attendu en Mastère 2.",
+    "negative3": "Hétérogénéité pédagogique selon l'expérience des intervenants et redondance de certaines notions fondamentales d'un module à l'autre.",
     "school": "YNOV Campus Bordeaux"
   },
   "form2": {

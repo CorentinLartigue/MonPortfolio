@@ -1,0 +1,140 @@
+/*======= PORTFOLIO PROJECT ========*/
+
+.portfolio-container {
+    @apply min-h-screen bg-gray-950 text-gray-300 font-mono selection:bg-cyan-500/30;
+}
+
+/*======= MAIN CONTENT ========*/
+
+/* Main Content */
+.portfolio-main {
+    @apply max-w-5xl mx-auto px-6 py-16 sm:py-24 space-y-24;
+}
+
+/* Objective */
+.portfolio-objective-grid {
+    @apply grid md:grid-cols-3 gap-8 items-start;
+}
+
+.portfolio-objective-grid aside {
+    @apply md:col-span-1 text-cyan-500 flex flex-col gap-4;
+}
+
+.portfolio-objective-grid aside svg {
+    @apply text-5xl;
+}
+
+.portfolio-objective-grid aside h2 {
+    @apply text-2xl font-bold uppercase tracking-widest text-white;
+}
+
+.portfolio-objective-grid > div {
+    @apply md:col-span-2 bg-gray-900 p-8 rounded-xl border border-gray-800 text-lg leading-relaxed;
+}
+
+/* Features */
+.portfolio-features-section {
+    @apply space-y-12;
+}
+
+.portfolio-features-section > h2 {
+    @apply text-3xl font-bold text-white flex items-center gap-4 border-b border-gray-800 pb-4;
+}
+
+.portfolio-features-section > h2 svg {
+    @apply text-cyan-500;
+}
+
+.portfolio-features-grid {
+    @apply grid md:grid-cols-2 gap-6;
+}
+
+.portfolio-features-grid article {
+    @apply bg-gray-900 p-6 rounded-xl border border-gray-800 hover:border-cyan-500/50 transition-colors;
+}
+
+.portfolio-features-grid article h3 {
+    @apply text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors;
+}
+
+.portfolio-features-grid article h3 span {
+    @apply text-cyan-500 mr-2;
+}
+
+.portfolio-features-grid article p {
+    @apply text-gray-400 text-sm leading-relaxed;
+}
+
+/* Tech Stack */
+.portfolio-stack-box {
+    @apply bg-gradient-to-br from-gray-900 to-gray-950 p-10 rounded-2xl border border-gray-800 shadow-2xl;
+}
+
+.portfolio-stack-box > h2 {
+    @apply text-3xl font-bold text-white mb-10 text-center flex items-center justify-center gap-4;
+}
+
+.portfolio-stack-box > h2 svg {
+    @apply text-cyan-500;
+}
+
+.portfolio-stack-grid {
+    @apply grid md:grid-cols-3 gap-8;
+}
+
+.portfolio-stack-grid article {
+    @apply flex flex-col items-center text-center space-y-3;
+}
+
+.portfolio-stack-grid article > span {
+    @apply w-12 h-12 rounded-full bg-cyan-500/10 flex items-center justify-center text-cyan-400 font-bold text-xl border border-cyan-500/20;
+}
+
+.portfolio-stack-grid article h3 {
+    @apply text-white font-bold;
+}
+
+.portfolio-stack-grid article p {
+    @apply text-xs text-gray-500;
+}
+
+/* Challenges & Learning */
+.portfolio-insights-grid {
+    @apply grid md:grid-cols-2 gap-12;
+}
+
+.portfolio-challenges-box {
+    @apply space-y-8 border-l-2 border-red-500/30 pl-8;
+}
+
+.portfolio-challenges-box h2 {
+    @apply text-2xl font-bold text-white;
+}
+
+.portfolio-challenges-box ul {
+    @apply space-y-6 list-none p-0 m-0;
+}
+
+.portfolio-challenges-box li strong {
+    @apply block text-red-400 mb-1;
+}
+
+.portfolio-challenges-box li span {
+    @apply text-sm text-gray-400 leading-relaxed;
+}
+
+.portfolio-learning-card {
+    @apply bg-gray-900 p-8 rounded-xl border border-gray-800 relative;
+}
+
+.portfolio-learning-card > svg {
+    @apply absolute top-8 right-8 text-6xl text-gray-800 opacity-30;
+}
+
+.portfolio-learning-card h2 {
+    @apply text-2xl font-bold text-white mb-6 relative z-10;
+}
+
+.portfolio-learning-card p {
+    @apply text-gray-400 leading-relaxed relative z-10;
+}

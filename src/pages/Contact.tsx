@@ -9,98 +9,89 @@ const Contact: React.FC = () => {
 
     return (
         <div className="page-container">
-            <div className="content-card contact-card">
+            <main className="content-card contact-page">
 
-                <div className="contact-header">
+                <header>
                     <h1 className="page-title">
                         {t('contact.title')}
                     </h1>
                     <p className="page-subtitle">
                         {t('contact.subtitle')}
                     </p>
-                </div>
+                </header>
 
-                <section className="contact-section-small">
+                <section>
                     <h2 className="section-title">
                         {t('contact.infoTitle')}
                     </h2>
                     <div className="contact-info-grid">
 
-                        <div className="contact-card-item">
-                            <div className="contact-icon-wrapper">
-                                <FaPhoneAlt className="contact-icon-small"/>
-                            </div>
+                        <article>
+                            <span>
+                                <FaPhoneAlt />
+                            </span>
                             <div>
-                                <p className="contact-phone-label">{t('contact.phoneLabel')}</p>
-                                <a
-                                    href="tel:+33642167647"
-                                    className="contact-phone-link"
-                                >
+                                <label>{t('contact.phoneLabel')}</label>
+                                <a href="tel:+33642167647">
                                     +33 6 42 16 76 47
                                 </a>
                             </div>
-                        </div>
+                        </article>
 
-                        <div className="contact-card-item">
-                            <div className="contact-icon-wrapper">
-                                <FaEnvelope className="contact-icon-small"/>
-                            </div>
+                        <article>
+                            <span>
+                                <FaEnvelope />
+                            </span>
                             <div>
-                                <p className="contact-email-label">{t('contact.emailLabel')}</p>
-                                <a
-                                    href="mailto:corentin.lartigue.cl@gmail.com"
-                                    className="contact-email-link"
-                                >
+                                <label>{t('contact.emailLabel')}</label>
+                                <a href="mailto:corentin.lartigue.cl@gmail.com">
                                     corentin.lartigue.cl@gmail.com
                                 </a>
                             </div>
-                        </div>
+                        </article>
 
                     </div>
                 </section>
 
-                <section className="contact-section-large">
+                <section>
                     <h2 className="section-title">
                         {t('contact.socialTitle')}
                     </h2>
-                    <p className="contact-section-desc">
+                    <p className="section-text">
                         {t('contact.socialDesc')}
                     </p>
 
-                    <div className="contact-socials-row">
+                    <nav aria-label="Réseaux sociaux">
                         <a
                             href="https://www.linkedin.com/in/corentin-lartigue"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="contact-social-item group"
                         >
-                            <div className="contact-social-icon-blue">
-                                <FaLinkedin className="contact-icon-large"/>
-                            </div>
-                            <span className="contact-social-label">LinkedIn</span>
+                            <span>
+                                <FaLinkedin />
+                            </span>
+                            <strong>LinkedIn</strong>
                         </a>
 
                         <a
                             href="https://github.com/CorentinLartigue"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="contact-social-item group"
                         >
-                            <div className="contact-social-icon-dark">
-                                <FaGithub className="contact-icon-large"/>
-                            </div>
-                            <span className="contact-social-label-dark">GitHub</span>
+                            <span>
+                                <FaGithub />
+                            </span>
+                            <strong>GitHub</strong>
                         </a>
-                    </div>
+                    </nav>
                 </section>
 
-                <div className="contact-cv-actions">
+                <footer>
                     <a
                         href={cv}
                         download="CV_Corentin_Lartigue.pdf"
-                        className="contact-btn-dark"
                     >
-                        <FaDownload className="contact-btn-icon"/>
+                        <FaDownload />
                         <span>{t('contact.btnDownloadCV')}</span>
                     </a>
 
@@ -108,20 +99,17 @@ const Contact: React.FC = () => {
                         href="https://www.canva.com/design/DAGgf_qHmnY/hIU_ywK-VuoQ8L2-zw7WhQ/view?utm_content=DAGgf_qHmnY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hf94ecbf562"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="contact-btn-blue"
                     >
-                        <FaExternalLinkAlt className="contact-btn-icon"/>
+                        <FaExternalLinkAlt />
                         <span>{t('contact.btnOnlineCV')}</span>
                     </a>
-                </div>
+                </footer>
 
-                <section className="contact-cta-section">
-                    <h3 className="contact-cta-title">{t('contact.ctaTitle')}</h3>
-                    <p className="contact-cta-text">
-                        {t('contact.ctaDesc')}
-                    </p>
-                </section>
-            </div>
+                <aside>
+                    <h3>{t('contact.ctaTitle')}</h3>
+                    <p>{t('contact.ctaDesc')}</p>
+                </aside>
+            </main>
         </div>
     );
 };

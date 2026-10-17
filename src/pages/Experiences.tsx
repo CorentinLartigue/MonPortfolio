@@ -1,68 +1,56 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-import {experiences} from '../data/experiences.ts';
-import {useTranslate} from '../hooks/useTranslate.ts';
+import { Link } from 'react-router-dom';
+import { experiences } from '../data/experiences.ts';
+import { useTranslate } from '../hooks/useTranslate.ts';
 import '../styles/experiences.css';
 
 const Experiences: React.FC = () => {
-    const {t} = useTranslate();
+    const { t } = useTranslate();
 
     return (
-        <div className="page-container">
-            <div className="xp-container">
-                <h1 className="xp-title">
-                    {t('experiences.title')}
-                </h1>
+        <main className="experiences-page">
+            <h1>{t('experiences.title')}</h1>
 
-                {experiences.map((experience, index) => (
-                    <div
-                        key={index}
-                        className="xp-card"
-                    >
-                        <div className="xp-header">
-                            <img
-                                src={experience.logo}
-                                alt={experience.entreprise}
-                                className="xp-logo"
-                            />
-                            <div className="xp-header-text">
-                                <h2 className="xp-job-title">
-                                    {t(experience.titreKey)}
-                                </h2>
-                                <p className="xp-meta">{experience.entreprise}</p>
-                                <p className="xp-meta">{t(experience.periodeKey)}</p>
-                            </div>
+            {experiences.map((experience, index) => (
+                <article key={index}>
+                    <header>
+                        <img
+                            src={experience.logo}
+                            alt={experience.entreprise}
+                        />
+                        <div>
+                            <h2>{t(experience.titreKey)}</h2>
+                            <p>{experience.entreprise}</p>
+                            <p>{t(experience.periodeKey)}</p>
                         </div>
+                    </header>
 
-                        <p className="xp-desc">{t(experience.descriptionKey)}</p>
+                    <p>{t(experience.descriptionKey)}</p>
 
-                        <div className="xp-section">
-                            <h3 className="xp-section-title">{t('experiences.headings.missions')}</h3>
-                            <ul className="xp-missions-list">
-                                {experience.missionsKeys.map((missionKey, idx) => (
-                                    <li key={idx}>{t(missionKey)}</li>
-                                ))}
-                            </ul>
-                        </div>
+                    <section>
+                        <h3>{t('experiences.headings.missions')}</h3>
+                        <ul>
+                            {experience.missionsKeys.map((missionKey, idx) => (
+                                <li key={idx}>{t(missionKey)}</li>
+                            ))}
+                        </ul>
+                    </section>
 
-                        <div className="xp-section">
-                            <h3 className="xp-section-title">
-                                {t('experiences.headings.opinion')}
-                            </h3>
-                            <p className="xp-opinion-text">{t(experience.avisKey)}</p>
-                        </div>
+                    <section>
+                        <h3>{t('experiences.headings.opinion')}</h3>
+                        <blockquote>{t(experience.avisKey)}</blockquote>
+                    </section>
 
-                        {experience.lienProjet && (
-                            <div className="xp-link-container">
-                                <Link to={experience.lienProjet} className="xp-link">
-                                    {t('experiences.btnViewProject')}
-                                </Link>
-                            </div>
-                        )}
-                    </div>
-                ))}
-            </div>
-        </div>
+                    {experience.lienProjet && (
+                        <footer>
+                            <Link to={experience.lienProjet}>
+                                {t('experiences.btnViewProject')}
+                            </Link>
+                        </footer>
+                    )}
+                </article>
+            ))}
+        </main>
     );
 };
 

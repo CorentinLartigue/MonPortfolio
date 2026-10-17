@@ -6,13 +6,15 @@
   },
   "btnViewTraining": "View Course",
   "form1": {
-    "title": "Bachelor 3 and Master's in Web Development",
-    "period": "2024 - 2027",
-    "desc": "Specialized training in web development, covering front-end and back-end technologies. This course provides mastery of modern programming languages as well as frameworks used in the industry.",
-    "positive1": "Degree recognized by the Ministry of Labor and companies",
-    "positive2": "The program offers a good foundation in front-end and back-end development, with practical projects and appreciated professional support.",
-    "positive3": "Many practical projects that allow students to develop the acquired knowledge fairly quickly",
-    "negative1": "However, interdisciplinary projects (Ydays) lack clarity and guidance, and some courses could be more in-depth with more sessions.",
+    "title": "Software Development Expert (RNCP39583 - Level 7) - Full Stack Master",
+    "period": "2024 - 2027 (Currently in Master 2)",
+    "desc": "5-year degree program combining academic coursework, corporate apprenticeship, and practical development projects executed solo or in teams.",
+    "positive1": "State-certified RNCP Level 7 (Master's level) degree recognized by the industry.",
+    "positive2": "Substantial volume of practical projects enabling much more sustained coding and practice than standard curricula.",
+    "positive3": "Development of strong technical autonomy and genuine versatility across the entire software development lifecycle.",
+    "negative1": "Tight deadlines: project timeframes are often too constrained to bring applications to full production-grade completion.",
+    "negative2": "Pacing is sometimes slowed down to accommodate less experienced students, holding back the technical complexity expected at the Master 2 level.",
+    "negative3": "Pedagogical inconsistency across instructors and recurrence of basic concepts across different modules instead of deeper topics.",
     "school": "YNOV Campus Bordeaux"
   },
   "form2": {

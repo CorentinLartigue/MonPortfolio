@@ -1,0 +1,116 @@
+/*======= YSPORT PROJECT STYLES ========*/
+
+/* Root layout and container styling */
+.ysport-container {
+    @apply min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-cyan-500/30;
+}
+
+/*======= MAIN CONTENT ========*/
+
+.ysport-main {
+    @apply max-w-6xl mx-auto px-6 py-20 space-y-32;
+}
+
+/*======= FEATURE SECTIONS ========*/
+
+.ysport-feature-grid {
+    @apply grid md:grid-cols-2 gap-12 items-center;
+}
+
+.ysport-feature-grid:first-of-type figure {
+    @apply order-2 md:order-1;
+}
+
+.ysport-feature-grid:first-of-type article {
+    @apply space-y-6 order-1 md:order-2;
+}
+
+.ysport-feature-grid article {
+    @apply space-y-6;
+}
+
+.ysport-feature-grid article > span {
+    @apply inline-flex w-16 h-16 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-2xl items-center justify-center text-3xl mb-6;
+}
+
+.ysport-feature-grid:nth-of-type(2) article > span {
+    @apply bg-cyan-500/10 text-cyan-400 border border-cyan-500/20;
+}
+
+.ysport-feature-grid article h2 {
+    @apply text-3xl font-black text-white;
+}
+
+.ysport-feature-grid article p {
+    @apply text-lg text-slate-300 leading-relaxed;
+}
+
+.ysport-feature-grid article ul {
+    @apply space-y-4 bg-slate-900/80 p-6 rounded-2xl shadow-xl border border-slate-800 list-none m-0;
+}
+
+.ysport-feature-grid article li {
+    @apply flex items-start gap-4 text-slate-300 font-medium;
+}
+
+.ysport-feature-grid article li > span {
+    @apply w-6 h-6 rounded-full bg-cyan-950/80 text-cyan-400 border border-cyan-800/40 flex items-center justify-center shrink-0 text-sm font-bold;
+}
+
+.ysport-feature-grid-pb {
+    @apply grid md:grid-cols-2 gap-12 items-center pb-20;
+}
+
+.ysport-feature-grid-pb article {
+    @apply space-y-6;
+}
+
+.ysport-feature-grid-pb article > span {
+    @apply inline-flex w-16 h-16 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-2xl items-center justify-center text-3xl mb-6;
+}
+
+.ysport-feature-grid-pb article h2 {
+    @apply text-3xl font-black text-white;
+}
+
+.ysport-feature-grid-pb article p {
+    @apply text-lg text-slate-300 leading-relaxed;
+}
+
+.ysport-extra-card {
+    @apply bg-slate-900/80 p-6 rounded-2xl border border-slate-800 shadow-xl border-l-4 border-l-cyan-500 text-slate-300 font-medium;
+}
+
+/*======= CLUSTERS SECTION ========*/
+
+.ysport-cluster-box {
+    @apply bg-slate-900/80 text-white p-10 md:p-16 rounded-[3rem] shadow-2xl border border-slate-800;
+}
+
+.ysport-cluster-header {
+    @apply text-center max-w-3xl mx-auto space-y-6 mb-16;
+}
+
+.ysport-cluster-icon {
+    @apply w-16 h-16 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6;
+}
+
+.ysport-cluster-header h2 {
+    @apply text-3xl font-black text-white;
+}
+
+.ysport-cluster-header p {
+    @apply text-lg text-slate-300 leading-relaxed;
+}
+
+.ysport-cluster-grid {
+    @apply grid md:grid-cols-2 gap-8;
+}
+
+.ysport-cluster-card {
+    @apply bg-slate-800/80 p-4 rounded-3xl border border-slate-700/80 hover:border-cyan-500 transition-colors;
+}
+
+.ysport-cluster-label {
+    @apply text-center font-bold text-cyan-400 uppercase tracking-widest text-sm mt-3;
+}

@@ -1,0 +1,241 @@
+/*======= PROJECT HERO COMPONENT ========*/
+
+.project-hero-wrapper {
+    @apply relative w-full;
+}
+
+/* Return button container */
+.project-return-wrapper {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-4;
+}
+
+/* Base hero presentation banner */
+.project-hero {
+    @apply relative overflow-hidden py-24 sm:py-32 px-4 sm:px-6 lg:px-8 border-b text-center;
+}
+
+.project-hero-glow {
+    @apply absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-96 rounded-full blur-3xl pointer-events-none;
+}
+
+.project-hero-content {
+    @apply relative z-10 max-w-4xl mx-auto flex flex-col items-center;
+}
+
+.project-hero-badge {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full font-semibold text-xs sm:text-sm mb-6 tracking-wide;
+}
+
+.project-hero-badge svg {
+    @apply text-sm;
+}
+
+.project-hero-content h1 {
+    @apply text-4xl sm:text-6xl font-black text-white tracking-tight mb-4 bg-clip-text text-transparent;
+}
+
+.project-hero-content > p:first-of-type {
+    @apply text-lg sm:text-xl font-bold mb-6;
+}
+
+.project-hero-content > p:nth-of-type(2) {
+    @apply text-sm sm:text-base text-slate-300 max-w-3xl leading-relaxed mb-8;
+}
+
+/* External action buttons */
+.project-hero-actions {
+    @apply flex flex-wrap justify-center gap-4 mb-8;
+}
+
+.project-hero-actions a {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-xs sm:text-sm transition-all duration-300 shadow-lg shadow-black/20;
+}
+
+.project-hero-actions a svg {
+    @apply text-base;
+}
+
+/* Technology stack tags */
+.project-hero-content ul {
+    @apply flex flex-wrap justify-center gap-2 mt-4 max-w-3xl mx-auto list-none p-0;
+}
+
+.project-hero-content li {
+    @apply px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs font-semibold text-slate-300 shadow-sm transition-colors;
+}
+
+/*======= THEME PALETTES ========*/
+
+/* Amber Theme */
+.project-hero-amber {
+    @apply bg-gradient-to-b from-amber-950/30 via-slate-900 to-slate-950 border-amber-900/20;
+}
+
+.project-hero-amber .project-hero-glow {
+    @apply bg-amber-500/10;
+}
+
+.project-hero-amber .project-hero-badge {
+    @apply bg-amber-500/10 border border-amber-500/30 text-amber-300;
+}
+
+.project-hero-amber .project-hero-content h1 {
+    @apply bg-gradient-to-r from-white via-amber-100 to-amber-300;
+}
+
+.project-hero-amber .project-hero-content > p:first-of-type {
+    @apply text-amber-400;
+}
+
+.project-hero-amber .project-hero-actions a {
+    @apply bg-amber-500/10 border border-amber-500/30 text-amber-300 hover:bg-amber-500/20 hover:border-amber-400/50;
+}
+
+.project-hero-amber .project-hero-content li:hover {
+    @apply border-amber-500/40 text-amber-300;
+}
+
+/* Blue Theme */
+.project-hero-blue {
+    @apply bg-gradient-to-b from-blue-950/30 via-slate-900 to-slate-950 border-blue-900/20;
+}
+
+.project-hero-blue .project-hero-glow {
+    @apply bg-blue-500/10;
+}
+
+.project-hero-blue .project-hero-badge {
+    @apply bg-blue-500/10 border border-blue-500/30 text-blue-300;
+}
+
+.project-hero-blue .project-hero-content h1 {
+    @apply bg-gradient-to-r from-white via-blue-100 to-blue-300;
+}
+
+.project-hero-blue .project-hero-content > p:first-of-type {
+    @apply text-blue-400;
+}
+
+.project-hero-blue .project-hero-actions a {
+    @apply bg-blue-500/10 border border-blue-500/30 text-blue-300 hover:bg-blue-500/20 hover:border-blue-400/50;
+}
+
+.project-hero-blue .project-hero-content li:hover {
+    @apply border-blue-500/40 text-blue-300;
+}
+
+/* Emerald Theme */
+.project-hero-emerald {
+    @apply bg-gradient-to-b from-emerald-950/30 via-slate-900 to-slate-950 border-emerald-900/20;
+}
+
+.project-hero-emerald .project-hero-glow {
+    @apply bg-emerald-500/10;
+}
+
+.project-hero-emerald .project-hero-badge {
+    @apply bg-emerald-500/10 border border-emerald-500/30 text-emerald-300;
+}
+
+.project-hero-emerald .project-hero-content h1 {
+    @apply bg-gradient-to-r from-white via-emerald-100 to-emerald-300;
+}
+
+.project-hero-emerald .project-hero-content > p:first-of-type {
+    @apply text-emerald-400;
+}
+
+.project-hero-emerald .project-hero-actions a {
+    @apply bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 hover:bg-emerald-500/20 hover:border-emerald-400/50;
+}
+
+.project-hero-emerald .project-hero-content li:hover {
+    @apply border-emerald-500/40 text-emerald-300;
+}
+
+/* Purple Theme */
+.project-hero-purple {
+    @apply bg-gradient-to-b from-purple-950/30 via-slate-900 to-slate-950 border-purple-900/20;
+}
+
+.project-hero-purple .project-hero-glow {
+    @apply bg-purple-600/10;
+}
+
+.project-hero-purple .project-hero-badge {
+    @apply bg-purple-600/10 border border-purple-500/30 text-purple-300;
+}
+
+.project-hero-purple .project-hero-content h1 {
+    @apply bg-gradient-to-r from-white via-purple-100 to-purple-300;
+}
+
+.project-hero-purple .project-hero-content > p:first-of-type {
+    @apply text-purple-400;
+}
+
+.project-hero-purple .project-hero-actions a {
+    @apply bg-purple-600/10 border border-purple-500/30 text-purple-300 hover:bg-purple-600/20 hover:border-purple-400/50;
+}
+
+.project-hero-purple .project-hero-content li:hover {
+    @apply border-purple-500/40 text-purple-300;
+}
+
+/* Cyan Theme */
+.project-hero-cyan {
+    @apply bg-gradient-to-b from-cyan-950/30 via-slate-900 to-slate-950 border-cyan-900/20;
+}
+
+.project-hero-cyan .project-hero-glow {
+    @apply bg-cyan-500/10;
+}
+
+.project-hero-cyan .project-hero-badge {
+    @apply bg-cyan-500/10 border border-cyan-500/30 text-cyan-300;
+}
+
+.project-hero-cyan .project-hero-content h1 {
+    @apply bg-gradient-to-r from-white via-cyan-100 to-cyan-300;
+}
+
+.project-hero-cyan .project-hero-content > p:first-of-type {
+    @apply text-cyan-400;
+}
+
+.project-hero-cyan .project-hero-actions a {
+    @apply bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 hover:bg-cyan-500/20 hover:border-cyan-400/50;
+}
+
+.project-hero-cyan .project-hero-content li:hover {
+    @apply border-cyan-500/40 text-cyan-300;
+}
+
+/* Indigo Theme */
+.project-hero-indigo {
+    @apply bg-gradient-to-b from-indigo-950/30 via-slate-900 to-slate-950 border-indigo-900/20;
+}
+
+.project-hero-indigo .project-hero-glow {
+    @apply bg-indigo-500/10;
+}
+
+.project-hero-indigo .project-hero-badge {
+    @apply bg-indigo-500/10 border border-indigo-500/30 text-indigo-300;
+}
+
+.project-hero-indigo .project-hero-content h1 {
+    @apply bg-gradient-to-r from-white via-indigo-100 to-indigo-300;
+}
+
+.project-hero-indigo .project-hero-content > p:first-of-type {
+    @apply text-indigo-400;
+}
+
+.project-hero-indigo .project-hero-actions a {
+    @apply bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 hover:bg-indigo-500/20 hover:border-indigo-400/50;
+}
+
+.project-hero-indigo .project-hero-content li:hover {
+    @apply border-indigo-500/40 text-indigo-300;
+}

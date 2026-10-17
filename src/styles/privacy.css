@@ -1,19 +1,25 @@
-.privacy-card-content {
+/*======= PRIVACY PAGE ========*/
+
+.privacy-page {
     @apply p-6 sm:p-10 space-y-6;
 }
 
-.privacy-subtitle {
+.privacy-page > p {
     @apply page-subtitle text-center;
 }
 
-.privacy-section-title {
-    @apply section-title mt-8;
+.privacy-page > section {
+    @apply space-y-2 mt-8;
 }
 
-.privacy-section-text {
-    @apply section-text mt-2;
+.privacy-page > section h2 {
+    @apply section-title;
 }
 
-.privacy-link {
+.privacy-page > section p {
+    @apply section-text;
+}
+
+.privacy-page a {
     @apply text-blue-600 hover:underline font-medium;
 }

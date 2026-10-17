@@ -8,41 +8,41 @@ const Error404: React.FC = () => {
     const {t} = useTranslate();
 
     return (
-        <div className="page-container error404-container">
-            <div className="content-card error404-card">
+        <main className="page-container error404-container">
+            <article className="content-card error404-card">
 
                 <div className="error404-icon-wrapper">
-                    <FiCompass className="error404-icon animate-spin-slow"/>
+                    <FiCompass className="animate-spin-slow"/>
                     <div className="error404-icon-pulse"></div>
                 </div>
 
                 <div className="error404-code-container">
-                    <h1 className="error404-code">404</h1>
-                    <div className="error404-code-shadow">404</div>
+                    <h1>404</h1>
+                    <div aria-hidden="true">404</div>
                 </div>
 
-                <div className="error404-text-wrapper">
-                    <h2 className="error404-title">
+                <div>
+                    <h2>
                         {t('error404.title')}
                     </h2>
-                    <p className="error404-desc">
+                    <p>
                         {t('error404.description')}
                     </p>
                 </div>
 
-                <div className="error404-actions">
-                    <Link to="/" className="error404-btn-primary">
-                        <FiHome className="error404-btn-icon"/>
+                <nav aria-label="Actions de retour">
+                    <Link to="/">
+                        <FiHome />
                         <span>{t('error404.btnHome')}</span>
                     </Link>
-                    <Link to="/projects" className="error404-btn-secondary">
+                    <Link to="/projects">
                         <span>{t('error404.btnProjects')}</span>
-                        <FiArrowRight className="error404-btn-icon"/>
+                        <FiArrowRight />
                     </Link>
-                </div>
+                </nav>
 
-            </div>
-        </div>
+            </article>
+        </main>
     );
 };
 

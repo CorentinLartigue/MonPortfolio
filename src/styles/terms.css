@@ -1,19 +1,25 @@
-.terms-card-content {
+/*======= TERMS PAGE ========*/
+
+.terms-page {
     @apply p-6 sm:p-10 space-y-6;
 }
 
-.terms-subtitle {
+.terms-page > p {
     @apply page-subtitle text-center;
 }
 
-.terms-section-title {
-    @apply section-title mt-8;
+.terms-page > section {
+    @apply space-y-2 mt-8;
 }
 
-.terms-section-text {
-    @apply section-text mt-2;
+.terms-page > section h2 {
+    @apply section-title;
 }
 
-.terms-link {
+.terms-page > section p {
+    @apply section-text;
+}
+
+.terms-page a {
     @apply text-blue-600 hover:underline font-medium;
 }

@@ -1,0 +1,75 @@
+/*======= BIORELAI PROJECT ========*/
+
+.biorelai-page {
+  @apply min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-emerald-500/30;
+}
+
+/*======= MAIN CONTENT ========*/
+
+/* Main content wrapper */
+.biorelai-main-content {
+  @apply max-w-6xl mx-auto px-6 py-20 space-y-24;
+}
+
+/* Intro card */
+.biorelai-intro-card {
+  @apply bg-slate-900/80 p-8 sm:p-10 rounded-3xl border border-slate-800 shadow-xl;
+}
+
+.biorelai-intro-card h2 {
+  @apply text-2xl font-bold text-white mb-4 border-l-4 border-emerald-500 pl-4;
+}
+
+.biorelai-intro-card p {
+  @apply text-slate-300 text-base sm:text-lg leading-relaxed;
+}
+
+/* Features and roles section */
+.biorelai-main-content > section > h2 {
+  @apply text-3xl font-bold text-center text-white mb-12;
+}
+
+.biorelai-roles-grid {
+  @apply grid md:grid-cols-2 lg:grid-cols-4 gap-6;
+}
+
+.biorelai-role-card {
+  @apply bg-slate-900/80 p-8 rounded-3xl border border-slate-800 shadow-xl hover:border-emerald-500/60 hover:-translate-y-1.5 transition-all duration-300;
+}
+
+.biorelai-role-icon {
+  @apply text-4xl text-emerald-400 mb-6 group-hover:scale-110 transition-transform origin-left;
+}
+
+.biorelai-role-card h3 {
+  @apply text-xl font-bold text-white mb-4;
+}
+
+.biorelai-role-card ul {
+  @apply space-y-3 text-slate-300 list-none p-0 m-0 text-sm;
+}
+
+.biorelai-role-card li {
+  @apply flex items-start gap-2;
+}
+
+.biorelai-role-card li > span {
+  @apply mt-1.5 w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0;
+}
+
+/* Methodology section */
+.biorelai-method-card {
+  @apply bg-slate-900/80 p-8 sm:p-10 rounded-3xl border border-slate-800 shadow-xl;
+}
+
+.biorelai-method-card h2 {
+  @apply text-2xl font-bold text-white mb-6 border-l-4 border-emerald-500 pl-4;
+}
+
+.biorelai-method-card h3 {
+  @apply text-lg font-bold text-emerald-400 mt-6 mb-2;
+}
+
+.biorelai-method-card p {
+  @apply text-slate-300 leading-relaxed text-sm sm:text-base;
+}

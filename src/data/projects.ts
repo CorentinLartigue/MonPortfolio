@@ -1,10 +1,40 @@
 import {IconType} from 'react-icons';
 import {
-    FaReact, FaHtml5, FaGithub, FaJs, FaPhp, FaAndroid, FaJava, FaCss3Alt, FaSync, FaCode
+    FaReact,
+    FaHtml5,
+    FaGithub,
+    FaJs,
+    FaPhp,
+    FaAndroid,
+    FaJava,
+    FaCss3Alt,
+    FaSync,
+    FaCode
 } from 'react-icons/fa';
 import {
-    SiTypescript, SiTailwindcss, SiFigma, SiJquery, SiSymfony, SiBootstrap, SiSpringboot,
-    SiLeaflet, SiTrello
+    SiTailwindcss,
+    SiFigma,
+    SiJquery,
+    SiSymfony,
+    SiBootstrap,
+    SiSpringboot,
+    SiLeaflet,
+    SiTrello,
+    SiNextdotjs,
+    SiSupabase,
+    SiNestjs,
+    SiPostgresql,
+    SiDocker,
+    SiStripe,
+    SiShopify,
+    SiGraphql,
+    SiAngular,
+    SiFlutter,
+    SiNginx,
+    SiLaravel,
+    SiRedis,
+    SiTypescript,
+    SiMysql
 } from 'react-icons/si';
 
 export interface Technology {
@@ -29,16 +59,96 @@ const baseUrl = import.meta.env.BASE_URL;
 
 export const projects: Projet[] = [
     {
+        id: 'dovinyle',
+        titreKey: 'project.list.dovinyle.title',
+        descriptionKey: 'project.list.dovinyle.desc',
+        image: `${baseUrl}images/projects/dovinyle/couverture.png`,
+        lien: '/projects/dovinyle',
+        category: 'web',
+        technologies: [
+            {name: 'Next.js', icon: SiNextdotjs, color: 'text-white'},
+            {name: 'NestJS', icon: SiNestjs, color: 'text-red-600'},
+            {name: 'PostgreSQL', icon: SiPostgresql, color: 'text-blue-400'},
+            {name: 'Stripe', icon: SiStripe, color: 'text-purple-400'},
+            {name: 'Docker', icon: SiDocker, color: 'text-blue-500'},
+            {name: 'Tailwind', icon: SiTailwindcss, color: 'text-cyan-400'},
+            {name: 'Supabase', icon: SiSupabase, color: 'text-emerald-400'},
+            {name: 'Figma', icon: SiFigma, color: 'text-purple-500'},
+            {name: 'Github', icon: FaGithub, color: 'text-gray-400'}
+        ]
+    },
+    {
+        id: 'cheerzup',
+        titreKey: 'project.list.cheerzup.title',
+        descriptionKey: 'project.list.cheerzup.desc',
+        image: `${baseUrl}images/projects/cheerzup/couverture.png`,
+        lien: '/projects/cheerzup',
+        category: 'mobile',
+        technologies: [
+            {name: 'Flutter', icon: SiFlutter, color: 'text-cyan-400'},
+            {name: 'NestJS', icon: SiNestjs, color: 'text-red-600'},
+            {name: 'Angular', icon: SiAngular, color: 'text-red-600'},
+            {name: 'PostgreSQL', icon: SiPostgresql, color: 'text-blue-400'},
+            {name: 'Docker', icon: SiDocker, color: 'text-blue-500'}
+        ]
+    },
+    {
+        id: 'locpriority',
+        titreKey: 'project.list.locpriority.title',
+        descriptionKey: 'project.list.locpriority.desc',
+        image: `${baseUrl}images/projects/locpriority/dashboard.png`,
+        lien: '/projects/locpriority',
+        category: 'web',
+        technologies: [
+            {name: 'Laravel', icon: SiLaravel, color: 'text-red-600'},
+            {name: 'React', icon: FaReact, color: 'text-cyan-400'},
+            {name: 'Shopify', icon: SiShopify, color: 'text-green-600'},
+            {name: 'Redis', icon: SiRedis, color: 'text-red-500'},
+            {name: 'GraphQL', icon: SiGraphql, color: 'text-pink-600'},
+            {name: 'Tailwind', icon: SiTailwindcss, color: 'text-blue-400'}
+        ]
+    },
+    {
+        id: 'ytellerie',
+        titreKey: 'project.list.ytellerie.title',
+        descriptionKey: 'project.list.ytellerie.desc',
+        image: `${baseUrl}images/projects/ytellerie/couverture.png`,
+        lien: '/projects/ytellerie',
+        category: 'web',
+        technologies: [
+            {name: 'Angular', icon: SiAngular, color: 'text-red-600'},
+            {name: 'NestJS', icon: SiNestjs, color: 'text-red-600'},
+            {name: 'PostgreSQL', icon: SiPostgresql, color: 'text-blue-400'},
+            {name: 'Docker', icon: SiDocker, color: 'text-blue-500'},
+            {name: 'Nginx', icon: SiNginx, color: 'text-green-600'}
+        ]
+    },
+    {
+        id: 'horamanea',
+        titreKey: 'project.list.horamanea.title',
+        descriptionKey: 'project.list.horamanea.desc',
+        image: `${baseUrl}images/projects/horamanea/couverture.png`,
+        lien: '/projects/horamanea',
+        category: 'web',
+        technologies: [
+            {name: 'Angular', icon: SiAngular, color: 'text-red-600'},
+            {name: 'TypeScript', icon: SiTypescript, color: 'text-blue-500'},
+            {name: 'Tailwind CSS', icon: SiTailwindcss, color: 'text-cyan-400'},
+            {name: 'Spring Boot', icon: SiSpringboot, color: 'text-green-500'},
+            {name: 'MySQL', icon: SiMysql, color: 'text-blue-600'},
+            {name: 'Stripe', icon: SiStripe, color: 'text-indigo-400'},
+            {name: 'Figma', icon: SiFigma, color: 'text-purple-400'}
+        ]
+    },
+    {
         id: 'portfolio',
         titreKey: 'project.list.portfolio.title',
         descriptionKey: 'project.list.portfolio.desc',
-        image: `${baseUrl}portfolio.webp`,
+        image: `${baseUrl}images/projects/portfolio/couverture.png`,
         lien: '/projects/portfolio',
         category: 'web',
         technologies: [
             {name: 'React', icon: FaReact, color: 'text-cyan-400'},
-            {name: 'TypeScript', icon: SiTypescript, color: 'text-blue-600'},
-            {name: 'HTML', icon: FaHtml5, color: 'text-orange-500'},
             {name: 'Tailwind', icon: SiTailwindcss, color: 'text-blue-400'},
             {name: 'Figma', icon: SiFigma, color: 'text-purple-500'},
             {name: 'Github', icon: FaGithub, color: 'text-gray-900'}
@@ -48,30 +158,25 @@ export const projects: Projet[] = [
         id: 'echecs',
         titreKey: 'project.list.echecs.title',
         descriptionKey: 'project.list.echecs.desc',
-        image: `${baseUrl}echecs.webp`,
+        image: `${baseUrl}images/projects/echecs/couverture.png`,
         lien: '/projects/echecs',
         category: 'web',
         technologies: [
             {name: 'React', icon: FaReact, color: 'text-cyan-400'},
-            {name: 'TypeScript', icon: SiTypescript, color: 'text-blue-600'},
-            {name: 'HTML', icon: FaHtml5, color: 'text-orange-500'},
             {name: 'Tailwind', icon: SiTailwindcss, color: 'text-blue-400'},
-            {name: 'Figma', icon: SiFigma, color: 'text-purple-500'}
+            {name: 'Github', icon: FaGithub, color: 'text-gray-900'}
         ]
     },
     {
         id: 'ysport',
         titreKey: 'project.list.ysport.title',
         descriptionKey: 'project.list.ysport.desc',
-        image: `${baseUrl}ysport.webp`,
+        image: `${baseUrl}images/projects/ysport/couverture.png`,
         lien: '/projects/ysport',
         category: 'web',
         technologies: [
             {name: 'React', icon: FaReact, color: 'text-cyan-400'},
-            {name: 'JavaScript', icon: FaJs, color: 'text-yellow-500'},
-            {name: 'HTML', icon: FaHtml5, color: 'text-orange-500'},
             {name: 'Bootstrap', icon: SiBootstrap, color: 'text-purple-600'},
-            {name: 'Java', icon: FaJava, color: 'text-red-500'},
             {name: 'SpringBoot', icon: SiSpringboot, color: 'text-green-600'},
             {name: 'Leaflet', icon: SiLeaflet, color: 'text-green-500'},
             {name: 'Figma', icon: SiFigma, color: 'text-purple-500'}
@@ -81,13 +186,10 @@ export const projects: Projet[] = [
         id: 'berroyer',
         titreKey: 'project.list.berroyer.title',
         descriptionKey: 'project.list.berroyer.desc',
-        image: `${baseUrl}berroyer.webp`,
+        image: `${baseUrl}images/projects/berroyer/couverture.png`,
         lien: '/projects/berroyer',
         category: 'web',
         technologies: [
-            {name: 'JavaScript', icon: FaJs, color: 'text-yellow-500'},
-            {name: 'PHP', icon: FaPhp, color: 'text-indigo-600'},
-            {name: 'HTML', icon: FaHtml5, color: 'text-orange-500'},
             {name: 'Twig', icon: FaCode, color: 'text-green-600'},
             {name: 'Ajax', icon: FaSync, color: 'text-blue-500'},
             {name: 'Jquery', icon: SiJquery, color: 'text-blue-600'},
@@ -98,7 +200,7 @@ export const projects: Projet[] = [
         id: 'amphitryon',
         titreKey: 'project.list.amphitryon.title',
         descriptionKey: 'project.list.amphitryon.desc',
-        image: `${baseUrl}amphitryon.webp`,
+        image: `${baseUrl}images/projects/amphitryon/couverture.png`,
         lien: '/projects/amphitryon',
         category: 'mobile',
         technologies: [
@@ -112,7 +214,7 @@ export const projects: Projet[] = [
         id: 'biorelai',
         titreKey: 'project.list.biorelai.title',
         descriptionKey: 'project.list.biorelai.desc',
-        image: `${baseUrl}biorelai.webp`,
+        image: `${baseUrl}images/projects/biorelai/couverture.png`,
         lien: '/projects/biorelai',
         category: 'web',
         technologies: [
@@ -126,7 +228,7 @@ export const projects: Projet[] = [
         id: 'm2l_statique',
         titreKey: 'project.list.m2l_statique.title',
         descriptionKey: 'project.list.m2l_statique.desc',
-        image: `${baseUrl}M2L_statique.webp`,
+        image: `${baseUrl}images/projects/m2l/statique.webp`,
         lien: '/projects/m2l',
         category: 'web',
         technologies: [
@@ -140,7 +242,7 @@ export const projects: Projet[] = [
         id: 'm2l_dynamique',
         titreKey: 'project.list.m2l_dynamique.title',
         descriptionKey: 'project.list.m2l_dynamique.desc',
-        image: `${baseUrl}M2L_dynamique.webp`,
+        image: `${baseUrl}images/projects/m2l/dynamique.webp`,
         lien: '/projects/m2l',
         category: 'web',
         technologies: [
@@ -155,7 +257,7 @@ export const projects: Projet[] = [
         id: 'sneaky',
         titreKey: 'project.list.sneaky.title',
         descriptionKey: 'project.list.sneaky.desc',
-        image: `${baseUrl}sneaky.webp`,
+        image: `${baseUrl}images/projects/sneaky/couverture.webp`,
         lien: '/projects/sneaky',
         category: 'web',
         technologies: [

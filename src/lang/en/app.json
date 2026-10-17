@@ -8,11 +8,12 @@
     "contact": "Contact"
   },
   "footer": {
-    "copyright": "@2024 Corentin Lartigue. All rights reserved.",
+    "copyright": "@2026 Corentin Lartigue. All rights reserved.",
     "terms": "Terms of Use",
     "privacy": "Privacy Policy"
   },
   "buttons": {
-    "back": "Back to projects"
+    "back": "Back to projects",
+    "zoom": "View in high definition"
   }
 }
